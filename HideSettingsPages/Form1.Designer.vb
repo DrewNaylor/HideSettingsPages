@@ -28,11 +28,14 @@ Partial Class Form1
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.groupboxSettingsPageVisibility = New System.Windows.Forms.GroupBox()
+        Me.FlowLayoutPanel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'FlowLayoutPanel1
         '
+        Me.FlowLayoutPanel1.Controls.Add(Me.groupboxSettingsPageVisibility)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 24)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
@@ -74,6 +77,15 @@ Partial Class Form1
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
+        'groupboxSettingsPageVisibility
+        '
+        Me.groupboxSettingsPageVisibility.Location = New System.Drawing.Point(3, 3)
+        Me.groupboxSettingsPageVisibility.Name = "groupboxSettingsPageVisibility"
+        Me.groupboxSettingsPageVisibility.Size = New System.Drawing.Size(323, 104)
+        Me.groupboxSettingsPageVisibility.TabIndex = 0
+        Me.groupboxSettingsPageVisibility.TabStop = False
+        Me.groupboxSettingsPageVisibility.Text = "Settings Page Visibility."
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -85,6 +97,7 @@ Partial Class Form1
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form1"
         Me.Text = "Form1"
+        Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -98,4 +111,5 @@ Partial Class Form1
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents groupboxSettingsPageVisibility As GroupBox
 End Class
