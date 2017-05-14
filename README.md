@@ -11,4 +11,4 @@ Screenshot:
 
 ![](/docs/images/HideSettingsPages-v0.1-screenshot.png?raw=true)
 
-As you can see, the GUI isn't fully complete yet. I'll have to change the text on the checkboxes to all the pages Microsoft allows users to disable.
+As you can see, the GUI isn't fully complete yet. I'll have to change the text on the checkboxes to all the pages Microsoft allows users to disable. You may also notice this app is running on Windows 7. Although this app can run on any version of Windows supported by the .Net Framework 4.6.1, the Registry key it modifies/sets only does things on PCs running the Windows 10 Creators Update or higher.
