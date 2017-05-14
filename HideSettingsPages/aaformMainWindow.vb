@@ -23,7 +23,7 @@
 
 
 
-Public Class Form1
+Public Class aaformMainWindow
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Set the window title based on the name, dev, and version number.
 
