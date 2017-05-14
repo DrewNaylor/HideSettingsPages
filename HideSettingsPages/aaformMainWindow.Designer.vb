@@ -22,60 +22,25 @@ Partial Class aaformMainWindow
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.flowlayoutpanelMainWindow = New System.Windows.Forms.FlowLayoutPanel()
         Me.groupboxSettingsPageVisibility = New System.Windows.Forms.GroupBox()
-        Me.FlowLayoutPanel1.SuspendLayout()
-        Me.MenuStrip1.SuspendLayout()
+        Me.menubarMainWindow = New System.Windows.Forms.MenuStrip()
+        Me.menubarFileMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarExitButton = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarHelpMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarAboutButton = New System.Windows.Forms.ToolStripMenuItem()
+        Me.flowlayoutpanelMainWindow.SuspendLayout()
+        Me.menubarMainWindow.SuspendLayout()
         Me.SuspendLayout()
         '
-        'FlowLayoutPanel1
+        'flowlayoutpanelMainWindow
         '
-        Me.FlowLayoutPanel1.Controls.Add(Me.groupboxSettingsPageVisibility)
-        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 24)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(335, 558)
-        Me.FlowLayoutPanel1.TabIndex = 0
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.HelpToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(335, 24)
-        Me.MenuStrip1.TabIndex = 1
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'FileToolStripMenuItem
-        '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem})
-        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem.Text = "File"
-        '
-        'ExitToolStripMenuItem
-        '
-        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ExitToolStripMenuItem.Text = "Exit"
-        '
-        'HelpToolStripMenuItem
-        '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
-        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.HelpToolStripMenuItem.Text = "Help"
-        '
-        'AboutToolStripMenuItem
-        '
-        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.AboutToolStripMenuItem.Text = "About"
+        Me.flowlayoutpanelMainWindow.Controls.Add(Me.groupboxSettingsPageVisibility)
+        Me.flowlayoutpanelMainWindow.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.flowlayoutpanelMainWindow.Location = New System.Drawing.Point(0, 24)
+        Me.flowlayoutpanelMainWindow.Name = "flowlayoutpanelMainWindow"
+        Me.flowlayoutpanelMainWindow.Size = New System.Drawing.Size(335, 558)
+        Me.flowlayoutpanelMainWindow.TabIndex = 0
         '
         'groupboxSettingsPageVisibility
         '
@@ -86,30 +51,65 @@ Partial Class aaformMainWindow
         Me.groupboxSettingsPageVisibility.TabStop = False
         Me.groupboxSettingsPageVisibility.Text = "Settings Page Visibility"
         '
-        'Form1
+        'menubarMainWindow
+        '
+        Me.menubarMainWindow.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarFileMenu, Me.menubarHelpMenu})
+        Me.menubarMainWindow.Location = New System.Drawing.Point(0, 0)
+        Me.menubarMainWindow.Name = "menubarMainWindow"
+        Me.menubarMainWindow.Size = New System.Drawing.Size(335, 24)
+        Me.menubarMainWindow.TabIndex = 1
+        Me.menubarMainWindow.Text = "MenuStrip1"
+        '
+        'menubarFileMenu
+        '
+        Me.menubarFileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarExitButton})
+        Me.menubarFileMenu.Name = "menubarFileMenu"
+        Me.menubarFileMenu.Size = New System.Drawing.Size(37, 20)
+        Me.menubarFileMenu.Text = "File"
+        '
+        'menubarExitButton
+        '
+        Me.menubarExitButton.Name = "menubarExitButton"
+        Me.menubarExitButton.Size = New System.Drawing.Size(152, 22)
+        Me.menubarExitButton.Text = "Exit"
+        '
+        'menubarHelpMenu
+        '
+        Me.menubarHelpMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarAboutButton})
+        Me.menubarHelpMenu.Name = "menubarHelpMenu"
+        Me.menubarHelpMenu.Size = New System.Drawing.Size(44, 20)
+        Me.menubarHelpMenu.Text = "Help"
+        '
+        'menubarAboutButton
+        '
+        Me.menubarAboutButton.Name = "menubarAboutButton"
+        Me.menubarAboutButton.Size = New System.Drawing.Size(152, 22)
+        Me.menubarAboutButton.Text = "About"
+        '
+        'aaformMainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.ClientSize = New System.Drawing.Size(335, 582)
-        Me.Controls.Add(Me.FlowLayoutPanel1)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.MainMenuStrip = Me.MenuStrip1
+        Me.Controls.Add(Me.flowlayoutpanelMainWindow)
+        Me.Controls.Add(Me.menubarMainWindow)
+        Me.MainMenuStrip = Me.menubarMainWindow
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.Name = "Form1"
+        Me.Name = "aaformMainWindow"
         Me.Text = "HideSettingsPages"
-        Me.FlowLayoutPanel1.ResumeLayout(False)
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        Me.flowlayoutpanelMainWindow.ResumeLayout(False)
+        Me.menubarMainWindow.ResumeLayout(False)
+        Me.menubarMainWindow.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents flowlayoutpanelMainWindow As FlowLayoutPanel
+    Friend WithEvents menubarMainWindow As MenuStrip
+    Friend WithEvents menubarFileMenu As ToolStripMenuItem
+    Friend WithEvents menubarExitButton As ToolStripMenuItem
+    Friend WithEvents menubarHelpMenu As ToolStripMenuItem
+    Friend WithEvents menubarAboutButton As ToolStripMenuItem
     Friend WithEvents groupboxSettingsPageVisibility As GroupBox
 End Class
