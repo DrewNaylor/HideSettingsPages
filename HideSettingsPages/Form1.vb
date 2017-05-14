@@ -24,5 +24,9 @@
 
 
 Public Class Form1
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Set the window title based on the name, dev, and version number.
 
+        Me.Text = "HideSettingsPages v." & My.Application.Info.Version.ToString
+    End Sub
 End Class

@@ -84,7 +84,7 @@ Partial Class Form1
         Me.groupboxSettingsPageVisibility.Size = New System.Drawing.Size(323, 104)
         Me.groupboxSettingsPageVisibility.TabIndex = 0
         Me.groupboxSettingsPageVisibility.TabStop = False
-        Me.groupboxSettingsPageVisibility.Text = "Settings Page Visibility."
+        Me.groupboxSettingsPageVisibility.Text = "Settings Page Visibility"
         '
         'Form1
         '
@@ -96,7 +96,7 @@ Partial Class Form1
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "HideSettingsPages"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
