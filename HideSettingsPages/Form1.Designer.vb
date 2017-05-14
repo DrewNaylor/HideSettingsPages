@@ -23,27 +23,58 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FlowLayoutPanel1.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'FlowLayoutPanel1
         '
-        Me.FlowLayoutPanel1.Controls.Add(Me.GroupBox1)
+        Me.FlowLayoutPanel1.Controls.Add(Me.MenuStrip1)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(335, 582)
         Me.FlowLayoutPanel1.TabIndex = 0
         '
-        'GroupBox1
+        'MenuStrip1
         '
-        Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(332, 452)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Pages to hide"
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(181, 24)
+        Me.MenuStrip1.TabIndex = 0
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Text = "File"
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Text = "Exit"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Text = "Help"
+        '
+        'AboutToolStripMenuItem
+        '
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AboutToolStripMenuItem.Text = "About"
         '
         'Form1
         '
@@ -55,10 +86,17 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.FlowLayoutPanel1.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
 End Class
