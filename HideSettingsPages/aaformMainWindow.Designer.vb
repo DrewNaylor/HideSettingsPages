@@ -408,9 +408,9 @@ Partial Class aaformMainWindow
         Me.labelChoosePages.AutoSize = True
         Me.labelChoosePages.Location = New System.Drawing.Point(19, 15)
         Me.labelChoosePages.Name = "labelChoosePages"
-        Me.labelChoosePages.Size = New System.Drawing.Size(77, 25)
+        Me.labelChoosePages.Size = New System.Drawing.Size(445, 25)
         Me.labelChoosePages.TabIndex = 13
-        Me.labelChoosePages.Text = "Label2"
+        Me.labelChoosePages.Text = "Choose pages you wish to hide or only show."
         '
         'aaformMainWindow
         '
