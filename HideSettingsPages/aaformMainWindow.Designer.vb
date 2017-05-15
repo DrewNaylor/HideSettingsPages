@@ -28,41 +28,27 @@ Partial Class aaformMainWindow
         Me.radiobuttonHidePages = New System.Windows.Forms.RadioButton()
         Me.labelPageVisibility = New System.Windows.Forms.Label()
         Me.groupboxPageList = New System.Windows.Forms.GroupBox()
-        Me.CheckBox13 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox12 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox11 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox10 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox9 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.panelScrollablePageList = New System.Windows.Forms.Panel()
+        Me.checkedlistboxPageList = New System.Windows.Forms.CheckedListBox()
+        Me.labelChoosePages = New System.Windows.Forms.Label()
         Me.groupboxRegistryKey = New System.Windows.Forms.GroupBox()
         Me.textboxRegistryKey = New System.Windows.Forms.TextBox()
+        Me.panelApplyUndoExit = New System.Windows.Forms.Panel()
         Me.buttonExit = New System.Windows.Forms.Button()
-        Me.buttonUndoChanges = New System.Windows.Forms.Button()
         Me.buttonApplyChanges = New System.Windows.Forms.Button()
+        Me.buttonUndoChanges = New System.Windows.Forms.Button()
         Me.menubarMainWindow = New System.Windows.Forms.MenuStrip()
         Me.menubarFileMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarExitButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarHelpMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarAboutButton = New System.Windows.Forms.ToolStripMenuItem()
-        Me.panelScrollablePageList = New System.Windows.Forms.Panel()
-        Me.labelChoosePages = New System.Windows.Forms.Label()
-        Me.panelApplyUndoExit = New System.Windows.Forms.Panel()
-        Me.CheckBox14 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox15 = New System.Windows.Forms.CheckBox()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
-        Me.groupboxRegistryKey.SuspendLayout()
-        Me.menubarMainWindow.SuspendLayout()
         Me.panelScrollablePageList.SuspendLayout()
+        Me.groupboxRegistryKey.SuspendLayout()
         Me.panelApplyUndoExit.SuspendLayout()
+        Me.menubarMainWindow.SuspendLayout()
         Me.SuspendLayout()
         '
         'flowlayoutpanelMainWindow
@@ -73,9 +59,9 @@ Partial Class aaformMainWindow
         Me.flowlayoutpanelMainWindow.Controls.Add(Me.panelApplyUndoExit)
         Me.flowlayoutpanelMainWindow.Dock = System.Windows.Forms.DockStyle.Fill
         Me.flowlayoutpanelMainWindow.Location = New System.Drawing.Point(0, 44)
-        Me.flowlayoutpanelMainWindow.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.flowlayoutpanelMainWindow.Margin = New System.Windows.Forms.Padding(6)
         Me.flowlayoutpanelMainWindow.Name = "flowlayoutpanelMainWindow"
-        Me.flowlayoutpanelMainWindow.Size = New System.Drawing.Size(662, 1723)
+        Me.flowlayoutpanelMainWindow.Size = New System.Drawing.Size(662, 1369)
         Me.flowlayoutpanelMainWindow.TabIndex = 0
         '
         'groupboxSettingsPageVisibility
@@ -84,9 +70,9 @@ Partial Class aaformMainWindow
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.radiobuttonHidePages)
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.labelPageVisibility)
         Me.groupboxSettingsPageVisibility.Location = New System.Drawing.Point(6, 6)
-        Me.groupboxSettingsPageVisibility.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.groupboxSettingsPageVisibility.Margin = New System.Windows.Forms.Padding(6)
         Me.groupboxSettingsPageVisibility.Name = "groupboxSettingsPageVisibility"
-        Me.groupboxSettingsPageVisibility.Padding = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.groupboxSettingsPageVisibility.Padding = New System.Windows.Forms.Padding(6)
         Me.groupboxSettingsPageVisibility.Size = New System.Drawing.Size(646, 175)
         Me.groupboxSettingsPageVisibility.TabIndex = 0
         Me.groupboxSettingsPageVisibility.TabStop = False
@@ -95,8 +81,8 @@ Partial Class aaformMainWindow
         'radiobuttonShowOnlyPages
         '
         Me.radiobuttonShowOnlyPages.AutoSize = True
-        Me.radiobuttonShowOnlyPages.Location = New System.Drawing.Point(26, 130)
-        Me.radiobuttonShowOnlyPages.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.radiobuttonShowOnlyPages.Location = New System.Drawing.Point(12, 126)
+        Me.radiobuttonShowOnlyPages.Margin = New System.Windows.Forms.Padding(6)
         Me.radiobuttonShowOnlyPages.Name = "radiobuttonShowOnlyPages"
         Me.radiobuttonShowOnlyPages.Size = New System.Drawing.Size(146, 29)
         Me.radiobuttonShowOnlyPages.TabIndex = 2
@@ -107,8 +93,8 @@ Partial Class aaformMainWindow
         'radiobuttonHidePages
         '
         Me.radiobuttonHidePages.AutoSize = True
-        Me.radiobuttonHidePages.Location = New System.Drawing.Point(26, 84)
-        Me.radiobuttonHidePages.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.radiobuttonHidePages.Location = New System.Drawing.Point(12, 85)
+        Me.radiobuttonHidePages.Margin = New System.Windows.Forms.Padding(6)
         Me.radiobuttonHidePages.Name = "radiobuttonHidePages"
         Me.radiobuttonHidePages.Size = New System.Drawing.Size(87, 29)
         Me.radiobuttonHidePages.TabIndex = 1
@@ -119,7 +105,7 @@ Partial Class aaformMainWindow
         'labelPageVisibility
         '
         Me.labelPageVisibility.AutoSize = True
-        Me.labelPageVisibility.Location = New System.Drawing.Point(20, 40)
+        Me.labelPageVisibility.Location = New System.Drawing.Point(7, 40)
         Me.labelPageVisibility.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.labelPageVisibility.Name = "labelPageVisibility"
         Me.labelPageVisibility.Size = New System.Drawing.Size(573, 25)
@@ -130,164 +116,49 @@ Partial Class aaformMainWindow
         '
         Me.groupboxPageList.Controls.Add(Me.panelScrollablePageList)
         Me.groupboxPageList.Location = New System.Drawing.Point(6, 193)
-        Me.groupboxPageList.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.groupboxPageList.Margin = New System.Windows.Forms.Padding(6)
         Me.groupboxPageList.Name = "groupboxPageList"
-        Me.groupboxPageList.Padding = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.groupboxPageList.Size = New System.Drawing.Size(646, 1530)
+        Me.groupboxPageList.Padding = New System.Windows.Forms.Padding(6)
+        Me.groupboxPageList.Size = New System.Drawing.Size(646, 922)
         Me.groupboxPageList.TabIndex = 1
         Me.groupboxPageList.TabStop = False
         Me.groupboxPageList.Text = "Settings page list"
         '
-        'CheckBox13
+        'panelScrollablePageList
         '
-        Me.CheckBox13.AutoSize = True
-        Me.CheckBox13.Location = New System.Drawing.Point(19, 609)
-        Me.CheckBox13.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.CheckBox13.Name = "CheckBox13"
-        Me.CheckBox13.Size = New System.Drawing.Size(166, 29)
-        Me.CheckBox13.TabIndex = 12
-        Me.CheckBox13.Text = "CheckBox13"
-        Me.CheckBox13.UseVisualStyleBackColor = True
+        Me.panelScrollablePageList.Controls.Add(Me.checkedlistboxPageList)
+        Me.panelScrollablePageList.Controls.Add(Me.labelChoosePages)
+        Me.panelScrollablePageList.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelScrollablePageList.Location = New System.Drawing.Point(6, 30)
+        Me.panelScrollablePageList.Name = "panelScrollablePageList"
+        Me.panelScrollablePageList.Size = New System.Drawing.Size(634, 886)
+        Me.panelScrollablePageList.TabIndex = 13
         '
-        'CheckBox12
+        'checkedlistboxPageList
         '
-        Me.CheckBox12.AutoSize = True
-        Me.CheckBox12.Location = New System.Drawing.Point(19, 568)
-        Me.CheckBox12.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.CheckBox12.Name = "CheckBox12"
-        Me.CheckBox12.Size = New System.Drawing.Size(166, 29)
-        Me.CheckBox12.TabIndex = 11
-        Me.CheckBox12.Text = "CheckBox12"
-        Me.CheckBox12.UseVisualStyleBackColor = True
+        Me.checkedlistboxPageList.CheckOnClick = True
+        Me.checkedlistboxPageList.Items.AddRange(New Object() {"about", "activation"})
+        Me.checkedlistboxPageList.Location = New System.Drawing.Point(6, 43)
+        Me.checkedlistboxPageList.Name = "checkedlistboxPageList"
+        Me.checkedlistboxPageList.Size = New System.Drawing.Size(618, 836)
+        Me.checkedlistboxPageList.TabIndex = 17
         '
-        'CheckBox11
+        'labelChoosePages
         '
-        Me.CheckBox11.AutoSize = True
-        Me.CheckBox11.Location = New System.Drawing.Point(19, 527)
-        Me.CheckBox11.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.CheckBox11.Name = "CheckBox11"
-        Me.CheckBox11.Size = New System.Drawing.Size(166, 29)
-        Me.CheckBox11.TabIndex = 10
-        Me.CheckBox11.Text = "CheckBox11"
-        Me.CheckBox11.UseVisualStyleBackColor = True
-        '
-        'CheckBox10
-        '
-        Me.CheckBox10.AutoSize = True
-        Me.CheckBox10.Location = New System.Drawing.Point(19, 486)
-        Me.CheckBox10.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.CheckBox10.Name = "CheckBox10"
-        Me.CheckBox10.Size = New System.Drawing.Size(166, 29)
-        Me.CheckBox10.TabIndex = 9
-        Me.CheckBox10.Text = "CheckBox10"
-        Me.CheckBox10.UseVisualStyleBackColor = True
-        '
-        'CheckBox9
-        '
-        Me.CheckBox9.AutoSize = True
-        Me.CheckBox9.Location = New System.Drawing.Point(20, 445)
-        Me.CheckBox9.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.CheckBox9.Name = "CheckBox9"
-        Me.CheckBox9.Size = New System.Drawing.Size(154, 29)
-        Me.CheckBox9.TabIndex = 8
-        Me.CheckBox9.Text = "CheckBox9"
-        Me.CheckBox9.UseVisualStyleBackColor = True
-        '
-        'CheckBox8
-        '
-        Me.CheckBox8.AutoSize = True
-        Me.CheckBox8.Location = New System.Drawing.Point(20, 404)
-        Me.CheckBox8.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.CheckBox8.Name = "CheckBox8"
-        Me.CheckBox8.Size = New System.Drawing.Size(154, 29)
-        Me.CheckBox8.TabIndex = 7
-        Me.CheckBox8.Text = "CheckBox8"
-        Me.CheckBox8.UseVisualStyleBackColor = True
-        '
-        'CheckBox7
-        '
-        Me.CheckBox7.AutoSize = True
-        Me.CheckBox7.Location = New System.Drawing.Point(19, 363)
-        Me.CheckBox7.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.CheckBox7.Name = "CheckBox7"
-        Me.CheckBox7.Size = New System.Drawing.Size(154, 29)
-        Me.CheckBox7.TabIndex = 6
-        Me.CheckBox7.Text = "CheckBox7"
-        Me.CheckBox7.UseVisualStyleBackColor = True
-        '
-        'CheckBox6
-        '
-        Me.CheckBox6.AutoSize = True
-        Me.CheckBox6.Location = New System.Drawing.Point(19, 322)
-        Me.CheckBox6.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(154, 29)
-        Me.CheckBox6.TabIndex = 5
-        Me.CheckBox6.Text = "CheckBox6"
-        Me.CheckBox6.UseVisualStyleBackColor = True
-        '
-        'CheckBox5
-        '
-        Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Location = New System.Drawing.Point(20, 281)
-        Me.CheckBox5.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(154, 29)
-        Me.CheckBox5.TabIndex = 4
-        Me.CheckBox5.Text = "CheckBox5"
-        Me.CheckBox5.UseVisualStyleBackColor = True
-        '
-        'CheckBox4
-        '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Location = New System.Drawing.Point(19, 188)
-        Me.CheckBox4.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(154, 29)
-        Me.CheckBox4.TabIndex = 3
-        Me.CheckBox4.Text = "CheckBox4"
-        Me.CheckBox4.UseVisualStyleBackColor = True
-        '
-        'CheckBox3
-        '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(19, 147)
-        Me.CheckBox3.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(154, 29)
-        Me.CheckBox3.TabIndex = 2
-        Me.CheckBox3.Text = "CheckBox3"
-        Me.CheckBox3.UseVisualStyleBackColor = True
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(19, 106)
-        Me.CheckBox2.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(154, 29)
-        Me.CheckBox2.TabIndex = 1
-        Me.CheckBox2.Text = "CheckBox2"
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(20, 65)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(154, 29)
-        Me.CheckBox1.TabIndex = 0
-        Me.CheckBox1.Text = "CheckBox1"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.labelChoosePages.AutoSize = True
+        Me.labelChoosePages.Location = New System.Drawing.Point(1, 13)
+        Me.labelChoosePages.Name = "labelChoosePages"
+        Me.labelChoosePages.Size = New System.Drawing.Size(445, 25)
+        Me.labelChoosePages.TabIndex = 13
+        Me.labelChoosePages.Text = "Choose pages you wish to hide or only show."
         '
         'groupboxRegistryKey
         '
         Me.groupboxRegistryKey.Controls.Add(Me.textboxRegistryKey)
-        Me.groupboxRegistryKey.Location = New System.Drawing.Point(6, 1735)
-        Me.groupboxRegistryKey.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.groupboxRegistryKey.Location = New System.Drawing.Point(6, 1127)
+        Me.groupboxRegistryKey.Margin = New System.Windows.Forms.Padding(6)
         Me.groupboxRegistryKey.Name = "groupboxRegistryKey"
-        Me.groupboxRegistryKey.Padding = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.groupboxRegistryKey.Padding = New System.Windows.Forms.Padding(6)
         Me.groupboxRegistryKey.Size = New System.Drawing.Size(646, 156)
         Me.groupboxRegistryKey.TabIndex = 2
         Me.groupboxRegistryKey.TabStop = False
@@ -296,41 +167,51 @@ Partial Class aaformMainWindow
         'textboxRegistryKey
         '
         Me.textboxRegistryKey.Location = New System.Drawing.Point(12, 40)
-        Me.textboxRegistryKey.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.textboxRegistryKey.Margin = New System.Windows.Forms.Padding(6)
         Me.textboxRegistryKey.Multiline = True
         Me.textboxRegistryKey.Name = "textboxRegistryKey"
         Me.textboxRegistryKey.Size = New System.Drawing.Size(618, 100)
         Me.textboxRegistryKey.TabIndex = 0
         '
+        'panelApplyUndoExit
+        '
+        Me.panelApplyUndoExit.Controls.Add(Me.buttonExit)
+        Me.panelApplyUndoExit.Controls.Add(Me.buttonApplyChanges)
+        Me.panelApplyUndoExit.Controls.Add(Me.buttonUndoChanges)
+        Me.panelApplyUndoExit.Location = New System.Drawing.Point(3, 1292)
+        Me.panelApplyUndoExit.Name = "panelApplyUndoExit"
+        Me.panelApplyUndoExit.Size = New System.Drawing.Size(649, 67)
+        Me.panelApplyUndoExit.TabIndex = 4
+        '
         'buttonExit
         '
         Me.buttonExit.Location = New System.Drawing.Point(462, 6)
-        Me.buttonExit.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.buttonExit.Margin = New System.Windows.Forms.Padding(6)
         Me.buttonExit.Name = "buttonExit"
         Me.buttonExit.Size = New System.Drawing.Size(123, 46)
         Me.buttonExit.TabIndex = 2
         Me.buttonExit.Text = "Exit"
         Me.buttonExit.UseVisualStyleBackColor = True
         '
-        'buttonUndoChanges
-        '
-        Me.buttonUndoChanges.Location = New System.Drawing.Point(250, 6)
-        Me.buttonUndoChanges.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.buttonUndoChanges.Name = "buttonUndoChanges"
-        Me.buttonUndoChanges.Size = New System.Drawing.Size(200, 46)
-        Me.buttonUndoChanges.TabIndex = 1
-        Me.buttonUndoChanges.Text = "Undo all changes"
-        Me.buttonUndoChanges.UseVisualStyleBackColor = True
-        '
         'buttonApplyChanges
         '
         Me.buttonApplyChanges.Location = New System.Drawing.Point(64, 6)
-        Me.buttonApplyChanges.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.buttonApplyChanges.Margin = New System.Windows.Forms.Padding(6)
         Me.buttonApplyChanges.Name = "buttonApplyChanges"
         Me.buttonApplyChanges.Size = New System.Drawing.Size(174, 46)
         Me.buttonApplyChanges.TabIndex = 0
         Me.buttonApplyChanges.Text = "Apply changes"
         Me.buttonApplyChanges.UseVisualStyleBackColor = True
+        '
+        'buttonUndoChanges
+        '
+        Me.buttonUndoChanges.Location = New System.Drawing.Point(250, 6)
+        Me.buttonUndoChanges.Margin = New System.Windows.Forms.Padding(6)
+        Me.buttonUndoChanges.Name = "buttonUndoChanges"
+        Me.buttonUndoChanges.Size = New System.Drawing.Size(200, 46)
+        Me.buttonUndoChanges.TabIndex = 1
+        Me.buttonUndoChanges.Text = "Undo all changes"
+        Me.buttonUndoChanges.UseVisualStyleBackColor = True
         '
         'menubarMainWindow
         '
@@ -369,94 +250,28 @@ Partial Class aaformMainWindow
         Me.menubarAboutButton.Size = New System.Drawing.Size(180, 38)
         Me.menubarAboutButton.Text = "About"
         '
-        'panelScrollablePageList
-        '
-        Me.panelScrollablePageList.AutoScroll = True
-        Me.panelScrollablePageList.Controls.Add(Me.CheckBox15)
-        Me.panelScrollablePageList.Controls.Add(Me.CheckBox14)
-        Me.panelScrollablePageList.Controls.Add(Me.labelChoosePages)
-        Me.panelScrollablePageList.Controls.Add(Me.CheckBox1)
-        Me.panelScrollablePageList.Controls.Add(Me.CheckBox13)
-        Me.panelScrollablePageList.Controls.Add(Me.CheckBox2)
-        Me.panelScrollablePageList.Controls.Add(Me.CheckBox12)
-        Me.panelScrollablePageList.Controls.Add(Me.CheckBox3)
-        Me.panelScrollablePageList.Controls.Add(Me.CheckBox11)
-        Me.panelScrollablePageList.Controls.Add(Me.CheckBox4)
-        Me.panelScrollablePageList.Controls.Add(Me.CheckBox10)
-        Me.panelScrollablePageList.Controls.Add(Me.CheckBox5)
-        Me.panelScrollablePageList.Controls.Add(Me.CheckBox9)
-        Me.panelScrollablePageList.Controls.Add(Me.CheckBox6)
-        Me.panelScrollablePageList.Controls.Add(Me.CheckBox8)
-        Me.panelScrollablePageList.Controls.Add(Me.CheckBox7)
-        Me.panelScrollablePageList.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panelScrollablePageList.Location = New System.Drawing.Point(6, 30)
-        Me.panelScrollablePageList.Name = "panelScrollablePageList"
-        Me.panelScrollablePageList.Size = New System.Drawing.Size(634, 1494)
-        Me.panelScrollablePageList.TabIndex = 13
-        '
-        'labelChoosePages
-        '
-        Me.labelChoosePages.AutoSize = True
-        Me.labelChoosePages.Location = New System.Drawing.Point(19, 15)
-        Me.labelChoosePages.Name = "labelChoosePages"
-        Me.labelChoosePages.Size = New System.Drawing.Size(445, 25)
-        Me.labelChoosePages.TabIndex = 13
-        Me.labelChoosePages.Text = "Choose pages you wish to hide or only show."
-        '
-        'panelApplyUndoExit
-        '
-        Me.panelApplyUndoExit.Controls.Add(Me.buttonExit)
-        Me.panelApplyUndoExit.Controls.Add(Me.buttonApplyChanges)
-        Me.panelApplyUndoExit.Controls.Add(Me.buttonUndoChanges)
-        Me.panelApplyUndoExit.Location = New System.Drawing.Point(3, 1900)
-        Me.panelApplyUndoExit.Name = "panelApplyUndoExit"
-        Me.panelApplyUndoExit.Size = New System.Drawing.Size(649, 67)
-        Me.panelApplyUndoExit.TabIndex = 4
-        '
-        'CheckBox14
-        '
-        Me.CheckBox14.AutoSize = True
-        Me.CheckBox14.Location = New System.Drawing.Point(19, 650)
-        Me.CheckBox14.Margin = New System.Windows.Forms.Padding(6)
-        Me.CheckBox14.Name = "CheckBox14"
-        Me.CheckBox14.Size = New System.Drawing.Size(166, 29)
-        Me.CheckBox14.TabIndex = 14
-        Me.CheckBox14.Text = "CheckBox14"
-        Me.CheckBox14.UseVisualStyleBackColor = True
-        '
-        'CheckBox15
-        '
-        Me.CheckBox15.AutoSize = True
-        Me.CheckBox15.Location = New System.Drawing.Point(19, 691)
-        Me.CheckBox15.Margin = New System.Windows.Forms.Padding(6)
-        Me.CheckBox15.Name = "CheckBox15"
-        Me.CheckBox15.Size = New System.Drawing.Size(166, 29)
-        Me.CheckBox15.TabIndex = 15
-        Me.CheckBox15.Text = "CheckBox15"
-        Me.CheckBox15.UseVisualStyleBackColor = True
-        '
         'aaformMainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(192.0!, 192.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
-        Me.ClientSize = New System.Drawing.Size(662, 1767)
+        Me.ClientSize = New System.Drawing.Size(662, 1413)
         Me.Controls.Add(Me.flowlayoutpanelMainWindow)
         Me.Controls.Add(Me.menubarMainWindow)
         Me.MainMenuStrip = Me.menubarMainWindow
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "aaformMainWindow"
         Me.Text = "HideSettingsPages"
         Me.flowlayoutpanelMainWindow.ResumeLayout(False)
         Me.groupboxSettingsPageVisibility.ResumeLayout(False)
         Me.groupboxSettingsPageVisibility.PerformLayout()
         Me.groupboxPageList.ResumeLayout(False)
-        Me.groupboxRegistryKey.ResumeLayout(False)
-        Me.groupboxRegistryKey.PerformLayout()
-        Me.menubarMainWindow.ResumeLayout(False)
-        Me.menubarMainWindow.PerformLayout()
         Me.panelScrollablePageList.ResumeLayout(False)
         Me.panelScrollablePageList.PerformLayout()
+        Me.groupboxRegistryKey.ResumeLayout(False)
+        Me.groupboxRegistryKey.PerformLayout()
         Me.panelApplyUndoExit.ResumeLayout(False)
+        Me.menubarMainWindow.ResumeLayout(False)
+        Me.menubarMainWindow.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -473,19 +288,6 @@ Partial Class aaformMainWindow
     Friend WithEvents radiobuttonShowOnlyPages As RadioButton
     Friend WithEvents radiobuttonHidePages As RadioButton
     Friend WithEvents groupboxPageList As GroupBox
-    Friend WithEvents CheckBox13 As CheckBox
-    Friend WithEvents CheckBox12 As CheckBox
-    Friend WithEvents CheckBox11 As CheckBox
-    Friend WithEvents CheckBox10 As CheckBox
-    Friend WithEvents CheckBox9 As CheckBox
-    Friend WithEvents CheckBox8 As CheckBox
-    Friend WithEvents CheckBox7 As CheckBox
-    Friend WithEvents CheckBox6 As CheckBox
-    Friend WithEvents CheckBox5 As CheckBox
-    Friend WithEvents CheckBox4 As CheckBox
-    Friend WithEvents CheckBox3 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents groupboxRegistryKey As GroupBox
     Friend WithEvents textboxRegistryKey As TextBox
     Friend WithEvents buttonUndoChanges As Button
@@ -494,6 +296,5 @@ Partial Class aaformMainWindow
     Friend WithEvents panelScrollablePageList As Panel
     Friend WithEvents labelChoosePages As Label
     Friend WithEvents panelApplyUndoExit As Panel
-    Friend WithEvents CheckBox15 As CheckBox
-    Friend WithEvents CheckBox14 As CheckBox
+    Friend WithEvents checkedlistboxPageList As CheckedListBox
 End Class
