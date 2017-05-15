@@ -122,7 +122,7 @@ Partial Class aaformMainWindow
         Me.panelScrollablePageList.Controls.Add(Me.labelChoosePages)
         Me.panelScrollablePageList.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelScrollablePageList.Location = New System.Drawing.Point(3, 16)
-        Me.panelScrollablePageList.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.panelScrollablePageList.Margin = New System.Windows.Forms.Padding(2)
         Me.panelScrollablePageList.Name = "panelScrollablePageList"
         Me.panelScrollablePageList.Size = New System.Drawing.Size(317, 442)
         Me.panelScrollablePageList.TabIndex = 13
@@ -132,7 +132,7 @@ Partial Class aaformMainWindow
         Me.checkedlistboxPageList.CheckOnClick = True
         Me.checkedlistboxPageList.Items.AddRange(New Object() {"about", "activation", "appsfeatures", "appsforwebsites", "backup", "batterysaver", "batterysaver-usagedetails", "bluetooth", "colors", "cortana", "camera", "connecteddevices", "datausage", "dateandtime", "defaultapps", "developers", "deviceencryption", "display", "emailandaccounts", "extras", "findmydevice", "lockscreen", "maps", "mousetouchpad", "network-ethernet", "network-cellular", "network-mobilehotspot", "network-proxy", "network-vpn", "network-directaccess", "network-wifi", "notifications", "nfctransactions", "easeofaccess-narrator", "easeofaccess-magnifier", "easeofaccess-highcontrast", "easeofaccess-closedcaptioning", "easeofaccess-keyboard", "easeofaccess-mouse", "easeofaccess-otheroptions", "optionalfeatures", "otherusers", "powersleep", "printers", "privacy-location", "privacy-webcam", "privacy-microphone", "privacy-motion", "privacy-speechtyping", "privacy-accountinfo", "privacy-contacts", "privacy-calendar", "privacy-callhistory", "privacy-email", "privacy-messaging", "privacy-radios", "privacy-backgroundapps", "privacy-customdevices", "privacy-feedback", "recovery", "regionlanguage", "storagesense", "tabletmode", "taskbar", "themes", "troubleshoot", "typing", "usb", "signinoptions", "sync", "workplace", "windowsdefender", "windowsinsider", "windowsupdate", "yourinfo"})
         Me.checkedlistboxPageList.Location = New System.Drawing.Point(3, 22)
-        Me.checkedlistboxPageList.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.checkedlistboxPageList.Margin = New System.Windows.Forms.Padding(2)
         Me.checkedlistboxPageList.Name = "checkedlistboxPageList"
         Me.checkedlistboxPageList.Size = New System.Drawing.Size(311, 409)
         Me.checkedlistboxPageList.TabIndex = 17
@@ -171,7 +171,7 @@ Partial Class aaformMainWindow
         Me.panelApplyUndoExit.Controls.Add(Me.buttonApplyChanges)
         Me.panelApplyUndoExit.Controls.Add(Me.buttonUndoChanges)
         Me.panelApplyUndoExit.Location = New System.Drawing.Point(2, 647)
-        Me.panelApplyUndoExit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.panelApplyUndoExit.Margin = New System.Windows.Forms.Padding(2)
         Me.panelApplyUndoExit.Name = "panelApplyUndoExit"
         Me.panelApplyUndoExit.Size = New System.Drawing.Size(324, 34)
         Me.panelApplyUndoExit.TabIndex = 4
@@ -247,7 +247,7 @@ Partial Class aaformMainWindow
         Me.Controls.Add(Me.flowlayoutpanelMainWindow)
         Me.Controls.Add(Me.menubarMainWindow)
         Me.MainMenuStrip = Me.menubarMainWindow
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "aaformMainWindow"
         Me.Text = "HideSettingsPages"
         Me.flowlayoutpanelMainWindow.ResumeLayout(False)
