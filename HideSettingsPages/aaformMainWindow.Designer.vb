@@ -24,8 +24,8 @@ Partial Class aaformMainWindow
     Private Sub InitializeComponent()
         Me.flowlayoutpanelMainWindow = New System.Windows.Forms.FlowLayoutPanel()
         Me.groupboxSettingsPageVisibility = New System.Windows.Forms.GroupBox()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.radiobuttonShowOnlyPages = New System.Windows.Forms.RadioButton()
+        Me.radiobuttonHidePages = New System.Windows.Forms.RadioButton()
         Me.labelPageVisibility = New System.Windows.Forms.Label()
         Me.groupboxPageList = New System.Windows.Forms.GroupBox()
         Me.CheckBox13 = New System.Windows.Forms.CheckBox()
@@ -42,11 +42,11 @@ Partial Class aaformMainWindow
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.groupboxRegistryKey = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.textboxRegistryKey = New System.Windows.Forms.TextBox()
         Me.groupboxApplyUndoExit = New System.Windows.Forms.GroupBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.buttonExit = New System.Windows.Forms.Button()
+        Me.buttonUndoChanges = New System.Windows.Forms.Button()
+        Me.buttonApplyChanges = New System.Windows.Forms.Button()
         Me.menubarMainWindow = New System.Windows.Forms.MenuStrip()
         Me.menubarFileMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarExitButton = New System.Windows.Forms.ToolStripMenuItem()
@@ -78,8 +78,8 @@ Partial Class aaformMainWindow
         '
         'groupboxSettingsPageVisibility
         '
-        Me.groupboxSettingsPageVisibility.Controls.Add(Me.RadioButton2)
-        Me.groupboxSettingsPageVisibility.Controls.Add(Me.RadioButton1)
+        Me.groupboxSettingsPageVisibility.Controls.Add(Me.radiobuttonShowOnlyPages)
+        Me.groupboxSettingsPageVisibility.Controls.Add(Me.radiobuttonHidePages)
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.labelPageVisibility)
         Me.groupboxSettingsPageVisibility.Location = New System.Drawing.Point(6, 6)
         Me.groupboxSettingsPageVisibility.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
@@ -90,29 +90,29 @@ Partial Class aaformMainWindow
         Me.groupboxSettingsPageVisibility.TabStop = False
         Me.groupboxSettingsPageVisibility.Text = "Settings Page Visibility"
         '
-        'RadioButton2
+        'radiobuttonShowOnlyPages
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(26, 140)
-        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(146, 29)
-        Me.RadioButton2.TabIndex = 2
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Show Only"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.radiobuttonShowOnlyPages.AutoSize = True
+        Me.radiobuttonShowOnlyPages.Location = New System.Drawing.Point(26, 140)
+        Me.radiobuttonShowOnlyPages.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.radiobuttonShowOnlyPages.Name = "radiobuttonShowOnlyPages"
+        Me.radiobuttonShowOnlyPages.Size = New System.Drawing.Size(146, 29)
+        Me.radiobuttonShowOnlyPages.TabIndex = 2
+        Me.radiobuttonShowOnlyPages.TabStop = True
+        Me.radiobuttonShowOnlyPages.Text = "Show Only"
+        Me.radiobuttonShowOnlyPages.UseVisualStyleBackColor = True
         '
-        'RadioButton1
+        'radiobuttonHidePages
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(26, 94)
-        Me.RadioButton1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(87, 29)
-        Me.RadioButton1.TabIndex = 1
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Hide"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.radiobuttonHidePages.AutoSize = True
+        Me.radiobuttonHidePages.Location = New System.Drawing.Point(26, 94)
+        Me.radiobuttonHidePages.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.radiobuttonHidePages.Name = "radiobuttonHidePages"
+        Me.radiobuttonHidePages.Size = New System.Drawing.Size(87, 29)
+        Me.radiobuttonHidePages.TabIndex = 1
+        Me.radiobuttonHidePages.TabStop = True
+        Me.radiobuttonHidePages.Text = "Hide"
+        Me.radiobuttonHidePages.UseVisualStyleBackColor = True
         '
         'labelPageVisibility
         '
@@ -281,7 +281,7 @@ Partial Class aaformMainWindow
         '
         'groupboxRegistryKey
         '
-        Me.groupboxRegistryKey.Controls.Add(Me.TextBox1)
+        Me.groupboxRegistryKey.Controls.Add(Me.textboxRegistryKey)
         Me.groupboxRegistryKey.Location = New System.Drawing.Point(6, 960)
         Me.groupboxRegistryKey.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.groupboxRegistryKey.Name = "groupboxRegistryKey"
@@ -291,20 +291,20 @@ Partial Class aaformMainWindow
         Me.groupboxRegistryKey.TabStop = False
         Me.groupboxRegistryKey.Text = "Registry key"
         '
-        'TextBox1
+        'textboxRegistryKey
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 40)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(618, 100)
-        Me.TextBox1.TabIndex = 0
+        Me.textboxRegistryKey.Location = New System.Drawing.Point(12, 40)
+        Me.textboxRegistryKey.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.textboxRegistryKey.Multiline = True
+        Me.textboxRegistryKey.Name = "textboxRegistryKey"
+        Me.textboxRegistryKey.Size = New System.Drawing.Size(618, 100)
+        Me.textboxRegistryKey.TabIndex = 0
         '
         'groupboxApplyUndoExit
         '
-        Me.groupboxApplyUndoExit.Controls.Add(Me.Button3)
-        Me.groupboxApplyUndoExit.Controls.Add(Me.Button2)
-        Me.groupboxApplyUndoExit.Controls.Add(Me.Button1)
+        Me.groupboxApplyUndoExit.Controls.Add(Me.buttonExit)
+        Me.groupboxApplyUndoExit.Controls.Add(Me.buttonUndoChanges)
+        Me.groupboxApplyUndoExit.Controls.Add(Me.buttonApplyChanges)
         Me.groupboxApplyUndoExit.Location = New System.Drawing.Point(6, 1128)
         Me.groupboxApplyUndoExit.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.groupboxApplyUndoExit.Name = "groupboxApplyUndoExit"
@@ -313,35 +313,35 @@ Partial Class aaformMainWindow
         Me.groupboxApplyUndoExit.TabIndex = 3
         Me.groupboxApplyUndoExit.TabStop = False
         '
-        'Button3
+        'buttonExit
         '
-        Me.Button3.Location = New System.Drawing.Point(428, 22)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(123, 46)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Exit"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.buttonExit.Location = New System.Drawing.Point(428, 22)
+        Me.buttonExit.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.buttonExit.Name = "buttonExit"
+        Me.buttonExit.Size = New System.Drawing.Size(123, 46)
+        Me.buttonExit.TabIndex = 2
+        Me.buttonExit.Text = "Exit"
+        Me.buttonExit.UseVisualStyleBackColor = True
         '
-        'Button2
+        'buttonUndoChanges
         '
-        Me.Button2.Location = New System.Drawing.Point(212, 22)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(200, 46)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Undo all changes"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.buttonUndoChanges.Location = New System.Drawing.Point(212, 22)
+        Me.buttonUndoChanges.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.buttonUndoChanges.Name = "buttonUndoChanges"
+        Me.buttonUndoChanges.Size = New System.Drawing.Size(200, 46)
+        Me.buttonUndoChanges.TabIndex = 1
+        Me.buttonUndoChanges.Text = "Undo all changes"
+        Me.buttonUndoChanges.UseVisualStyleBackColor = True
         '
-        'Button1
+        'buttonApplyChanges
         '
-        Me.Button1.Location = New System.Drawing.Point(26, 22)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(174, 46)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Apply changes"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.buttonApplyChanges.Location = New System.Drawing.Point(26, 22)
+        Me.buttonApplyChanges.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.buttonApplyChanges.Name = "buttonApplyChanges"
+        Me.buttonApplyChanges.Size = New System.Drawing.Size(174, 46)
+        Me.buttonApplyChanges.TabIndex = 0
+        Me.buttonApplyChanges.Text = "Apply changes"
+        Me.buttonApplyChanges.UseVisualStyleBackColor = True
         '
         'menubarMainWindow
         '
@@ -447,8 +447,8 @@ Partial Class aaformMainWindow
     Friend WithEvents menubarAboutButton As ToolStripMenuItem
     Friend WithEvents groupboxSettingsPageVisibility As GroupBox
     Friend WithEvents labelPageVisibility As Label
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents radiobuttonShowOnlyPages As RadioButton
+    Friend WithEvents radiobuttonHidePages As RadioButton
     Friend WithEvents groupboxPageList As GroupBox
     Friend WithEvents CheckBox13 As CheckBox
     Friend WithEvents CheckBox12 As CheckBox
@@ -464,11 +464,11 @@ Partial Class aaformMainWindow
     Friend WithEvents CheckBox2 As CheckBox
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents groupboxRegistryKey As GroupBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents textboxRegistryKey As TextBox
     Friend WithEvents groupboxApplyUndoExit As GroupBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents buttonUndoChanges As Button
+    Friend WithEvents buttonApplyChanges As Button
+    Friend WithEvents buttonExit As Button
     Friend WithEvents panelScrollablePageList As Panel
     Friend WithEvents labelChoosePages As Label
 End Class
