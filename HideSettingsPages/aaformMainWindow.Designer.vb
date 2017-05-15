@@ -53,14 +53,16 @@ Partial Class aaformMainWindow
         Me.menubarAboutButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.panelScrollablePageList = New System.Windows.Forms.Panel()
         Me.labelChoosePages = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.panelApplyUndoExit = New System.Windows.Forms.Panel()
+        Me.CheckBox14 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox15 = New System.Windows.Forms.CheckBox()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
         Me.groupboxRegistryKey.SuspendLayout()
         Me.menubarMainWindow.SuspendLayout()
         Me.panelScrollablePageList.SuspendLayout()
-        Me.Panel1.SuspendLayout()
+        Me.panelApplyUndoExit.SuspendLayout()
         Me.SuspendLayout()
         '
         'flowlayoutpanelMainWindow
@@ -68,12 +70,12 @@ Partial Class aaformMainWindow
         Me.flowlayoutpanelMainWindow.Controls.Add(Me.groupboxSettingsPageVisibility)
         Me.flowlayoutpanelMainWindow.Controls.Add(Me.groupboxPageList)
         Me.flowlayoutpanelMainWindow.Controls.Add(Me.groupboxRegistryKey)
-        Me.flowlayoutpanelMainWindow.Controls.Add(Me.Panel1)
+        Me.flowlayoutpanelMainWindow.Controls.Add(Me.panelApplyUndoExit)
         Me.flowlayoutpanelMainWindow.Dock = System.Windows.Forms.DockStyle.Fill
         Me.flowlayoutpanelMainWindow.Location = New System.Drawing.Point(0, 44)
         Me.flowlayoutpanelMainWindow.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.flowlayoutpanelMainWindow.Name = "flowlayoutpanelMainWindow"
-        Me.flowlayoutpanelMainWindow.Size = New System.Drawing.Size(662, 1226)
+        Me.flowlayoutpanelMainWindow.Size = New System.Drawing.Size(662, 1723)
         Me.flowlayoutpanelMainWindow.TabIndex = 0
         '
         'groupboxSettingsPageVisibility
@@ -131,7 +133,7 @@ Partial Class aaformMainWindow
         Me.groupboxPageList.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.groupboxPageList.Name = "groupboxPageList"
         Me.groupboxPageList.Padding = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.groupboxPageList.Size = New System.Drawing.Size(646, 722)
+        Me.groupboxPageList.Size = New System.Drawing.Size(646, 1530)
         Me.groupboxPageList.TabIndex = 1
         Me.groupboxPageList.TabStop = False
         Me.groupboxPageList.Text = "Settings page list"
@@ -139,7 +141,7 @@ Partial Class aaformMainWindow
         'CheckBox13
         '
         Me.CheckBox13.AutoSize = True
-        Me.CheckBox13.Location = New System.Drawing.Point(20, 641)
+        Me.CheckBox13.Location = New System.Drawing.Point(19, 557)
         Me.CheckBox13.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox13.Name = "CheckBox13"
         Me.CheckBox13.Size = New System.Drawing.Size(166, 29)
@@ -150,7 +152,7 @@ Partial Class aaformMainWindow
         'CheckBox12
         '
         Me.CheckBox12.AutoSize = True
-        Me.CheckBox12.Location = New System.Drawing.Point(20, 593)
+        Me.CheckBox12.Location = New System.Drawing.Point(19, 516)
         Me.CheckBox12.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox12.Name = "CheckBox12"
         Me.CheckBox12.Size = New System.Drawing.Size(166, 29)
@@ -161,7 +163,7 @@ Partial Class aaformMainWindow
         'CheckBox11
         '
         Me.CheckBox11.AutoSize = True
-        Me.CheckBox11.Location = New System.Drawing.Point(20, 545)
+        Me.CheckBox11.Location = New System.Drawing.Point(19, 475)
         Me.CheckBox11.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox11.Name = "CheckBox11"
         Me.CheckBox11.Size = New System.Drawing.Size(166, 29)
@@ -172,7 +174,7 @@ Partial Class aaformMainWindow
         'CheckBox10
         '
         Me.CheckBox10.AutoSize = True
-        Me.CheckBox10.Location = New System.Drawing.Point(20, 497)
+        Me.CheckBox10.Location = New System.Drawing.Point(19, 434)
         Me.CheckBox10.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox10.Name = "CheckBox10"
         Me.CheckBox10.Size = New System.Drawing.Size(166, 29)
@@ -183,7 +185,7 @@ Partial Class aaformMainWindow
         'CheckBox9
         '
         Me.CheckBox9.AutoSize = True
-        Me.CheckBox9.Location = New System.Drawing.Point(20, 449)
+        Me.CheckBox9.Location = New System.Drawing.Point(20, 393)
         Me.CheckBox9.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox9.Name = "CheckBox9"
         Me.CheckBox9.Size = New System.Drawing.Size(154, 29)
@@ -194,7 +196,7 @@ Partial Class aaformMainWindow
         'CheckBox8
         '
         Me.CheckBox8.AutoSize = True
-        Me.CheckBox8.Location = New System.Drawing.Point(20, 401)
+        Me.CheckBox8.Location = New System.Drawing.Point(20, 352)
         Me.CheckBox8.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox8.Name = "CheckBox8"
         Me.CheckBox8.Size = New System.Drawing.Size(154, 29)
@@ -205,7 +207,7 @@ Partial Class aaformMainWindow
         'CheckBox7
         '
         Me.CheckBox7.AutoSize = True
-        Me.CheckBox7.Location = New System.Drawing.Point(20, 353)
+        Me.CheckBox7.Location = New System.Drawing.Point(19, 311)
         Me.CheckBox7.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox7.Name = "CheckBox7"
         Me.CheckBox7.Size = New System.Drawing.Size(154, 29)
@@ -216,7 +218,7 @@ Partial Class aaformMainWindow
         'CheckBox6
         '
         Me.CheckBox6.AutoSize = True
-        Me.CheckBox6.Location = New System.Drawing.Point(20, 305)
+        Me.CheckBox6.Location = New System.Drawing.Point(19, 270)
         Me.CheckBox6.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox6.Name = "CheckBox6"
         Me.CheckBox6.Size = New System.Drawing.Size(154, 29)
@@ -227,7 +229,7 @@ Partial Class aaformMainWindow
         'CheckBox5
         '
         Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Location = New System.Drawing.Point(20, 257)
+        Me.CheckBox5.Location = New System.Drawing.Point(20, 229)
         Me.CheckBox5.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox5.Name = "CheckBox5"
         Me.CheckBox5.Size = New System.Drawing.Size(154, 29)
@@ -238,7 +240,7 @@ Partial Class aaformMainWindow
         'CheckBox4
         '
         Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Location = New System.Drawing.Point(20, 209)
+        Me.CheckBox4.Location = New System.Drawing.Point(19, 188)
         Me.CheckBox4.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox4.Name = "CheckBox4"
         Me.CheckBox4.Size = New System.Drawing.Size(154, 29)
@@ -249,7 +251,7 @@ Partial Class aaformMainWindow
         'CheckBox3
         '
         Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(20, 161)
+        Me.CheckBox3.Location = New System.Drawing.Point(19, 147)
         Me.CheckBox3.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(154, 29)
@@ -260,7 +262,7 @@ Partial Class aaformMainWindow
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(20, 113)
+        Me.CheckBox2.Location = New System.Drawing.Point(19, 106)
         Me.CheckBox2.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(154, 29)
@@ -282,7 +284,7 @@ Partial Class aaformMainWindow
         'groupboxRegistryKey
         '
         Me.groupboxRegistryKey.Controls.Add(Me.textboxRegistryKey)
-        Me.groupboxRegistryKey.Location = New System.Drawing.Point(6, 927)
+        Me.groupboxRegistryKey.Location = New System.Drawing.Point(6, 1735)
         Me.groupboxRegistryKey.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.groupboxRegistryKey.Name = "groupboxRegistryKey"
         Me.groupboxRegistryKey.Padding = New System.Windows.Forms.Padding(6, 6, 6, 6)
@@ -302,7 +304,7 @@ Partial Class aaformMainWindow
         '
         'buttonExit
         '
-        Me.buttonExit.Location = New System.Drawing.Point(447, 6)
+        Me.buttonExit.Location = New System.Drawing.Point(462, 6)
         Me.buttonExit.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.buttonExit.Name = "buttonExit"
         Me.buttonExit.Size = New System.Drawing.Size(123, 46)
@@ -312,7 +314,7 @@ Partial Class aaformMainWindow
         '
         'buttonUndoChanges
         '
-        Me.buttonUndoChanges.Location = New System.Drawing.Point(235, 6)
+        Me.buttonUndoChanges.Location = New System.Drawing.Point(250, 6)
         Me.buttonUndoChanges.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.buttonUndoChanges.Name = "buttonUndoChanges"
         Me.buttonUndoChanges.Size = New System.Drawing.Size(200, 46)
@@ -322,7 +324,7 @@ Partial Class aaformMainWindow
         '
         'buttonApplyChanges
         '
-        Me.buttonApplyChanges.Location = New System.Drawing.Point(49, 6)
+        Me.buttonApplyChanges.Location = New System.Drawing.Point(64, 6)
         Me.buttonApplyChanges.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.buttonApplyChanges.Name = "buttonApplyChanges"
         Me.buttonApplyChanges.Size = New System.Drawing.Size(174, 46)
@@ -370,6 +372,8 @@ Partial Class aaformMainWindow
         'panelScrollablePageList
         '
         Me.panelScrollablePageList.AutoScroll = True
+        Me.panelScrollablePageList.Controls.Add(Me.CheckBox15)
+        Me.panelScrollablePageList.Controls.Add(Me.CheckBox14)
         Me.panelScrollablePageList.Controls.Add(Me.labelChoosePages)
         Me.panelScrollablePageList.Controls.Add(Me.CheckBox1)
         Me.panelScrollablePageList.Controls.Add(Me.CheckBox13)
@@ -387,7 +391,7 @@ Partial Class aaformMainWindow
         Me.panelScrollablePageList.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelScrollablePageList.Location = New System.Drawing.Point(6, 30)
         Me.panelScrollablePageList.Name = "panelScrollablePageList"
-        Me.panelScrollablePageList.Size = New System.Drawing.Size(634, 686)
+        Me.panelScrollablePageList.Size = New System.Drawing.Size(634, 1494)
         Me.panelScrollablePageList.TabIndex = 13
         '
         'labelChoosePages
@@ -399,21 +403,43 @@ Partial Class aaformMainWindow
         Me.labelChoosePages.TabIndex = 13
         Me.labelChoosePages.Text = "Choose pages you wish to hide or only show."
         '
-        'Panel1
+        'panelApplyUndoExit
         '
-        Me.Panel1.Controls.Add(Me.buttonExit)
-        Me.Panel1.Controls.Add(Me.buttonApplyChanges)
-        Me.Panel1.Controls.Add(Me.buttonUndoChanges)
-        Me.Panel1.Location = New System.Drawing.Point(3, 1092)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(633, 67)
-        Me.Panel1.TabIndex = 4
+        Me.panelApplyUndoExit.Controls.Add(Me.buttonExit)
+        Me.panelApplyUndoExit.Controls.Add(Me.buttonApplyChanges)
+        Me.panelApplyUndoExit.Controls.Add(Me.buttonUndoChanges)
+        Me.panelApplyUndoExit.Location = New System.Drawing.Point(3, 1900)
+        Me.panelApplyUndoExit.Name = "panelApplyUndoExit"
+        Me.panelApplyUndoExit.Size = New System.Drawing.Size(649, 67)
+        Me.panelApplyUndoExit.TabIndex = 4
+        '
+        'CheckBox14
+        '
+        Me.CheckBox14.AutoSize = True
+        Me.CheckBox14.Location = New System.Drawing.Point(19, 598)
+        Me.CheckBox14.Margin = New System.Windows.Forms.Padding(6)
+        Me.CheckBox14.Name = "CheckBox14"
+        Me.CheckBox14.Size = New System.Drawing.Size(166, 29)
+        Me.CheckBox14.TabIndex = 14
+        Me.CheckBox14.Text = "CheckBox14"
+        Me.CheckBox14.UseVisualStyleBackColor = True
+        '
+        'CheckBox15
+        '
+        Me.CheckBox15.AutoSize = True
+        Me.CheckBox15.Location = New System.Drawing.Point(19, 639)
+        Me.CheckBox15.Margin = New System.Windows.Forms.Padding(6)
+        Me.CheckBox15.Name = "CheckBox15"
+        Me.CheckBox15.Size = New System.Drawing.Size(166, 29)
+        Me.CheckBox15.TabIndex = 15
+        Me.CheckBox15.Text = "CheckBox15"
+        Me.CheckBox15.UseVisualStyleBackColor = True
         '
         'aaformMainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(192.0!, 192.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
-        Me.ClientSize = New System.Drawing.Size(662, 1270)
+        Me.ClientSize = New System.Drawing.Size(662, 1767)
         Me.Controls.Add(Me.flowlayoutpanelMainWindow)
         Me.Controls.Add(Me.menubarMainWindow)
         Me.MainMenuStrip = Me.menubarMainWindow
@@ -430,7 +456,7 @@ Partial Class aaformMainWindow
         Me.menubarMainWindow.PerformLayout()
         Me.panelScrollablePageList.ResumeLayout(False)
         Me.panelScrollablePageList.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
+        Me.panelApplyUndoExit.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -467,5 +493,7 @@ Partial Class aaformMainWindow
     Friend WithEvents buttonExit As Button
     Friend WithEvents panelScrollablePageList As Panel
     Friend WithEvents labelChoosePages As Label
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents panelApplyUndoExit As Panel
+    Friend WithEvents CheckBox15 As CheckBox
+    Friend WithEvents CheckBox14 As CheckBox
 End Class
