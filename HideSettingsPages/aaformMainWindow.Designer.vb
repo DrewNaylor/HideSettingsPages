@@ -141,7 +141,7 @@ Partial Class aaformMainWindow
         'CheckBox13
         '
         Me.CheckBox13.AutoSize = True
-        Me.CheckBox13.Location = New System.Drawing.Point(19, 557)
+        Me.CheckBox13.Location = New System.Drawing.Point(19, 609)
         Me.CheckBox13.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox13.Name = "CheckBox13"
         Me.CheckBox13.Size = New System.Drawing.Size(166, 29)
@@ -152,7 +152,7 @@ Partial Class aaformMainWindow
         'CheckBox12
         '
         Me.CheckBox12.AutoSize = True
-        Me.CheckBox12.Location = New System.Drawing.Point(19, 516)
+        Me.CheckBox12.Location = New System.Drawing.Point(19, 568)
         Me.CheckBox12.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox12.Name = "CheckBox12"
         Me.CheckBox12.Size = New System.Drawing.Size(166, 29)
@@ -163,7 +163,7 @@ Partial Class aaformMainWindow
         'CheckBox11
         '
         Me.CheckBox11.AutoSize = True
-        Me.CheckBox11.Location = New System.Drawing.Point(19, 475)
+        Me.CheckBox11.Location = New System.Drawing.Point(19, 527)
         Me.CheckBox11.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox11.Name = "CheckBox11"
         Me.CheckBox11.Size = New System.Drawing.Size(166, 29)
@@ -174,7 +174,7 @@ Partial Class aaformMainWindow
         'CheckBox10
         '
         Me.CheckBox10.AutoSize = True
-        Me.CheckBox10.Location = New System.Drawing.Point(19, 434)
+        Me.CheckBox10.Location = New System.Drawing.Point(19, 486)
         Me.CheckBox10.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox10.Name = "CheckBox10"
         Me.CheckBox10.Size = New System.Drawing.Size(166, 29)
@@ -185,7 +185,7 @@ Partial Class aaformMainWindow
         'CheckBox9
         '
         Me.CheckBox9.AutoSize = True
-        Me.CheckBox9.Location = New System.Drawing.Point(20, 393)
+        Me.CheckBox9.Location = New System.Drawing.Point(20, 445)
         Me.CheckBox9.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox9.Name = "CheckBox9"
         Me.CheckBox9.Size = New System.Drawing.Size(154, 29)
@@ -196,7 +196,7 @@ Partial Class aaformMainWindow
         'CheckBox8
         '
         Me.CheckBox8.AutoSize = True
-        Me.CheckBox8.Location = New System.Drawing.Point(20, 352)
+        Me.CheckBox8.Location = New System.Drawing.Point(20, 404)
         Me.CheckBox8.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox8.Name = "CheckBox8"
         Me.CheckBox8.Size = New System.Drawing.Size(154, 29)
@@ -207,7 +207,7 @@ Partial Class aaformMainWindow
         'CheckBox7
         '
         Me.CheckBox7.AutoSize = True
-        Me.CheckBox7.Location = New System.Drawing.Point(19, 311)
+        Me.CheckBox7.Location = New System.Drawing.Point(19, 363)
         Me.CheckBox7.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox7.Name = "CheckBox7"
         Me.CheckBox7.Size = New System.Drawing.Size(154, 29)
@@ -218,7 +218,7 @@ Partial Class aaformMainWindow
         'CheckBox6
         '
         Me.CheckBox6.AutoSize = True
-        Me.CheckBox6.Location = New System.Drawing.Point(19, 270)
+        Me.CheckBox6.Location = New System.Drawing.Point(19, 322)
         Me.CheckBox6.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox6.Name = "CheckBox6"
         Me.CheckBox6.Size = New System.Drawing.Size(154, 29)
@@ -229,7 +229,7 @@ Partial Class aaformMainWindow
         'CheckBox5
         '
         Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Location = New System.Drawing.Point(20, 229)
+        Me.CheckBox5.Location = New System.Drawing.Point(20, 281)
         Me.CheckBox5.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox5.Name = "CheckBox5"
         Me.CheckBox5.Size = New System.Drawing.Size(154, 29)
@@ -416,7 +416,7 @@ Partial Class aaformMainWindow
         'CheckBox14
         '
         Me.CheckBox14.AutoSize = True
-        Me.CheckBox14.Location = New System.Drawing.Point(19, 598)
+        Me.CheckBox14.Location = New System.Drawing.Point(19, 650)
         Me.CheckBox14.Margin = New System.Windows.Forms.Padding(6)
         Me.CheckBox14.Name = "CheckBox14"
         Me.CheckBox14.Size = New System.Drawing.Size(166, 29)
@@ -427,7 +427,7 @@ Partial Class aaformMainWindow
         'CheckBox15
         '
         Me.CheckBox15.AutoSize = True
-        Me.CheckBox15.Location = New System.Drawing.Point(19, 639)
+        Me.CheckBox15.Location = New System.Drawing.Point(19, 691)
         Me.CheckBox15.Margin = New System.Windows.Forms.Padding(6)
         Me.CheckBox15.Name = "CheckBox15"
         Me.CheckBox15.Size = New System.Drawing.Size(166, 29)
