@@ -35,15 +35,15 @@
         ' the list of the checked items. Code based on MSDN
         ' sample: https://msdn.microsoft.com/en-us/library/system.windows.forms.checkedlistbox.checkedindices(v=vs.110).aspx
 
-        'Dim itemChecked As String
-        'For Each itemChecked In aaformMainWindow.checkedlistboxPageList.CheckedItems
-        '    stringKeyPageList = itemChecked.ToString
-        'Next
-
-        For Each i As Object In aaformMainWindow.checkedlistboxPageList.CheckedItems
-            ' Based off code from a forum I can't remember now.
-            stringKeyPageList = i.ToString + ";" ' The ";", seperates items with a semicolon.
+        Dim itemChecked As String
+        For Each itemChecked In aaformMainWindow.checkedlistboxPageList.CheckedItems
+            stringKeyPageList = itemChecked & ";"
         Next
+
+        'For Each i As Object In aaformMainWindow.checkedlistboxPageList.CheckedItems
+        '    ' Based off code from a forum I can't remember now.
+        '    stringKeyPageList = i.ToString + ";" ' The ";", seperates items with a semicolon.
+        'Next
 
 
     End Sub
