@@ -59,7 +59,7 @@ Partial Class aaformMainWindow
         Me.flowlayoutpanelMainWindow.Controls.Add(Me.panelApplyUndoExit)
         Me.flowlayoutpanelMainWindow.Dock = System.Windows.Forms.DockStyle.Fill
         Me.flowlayoutpanelMainWindow.Location = New System.Drawing.Point(0, 44)
-        Me.flowlayoutpanelMainWindow.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.flowlayoutpanelMainWindow.Margin = New System.Windows.Forms.Padding(6)
         Me.flowlayoutpanelMainWindow.Name = "flowlayoutpanelMainWindow"
         Me.flowlayoutpanelMainWindow.Size = New System.Drawing.Size(662, 1342)
         Me.flowlayoutpanelMainWindow.TabIndex = 0
@@ -70,9 +70,9 @@ Partial Class aaformMainWindow
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.radiobuttonHidePages)
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.labelPageVisibility)
         Me.groupboxSettingsPageVisibility.Location = New System.Drawing.Point(6, 6)
-        Me.groupboxSettingsPageVisibility.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.groupboxSettingsPageVisibility.Margin = New System.Windows.Forms.Padding(6)
         Me.groupboxSettingsPageVisibility.Name = "groupboxSettingsPageVisibility"
-        Me.groupboxSettingsPageVisibility.Padding = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.groupboxSettingsPageVisibility.Padding = New System.Windows.Forms.Padding(6)
         Me.groupboxSettingsPageVisibility.Size = New System.Drawing.Size(646, 176)
         Me.groupboxSettingsPageVisibility.TabIndex = 0
         Me.groupboxSettingsPageVisibility.TabStop = False
@@ -82,7 +82,7 @@ Partial Class aaformMainWindow
         '
         Me.radiobuttonShowOnlyPages.AutoSize = True
         Me.radiobuttonShowOnlyPages.Location = New System.Drawing.Point(12, 126)
-        Me.radiobuttonShowOnlyPages.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.radiobuttonShowOnlyPages.Margin = New System.Windows.Forms.Padding(6)
         Me.radiobuttonShowOnlyPages.Name = "radiobuttonShowOnlyPages"
         Me.radiobuttonShowOnlyPages.Size = New System.Drawing.Size(146, 29)
         Me.radiobuttonShowOnlyPages.TabIndex = 2
@@ -94,7 +94,7 @@ Partial Class aaformMainWindow
         '
         Me.radiobuttonHidePages.AutoSize = True
         Me.radiobuttonHidePages.Location = New System.Drawing.Point(12, 84)
-        Me.radiobuttonHidePages.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.radiobuttonHidePages.Margin = New System.Windows.Forms.Padding(6)
         Me.radiobuttonHidePages.Name = "radiobuttonHidePages"
         Me.radiobuttonHidePages.Size = New System.Drawing.Size(87, 29)
         Me.radiobuttonHidePages.TabIndex = 1
@@ -116,9 +116,9 @@ Partial Class aaformMainWindow
         '
         Me.groupboxPageList.Controls.Add(Me.panelScrollablePageList)
         Me.groupboxPageList.Location = New System.Drawing.Point(6, 194)
-        Me.groupboxPageList.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.groupboxPageList.Margin = New System.Windows.Forms.Padding(6)
         Me.groupboxPageList.Name = "groupboxPageList"
-        Me.groupboxPageList.Padding = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.groupboxPageList.Padding = New System.Windows.Forms.Padding(6)
         Me.groupboxPageList.Size = New System.Drawing.Size(646, 904)
         Me.groupboxPageList.TabIndex = 1
         Me.groupboxPageList.TabStop = False
@@ -130,7 +130,7 @@ Partial Class aaformMainWindow
         Me.panelScrollablePageList.Controls.Add(Me.labelChoosePages)
         Me.panelScrollablePageList.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelScrollablePageList.Location = New System.Drawing.Point(6, 30)
-        Me.panelScrollablePageList.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.panelScrollablePageList.Margin = New System.Windows.Forms.Padding(4)
         Me.panelScrollablePageList.Name = "panelScrollablePageList"
         Me.panelScrollablePageList.Size = New System.Drawing.Size(634, 868)
         Me.panelScrollablePageList.TabIndex = 13
@@ -140,7 +140,7 @@ Partial Class aaformMainWindow
         Me.checkedlistboxPageList.CheckOnClick = True
         Me.checkedlistboxPageList.Items.AddRange(New Object() {"about", "activation", "appsfeatures", "appsforwebsites", "backup", "batterysaver", "batterysaver-usagedetails", "bluetooth", "colors", "cortana", "camera", "connecteddevices", "datausage", "dateandtime", "defaultapps", "developers", "deviceencryption", "display", "emailandaccounts", "extras", "findmydevice", "lockscreen", "maps", "mousetouchpad", "network-ethernet", "network-cellular", "network-mobilehotspot", "network-proxy", "network-vpn", "network-directaccess", "network-wifi", "notifications", "nfctransactions", "easeofaccess-narrator", "easeofaccess-magnifier", "easeofaccess-highcontrast", "easeofaccess-closedcaptioning", "easeofaccess-keyboard", "easeofaccess-mouse", "easeofaccess-otheroptions", "optionalfeatures", "otherusers", "powersleep", "printers", "privacy-location", "privacy-webcam", "privacy-microphone", "privacy-motion", "privacy-speechtyping", "privacy-accountinfo", "privacy-contacts", "privacy-calendar", "privacy-callhistory", "privacy-email", "privacy-messaging", "privacy-radios", "privacy-backgroundapps", "privacy-customdevices", "privacy-feedback", "recovery", "regionlanguage", "storagesense", "tabletmode", "taskbar", "themes", "troubleshoot", "typing", "usb", "signinoptions", "sync", "workplace", "windowsdefender", "windowsinsider", "windowsupdate", "yourinfo"})
         Me.checkedlistboxPageList.Location = New System.Drawing.Point(6, 44)
-        Me.checkedlistboxPageList.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.checkedlistboxPageList.Margin = New System.Windows.Forms.Padding(4)
         Me.checkedlistboxPageList.Name = "checkedlistboxPageList"
         Me.checkedlistboxPageList.Size = New System.Drawing.Size(618, 810)
         Me.checkedlistboxPageList.TabIndex = 17
@@ -159,9 +159,9 @@ Partial Class aaformMainWindow
         '
         Me.groupboxRegistryKey.Controls.Add(Me.textboxRegistryKey)
         Me.groupboxRegistryKey.Location = New System.Drawing.Point(6, 1110)
-        Me.groupboxRegistryKey.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.groupboxRegistryKey.Margin = New System.Windows.Forms.Padding(6)
         Me.groupboxRegistryKey.Name = "groupboxRegistryKey"
-        Me.groupboxRegistryKey.Padding = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.groupboxRegistryKey.Padding = New System.Windows.Forms.Padding(6)
         Me.groupboxRegistryKey.Size = New System.Drawing.Size(646, 156)
         Me.groupboxRegistryKey.TabIndex = 2
         Me.groupboxRegistryKey.TabStop = False
@@ -170,10 +170,11 @@ Partial Class aaformMainWindow
         'textboxRegistryKey
         '
         Me.textboxRegistryKey.Location = New System.Drawing.Point(12, 40)
-        Me.textboxRegistryKey.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.textboxRegistryKey.Margin = New System.Windows.Forms.Padding(6)
         Me.textboxRegistryKey.Multiline = True
         Me.textboxRegistryKey.Name = "textboxRegistryKey"
         Me.textboxRegistryKey.ReadOnly = True
+        Me.textboxRegistryKey.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.textboxRegistryKey.Size = New System.Drawing.Size(618, 100)
         Me.textboxRegistryKey.TabIndex = 0
         '
@@ -183,7 +184,7 @@ Partial Class aaformMainWindow
         Me.panelApplyUndoExit.Controls.Add(Me.buttonApplyChanges)
         Me.panelApplyUndoExit.Controls.Add(Me.buttonUndoChanges)
         Me.panelApplyUndoExit.Location = New System.Drawing.Point(4, 1276)
-        Me.panelApplyUndoExit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.panelApplyUndoExit.Margin = New System.Windows.Forms.Padding(4)
         Me.panelApplyUndoExit.Name = "panelApplyUndoExit"
         Me.panelApplyUndoExit.Size = New System.Drawing.Size(648, 68)
         Me.panelApplyUndoExit.TabIndex = 4
@@ -191,7 +192,7 @@ Partial Class aaformMainWindow
         'buttonExit
         '
         Me.buttonExit.Location = New System.Drawing.Point(462, 6)
-        Me.buttonExit.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.buttonExit.Margin = New System.Windows.Forms.Padding(6)
         Me.buttonExit.Name = "buttonExit"
         Me.buttonExit.Size = New System.Drawing.Size(124, 46)
         Me.buttonExit.TabIndex = 2
@@ -201,7 +202,7 @@ Partial Class aaformMainWindow
         'buttonApplyChanges
         '
         Me.buttonApplyChanges.Location = New System.Drawing.Point(64, 6)
-        Me.buttonApplyChanges.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.buttonApplyChanges.Margin = New System.Windows.Forms.Padding(6)
         Me.buttonApplyChanges.Name = "buttonApplyChanges"
         Me.buttonApplyChanges.Size = New System.Drawing.Size(174, 46)
         Me.buttonApplyChanges.TabIndex = 0
@@ -211,7 +212,7 @@ Partial Class aaformMainWindow
         'buttonUndoChanges
         '
         Me.buttonUndoChanges.Location = New System.Drawing.Point(250, 6)
-        Me.buttonUndoChanges.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.buttonUndoChanges.Margin = New System.Windows.Forms.Padding(6)
         Me.buttonUndoChanges.Name = "buttonUndoChanges"
         Me.buttonUndoChanges.Size = New System.Drawing.Size(200, 46)
         Me.buttonUndoChanges.TabIndex = 1
@@ -263,7 +264,7 @@ Partial Class aaformMainWindow
         Me.Controls.Add(Me.flowlayoutpanelMainWindow)
         Me.Controls.Add(Me.menubarMainWindow)
         Me.MainMenuStrip = Me.menubarMainWindow
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "aaformMainWindow"
         Me.Text = "HideSettingsPages"
         Me.flowlayoutpanelMainWindow.ResumeLayout(False)
