@@ -35,13 +35,6 @@
         ' the list of the checked items. Code based on MSDN
         ' sample: https://msdn.microsoft.com/en-us/library/e954th47(v=vs.110).aspx
 
-        'Dim itemChecked As String
-        'For Each itemChecked In aaformMainWindow.checkedlistboxPageList.CheckedItems
-        '    ' Based off code from a forum I can't remember now.
-        '    stringKeyPageList = itemChecked & ";" ' The ";", seperates items with a semicolon.
-        'Next
-
-
         ' Determine if there are any items checked.  
         If aaformMainWindow.checkedlistboxPageList.CheckedItems.Count <> 0 Then
             ' If so, loop through all checked items and print results.  
