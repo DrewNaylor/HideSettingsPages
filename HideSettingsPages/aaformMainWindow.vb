@@ -34,7 +34,13 @@ Public Class aaformMainWindow
         ' Close the application.
         Me.Close()
     End Sub
+
+    Private Sub buttonExit_Click(sender As Object, e As EventArgs) Handles buttonExit.Click
+        ' Close the application.
+        Me.Close()
+    End Sub
 #End Region
+
 #Region "Registry key generator code subs."
     Private Sub checkedlistboxPageList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles checkedlistboxPageList.SelectedIndexChanged
         ' When the user checks checkboxes, update the string that displays
