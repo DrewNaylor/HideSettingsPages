@@ -32,6 +32,9 @@ Public Class aaformMainWindow
 
     Private Sub CheckedListBox1_ItemCheck(sender As Object, e As ItemCheckEventArgs) Handles checkedlistboxPageList.ItemCheck
         ' TODO: Put in code to update the Registry key textbox.
+
+        registryKeyBuilder.computeStringKeyPageList()
+        textboxRegistryKey.Text = registryKeyBuilder.stringKeyHideOrShowOnly & registryKeyBuilder.stringKeyPageList
     End Sub
 
     Private Sub radiobuttonHidePages_Click(sender As Object, e As EventArgs) Handles radiobuttonHidePages.Click

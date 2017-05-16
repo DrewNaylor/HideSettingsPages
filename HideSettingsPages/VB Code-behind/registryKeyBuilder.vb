@@ -32,10 +32,14 @@
 #Region "computeStringKeyPageList to figure out stringKeyPageList."
     Friend Shared Sub computeStringKeyPageList()
         ' Create private ints and objs to be able to get
-        ' the list of the checked items.
-        Dim indexChecked As Integer
+        ' the list of the checked items. Code based on MSDN
+        ' sample: https://msdn.microsoft.com/en-us/library/system.windows.forms.checkedlistbox.checkedindices(v=vs.110).aspx
+
         Dim itemChecked As Object
-        For Each 
+        For Each itemChecked In aaformMainWindow.checkedlistboxPageList.CheckedItems
+            stringKeyPageList = itemChecked.ToString
+        Next
+
     End Sub
 #End Region
 
