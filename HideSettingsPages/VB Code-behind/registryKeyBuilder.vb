@@ -16,9 +16,8 @@
     ' to store the completed Registry key.
     Friend Shared stringFullRegistryKey As String
 
-#Region "keyHideOrShowOnly to figure out stringKeyHideOrShowOnly."
+#Region "computeStringKeyHideOrShowOnly to figure out stringKeyHideOrShowOnly."
     Friend Shared Sub computeStringKeyHideOrShowOnly()
-
         ' Depending on which Radio Button at the top is checked,
         ' change stringKeyHideOrShowOnly.
 
@@ -27,8 +26,11 @@
         ElseIf aaformMainWindow.radiobuttonShowOnlyPages.Checked = True Then
             stringKeyHideOrShowOnly = "showonly:"
         End If
-
     End Sub
+#End Region
+
+#Region "computeStringKeyPageList to figure out stringKeyPageList."
+
 #End Region
 
 
