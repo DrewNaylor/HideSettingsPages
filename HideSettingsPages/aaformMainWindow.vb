@@ -25,6 +25,8 @@
 
 Public Class aaformMainWindow
     Private Sub checkedlistboxPageList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles checkedlistboxPageList.SelectedIndexChanged
+        ' When the user checks checkboxes, update the string that displays
+        ' which pages the user chose for the Registry key.
         registryKeyBuilder.computeStringKeyPageList()
         textboxRegistryKey.Text = registryKeyBuilder.stringKeyHideOrShowOnly & registryKeyBuilder.stringKeyPageList
     End Sub
