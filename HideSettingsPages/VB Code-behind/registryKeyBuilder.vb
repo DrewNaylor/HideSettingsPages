@@ -51,6 +51,7 @@
                 s = s & aaformMainWindow.checkedlistboxPageList.CheckedItems(x).ToString & ";"
             Next x
             stringKeyPageList = s
+            stringKeyPageList = stringKeyPageList.TrimEnd(CType(";", Char()))
         End If
 
     End Sub
