@@ -30,7 +30,13 @@
 #End Region
 
 #Region "computeStringKeyPageList to figure out stringKeyPageList."
-
+    Friend Shared Sub computeStringKeyPageList()
+        ' Create private ints and objs to be able to get
+        ' the list of the checked items.
+        Dim indexChecked As Integer
+        Dim itemChecked As Object
+        For Each 
+    End Sub
 #End Region
 
 
