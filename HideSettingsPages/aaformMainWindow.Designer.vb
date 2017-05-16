@@ -58,10 +58,10 @@ Partial Class aaformMainWindow
         Me.flowlayoutpanelMainWindow.Controls.Add(Me.groupboxRegistryKey)
         Me.flowlayoutpanelMainWindow.Controls.Add(Me.panelApplyUndoExit)
         Me.flowlayoutpanelMainWindow.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.flowlayoutpanelMainWindow.Location = New System.Drawing.Point(0, 44)
+        Me.flowlayoutpanelMainWindow.Location = New System.Drawing.Point(0, 46)
         Me.flowlayoutpanelMainWindow.Margin = New System.Windows.Forms.Padding(6)
         Me.flowlayoutpanelMainWindow.Name = "flowlayoutpanelMainWindow"
-        Me.flowlayoutpanelMainWindow.Size = New System.Drawing.Size(662, 1342)
+        Me.flowlayoutpanelMainWindow.Size = New System.Drawing.Size(662, 1340)
         Me.flowlayoutpanelMainWindow.TabIndex = 0
         '
         'groupboxSettingsPageVisibility
@@ -226,7 +226,7 @@ Partial Class aaformMainWindow
         Me.menubarMainWindow.Location = New System.Drawing.Point(0, 0)
         Me.menubarMainWindow.Name = "menubarMainWindow"
         Me.menubarMainWindow.Padding = New System.Windows.Forms.Padding(12, 4, 0, 4)
-        Me.menubarMainWindow.Size = New System.Drawing.Size(662, 44)
+        Me.menubarMainWindow.Size = New System.Drawing.Size(662, 46)
         Me.menubarMainWindow.TabIndex = 1
         Me.menubarMainWindow.Text = "MenuStrip1"
         '
@@ -253,7 +253,7 @@ Partial Class aaformMainWindow
         'menubarAboutButton
         '
         Me.menubarAboutButton.Name = "menubarAboutButton"
-        Me.menubarAboutButton.Size = New System.Drawing.Size(180, 38)
+        Me.menubarAboutButton.Size = New System.Drawing.Size(269, 38)
         Me.menubarAboutButton.Text = "About"
         '
         'aaformMainWindow

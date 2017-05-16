@@ -39,6 +39,11 @@ Public Class aaformMainWindow
         ' Close the application.
         Me.Close()
     End Sub
+
+    Private Sub menubarAboutButton_Click(sender As Object, e As EventArgs) Handles menubarAboutButton.Click
+        ' Show About window (to be implemented.)
+        'aaformAboutWindow.ShowDialog
+    End Sub
 #End Region
 
 #Region "Registry key generator code subs."
