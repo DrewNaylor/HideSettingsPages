@@ -41,8 +41,8 @@
         'Next
 
         For Each i As Object In aaformMainWindow.checkedlistboxPageList.CheckedItems
-
-            stringKeyPageList = i.ToString + ";" 'the " ", adds space in between the items.
+            ' Based off code from a forum I can't remember now.
+            stringKeyPageList = i.ToString + ";" ' The ";", seperates items with a semicolon.
         Next
 
 
