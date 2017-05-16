@@ -58,10 +58,10 @@ Partial Class aaformMainWindow
         Me.flowlayoutpanelMainWindow.Controls.Add(Me.groupboxRegistryKey)
         Me.flowlayoutpanelMainWindow.Controls.Add(Me.panelApplyUndoExit)
         Me.flowlayoutpanelMainWindow.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.flowlayoutpanelMainWindow.Location = New System.Drawing.Point(0, 44)
+        Me.flowlayoutpanelMainWindow.Location = New System.Drawing.Point(0, 46)
         Me.flowlayoutpanelMainWindow.Margin = New System.Windows.Forms.Padding(6)
         Me.flowlayoutpanelMainWindow.Name = "flowlayoutpanelMainWindow"
-        Me.flowlayoutpanelMainWindow.Size = New System.Drawing.Size(662, 1342)
+        Me.flowlayoutpanelMainWindow.Size = New System.Drawing.Size(662, 1340)
         Me.flowlayoutpanelMainWindow.TabIndex = 0
         '
         'groupboxSettingsPageVisibility
@@ -226,7 +226,7 @@ Partial Class aaformMainWindow
         Me.menubarMainWindow.Location = New System.Drawing.Point(0, 0)
         Me.menubarMainWindow.Name = "menubarMainWindow"
         Me.menubarMainWindow.Padding = New System.Windows.Forms.Padding(12, 4, 0, 4)
-        Me.menubarMainWindow.Size = New System.Drawing.Size(662, 44)
+        Me.menubarMainWindow.Size = New System.Drawing.Size(662, 46)
         Me.menubarMainWindow.TabIndex = 1
         Me.menubarMainWindow.Text = "MenuStrip1"
         '
@@ -234,20 +234,20 @@ Partial Class aaformMainWindow
         '
         Me.menubarFileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarExitButton})
         Me.menubarFileMenu.Name = "menubarFileMenu"
-        Me.menubarFileMenu.Size = New System.Drawing.Size(64, 36)
+        Me.menubarFileMenu.Size = New System.Drawing.Size(64, 38)
         Me.menubarFileMenu.Text = "File"
         '
         'menubarExitButton
         '
         Me.menubarExitButton.Name = "menubarExitButton"
-        Me.menubarExitButton.Size = New System.Drawing.Size(152, 38)
+        Me.menubarExitButton.Size = New System.Drawing.Size(269, 38)
         Me.menubarExitButton.Text = "Exit"
         '
         'menubarHelpMenu
         '
         Me.menubarHelpMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarAboutButton})
         Me.menubarHelpMenu.Name = "menubarHelpMenu"
-        Me.menubarHelpMenu.Size = New System.Drawing.Size(77, 36)
+        Me.menubarHelpMenu.Size = New System.Drawing.Size(77, 38)
         Me.menubarHelpMenu.Text = "Help"
         '
         'menubarAboutButton

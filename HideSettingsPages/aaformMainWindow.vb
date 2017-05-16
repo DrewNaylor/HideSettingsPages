@@ -24,16 +24,23 @@
 
 
 Public Class aaformMainWindow
+#Region "Other app code subs."
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Set the window title based on the name, dev, and version number.
+        Me.Text = "HideSettingsPages v." & My.Application.Info.Version.ToString
+    End Sub
+
+    Private Sub menubarExitButton_Click(sender As Object, e As EventArgs) Handles menubarExitButton.Click
+        ' Close the application.
+        Me.Close()
+    End Sub
+#End Region
+#Region "Registry key generator code subs."
     Private Sub checkedlistboxPageList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles checkedlistboxPageList.SelectedIndexChanged
         ' When the user checks checkboxes, update the string that displays
         ' which pages the user chose for the Registry key.
         registryKeyBuilder.computeStringFullRegistryKey()
         textboxRegistryKey.Text = registryKeyBuilder.stringFullRegistryKey
-    End Sub
-
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Set the window title based on the name, dev, and version number.
-        Me.Text = "HideSettingsPages v." & My.Application.Info.Version.ToString
     End Sub
 
     Private Sub radiobuttonHidePages_Click(sender As Object, e As EventArgs) Handles radiobuttonHidePages.Click
@@ -49,4 +56,5 @@ Public Class aaformMainWindow
         registryKeyBuilder.computeStringFullRegistryKey()
         textboxRegistryKey.Text = registryKeyBuilder.stringFullRegistryKey
     End Sub
+#End Region
 End Class
