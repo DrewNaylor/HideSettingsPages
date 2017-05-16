@@ -50,6 +50,14 @@
     End Sub
 #End Region
 
+#Region "Build final Registry key."
+    Friend Shared Sub computeStringFullRegistryKey()
+        ' Put together final string to display in textbox
+        ' and write to the Registry.
+    End Sub
+
+#End Region
+
 
 #End Region
 End Class
