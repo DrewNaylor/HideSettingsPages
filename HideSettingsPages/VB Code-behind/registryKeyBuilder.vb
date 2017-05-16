@@ -4,22 +4,27 @@
     ' and it gets updated when the user checks checkboxes or changes the radio
     ' buttons at the top.
 
-    ' Create a public, shared string called stringKeyHideOrShowOnly
+    ' Create a friend, shared string called stringKeyHideOrShowOnly
     ' that updates based on which of the radio buttons at the 
     ' top the user clicks.
-    Public Shared stringKeyHideOrShowOnly As String
-    ' Create a public, shared string called stringKeyPageList
+    Friend Shared stringKeyHideOrShowOnly As String
+    ' Create a friend, shared string called stringKeyPageList
     ' to store the list of pages the user wants to hide or shor only
     ' in the Settings app.
-    Public Shared stringKeyPageList As String
-    ' Create a public, shared string called stringFullRegistryKey
+    Friend Shared stringKeyPageList As String
+    ' Create a friend, shared string called stringFullRegistryKey
     ' to store the completed Registry key.
-    Public Shared stringFullRegistryKey As String
+    Friend Shared stringFullRegistryKey As String
 
-#Region "keyHideShow"
+#Region "keyHideOrShowOnly to figure out stringKeyHideOrShowOnly."
+    Friend Shared Sub computeStringKeyHideOrShowOnly()
+
+        ' Depending on which Radio Button at the top is checked,
+        ' change stringKeyHideOrShowOnly.
 
 
 
+    End Sub
 #End Region
 
 
