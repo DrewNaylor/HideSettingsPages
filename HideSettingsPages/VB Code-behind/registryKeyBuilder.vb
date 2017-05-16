@@ -35,10 +35,16 @@
         ' the list of the checked items. Code based on MSDN
         ' sample: https://msdn.microsoft.com/en-us/library/system.windows.forms.checkedlistbox.checkedindices(v=vs.110).aspx
 
-        Dim itemChecked As Object
-        For Each itemChecked In aaformMainWindow.checkedlistboxPageList.CheckedItems
-            stringKeyPageList = itemChecked.ToString
+        'Dim itemChecked As String
+        'For Each itemChecked In aaformMainWindow.checkedlistboxPageList.CheckedItems
+        '    stringKeyPageList = itemChecked.ToString
+        'Next
+
+        For Each i As Object In aaformMainWindow.checkedlistboxPageList.CheckedItems
+
+            stringKeyPageList = i.ToString + ";" 'the " ", adds space in between the items.
         Next
+
 
     End Sub
 #End Region
