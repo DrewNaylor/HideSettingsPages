@@ -33,18 +33,25 @@
     Friend Shared Sub computeStringKeyPageList()
         ' Create private ints and objs to be able to get
         ' the list of the checked items. Code based on MSDN
-        ' sample: https://msdn.microsoft.com/en-us/library/system.windows.forms.checkedlistbox.checkedindices(v=vs.110).aspx
+        ' sample: https://msdn.microsoft.com/en-us/library/e954th47(v=vs.110).aspx
 
-        Dim itemChecked As String
-        For Each itemChecked In aaformMainWindow.checkedlistboxPageList.CheckedItems
-            stringKeyPageList = itemChecked & ";"
-        Next
-
-        'For Each i As Object In aaformMainWindow.checkedlistboxPageList.CheckedItems
+        'Dim itemChecked As String
+        'For Each itemChecked In aaformMainWindow.checkedlistboxPageList.CheckedItems
         '    ' Based off code from a forum I can't remember now.
-        '    stringKeyPageList = i.ToString + ";" ' The ";", seperates items with a semicolon.
+        '    stringKeyPageList = itemChecked & ";" ' The ";", seperates items with a semicolon.
         'Next
 
+
+        ' Determine if there are any items checked.  
+        If aaformMainWindow.checkedlistboxPageList.CheckedItems.Count <> 0 Then
+            ' If so, loop through all checked items and print results.  
+            Dim x As Integer
+            Dim s As String = ""
+            For x = 0 To aaformMainWindow.checkedlistboxPageList.CheckedItems.Count - 1
+                s = s & aaformMainWindow.checkedlistboxPageList.CheckedItems(x).ToString & ";"
+            Next x
+            stringKeyPageList = s
+        End If
 
     End Sub
 #End Region

@@ -34,13 +34,6 @@ Public Class aaformMainWindow
         Me.Text = "HideSettingsPages v." & My.Application.Info.Version.ToString
     End Sub
 
-    'Private Sub CheckedListBox1_ItemCheck(sender As Object, e As ItemCheckEventArgs) Handles checkedlistboxPageList.ItemCheck
-    '    ' TODO: Put in code to update the Registry key textbox.
-
-    '    registryKeyBuilder.computeStringKeyPageList()
-    '    textboxRegistryKey.Text = registryKeyBuilder.stringKeyHideOrShowOnly & registryKeyBuilder.stringKeyPageList
-    'End Sub
-
     Private Sub radiobuttonHidePages_Click(sender As Object, e As EventArgs) Handles radiobuttonHidePages.Click
         ' Make sure the stringKeyHideOrShowOnly is updated
         ' when clicking the radio buttons.
