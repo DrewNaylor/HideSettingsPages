@@ -27,7 +27,6 @@ Public Class aaformMainWindow
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Set the window title based on the name, dev, and version number.
-
         Me.Text = "HideSettingsPages v." & My.Application.Info.Version.ToString
     End Sub
 
@@ -35,5 +34,13 @@ Public Class aaformMainWindow
         ' TODO: Put in code to update the Registry key textbox.
     End Sub
 
+    Private Sub radiobuttonHidePages_Click(sender As Object, e As EventArgs) Handles radiobuttonHidePages.Click
+        registryKeyBuilder.computeStringKeyHideOrShowOnly()
+        textboxRegistryKey.Text = registryKeyBuilder.stringKeyHideOrShowOnly
+    End Sub
 
+    Private Sub radiobuttonShowOnlyPages_Click(sender As Object, e As EventArgs) Handles radiobuttonShowOnlyPages.Click
+        registryKeyBuilder.computeStringKeyHideOrShowOnly()
+        textboxRegistryKey.Text = registryKeyBuilder.stringKeyHideOrShowOnly
+    End Sub
 End Class

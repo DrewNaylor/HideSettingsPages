@@ -22,7 +22,11 @@
         ' Depending on which Radio Button at the top is checked,
         ' change stringKeyHideOrShowOnly.
 
-
+        If aaformMainWindow.radiobuttonHidePages.Checked = True Then
+            stringKeyHideOrShowOnly = "hide:"
+        ElseIf aaformMainWindow.radiobuttonShowOnlyPages.Checked = True Then
+            stringKeyHideOrShowOnly = "showonly:"
+        End If
 
     End Sub
 #End Region
