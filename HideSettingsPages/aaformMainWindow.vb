@@ -35,11 +35,15 @@ Public Class aaformMainWindow
     End Sub
 
     Private Sub radiobuttonHidePages_Click(sender As Object, e As EventArgs) Handles radiobuttonHidePages.Click
+        ' Make sure the stringKeyHideOrShowOnly is updated
+        ' when clicking the radio buttons.
         registryKeyBuilder.computeStringKeyHideOrShowOnly()
         textboxRegistryKey.Text = registryKeyBuilder.stringKeyHideOrShowOnly
     End Sub
 
     Private Sub radiobuttonShowOnlyPages_Click(sender As Object, e As EventArgs) Handles radiobuttonShowOnlyPages.Click
+        ' Make sure the stringKeyHideOrShowOnly is updated
+        ' when clicking the radio buttons.
         registryKeyBuilder.computeStringKeyHideOrShowOnly()
         textboxRegistryKey.Text = registryKeyBuilder.stringKeyHideOrShowOnly
     End Sub
