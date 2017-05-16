@@ -76,7 +76,7 @@ Partial Class aaformMainWindow
         Me.groupboxSettingsPageVisibility.Size = New System.Drawing.Size(646, 176)
         Me.groupboxSettingsPageVisibility.TabIndex = 0
         Me.groupboxSettingsPageVisibility.TabStop = False
-        Me.groupboxSettingsPageVisibility.Text = "Settings Page Visibility"
+        Me.groupboxSettingsPageVisibility.Text = "Settings page visibility"
         '
         'radiobuttonShowOnlyPages
         '
@@ -151,9 +151,9 @@ Partial Class aaformMainWindow
         Me.labelChoosePages.Location = New System.Drawing.Point(0, 12)
         Me.labelChoosePages.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labelChoosePages.Name = "labelChoosePages"
-        Me.labelChoosePages.Size = New System.Drawing.Size(445, 25)
+        Me.labelChoosePages.Size = New System.Drawing.Size(355, 25)
         Me.labelChoosePages.TabIndex = 13
-        Me.labelChoosePages.Text = "Choose pages you wish to hide or only show."
+        Me.labelChoosePages.Text = "Choose pages to hide or only show."
         '
         'groupboxRegistryKey
         '
