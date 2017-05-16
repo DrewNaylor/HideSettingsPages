@@ -27,8 +27,8 @@ Public Class aaformMainWindow
     Private Sub checkedlistboxPageList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles checkedlistboxPageList.SelectedIndexChanged
         ' When the user checks checkboxes, update the string that displays
         ' which pages the user chose for the Registry key.
-        registryKeyBuilder.computeStringKeyPageList()
-        textboxRegistryKey.Text = registryKeyBuilder.stringKeyHideOrShowOnly & registryKeyBuilder.stringKeyPageList
+        registryKeyBuilder.computeStringFullRegistryKey()
+        textboxRegistryKey.Text = registryKeyBuilder.stringFullRegistryKey
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -39,14 +39,14 @@ Public Class aaformMainWindow
     Private Sub radiobuttonHidePages_Click(sender As Object, e As EventArgs) Handles radiobuttonHidePages.Click
         ' Make sure the stringKeyHideOrShowOnly is updated
         ' when clicking the radio buttons.
-        registryKeyBuilder.computeStringKeyHideOrShowOnly()
-        textboxRegistryKey.Text = registryKeyBuilder.stringKeyHideOrShowOnly & registryKeyBuilder.stringKeyPageList
+        registryKeyBuilder.computeStringFullRegistryKey()
+        textboxRegistryKey.Text = registryKeyBuilder.stringFullRegistryKey
     End Sub
 
     Private Sub radiobuttonShowOnlyPages_Click(sender As Object, e As EventArgs) Handles radiobuttonShowOnlyPages.Click
         ' Make sure the stringKeyHideOrShowOnly is updated
         ' when clicking the radio buttons.
-        registryKeyBuilder.computeStringKeyHideOrShowOnly()
-        textboxRegistryKey.Text = registryKeyBuilder.stringKeyHideOrShowOnly & registryKeyBuilder.stringKeyPageList
+        registryKeyBuilder.computeStringFullRegistryKey()
+        textboxRegistryKey.Text = registryKeyBuilder.stringFullRegistryKey
     End Sub
 End Class

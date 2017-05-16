@@ -54,6 +54,9 @@
     Friend Shared Sub computeStringFullRegistryKey()
         ' Put together final string to display in textbox
         ' and write to the Registry.
+        computeStringKeyHideOrShowOnly()
+        computeStringKeyPageList()
+        stringFullRegistryKey = stringKeyHideOrShowOnly & stringKeyPageList
     End Sub
 
 #End Region
