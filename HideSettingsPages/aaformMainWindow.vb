@@ -50,8 +50,8 @@ Public Class aaformMainWindow
     Private Sub checkedlistboxPageList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles checkedlistboxPageList.SelectedIndexChanged
         ' When the user checks checkboxes, update the string that displays
         ' which pages the user chose for the Registry key.
-        registryKeyBuilder.computeStringFullRegistryKey()
-        textboxRegistryKey.Text = registryKeyBuilder.stringFullRegistryKey
+        'registryKeyBuilder.computeStringFullRegistryKey()
+        'textboxRegistryKey.Text = registryKeyBuilder.stringFullRegistryKey
     End Sub
 
     Private Sub radiobuttonHidePages_Click(sender As Object, e As EventArgs) Handles radiobuttonHidePages.Click
@@ -67,5 +67,22 @@ Public Class aaformMainWindow
         registryKeyBuilder.computeStringFullRegistryKey()
         textboxRegistryKey.Text = registryKeyBuilder.stringFullRegistryKey
     End Sub
+
+#Region "Ensure the Registry key is properly recomputed when the user uses the mouse or keyboard."
+    Private Sub checkedlistboxPageList_MouseUp(sender As Object, e As MouseEventArgs) Handles checkedlistboxPageList.MouseUp
+        ' When the user checks checkboxes, update the string that displays
+        ' which pages the user chose for the Registry key.
+        registryKeyBuilder.computeStringFullRegistryKey()
+        textboxRegistryKey.Text = registryKeyBuilder.stringFullRegistryKey
+    End Sub
+
+    Private Sub checkedlistboxPageList_KeyUp(sender As Object, e As KeyEventArgs) Handles checkedlistboxPageList.KeyUp
+        ' When the user checks checkboxes, update the string that displays
+        ' which pages the user chose for the Registry key.
+        registryKeyBuilder.computeStringFullRegistryKey()
+        textboxRegistryKey.Text = registryKeyBuilder.stringFullRegistryKey
+    End Sub
+#End Region
+
 #End Region
 End Class
