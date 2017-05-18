@@ -9,6 +9,6 @@ Currently, HideSettingsPages is just a GUI and the only actual code is used to u
 
 Screenshot:
 
-![](/docs/images/HideSettingsPages-v0.1-screenshot.png?raw=true)
+![](/docs/images/HideSettingsPages-computes_registry_key-screenshot.png?raw=true)
 
-As you can see, the GUI isn't fully complete yet. I'll have to change the text on the checkboxes to all the pages Microsoft allows users to disable. You may also notice this app is running on Windows 7. Although this app can run on any version of Windows supported by the .Net Framework 4.6.1, the Registry key it modifies/sets only does things on PCs running the Windows 10 Creators Update or higher.
+As you can see, the GUI is mostly complete. HideSettingsPages can, as of May 18, 2017, generate the necessary Registry key that hides (or only shows) pages in the Settings app. I'll have to make the Apply and Undo buttons at the bottom actually do what they're supposed to do, along with adding an About window. You may also notice this app is running on Windows 7. Although this app can run on any version of Windows supported by the .Net Framework 4.6.1, the Registry key it modifies/sets only does things on PCs running the Windows 10 Creators Update or higher.
