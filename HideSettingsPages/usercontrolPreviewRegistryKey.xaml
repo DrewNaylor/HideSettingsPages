@@ -7,6 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <TextBox Text="{Binding Path=registryKeyBuilder.stringFullRegistryKey, Mode=OneWay}" />
+        <TextBox DataContext="registryKeyBuilder.stringFullRegistryKey" Text="{Binding Path=stringPreviewKey}" />
     </Grid>
 </UserControl>
