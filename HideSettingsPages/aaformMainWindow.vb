@@ -28,6 +28,12 @@ Public Class aaformMainWindow
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Set the window title based on the name, dev, and version number.
         Me.Text = "HideSettingsPages v." & My.Application.Info.Version.ToString
+
+        ' Make sure the Registry key is updated as soon as the window
+        ' opens because sometimes the "Hide" radio button is unchecked
+        ' when I lauch this app from the Debug folder on Windows 7.
+        registryKeyBuilder.computeStringFullRegistryKey()
+        textboxRegistryKey.Text = registryKeyBuilder.stringFullRegistryKey
     End Sub
 
     Private Sub menubarExitButton_Click(sender As Object, e As EventArgs) Handles menubarExitButton.Click

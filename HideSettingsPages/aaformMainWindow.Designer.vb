@@ -83,13 +83,13 @@ Partial Class aaformMainWindow
         Me.radiobuttonShowOnlyPages.Name = "radiobuttonShowOnlyPages"
         Me.radiobuttonShowOnlyPages.Size = New System.Drawing.Size(76, 17)
         Me.radiobuttonShowOnlyPages.TabIndex = 2
-        Me.radiobuttonShowOnlyPages.TabStop = True
         Me.radiobuttonShowOnlyPages.Text = "Show Only"
         Me.radiobuttonShowOnlyPages.UseVisualStyleBackColor = True
         '
         'radiobuttonHidePages
         '
         Me.radiobuttonHidePages.AutoSize = True
+        Me.radiobuttonHidePages.Checked = True
         Me.radiobuttonHidePages.Location = New System.Drawing.Point(6, 42)
         Me.radiobuttonHidePages.Name = "radiobuttonHidePages"
         Me.radiobuttonHidePages.Size = New System.Drawing.Size(47, 17)
