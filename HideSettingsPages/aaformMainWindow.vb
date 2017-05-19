@@ -88,6 +88,10 @@ Public Class aaformMainWindow
         registryKeyBuilder.computeStringFullRegistryKey()
         textboxRegistryKey.Text = registryKeyBuilder.stringFullRegistryKey
     End Sub
+
+    Private Sub linklabelViewLarger_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linklabelViewLarger.LinkClicked
+        aaformRegistryKeyLargePreview.Show()
+    End Sub
 #End Region
 
 #End Region

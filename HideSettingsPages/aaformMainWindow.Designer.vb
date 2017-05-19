@@ -43,7 +43,7 @@ Partial Class aaformMainWindow
         Me.menubarExitButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarHelpMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarAboutButton = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.linklabelViewLarger = New System.Windows.Forms.LinkLabel()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
@@ -151,7 +151,7 @@ Partial Class aaformMainWindow
         '
         'groupboxRegistryKey
         '
-        Me.groupboxRegistryKey.Controls.Add(Me.LinkLabel1)
+        Me.groupboxRegistryKey.Controls.Add(Me.linklabelViewLarger)
         Me.groupboxRegistryKey.Controls.Add(Me.textboxRegistryKey)
         Me.groupboxRegistryKey.Location = New System.Drawing.Point(3, 542)
         Me.groupboxRegistryKey.Name = "groupboxRegistryKey"
@@ -244,15 +244,15 @@ Partial Class aaformMainWindow
         Me.menubarAboutButton.Size = New System.Drawing.Size(107, 22)
         Me.menubarAboutButton.Text = "About"
         '
-        'LinkLabel1
+        'linklabelViewLarger
         '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(6, 62)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(68, 13)
-        Me.LinkLabel1.TabIndex = 1
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "View larger..."
+        Me.linklabelViewLarger.AutoSize = True
+        Me.linklabelViewLarger.Location = New System.Drawing.Point(6, 62)
+        Me.linklabelViewLarger.Name = "linklabelViewLarger"
+        Me.linklabelViewLarger.Size = New System.Drawing.Size(68, 13)
+        Me.linklabelViewLarger.TabIndex = 1
+        Me.linklabelViewLarger.TabStop = True
+        Me.linklabelViewLarger.Text = "View larger..."
         '
         'aaformMainWindow
         '
@@ -302,5 +302,5 @@ Partial Class aaformMainWindow
     Friend WithEvents labelChoosePages As Label
     Friend WithEvents panelApplyUndoExit As Panel
     Friend WithEvents checkedlistboxPageList As CheckedListBox
-    Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents linklabelViewLarger As LinkLabel
 End Class
