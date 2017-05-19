@@ -9,10 +9,10 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("HideSettingsPages")>
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyDescription("GUI to set a Registry key to hide individual pages in the Windows 10 Settings app on the Creators Update and newer.")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("HideSettingsPages")>
-<Assembly: AssemblyCopyright("Copyright © 2017 Drew Naylor")>
+<Assembly: AssemblyCopyright("Copyright © 2017 Drew Naylor. Licensed under the Gnu GPL v3+.")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
