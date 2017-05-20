@@ -22,32 +22,17 @@ Partial Class aaformRegistryKeyLargePreview
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.elementhostTextBox = New System.Windows.Forms.Integration.ElementHost()
-        Me.wpfusercontrolPreviewKey = New HideSettingsPages.previewRegistryKey()
         Me.SuspendLayout()
-        '
-        'elementhostTextBox
-        '
-        Me.elementhostTextBox.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.elementhostTextBox.Location = New System.Drawing.Point(0, 0)
-        Me.elementhostTextBox.Name = "elementhostTextBox"
-        Me.elementhostTextBox.Size = New System.Drawing.Size(284, 262)
-        Me.elementhostTextBox.TabIndex = 0
-        Me.elementhostTextBox.Text = "ElementHost1"
-        Me.elementhostTextBox.Child = Me.wpfusercontrolPreviewKey
         '
         'aaformRegistryKeyLargePreview
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 262)
-        Me.Controls.Add(Me.elementhostTextBox)
         Me.Name = "aaformRegistryKeyLargePreview"
         Me.Text = "aaformRegistryKeyLargePreview"
         Me.ResumeLayout(False)
 
     End Sub
     Friend PreviewRegistryKey1 As previewRegistryKey
-    Friend WithEvents elementhostTextBox As Integration.ElementHost
-    Friend wpfusercontrolPreviewKey As previewRegistryKey
 End Class

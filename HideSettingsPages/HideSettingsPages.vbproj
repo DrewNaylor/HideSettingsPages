@@ -137,9 +137,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="usercontrolPreviewRegistryKey.xaml.vb">
-      <DependentUpon>usercontrolPreviewRegistryKey.xaml</DependentUpon>
-    </Compile>
     <Compile Include="VB Code-behind\registryKeyBuilder.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -185,12 +182,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HideSettingsPages-OfficialIcon.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="usercontrolPreviewRegistryKey.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

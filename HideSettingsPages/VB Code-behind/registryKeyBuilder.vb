@@ -86,8 +86,7 @@ Public Class registryKeyBuilder
         computeStringKeyPageList()
         stringFullRegistryKey = stringKeyHideOrShowOnly & stringKeyPageList
         aaformMainWindow.textboxRegistryKey.Text = stringFullRegistryKey
-        'UserControl1.updateLargePreviewTextbox()
-        'textboxLargeRegistryKeyPreview.Text = registryKeyBuilder.stringFullRegistryKey
+
     End Sub
 
 #End Region
