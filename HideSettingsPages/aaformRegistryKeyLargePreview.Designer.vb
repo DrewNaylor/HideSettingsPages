@@ -42,6 +42,7 @@ Partial Class aaformRegistryKeyLargePreview
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.ClientSize = New System.Drawing.Size(284, 262)
         Me.Controls.Add(Me.textboxLargeRegistryKeyPreview)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
         Me.Name = "aaformRegistryKeyLargePreview"
         Me.Text = "Large Registry Key Preview"
         Me.ResumeLayout(False)
