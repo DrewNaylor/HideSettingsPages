@@ -36,8 +36,8 @@ Public Class aaformAboutWindow
         BuildDateString = BuildDateString.TrimEnd(CType(vbCrLf, Char()))
 
         ' Put the text in the About box on launch.
-        textboxAboutApp.Text = ("UXL Launcher - Unified eXecutable Launcher" & vbCrLf &
-"Version " & My.Application.Info.Version.ToString & " Git - Codename ""Personalizationizer 3000""" & vbCrLf &
+        textboxAboutApp.Text = ("HideSettingsPages - Hide Windows 10 Settings App Pages" & vbCrLf &
+"Version " & My.Application.Info.Version.ToString & " Git" & vbCrLf &
 "App compiled at UTC: " & BuildDateString & vbCrLf &
 "Copyright (C) 2013-2017  Drew Naylor" & vbCrLf &
 "" & vbCrLf &
@@ -65,18 +65,21 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY o
 
     End Sub
 #End Region
+
 #Region "Code to run when clicking the link to go to the GitHub repository."
     Private Sub linkRepository_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkRepository.LinkClicked
         ' Open the GitHub repository.
         Process.Start("https://github.com/DrewNaylor/HideSettingsPages")
     End Sub
 #End Region
+
 #Region "Code to run when clicking the link to check for updates."
     Private Sub linkUpdateCheck_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkUpdateCheck.LinkClicked
         ' Go to the Releases page.
         Process.Start("https://github.com/DrewNaylor/HideSettingsPages/releases/latest")
     End Sub
 #End Region
+
 #Region "Code to run when clicking the link to go to my website."
     Private Sub linkMyWebsite_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkMyWebsite.LinkClicked
         ' Go to my website.

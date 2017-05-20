@@ -79,7 +79,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 2017-05-20T03:23:55
+        '''  Looks up a localized string similar to 2017-05-20T03:41:31
         '''.
         '''</summary>
         Friend ReadOnly Property BuildDate() As String
@@ -106,9 +106,9 @@ Namespace My.Resources
         '''Copyright \f1\&apos;a9 2007 Free Software Foundation, Inc. &lt;{{\field{\*\fldinst{HYPERLINK &quot;http://fsf.org/&quot;}}{\fldrslt{http://fsf.org/\ul0\cf0}}}}\f1\fs24 &gt;\par
         '''\f0 Everyone is permitted to copy and distribute verbat [rest of string was truncated]&quot;;.
         '''</summary>
-        Friend ReadOnly Property gpl_rtf() As String
+        Friend ReadOnly Property gpl_RTF() As String
             Get
-                Return ResourceManager.GetString("gpl_rtf", resourceCulture)
+                Return ResourceManager.GetString("gpl_RTF", resourceCulture)
             End Get
         End Property
         

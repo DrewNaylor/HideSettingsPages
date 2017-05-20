@@ -127,7 +127,7 @@
   <data name="dummyfile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dummyfile.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
-  <data name="gpl_rtf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="gpl_RTF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gpl-rtf.rtf;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="UXL_Launcher_Banner" type="System.Resources.ResXFileRef, System.Windows.Forms">
