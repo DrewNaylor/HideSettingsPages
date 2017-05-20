@@ -39,7 +39,7 @@ Public Class aaformAboutWindow
         textboxAboutApp.Text = ("HideSettingsPages - Hide Windows 10 Settings App Pages" & vbCrLf &
 "Version " & My.Application.Info.Version.ToString & " Git" & vbCrLf &
 "App compiled at UTC: " & BuildDateString & vbCrLf &
-"Copyright (C) 2013-2017  Drew Naylor" & vbCrLf &
+"Copyright (C) 2017  Drew Naylor" & vbCrLf &
 "" & vbCrLf &
 "UXL Launcher provides launchers for most Microsoft Office apps in one place." & vbCrLf &
 "" & vbCrLf &
