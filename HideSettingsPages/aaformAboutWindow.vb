@@ -80,7 +80,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY o
 #Region "Code to run when clicking the link to go to my website."
     Private Sub linkMyWebsite_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkMyWebsite.LinkClicked
         ' Go to my website.
-        Process.Start("http://drewnaylor.github.io")
+        Process.Start("https://drew-naylor.com")
     End Sub
 #End Region
 #Region "Code to run when closing the About window."
@@ -95,7 +95,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY o
         ' page in the messagebox.
         Dim msgResult As Integer = MessageBox.Show("Are you sure you want open this link?" & vbCrLf &
                 "" & vbCrLf &
-                e.LinkText, "UXL Launcher",
+                e.LinkText, "HideSettingsPages",
             MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
 
         ' If the user chooses to open the link, navigate the default browser there.
@@ -110,7 +110,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY o
         ' page in the messagebox.
         Dim msgResult As Integer = MessageBox.Show("Are you sure you want open this link?" & vbCrLf &
                 "" & vbCrLf &
-                e.LinkText, "UXL Launcher",
+                e.LinkText, "HideSettingsPages",
             MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
 
         ' If the user chooses to open the link, navigate the default browser there.
