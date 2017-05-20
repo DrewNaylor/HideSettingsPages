@@ -86,17 +86,6 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY o
 #Region "Code to run when closing the About window."
     Private Sub aaformAboutWindow_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
 
-        ' When the Options window is closing, tell the main window to be Always On Top if My.Settings.alwaysOnTop is set to True.
-        If My.Settings.alwaysOnTop = True Then
-            aaformMainWindow.TopMost = True
-        ElseIf My.Settings.alwaysOnTop = False Then
-            aaformMainWindow.TopMost = False
-        End If
-
-        ' Debug label for the Always On Top feature.
-        aaformMainWindow.debugLabelForAlwaysOnTop.Text = "menubar button checkstate: " & aaformMainWindow.menubarAlwaysOnTopButton.CheckState & vbNewLine &
-        "alwaysOnTop setting: " & My.Settings.alwaysOnTop & vbNewLine &
-        "main window TopMost: " & aaformMainWindow.TopMost
     End Sub
 #End Region
 #Region "Code to run when clicking links in the RTF documents."

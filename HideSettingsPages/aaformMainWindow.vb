@@ -48,17 +48,11 @@ Public Class aaformMainWindow
 
     Private Sub menubarAboutButton_Click(sender As Object, e As EventArgs) Handles menubarAboutButton.Click
         ' Show About window (to be implemented.)
-        'aaformAboutWindow.ShowDialog
+        aaformAboutWindow.ShowDialog()
     End Sub
 #End Region
 
 #Region "Registry key generator code subs."
-    Private Sub checkedlistboxPageList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles checkedlistboxPageList.SelectedIndexChanged
-        ' When the user checks checkboxes, update the string that displays
-        ' which pages the user chose for the Registry key.
-        'registryKeyBuilder.computeStringFullRegistryKey()
-        'textboxRegistryKey.Text = registryKeyBuilder.stringFullRegistryKey
-    End Sub
 
     Private Sub radiobuttonHidePages_Click(sender As Object, e As EventArgs) Handles radiobuttonHidePages.Click
         ' Make sure the stringKeyHideOrShowOnly is updated
