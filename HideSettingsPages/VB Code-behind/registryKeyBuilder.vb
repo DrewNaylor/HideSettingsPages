@@ -3,6 +3,7 @@
 'Copyright (C) 2017  Drew Naylor
 'Microsoft Windows and all related words are copyright
 'and trademark Microsoft Corporation.
+'Any other companies mentioned own their respective copyrights/trademarks.
 '(Note that the copyright years include the years left out by the hyphen.)
 '
 'This file is part of HideSettingsPages

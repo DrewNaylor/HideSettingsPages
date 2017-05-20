@@ -3,6 +3,7 @@
 'Copyright (C) 2017  Drew Naylor
 'Microsoft Windows and all related words are copyright
 'and trademark Microsoft Corporation.
+'Any other companies mentioned own their respective copyrights/trademarks.
 '(Note that the copyright years include the years left out by the hyphen.)
 '
 'This file is part of HideSettingsPages
@@ -44,17 +45,15 @@ Public Class aaformAboutWindow
 "HideSettingsPages is a GUI to set a Registry key to hide individual pages in the Windows 10 Settings app on the Creators Update and newer." & vbCrLf &
 "" & vbCrLf &
 "License notice:" & vbCrLf &
-"UXL Launcher is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by" &
+"HideSettingsPages is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by" &
 " the Free Software Foundation, either version 3 of the License, or (at your option) any later version." & vbCrLf &
 "" & vbCrLf &
-"UXL Launcher is distributed in the hope that it will be useful,
+"HideSettingsPages is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details." & vbCrLf &
 "" & vbCrLf &
-"You should have received a copy of the GNU General Public License along with UXL Launcher. If not, see <http://www.gnu.org/licenses/>." & vbCrLf &
+"You should have received a copy of the GNU General Public License along with HideSettingsPages. If not, see <http://www.gnu.org/licenses/>." & vbCrLf &
 "" & vbCrLf &
-"Drew is not intending on infringing on Microsoft" & "'" & "s copyrights, so UXL Launcher is only a shortcut application." & vbCrLf &
-"" & vbCrLf &
-"Copyright notice: Office, Microsoft Office, Word, Excel, PowerPoint, And all related words (by MSFT) are Copyright [a long time ago]-[sometime in the future] Microsoft Corp. All Rights Reserved for Microsoft" & "'" & "s copyrights." & vbCrLf &
+"Copyright notice: Office, Microsoft Windows all related words (by MSFT) are Copyright [a long time ago]-[sometime in the future] Microsoft Corp. All Rights Reserved for Microsoft" & "'" & "s copyrights." & vbCrLf &
 "Any other companies mentioned own their respective copyrights/trademarks.")
 
 
