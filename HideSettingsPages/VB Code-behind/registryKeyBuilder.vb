@@ -25,7 +25,6 @@
 
 
 Public Class registryKeyBuilder
-
 #Region "Figure out the Registry key to set to hide pages."
     ' This class has subs that figure out what the Registry key data will be
     ' and it gets updated when the user checks checkboxes or changes the radio
@@ -85,6 +84,8 @@ Public Class registryKeyBuilder
         computeStringKeyHideOrShowOnly()
         computeStringKeyPageList()
         stringFullRegistryKey = stringKeyHideOrShowOnly & stringKeyPageList
+
+        ' Set the text property in the preview textboxes.
         aaformMainWindow.textboxRegistryKey.Text = stringFullRegistryKey
         aaformRegistryKeyLargePreview.textboxLargeRegistryKeyPreview.Text = stringFullRegistryKey
     End Sub

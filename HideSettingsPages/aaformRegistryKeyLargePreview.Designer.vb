@@ -44,6 +44,8 @@ Partial Class aaformRegistryKeyLargePreview
         Me.Controls.Add(Me.textboxLargeRegistryKeyPreview)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
         Me.Name = "aaformRegistryKeyLargePreview"
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
         Me.Text = "Registry Key Preview"
         Me.ResumeLayout(False)
         Me.PerformLayout()
