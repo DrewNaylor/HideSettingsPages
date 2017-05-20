@@ -158,7 +158,7 @@ Partial Class aaformMainWindow
         Me.groupboxRegistryKey.Size = New System.Drawing.Size(323, 78)
         Me.groupboxRegistryKey.TabIndex = 2
         Me.groupboxRegistryKey.TabStop = False
-        Me.groupboxRegistryKey.Text = "Registry key"
+        Me.groupboxRegistryKey.Text = "Registry key preview"
         '
         'textboxRegistryKey
         '
@@ -294,7 +294,6 @@ Partial Class aaformMainWindow
     Friend WithEvents radiobuttonHidePages As RadioButton
     Friend WithEvents groupboxPageList As GroupBox
     Friend WithEvents groupboxRegistryKey As GroupBox
-    Friend WithEvents textboxRegistryKey As TextBox
     Friend WithEvents buttonUndoChanges As Button
     Friend WithEvents buttonApplyChanges As Button
     Friend WithEvents buttonExit As Button
@@ -303,4 +302,5 @@ Partial Class aaformMainWindow
     Friend WithEvents panelApplyUndoExit As Panel
     Friend WithEvents checkedlistboxPageList As CheckedListBox
     Friend WithEvents linklabelViewLarger As LinkLabel
+    Friend WithEvents textboxRegistryKey As TextBox
 End Class
