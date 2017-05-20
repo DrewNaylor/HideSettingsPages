@@ -7,6 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid x:Name="grid" x:FieldModifier="Public">
-        <TextBox x:Name="textboxLargeRegistryKeyPreview" x:FieldModifier="Public" />
+        <TextBox x:Name="textboxLargeRegistryKeyPreview" />
     </Grid>
 </UserControl>

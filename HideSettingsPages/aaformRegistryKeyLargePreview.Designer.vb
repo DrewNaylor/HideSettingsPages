@@ -22,32 +22,32 @@ Partial Class aaformRegistryKeyLargePreview
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.ElementHost1 = New System.Windows.Forms.Integration.ElementHost()
-        Me.PreviewRegistryKey1 = New HideSettingsPages.previewRegistryKey()
+        Me.elementhostTextBox = New System.Windows.Forms.Integration.ElementHost()
+        Me.wpfusercontrolPreviewKey = New HideSettingsPages.previewRegistryKey()
         Me.SuspendLayout()
         '
-        'ElementHost1
+        'elementhostTextBox
         '
-        Me.ElementHost1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ElementHost1.Location = New System.Drawing.Point(0, 0)
-        Me.ElementHost1.Name = "ElementHost1"
-        Me.ElementHost1.Size = New System.Drawing.Size(284, 262)
-        Me.ElementHost1.TabIndex = 0
-        Me.ElementHost1.Text = "ElementHost1"
-        Me.ElementHost1.Child = Me.PreviewRegistryKey1
+        Me.elementhostTextBox.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.elementhostTextBox.Location = New System.Drawing.Point(0, 0)
+        Me.elementhostTextBox.Name = "elementhostTextBox"
+        Me.elementhostTextBox.Size = New System.Drawing.Size(284, 262)
+        Me.elementhostTextBox.TabIndex = 0
+        Me.elementhostTextBox.Text = "ElementHost1"
+        Me.elementhostTextBox.Child = Me.wpfusercontrolPreviewKey
         '
         'aaformRegistryKeyLargePreview
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 262)
-        Me.Controls.Add(Me.ElementHost1)
+        Me.Controls.Add(Me.elementhostTextBox)
         Me.Name = "aaformRegistryKeyLargePreview"
         Me.Text = "aaformRegistryKeyLargePreview"
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents ElementHost1 As Integration.ElementHost
     Friend PreviewRegistryKey1 As previewRegistryKey
+    Friend WithEvents elementhostTextBox As Integration.ElementHost
+    Friend wpfusercontrolPreviewKey As previewRegistryKey
 End Class
