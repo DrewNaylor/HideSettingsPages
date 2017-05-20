@@ -53,7 +53,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY o
 "" & vbCrLf &
 "You should have received a copy of the GNU General Public License along with HideSettingsPages. If not, see <http://www.gnu.org/licenses/>." & vbCrLf &
 "" & vbCrLf &
-"Copyright notice: Office, Microsoft Windows all related words (by MSFT) are Copyright [a long time ago]-[sometime in the future] Microsoft Corp. All Rights Reserved for Microsoft" & "'" & "s copyrights." & vbCrLf &
+"Copyright notice: Microsoft Windows and all related words (by MSFT) are Copyright [a long time ago]-[sometime in the future] Microsoft Corp. All Rights Reserved for Microsoft" & "'" & "s copyrights." & vbCrLf &
 "Any other companies mentioned own their respective copyrights/trademarks.")
 
 
