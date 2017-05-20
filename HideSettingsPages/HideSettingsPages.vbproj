@@ -171,6 +171,8 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Resources\Acknowledgements-RTF.rtf" />
+    <None Include="Resources\gpl-rtf.rtf" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
@@ -186,8 +188,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HideSettingsPages-OfficialIcon.ico" />
+    <None Include="Resources\dummyfile.txt" />
+    <None Include="Resources\BuildDate.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>powershell -Command "((Get-Date).ToUniversalTime()).ToString(\"s\") | Out-File '$(ProjectDir)Resources\BuildDate.txt'"</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
