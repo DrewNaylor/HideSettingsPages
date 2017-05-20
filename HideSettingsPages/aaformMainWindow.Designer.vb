@@ -33,6 +33,7 @@ Partial Class aaformMainWindow
         Me.checkedlistboxPageList = New System.Windows.Forms.CheckedListBox()
         Me.labelChoosePages = New System.Windows.Forms.Label()
         Me.groupboxRegistryKey = New System.Windows.Forms.GroupBox()
+        Me.linklabelViewLarger = New System.Windows.Forms.LinkLabel()
         Me.textboxRegistryKey = New System.Windows.Forms.TextBox()
         Me.panelApplyUndoExit = New System.Windows.Forms.Panel()
         Me.buttonExit = New System.Windows.Forms.Button()
@@ -43,7 +44,10 @@ Partial Class aaformMainWindow
         Me.menubarExitButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarHelpMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarAboutButton = New System.Windows.Forms.ToolStripMenuItem()
-        Me.linklabelViewLarger = New System.Windows.Forms.LinkLabel()
+        Me.menubarLicenseButton = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarAuthorsButton = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarHelpTopicsButton = New System.Windows.Forms.ToolStripMenuItem()
+        Me.zseparatorHelpMenu = New System.Windows.Forms.ToolStripSeparator()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
@@ -160,6 +164,16 @@ Partial Class aaformMainWindow
         Me.groupboxRegistryKey.TabStop = False
         Me.groupboxRegistryKey.Text = "Registry key preview"
         '
+        'linklabelViewLarger
+        '
+        Me.linklabelViewLarger.AutoSize = True
+        Me.linklabelViewLarger.Location = New System.Drawing.Point(6, 62)
+        Me.linklabelViewLarger.Name = "linklabelViewLarger"
+        Me.linklabelViewLarger.Size = New System.Drawing.Size(68, 13)
+        Me.linklabelViewLarger.TabIndex = 1
+        Me.linklabelViewLarger.TabStop = True
+        Me.linklabelViewLarger.Text = "View larger..."
+        '
         'textboxRegistryKey
         '
         Me.textboxRegistryKey.Location = New System.Drawing.Point(6, 20)
@@ -233,7 +247,7 @@ Partial Class aaformMainWindow
         '
         'menubarHelpMenu
         '
-        Me.menubarHelpMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarAboutButton})
+        Me.menubarHelpMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarHelpTopicsButton, Me.zseparatorHelpMenu, Me.menubarAuthorsButton, Me.menubarLicenseButton, Me.menubarAboutButton})
         Me.menubarHelpMenu.Name = "menubarHelpMenu"
         Me.menubarHelpMenu.Size = New System.Drawing.Size(44, 20)
         Me.menubarHelpMenu.Text = "Help"
@@ -241,18 +255,32 @@ Partial Class aaformMainWindow
         'menubarAboutButton
         '
         Me.menubarAboutButton.Name = "menubarAboutButton"
-        Me.menubarAboutButton.Size = New System.Drawing.Size(107, 22)
+        Me.menubarAboutButton.Size = New System.Drawing.Size(211, 22)
         Me.menubarAboutButton.Text = "About"
         '
-        'linklabelViewLarger
+        'menubarLicenseButton
         '
-        Me.linklabelViewLarger.AutoSize = True
-        Me.linklabelViewLarger.Location = New System.Drawing.Point(6, 62)
-        Me.linklabelViewLarger.Name = "linklabelViewLarger"
-        Me.linklabelViewLarger.Size = New System.Drawing.Size(68, 13)
-        Me.linklabelViewLarger.TabIndex = 1
-        Me.linklabelViewLarger.TabStop = True
-        Me.linklabelViewLarger.Text = "View larger..."
+        Me.menubarLicenseButton.Name = "menubarLicenseButton"
+        Me.menubarLicenseButton.Size = New System.Drawing.Size(211, 22)
+        Me.menubarLicenseButton.Text = "&License"
+        '
+        'menubarAuthorsButton
+        '
+        Me.menubarAuthorsButton.Name = "menubarAuthorsButton"
+        Me.menubarAuthorsButton.Size = New System.Drawing.Size(211, 22)
+        Me.menubarAuthorsButton.Text = "A&cknowledgments"
+        '
+        'menubarHelpTopicsButton
+        '
+        Me.menubarHelpTopicsButton.Name = "menubarHelpTopicsButton"
+        Me.menubarHelpTopicsButton.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F1), System.Windows.Forms.Keys)
+        Me.menubarHelpTopicsButton.Size = New System.Drawing.Size(211, 22)
+        Me.menubarHelpTopicsButton.Text = "&View Help Topics"
+        '
+        'zseparatorHelpMenu
+        '
+        Me.zseparatorHelpMenu.Name = "zseparatorHelpMenu"
+        Me.zseparatorHelpMenu.Size = New System.Drawing.Size(208, 6)
         '
         'aaformMainWindow
         '
@@ -303,4 +331,8 @@ Partial Class aaformMainWindow
     Friend WithEvents checkedlistboxPageList As CheckedListBox
     Friend WithEvents linklabelViewLarger As LinkLabel
     Friend WithEvents textboxRegistryKey As TextBox
+    Friend WithEvents menubarHelpTopicsButton As ToolStripMenuItem
+    Friend WithEvents zseparatorHelpMenu As ToolStripSeparator
+    Friend WithEvents menubarAuthorsButton As ToolStripMenuItem
+    Friend WithEvents menubarLicenseButton As ToolStripMenuItem
 End Class
