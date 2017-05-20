@@ -242,8 +242,8 @@ Partial Class aaformMainWindow
         'menubarExitButton
         '
         Me.menubarExitButton.Name = "menubarExitButton"
-        Me.menubarExitButton.Size = New System.Drawing.Size(92, 22)
-        Me.menubarExitButton.Text = "Exit"
+        Me.menubarExitButton.Size = New System.Drawing.Size(152, 22)
+        Me.menubarExitButton.Text = "E&xit"
         '
         'menubarHelpMenu
         '
@@ -256,7 +256,7 @@ Partial Class aaformMainWindow
         '
         Me.menubarAboutButton.Name = "menubarAboutButton"
         Me.menubarAboutButton.Size = New System.Drawing.Size(211, 22)
-        Me.menubarAboutButton.Text = "About"
+        Me.menubarAboutButton.Text = "&About"
         '
         'menubarLicenseButton
         '
