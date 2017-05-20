@@ -188,6 +188,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HideSettingsPages-OfficialIcon.ico" />
+    <None Include="Resources\HideSettingsPages_Banner.png" />
     <None Include="Resources\UXL_Launcher_Banner.png" />
     <None Include="Resources\dummyfile.txt" />
     <None Include="Resources\BuildDate.txt" />
