@@ -54,7 +54,7 @@ Partial Class aaformAboutWindow
         Me.tableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.96255!))
         Me.tableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.37086!))
         Me.tableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.60706!))
-        Me.tableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 141.0!))
+        Me.tableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143.0!))
         Me.tableLayoutPanel.Controls.Add(Me.buttonClose, 3, 1)
         Me.tableLayoutPanel.Controls.Add(Me.tabcontrolAboutWindow, 0, 0)
         Me.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
@@ -96,7 +96,7 @@ Partial Class aaformAboutWindow
         Me.tabpageAbout.Controls.Add(Me.tableLayoutPanelAboutApp)
         Me.tabpageAbout.Location = New System.Drawing.Point(4, 22)
         Me.tabpageAbout.Name = "tabpageAbout"
-        Me.tabpageAbout.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.tabpageAbout.Padding = New System.Windows.Forms.Padding(3)
         Me.tabpageAbout.Size = New System.Drawing.Size(520, 407)
         Me.tabpageAbout.TabIndex = 0
         Me.tabpageAbout.Text = "About"
@@ -204,9 +204,9 @@ Partial Class aaformAboutWindow
         '
         Me.tabpageLicense.Controls.Add(Me.rtftextboxLicense)
         Me.tabpageLicense.Location = New System.Drawing.Point(4, 22)
-        Me.tabpageLicense.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tabpageLicense.Margin = New System.Windows.Forms.Padding(2)
         Me.tabpageLicense.Name = "tabpageLicense"
-        Me.tabpageLicense.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tabpageLicense.Padding = New System.Windows.Forms.Padding(2)
         Me.tabpageLicense.Size = New System.Drawing.Size(520, 407)
         Me.tabpageLicense.TabIndex = 3
         Me.tabpageLicense.Text = "License"
@@ -229,9 +229,9 @@ Partial Class aaformAboutWindow
         '
         Me.tabpageAcknowledgments.Controls.Add(Me.rtftextboxAcknowledgements)
         Me.tabpageAcknowledgments.Location = New System.Drawing.Point(4, 22)
-        Me.tabpageAcknowledgments.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tabpageAcknowledgments.Margin = New System.Windows.Forms.Padding(2)
         Me.tabpageAcknowledgments.Name = "tabpageAcknowledgments"
-        Me.tabpageAcknowledgments.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tabpageAcknowledgments.Padding = New System.Windows.Forms.Padding(2)
         Me.tabpageAcknowledgments.Size = New System.Drawing.Size(520, 407)
         Me.tabpageAcknowledgments.TabIndex = 4
         Me.tabpageAcknowledgments.Text = "Acknowledgments"
@@ -264,7 +264,7 @@ Partial Class aaformAboutWindow
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "About UXL Launcher"
+        Me.Text = "About HideSettingsPages"
         Me.tableLayoutPanel.ResumeLayout(False)
         Me.tableLayoutPanel.PerformLayout()
         Me.tabcontrolAboutWindow.ResumeLayout(False)

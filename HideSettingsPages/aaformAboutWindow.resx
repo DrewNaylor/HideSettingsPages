@@ -120,7 +120,8 @@
   <data name="textboxAboutApp.Text" xml:space="preserve">
     <value>Description :
 
-(At runtime, the labels' text will be replaced with the application's assembly information.
-Customize the application's assembly information in the Application pane of Project Designer.)</value>
+(At runtime, the labels' text will be replaced with the application's assembly information and
+a bunch of other things I put in the code. Customize the application's assembly information
+in the Application pane of Project Designer.)</value>
   </data>
 </root>
