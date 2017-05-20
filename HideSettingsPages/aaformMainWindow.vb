@@ -37,23 +37,48 @@ Public Class aaformMainWindow
         textboxRegistryKey.Text = registryKeyBuilder.stringFullRegistryKey
     End Sub
 
+    Private Sub buttonExit_Click(sender As Object, e As EventArgs) Handles buttonExit.Click
+        ' Close the application.
+        Me.Close()
+    End Sub
+#End Region
+
+#Region "Menubar buttons."
     Private Sub menubarExitButton_Click(sender As Object, e As EventArgs) Handles menubarExitButton.Click
         ' Close the application.
         Me.Close()
     End Sub
 
-    Private Sub buttonExit_Click(sender As Object, e As EventArgs) Handles buttonExit.Click
-        ' Close the application.
-        Me.Close()
+#Region "Help menubar buttons."
+    Private Sub menubarAboutButton_Click(sender As Object, e As EventArgs) Handles menubarAboutButton.Click
+        ' Open the About window to About tab. Credit goes to this SO answer: <http://stackoverflow.com/a/2513186>
+        Dim forceAboutWindowTab As New aaformAboutWindow
+        forceAboutWindowTab.tabcontrolAboutWindow.SelectTab(0)
+        forceAboutWindowTab.ShowDialog()
     End Sub
 
-    Private Sub menubarAboutButton_Click(sender As Object, e As EventArgs) Handles menubarAboutButton.Click
-        ' Show About window (to be implemented.)
-        aaformAboutWindow.ShowDialog()
+    Private Sub menubarLicenseButton_Click(sender As Object, e As EventArgs) Handles menubarLicenseButton.Click
+        ' Open the About window to License tab. Credit goes to this SO answer: <http://stackoverflow.com/a/2513186>
+        Dim forceAboutWindowTab As New aaformAboutWindow
+        forceAboutWindowTab.tabcontrolAboutWindow.SelectTab(1)
+        forceAboutWindowTab.ShowDialog()
+    End Sub
+
+    Private Sub menubarAuthorsButton_Click(sender As Object, e As EventArgs) Handles menubarAuthorsButton.Click
+        ' Open the About window to Acknowledgements tab. Credit goes to this SO answer: <http://stackoverflow.com/a/2513186>
+        Dim forceAboutWindowTab As New aaformAboutWindow
+        forceAboutWindowTab.tabcontrolAboutWindow.SelectTab(2)
+        forceAboutWindowTab.ShowDialog()
+    End Sub
+
+    Private Sub menubarHelpTopicsButton_Click(sender As Object, e As EventArgs) Handles menubarHelpTopicsButton.Click
+        ' Go to the GitHub wiki.
+        Process.Start("https://github.com/DrewNaylor/UXL-Launcher/wiki")
     End Sub
 #End Region
+#End Region
 
-#Region "Registry key generator code subs."
+#Region "Registry computation code subs."
 
     Private Sub radiobuttonHidePages_Click(sender As Object, e As EventArgs) Handles radiobuttonHidePages.Click
         ' Make sure the stringKeyHideOrShowOnly is updated
