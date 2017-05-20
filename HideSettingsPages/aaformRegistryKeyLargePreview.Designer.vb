@@ -22,30 +22,31 @@ Partial Class aaformRegistryKeyLargePreview
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.textboxLargeRegistryKeyPreview = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'textboxLargeRegistryKeyPreview
         '
-        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox1.Location = New System.Drawing.Point(0, 0)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(284, 262)
-        Me.TextBox1.TabIndex = 0
+        Me.textboxLargeRegistryKeyPreview.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.textboxLargeRegistryKeyPreview.Location = New System.Drawing.Point(0, 0)
+        Me.textboxLargeRegistryKeyPreview.Multiline = True
+        Me.textboxLargeRegistryKeyPreview.Name = "textboxLargeRegistryKeyPreview"
+        Me.textboxLargeRegistryKeyPreview.ReadOnly = True
+        Me.textboxLargeRegistryKeyPreview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.textboxLargeRegistryKeyPreview.Size = New System.Drawing.Size(284, 262)
+        Me.textboxLargeRegistryKeyPreview.TabIndex = 0
         '
         'aaformRegistryKeyLargePreview
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.ClientSize = New System.Drawing.Size(284, 262)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.textboxLargeRegistryKeyPreview)
         Me.Name = "aaformRegistryKeyLargePreview"
-        Me.Text = "aaformRegistryKeyLargePreview"
+        Me.Text = "Large Registry Key Preview"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents textboxLargeRegistryKeyPreview As TextBox
 End Class
