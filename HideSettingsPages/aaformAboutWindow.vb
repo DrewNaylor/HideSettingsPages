@@ -68,13 +68,13 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY o
 #Region "Code to run when clicking the link to go to the GitHub repository."
     Private Sub linkRepository_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkRepository.LinkClicked
         ' Open the GitHub repository.
-        Process.Start("https://github.com/DrewNaylor/UXL-Launcher")
+        Process.Start("https://github.com/DrewNaylor/HideSettingsPages")
     End Sub
 #End Region
 #Region "Code to run when clicking the link to check for updates."
     Private Sub linkUpdateCheck_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkUpdateCheck.LinkClicked
         ' Go to the Releases page.
-        Process.Start("https://github.com/DrewNaylor/UXL-Launcher/releases/latest")
+        Process.Start("https://github.com/DrewNaylor/HideSettingsPages/releases/latest")
     End Sub
 #End Region
 #Region "Code to run when clicking the link to go to my website."
@@ -83,11 +83,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY o
         Process.Start("https://drew-naylor.com")
     End Sub
 #End Region
-#Region "Code to run when closing the About window."
-    Private Sub aaformAboutWindow_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
 
-    End Sub
-#End Region
 #Region "Code to run when clicking links in the RTF documents."
     Private Sub rtftextboxLicense_LinkClicked(sender As Object, e As LinkClickedEventArgs) Handles rtftextboxLicense.LinkClicked
         ' When the user clicks a link in the RTF License rich textbox, go to that
