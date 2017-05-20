@@ -73,7 +73,7 @@ Public Class aaformMainWindow
 
     Private Sub menubarHelpTopicsButton_Click(sender As Object, e As EventArgs) Handles menubarHelpTopicsButton.Click
         ' Go to the GitHub wiki.
-        Process.Start("https://github.com/DrewNaylor/UXL-Launcher/wiki")
+        Process.Start("https://github.com/DrewNaylor/HideSettingsPages/wiki")
     End Sub
 #End Region
 #End Region
