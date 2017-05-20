@@ -24,5 +24,7 @@
 
 
 Public Class aaformRegistryKeyLargePreview
-
+    Private Sub aaformRegistryKeyLargePreview_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        textboxLargeRegistryKeyPreview.Text = registryKeyBuilder.stringFullRegistryKey
+    End Sub
 End Class
