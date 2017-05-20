@@ -64,14 +64,12 @@ Public Class aaformMainWindow
         ' Make sure the stringKeyHideOrShowOnly is updated
         ' when clicking the radio buttons.
         registryKeyBuilder.computeStringFullRegistryKey()
-        textboxRegistryKey.Text = registryKeyBuilder.stringFullRegistryKey
     End Sub
 
     Private Sub radiobuttonShowOnlyPages_Click(sender As Object, e As EventArgs) Handles radiobuttonShowOnlyPages.Click
         ' Make sure the stringKeyHideOrShowOnly is updated
         ' when clicking the radio buttons.
         registryKeyBuilder.computeStringFullRegistryKey()
-        textboxRegistryKey.Text = registryKeyBuilder.stringFullRegistryKey
     End Sub
 
 #Region "Ensure the Registry key is properly recomputed when the user uses the mouse or keyboard."
@@ -79,14 +77,12 @@ Public Class aaformMainWindow
         ' When the user checks checkboxes, update the string that displays
         ' which pages the user chose for the Registry key.
         registryKeyBuilder.computeStringFullRegistryKey()
-        textboxRegistryKey.Text = registryKeyBuilder.stringFullRegistryKey
     End Sub
 
     Private Sub checkedlistboxPageList_KeyUp(sender As Object, e As KeyEventArgs) Handles checkedlistboxPageList.KeyUp
         ' When the user checks checkboxes, update the string that displays
         ' which pages the user chose for the Registry key.
         registryKeyBuilder.computeStringFullRegistryKey()
-        textboxRegistryKey.Text = registryKeyBuilder.stringFullRegistryKey
     End Sub
 
     Private Sub linklabelViewLarger_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linklabelViewLarger.LinkClicked

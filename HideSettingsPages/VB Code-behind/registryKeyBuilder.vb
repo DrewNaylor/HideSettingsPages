@@ -21,10 +21,11 @@
 'You should have received a copy of the GNU General Public License
 'along with HideSettingsPages.  If not, see <http://www.gnu.org/licenses/>.
 
-Imports System.ComponentModel
+
+
 
 Public Class registryKeyBuilder
-    Implements INotifyPropertyChanged
+
 #Region "Figure out the Registry key to set to hide pages."
     ' This class has subs that figure out what the Registry key data will be
     ' and it gets updated when the user checks checkboxes or changes the radio
@@ -41,8 +42,7 @@ Public Class registryKeyBuilder
     ' Create a friend, shared string called stringFullRegistryKey
     ' to store the completed Registry key.
     Friend Shared stringFullRegistryKey As String
-    ' Add an event handler for INotifyPropertyChanged.
-    Public Event PropertyChanged As PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged
+
 
 #Region "computeStringKeyHideOrShowOnly to figure out stringKeyHideOrShowOnly."
     Friend Shared Sub computeStringKeyHideOrShowOnly()
@@ -85,6 +85,7 @@ Public Class registryKeyBuilder
         computeStringKeyHideOrShowOnly()
         computeStringKeyPageList()
         stringFullRegistryKey = stringKeyHideOrShowOnly & stringKeyPageList
+        aaformMainWindow.textboxRegistryKey.Text = stringFullRegistryKey
     End Sub
 
 #End Region
