@@ -71,8 +71,8 @@ Public Class registryKeyValueBuilder
             For x = 0 To aaformMainWindow.checkedlistboxPageList.CheckedItems.Count - 1
                 s = s & aaformMainWindow.checkedlistboxPageList.CheckedItems(x).ToString & ";"
             Next x
-            stringKeyPageList = s
-            stringKeyPageList = stringKeyPageList.TrimEnd(CType(";", Char()))
+            stringKeyValuePageList = s
+            stringKeyValuePageList = stringKeyValuePageList.TrimEnd(CType(";", Char()))
         End If
 
     End Sub
@@ -84,11 +84,11 @@ Public Class registryKeyValueBuilder
         ' and write to the Registry.
         computeStringKeyHideOrShowOnly()
         computeStringKeyPageList()
-        stringFullRegistryKey = stringKeyHideOrShowOnly & stringKeyPageList
+        stringFullRegistryKeyValue = stringKeyValueHideOrShowOnly & stringKeyValuePageList
 
         ' Set the text property in the preview textboxes.
-        aaformMainWindow.textboxRegistryKey.Text = stringFullRegistryKey
-        aaformRegistryKeyValueValueLargePreview.textboxLargeRegistryKeyPreview.Text = stringFullRegistryKey
+        aaformMainWindow.textboxRegistryKey.Text = stringFullRegistryKeyValue
+        aaformRegistryKeyValueValueLargePreview.textboxLargeRegistryKeyPreview.Text = stringFullRegistryKeyValue
     End Sub
 
 #End Region
