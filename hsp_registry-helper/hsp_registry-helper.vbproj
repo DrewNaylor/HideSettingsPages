@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{FBE5ABFD-5A61-49EB-BE55-85AE7748F1F1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>hsp_registry_helper.Module1</StartupObject>
+    <StartupObject>hsp_registry_helper.applyOrRemoveRegistryKey</StartupObject>
     <RootNamespace>hsp_registry_helper</RootNamespace>
     <AssemblyName>hsp_registry-helper</AssemblyName>
     <FileAlignment>512</FileAlignment>

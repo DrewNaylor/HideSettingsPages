@@ -26,12 +26,20 @@
 
 
 Imports System.Windows.Forms
-Module Module1
+Module applyOrRemoveRegistryKey
 
 
     Public Sub Main(ByVal sArgs() As String)
+
+        ' Set titlebar text to application name and version.
+        Console.Title = "HideSettingsPages Registry Helper v." & My.Application.Info.Version.ToString
+
+        ' Make some priate strings.
         Dim i As Integer = 0
+        ' fullKey is the Registry key from main app.
         Dim fullKey As String = Nothing
+        ' actionToTake is the "apply" or "undo" string
+        ' from main app.
         Dim actionToTake As String = Nothing
 
         ' I got the code below from this SO answer:
