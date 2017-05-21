@@ -9,6 +9,9 @@ Module Module1
 
         ' I got the code below from this SO answer:
         ' http://stackoverflow.com/a/26323809
+        ' Also, this code was modified from this
+        ' MSDN article:
+        ' https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.arguments%28v=vs.110%29.aspx?f=255&MSPPError=-2147217396
 
         If sArgs.Length = 0 Then                'If there are no arguments
             Console.WriteLine("Hello World! <-no arguments passed->") 'Just output Hello World
