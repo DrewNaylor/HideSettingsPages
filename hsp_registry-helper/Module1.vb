@@ -3,7 +3,9 @@ Module Module1
 
 
     Public Sub Main(ByVal sArgs() As String)
-
+        Dim i As Integer = 0
+        Dim fullKey As String = Nothing
+        Dim actionToTake As String = Nothing
 
         ' I got the code below from this SO answer:
         ' http://stackoverflow.com/a/26323809
@@ -12,16 +14,18 @@ Module Module1
             Console.WriteLine("Hello World! <-no arguments passed->") 'Just output Hello World
         Else                                    'We have some arguments 
 
-            Dim i As Integer = 0
-            While i < sArgs.Length  'So with each argument
-                Console.WriteLine("Hello " & sArgs(i) & "!") 'Print out each item
-                i = i + 1  'Increment to the next argument
-            End While
+            For Each s As String In My.Application.CommandLineArgs
+                Console.WriteLine("[" + i.ToString() + "] = " + s)
+                i = i + 1
 
+                If i.ToString = 1 Then
+                    fullKey = s
+                ElseIf i.ToString = 2 Then
+                    actionToTake = s
+                End If
+            Next
         End If
 
-        Dim fullKey As String = My.Application.CommandLineArgs(1)
-        Dim actionToRun As String = My.Application.CommandLineArgs(2)
 
         MessageBox.Show("This is the full Registry key.")
         MessageBox.Show("Stop.")
