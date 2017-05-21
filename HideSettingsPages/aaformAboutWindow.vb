@@ -1,4 +1,4 @@
-﻿'HideSettingsPages - GUI to set a Registry key to hide individual pages
+﻿'HideSettingsPages - GUI to set a Registry key value to hide individual pages
 'in the Windows 10 Settings app on the Creators Update and newer.
 'Copyright (C) 2017  Drew Naylor
 'Microsoft Windows and all related words are copyright
@@ -42,7 +42,7 @@ Public Class aaformAboutWindow
 "App compiled at UTC: " & BuildDateString & vbCrLf &
 "Copyright (C) 2017  Drew Naylor" & vbCrLf &
 "" & vbCrLf &
-"HideSettingsPages is a GUI to set a Registry key to hide individual pages in the Windows 10 Settings app on the Creators Update and newer." & vbCrLf &
+"HideSettingsPages is a GUI to set a Registry key value to hide individual pages in the Windows 10 Settings app on the Creators Update and newer." & vbCrLf &
 "" & vbCrLf &
 "License notice:" & vbCrLf &
 "HideSettingsPages is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by" &

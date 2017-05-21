@@ -1,4 +1,4 @@
-﻿'HideSettingsPages - GUI to set a Registry key to hide individual pages
+﻿'HideSettingsPages - GUI to set a Registry key value to hide individual pages
 'in the Windows 10 Settings app on the Creators Update and newer.
 'Copyright (C) 2017  Drew Naylor
 'Microsoft Windows and all related words are copyright
@@ -25,40 +25,40 @@
 
 
 
-Public Class registryKeyBuilder
-#Region "Figure out the Registry key to set to hide pages."
-    ' This class has subs that figure out what the Registry key data will be
+Public Class registryKeyValueBuilder
+#Region "Figure out the Registry key value to set to hide pages."
+    ' This class has subs that figure out what the Registry key value data will be
     ' and it gets updated when the user checks checkboxes or changes the radio
     ' buttons at the top.
 
-    ' Create a friend, shared string called stringKeyHideOrShowOnly
+    ' Create a friend, shared string called stringKeyValueHideOrShowOnly
     ' that updates based on which of the radio buttons at the 
     ' top the user clicks.
-    Friend Shared stringKeyHideOrShowOnly As String
-    ' Create a friend, shared string called stringKeyPageList
+    Friend Shared stringKeyValueHideOrShowOnly As String
+    ' Create a friend, shared string called stringKeyValuePageList
     ' to store the list of pages the user wants to hide or shor only
     ' in the Settings app.
-    Friend Shared stringKeyPageList As String
-    ' Create a friend, shared string called stringFullRegistryKey
-    ' to store the completed Registry key.
-    Friend Shared stringFullRegistryKey As String
+    Friend Shared stringKeyValuePageList As String
+    ' Create a friend, shared string called stringFullRegistryKeyValue
+    ' to store the completed Registry key value.
+    Friend Shared stringFullRegistryKeyValue As String
 
 
-#Region "computeStringKeyHideOrShowOnly to figure out stringKeyHideOrShowOnly."
-    Friend Shared Sub computeStringKeyHideOrShowOnly()
+#Region "computeStringKeyValueHideOrShowOnly to figure out stringKeyValueHideOrShowOnly."
+    Friend Shared Sub computeStringKeyValueHideOrShowOnly()
         ' Depending on which Radio Button at the top is checked,
-        ' change stringKeyHideOrShowOnly.
+        ' change stringKeyValueHideOrShowOnly.
 
         If aaformMainWindow.radiobuttonHidePages.Checked = True Then
-            stringKeyHideOrShowOnly = "hide:"
+            stringKeyValueHideOrShowOnly = "hide:"
         ElseIf aaformMainWindow.radiobuttonShowOnlyPages.Checked = True Then
-            stringKeyHideOrShowOnly = "showonly:"
+            stringKeyValueHideOrShowOnly = "showonly:"
         End If
     End Sub
 #End Region
 
-#Region "computeStringKeyPageList to figure out stringKeyPageList."
-    Friend Shared Sub computeStringKeyPageList()
+#Region "computeStringKeyValuePageList to figure out stringKeyValuePageList."
+    Friend Shared Sub computeStringKeyValuePageList()
         ' Create private ints and objs to be able to get
         ' the list of the checked items. Code based on MSDN
         ' sample: https://msdn.microsoft.com/en-us/library/e954th47(v=vs.110).aspx
@@ -71,24 +71,24 @@ Public Class registryKeyBuilder
             For x = 0 To aaformMainWindow.checkedlistboxPageList.CheckedItems.Count - 1
                 s = s & aaformMainWindow.checkedlistboxPageList.CheckedItems(x).ToString & ";"
             Next x
-            stringKeyPageList = s
-            stringKeyPageList = stringKeyPageList.TrimEnd(CType(";", Char()))
+            stringKeyValuePageList = s
+            stringKeyValuePageList = stringKeyValuePageList.TrimEnd(CType(";", Char()))
         End If
 
     End Sub
 #End Region
 
-#Region "Build final Registry key."
-    Friend Shared Sub computeStringFullRegistryKey()
+#Region "Build final Registry key value."
+    Friend Shared Sub computeStringFullRegistryKeyValue()
         ' Put together final string to display in textbox
         ' and write to the Registry.
-        computeStringKeyHideOrShowOnly()
-        computeStringKeyPageList()
-        stringFullRegistryKey = stringKeyHideOrShowOnly & stringKeyPageList
+        computeStringKeyValueHideOrShowOnly()
+        computeStringKeyValuePageList()
+        stringFullRegistryKeyValue = stringKeyValueHideOrShowOnly & stringKeyValuePageList
 
         ' Set the text property in the preview textboxes.
-        aaformMainWindow.textboxRegistryKey.Text = stringFullRegistryKey
-        aaformRegistryKeyLargePreview.textboxLargeRegistryKeyPreview.Text = stringFullRegistryKey
+        aaformMainWindow.textboxRegistryKeyValue.Text = stringFullRegistryKeyValue
+        aaformRegistryKeyValueValueLargePreview.textboxLargeRegistryKeyValuePreview.Text = stringFullRegistryKeyValue
     End Sub
 
 #End Region

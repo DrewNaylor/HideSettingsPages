@@ -1,4 +1,4 @@
-﻿'HideSettingsPages - GUI to set a Registry key to hide individual pages
+﻿'HideSettingsPages - GUI to set a Registry key value to hide individual pages
 'in the Windows 10 Settings app on the Creators Update and newer.
 'Copyright (C) 2017  Drew Naylor
 'Microsoft Windows and all related words are copyright
@@ -23,10 +23,10 @@
 
 
 
-Public Class aaformRegistryKeyLargePreview
-    Private Sub aaformRegistryKeyLargePreview_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+Public Class aaformRegistryKeyValueValueLargePreview
+    Private Sub aaformRegistryKeyValueLargePreview_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Make sure the textbox is up-to-date with the current
-        ' Registry key.
-        textboxLargeRegistryKeyPreview.Text = registryKeyBuilder.stringFullRegistryKey
+        ' Registry key value.
+        textboxLargeRegistryKeyValuePreview.Text = registryKeyValueBuilder.stringFullRegistryKeyValue
     End Sub
 End Class

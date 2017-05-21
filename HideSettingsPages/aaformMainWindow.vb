@@ -1,4 +1,4 @@
-﻿'HideSettingsPages - GUI to set a Registry key to hide individual pages
+﻿'HideSettingsPages - GUI to set a Registry key value to hide individual pages
 'in the Windows 10 Settings app on the Creators Update and newer.
 'Copyright (C) 2017  Drew Naylor
 'Microsoft Windows and all related words are copyright
@@ -30,11 +30,11 @@ Public Class aaformMainWindow
         ' Set the window title based on the name, dev, and version number.
         Me.Text = "HideSettingsPages v." & My.Application.Info.Version.ToString
 
-        ' Make sure the Registry key is updated as soon as the window
+        ' Make sure the Registry key value is updated as soon as the window
         ' opens because sometimes the "Hide" radio button is unchecked
         ' when I lauch this app from the Debug folder on Windows 7.
-        registryKeyBuilder.computeStringFullRegistryKey()
-        textboxRegistryKey.Text = registryKeyBuilder.stringFullRegistryKey
+        registryKeyValueBuilder.computeStringFullRegistryKeyValue()
+        textboxRegistryKeyValue.Text = registryKeyValueBuilder.stringFullRegistryKeyValue
     End Sub
 
     Private Sub buttonExit_Click(sender As Object, e As EventArgs) Handles buttonExit.Click
@@ -43,8 +43,8 @@ Public Class aaformMainWindow
     End Sub
 
     Private Sub linklabelViewLarger_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linklabelViewLarger.LinkClicked
-        ' Opens a larger window to preview the Registry key more easily.
-        aaformRegistryKeyLargePreview.Show()
+        ' Opens a larger window to preview the Registry key value more easily.
+        aaformRegistryKeyValueValueLargePreview.Show()
     End Sub
 #End Region
 
@@ -86,41 +86,41 @@ Public Class aaformMainWindow
 #Region "Registry computation code subs."
 
     Private Sub radiobuttonHidePages_Click(sender As Object, e As EventArgs) Handles radiobuttonHidePages.Click
-        ' Make sure the stringKeyHideOrShowOnly is updated
+        ' Make sure the stringKeyValueHideOrShowOnly is updated
         ' when clicking the radio buttons.
-        registryKeyBuilder.computeStringFullRegistryKey()
+        registryKeyValueBuilder.computeStringFullRegistryKeyValue()
     End Sub
 
     Private Sub radiobuttonShowOnlyPages_Click(sender As Object, e As EventArgs) Handles radiobuttonShowOnlyPages.Click
-        ' Make sure the stringKeyHideOrShowOnly is updated
+        ' Make sure the stringKeyValueHideOrShowOnly is updated
         ' when clicking the radio buttons.
-        registryKeyBuilder.computeStringFullRegistryKey()
+        registryKeyValueBuilder.computeStringFullRegistryKeyValue()
     End Sub
 
-#Region "Ensure the Registry key is properly recomputed when the user uses the mouse or keyboard."
+#Region "Ensure the Registry key value is properly recomputed when the user uses the mouse or keyboard."
     Private Sub checkedlistboxPageList_MouseUp(sender As Object, e As MouseEventArgs) Handles checkedlistboxPageList.MouseUp
         ' When the user checks checkboxes, update the string that displays
-        ' which pages the user chose for the Registry key.
-        registryKeyBuilder.computeStringFullRegistryKey()
+        ' which pages the user chose for the Registry key value.
+        registryKeyValueBuilder.computeStringFullRegistryKeyValue()
     End Sub
 
     Private Sub checkedlistboxPageList_KeyUp(sender As Object, e As KeyEventArgs) Handles checkedlistboxPageList.KeyUp
         ' When the user checks checkboxes, update the string that displays
-        ' which pages the user chose for the Registry key.
-        registryKeyBuilder.computeStringFullRegistryKey()
+        ' which pages the user chose for the Registry key value.
+        registryKeyValueBuilder.computeStringFullRegistryKeyValue()
     End Sub
 #End Region
 #End Region
 
 
-#Region "Apply/undo Registry key subs."
+#Region "Apply/undo Registry key value subs."
 
 
     Private Sub buttonUndoChanges_Click(sender As Object, e As EventArgs) Handles buttonUndoChanges.Click
-        ' Tell the registry key helper app to delete the key in the Registry.
+        ' Tell the registry helper app to delete the key value in the Registry.
         Dim proc As New ProcessStartInfo
         proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
-        proc.Arguments = registryKeyBuilder.stringFullRegistryKey & " undo"
+        proc.Arguments = registryKeyValueBuilder.stringFullRegistryKeyValue & " undo"
         Process.Start(proc)
     End Sub
 #End Region
