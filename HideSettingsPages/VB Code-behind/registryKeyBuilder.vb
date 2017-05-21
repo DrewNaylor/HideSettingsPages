@@ -1,4 +1,4 @@
-﻿'HideSettingsPages - GUI to set a Registry key to hide individual pages
+﻿'HideSettingsPages - GUI to set a Registry key value to hide individual pages
 'in the Windows 10 Settings app on the Creators Update and newer.
 'Copyright (C) 2017  Drew Naylor
 'Microsoft Windows and all related words are copyright
@@ -25,23 +25,23 @@
 
 
 
-Public Class registryKeyBuilder
-#Region "Figure out the Registry key to set to hide pages."
-    ' This class has subs that figure out what the Registry key data will be
+Public Class registryKeyValueBuilder
+#Region "Figure out the Registry key value to set to hide pages."
+    ' This class has subs that figure out what the Registry key value data will be
     ' and it gets updated when the user checks checkboxes or changes the radio
     ' buttons at the top.
 
     ' Create a friend, shared string called stringKeyHideOrShowOnly
     ' that updates based on which of the radio buttons at the 
     ' top the user clicks.
-    Friend Shared stringKeyHideOrShowOnly As String
+    Friend Shared stringKeyValueHideOrShowOnly As String
     ' Create a friend, shared string called stringKeyPageList
     ' to store the list of pages the user wants to hide or shor only
     ' in the Settings app.
-    Friend Shared stringKeyPageList As String
+    Friend Shared stringKeyValuePageList As String
     ' Create a friend, shared string called stringFullRegistryKey
-    ' to store the completed Registry key.
-    Friend Shared stringFullRegistryKey As String
+    ' to store the completed Registry key value.
+    Friend Shared stringFullRegistryKeyValue As String
 
 
 #Region "computeStringKeyHideOrShowOnly to figure out stringKeyHideOrShowOnly."
@@ -78,8 +78,8 @@ Public Class registryKeyBuilder
     End Sub
 #End Region
 
-#Region "Build final Registry key."
-    Friend Shared Sub computeStringFullRegistryKey()
+#Region "Build final Registry key value."
+    Friend Shared Sub computeStringFullRegistryKeyValue()
         ' Put together final string to display in textbox
         ' and write to the Registry.
         computeStringKeyHideOrShowOnly()
