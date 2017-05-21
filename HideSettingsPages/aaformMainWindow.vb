@@ -118,6 +118,7 @@ Public Class aaformMainWindow
 
     Private Sub buttonUndoChanges_Click(sender As Object, e As EventArgs) Handles buttonUndoChanges.Click
         ' Tell the registry key helper app to delete the key in the Registry.
+        Process.Start(My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe", registryKeyBuilder.stringFullRegistryKey)
     End Sub
 #End Region
 End Class
