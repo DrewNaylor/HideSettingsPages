@@ -44,7 +44,7 @@ Public Class registryKeyValueBuilder
     Friend Shared stringFullRegistryKeyValue As String
 
 
-#Region "computeStringKeyHideOrShowOnly to figure out stringKeyHideOrShowOnly."
+#Region "computeStringKeyValueHideOrShowOnly to figure out stringKeyValueHideOrShowOnly."
     Friend Shared Sub computeStringKeyValueHideOrShowOnly()
         ' Depending on which Radio Button at the top is checked,
         ' change stringKeyValueHideOrShowOnly.
