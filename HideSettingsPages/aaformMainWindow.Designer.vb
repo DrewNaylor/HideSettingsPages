@@ -32,7 +32,7 @@ Partial Class aaformMainWindow
         Me.panelScrollablePageList = New System.Windows.Forms.Panel()
         Me.checkedlistboxPageList = New System.Windows.Forms.CheckedListBox()
         Me.labelChoosePages = New System.Windows.Forms.Label()
-        Me.groupboxRegistryKey = New System.Windows.Forms.GroupBox()
+        Me.groupboxPreviewRegistryKeyValue = New System.Windows.Forms.GroupBox()
         Me.linklabelViewLarger = New System.Windows.Forms.LinkLabel()
         Me.textboxRegistryKeyValue = New System.Windows.Forms.TextBox()
         Me.panelApplyUndoExit = New System.Windows.Forms.Panel()
@@ -52,7 +52,7 @@ Partial Class aaformMainWindow
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
         Me.panelScrollablePageList.SuspendLayout()
-        Me.groupboxRegistryKey.SuspendLayout()
+        Me.groupboxPreviewRegistryKeyValue.SuspendLayout()
         Me.panelApplyUndoExit.SuspendLayout()
         Me.menubarMainWindow.SuspendLayout()
         Me.SuspendLayout()
@@ -61,11 +61,11 @@ Partial Class aaformMainWindow
         '
         Me.flowlayoutpanelMainWindow.Controls.Add(Me.groupboxSettingsPageVisibility)
         Me.flowlayoutpanelMainWindow.Controls.Add(Me.groupboxPageList)
-        Me.flowlayoutpanelMainWindow.Controls.Add(Me.groupboxRegistryKey)
+        Me.flowlayoutpanelMainWindow.Controls.Add(Me.groupboxPreviewRegistryKeyValue)
         Me.flowlayoutpanelMainWindow.Controls.Add(Me.panelApplyUndoExit)
         Me.flowlayoutpanelMainWindow.Dock = System.Windows.Forms.DockStyle.Fill
         Me.flowlayoutpanelMainWindow.Location = New System.Drawing.Point(0, 44)
-        Me.flowlayoutpanelMainWindow.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.flowlayoutpanelMainWindow.Margin = New System.Windows.Forms.Padding(6)
         Me.flowlayoutpanelMainWindow.Name = "flowlayoutpanelMainWindow"
         Me.flowlayoutpanelMainWindow.Size = New System.Drawing.Size(662, 1322)
         Me.flowlayoutpanelMainWindow.TabIndex = 0
@@ -76,9 +76,9 @@ Partial Class aaformMainWindow
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.radiobuttonHidePages)
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.labelPageVisibility)
         Me.groupboxSettingsPageVisibility.Location = New System.Drawing.Point(6, 6)
-        Me.groupboxSettingsPageVisibility.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.groupboxSettingsPageVisibility.Margin = New System.Windows.Forms.Padding(6)
         Me.groupboxSettingsPageVisibility.Name = "groupboxSettingsPageVisibility"
-        Me.groupboxSettingsPageVisibility.Padding = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.groupboxSettingsPageVisibility.Padding = New System.Windows.Forms.Padding(6)
         Me.groupboxSettingsPageVisibility.Size = New System.Drawing.Size(646, 176)
         Me.groupboxSettingsPageVisibility.TabIndex = 0
         Me.groupboxSettingsPageVisibility.TabStop = False
@@ -88,7 +88,7 @@ Partial Class aaformMainWindow
         '
         Me.radiobuttonShowOnlyPages.AutoSize = True
         Me.radiobuttonShowOnlyPages.Location = New System.Drawing.Point(12, 126)
-        Me.radiobuttonShowOnlyPages.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.radiobuttonShowOnlyPages.Margin = New System.Windows.Forms.Padding(6)
         Me.radiobuttonShowOnlyPages.Name = "radiobuttonShowOnlyPages"
         Me.radiobuttonShowOnlyPages.Size = New System.Drawing.Size(146, 29)
         Me.radiobuttonShowOnlyPages.TabIndex = 2
@@ -100,7 +100,7 @@ Partial Class aaformMainWindow
         Me.radiobuttonHidePages.AutoSize = True
         Me.radiobuttonHidePages.Checked = True
         Me.radiobuttonHidePages.Location = New System.Drawing.Point(12, 84)
-        Me.radiobuttonHidePages.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.radiobuttonHidePages.Margin = New System.Windows.Forms.Padding(6)
         Me.radiobuttonHidePages.Name = "radiobuttonHidePages"
         Me.radiobuttonHidePages.Size = New System.Drawing.Size(87, 29)
         Me.radiobuttonHidePages.TabIndex = 1
@@ -122,9 +122,9 @@ Partial Class aaformMainWindow
         '
         Me.groupboxPageList.Controls.Add(Me.panelScrollablePageList)
         Me.groupboxPageList.Location = New System.Drawing.Point(6, 194)
-        Me.groupboxPageList.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.groupboxPageList.Margin = New System.Windows.Forms.Padding(6)
         Me.groupboxPageList.Name = "groupboxPageList"
-        Me.groupboxPageList.Padding = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.groupboxPageList.Padding = New System.Windows.Forms.Padding(6)
         Me.groupboxPageList.Size = New System.Drawing.Size(646, 878)
         Me.groupboxPageList.TabIndex = 1
         Me.groupboxPageList.TabStop = False
@@ -136,7 +136,7 @@ Partial Class aaformMainWindow
         Me.panelScrollablePageList.Controls.Add(Me.labelChoosePages)
         Me.panelScrollablePageList.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelScrollablePageList.Location = New System.Drawing.Point(6, 30)
-        Me.panelScrollablePageList.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.panelScrollablePageList.Margin = New System.Windows.Forms.Padding(4)
         Me.panelScrollablePageList.Name = "panelScrollablePageList"
         Me.panelScrollablePageList.Size = New System.Drawing.Size(634, 842)
         Me.panelScrollablePageList.TabIndex = 13
@@ -146,7 +146,7 @@ Partial Class aaformMainWindow
         Me.checkedlistboxPageList.CheckOnClick = True
         Me.checkedlistboxPageList.Items.AddRange(New Object() {"about", "activation", "appsfeatures", "appsforwebsites", "autoplay", "backup", "batterysaver", "batterysaver-usagedetails", "bluetooth", "camera", "colors", "connecteddevices", "cortana", "cortana-moredetails", "cortana-permissions", "crossdevice", "datausage", "dateandtime", "defaultapps", "developers", "deviceencryption", "display", "easeofaccess-closedcaptioning", "easeofaccess-highcontrast", "easeofaccess-keyboard", "easeofaccess-magnifier", "easeofaccess-mouse", "easeofaccess-narrator", "easeofaccess-otheroptions", "emailandaccounts", "extras", "findmydevice", "gaming-broadcasting", "gaming-gamebar", "gaming-gamedvr", "gaming-gamemode", "holographic", "holographic-audio", "lockscreen", "maps", "mousetouchpad", "multitasking", "network-airplanemode", "network-cellular", "network-dialup", "network-directaccess", "network-ethernet", "network-mobilehotspot", "network-proxy", "network-status", "network-vpn", "network-wifi", "network-wifisettings", "nfctransactions", "notifications", "optionalfeatures", "otherusers", "pen", "personalization-background", "personalization-start", "powersleep", "printers", "privacy", "privacy-accountinfo", "privacy-appdiagnostics", "privacy-backgroundapps", "privacy-calendar", "privacy-callhistory", "privacy-contacts", "privacy-customdevices", "privacy-email", "privacy-feedback", "privacy-location", "privacy-messaging", "privacy-microphone", "privacy-motion", "privacy-notifications", "privacy-radios", "privacy-speechtyping", "privacy-tasks", "privacy-webcam", "project", "recovery", "regionlanguage", "signinoptions", "speech", "storagesense", "sync", "tabletmode", "taskbar", "themes", "troubleshoot", "typing", "usb", "windowsdefender", "windowsinsider", "windowsupdate", "windowsupdate-action", "windowsupdate-history", "windowsupdate-options", "windowsupdate-restartoptions", "workplace", "yourinfo"})
         Me.checkedlistboxPageList.Location = New System.Drawing.Point(6, 44)
-        Me.checkedlistboxPageList.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.checkedlistboxPageList.Margin = New System.Windows.Forms.Padding(4)
         Me.checkedlistboxPageList.Name = "checkedlistboxPageList"
         Me.checkedlistboxPageList.Size = New System.Drawing.Size(618, 784)
         Me.checkedlistboxPageList.TabIndex = 17
@@ -161,18 +161,18 @@ Partial Class aaformMainWindow
         Me.labelChoosePages.TabIndex = 13
         Me.labelChoosePages.Text = "Choose pages to hide or only show."
         '
-        'groupboxRegistryKey
+        'groupboxPreviewRegistryKeyValue
         '
-        Me.groupboxRegistryKey.Controls.Add(Me.linklabelViewLarger)
-        Me.groupboxRegistryKey.Controls.Add(Me.textboxRegistryKeyValue)
-        Me.groupboxRegistryKey.Location = New System.Drawing.Point(6, 1084)
-        Me.groupboxRegistryKey.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.groupboxRegistryKey.Name = "groupboxRegistryKey"
-        Me.groupboxRegistryKey.Padding = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.groupboxRegistryKey.Size = New System.Drawing.Size(646, 156)
-        Me.groupboxRegistryKey.TabIndex = 2
-        Me.groupboxRegistryKey.TabStop = False
-        Me.groupboxRegistryKey.Text = "Registry key preview"
+        Me.groupboxPreviewRegistryKeyValue.Controls.Add(Me.linklabelViewLarger)
+        Me.groupboxPreviewRegistryKeyValue.Controls.Add(Me.textboxRegistryKeyValue)
+        Me.groupboxPreviewRegistryKeyValue.Location = New System.Drawing.Point(6, 1084)
+        Me.groupboxPreviewRegistryKeyValue.Margin = New System.Windows.Forms.Padding(6)
+        Me.groupboxPreviewRegistryKeyValue.Name = "groupboxPreviewRegistryKeyValue"
+        Me.groupboxPreviewRegistryKeyValue.Padding = New System.Windows.Forms.Padding(6)
+        Me.groupboxPreviewRegistryKeyValue.Size = New System.Drawing.Size(646, 156)
+        Me.groupboxPreviewRegistryKeyValue.TabIndex = 2
+        Me.groupboxPreviewRegistryKeyValue.TabStop = False
+        Me.groupboxPreviewRegistryKeyValue.Text = "Registry key value preview"
         '
         'linklabelViewLarger
         '
@@ -188,7 +188,7 @@ Partial Class aaformMainWindow
         'textboxRegistryKeyValue
         '
         Me.textboxRegistryKeyValue.Location = New System.Drawing.Point(12, 40)
-        Me.textboxRegistryKeyValue.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.textboxRegistryKeyValue.Margin = New System.Windows.Forms.Padding(6)
         Me.textboxRegistryKeyValue.Multiline = True
         Me.textboxRegistryKeyValue.Name = "textboxRegistryKeyValue"
         Me.textboxRegistryKeyValue.ReadOnly = True
@@ -202,7 +202,7 @@ Partial Class aaformMainWindow
         Me.panelApplyUndoExit.Controls.Add(Me.buttonApplyChanges)
         Me.panelApplyUndoExit.Controls.Add(Me.buttonUndoChanges)
         Me.panelApplyUndoExit.Location = New System.Drawing.Point(4, 1250)
-        Me.panelApplyUndoExit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.panelApplyUndoExit.Margin = New System.Windows.Forms.Padding(4)
         Me.panelApplyUndoExit.Name = "panelApplyUndoExit"
         Me.panelApplyUndoExit.Size = New System.Drawing.Size(648, 68)
         Me.panelApplyUndoExit.TabIndex = 4
@@ -210,7 +210,7 @@ Partial Class aaformMainWindow
         'buttonExit
         '
         Me.buttonExit.Location = New System.Drawing.Point(462, 6)
-        Me.buttonExit.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.buttonExit.Margin = New System.Windows.Forms.Padding(6)
         Me.buttonExit.Name = "buttonExit"
         Me.buttonExit.Size = New System.Drawing.Size(124, 46)
         Me.buttonExit.TabIndex = 2
@@ -220,7 +220,7 @@ Partial Class aaformMainWindow
         'buttonApplyChanges
         '
         Me.buttonApplyChanges.Location = New System.Drawing.Point(64, 6)
-        Me.buttonApplyChanges.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.buttonApplyChanges.Margin = New System.Windows.Forms.Padding(6)
         Me.buttonApplyChanges.Name = "buttonApplyChanges"
         Me.buttonApplyChanges.Size = New System.Drawing.Size(174, 46)
         Me.buttonApplyChanges.TabIndex = 0
@@ -230,7 +230,7 @@ Partial Class aaformMainWindow
         'buttonUndoChanges
         '
         Me.buttonUndoChanges.Location = New System.Drawing.Point(250, 6)
-        Me.buttonUndoChanges.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.buttonUndoChanges.Margin = New System.Windows.Forms.Padding(6)
         Me.buttonUndoChanges.Name = "buttonUndoChanges"
         Me.buttonUndoChanges.Size = New System.Drawing.Size(200, 46)
         Me.buttonUndoChanges.TabIndex = 1
@@ -307,7 +307,7 @@ Partial Class aaformMainWindow
         Me.Controls.Add(Me.menubarMainWindow)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.menubarMainWindow
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "aaformMainWindow"
         Me.Text = "HideSettingsPages"
         Me.flowlayoutpanelMainWindow.ResumeLayout(False)
@@ -316,8 +316,8 @@ Partial Class aaformMainWindow
         Me.groupboxPageList.ResumeLayout(False)
         Me.panelScrollablePageList.ResumeLayout(False)
         Me.panelScrollablePageList.PerformLayout()
-        Me.groupboxRegistryKey.ResumeLayout(False)
-        Me.groupboxRegistryKey.PerformLayout()
+        Me.groupboxPreviewRegistryKeyValue.ResumeLayout(False)
+        Me.groupboxPreviewRegistryKeyValue.PerformLayout()
         Me.panelApplyUndoExit.ResumeLayout(False)
         Me.menubarMainWindow.ResumeLayout(False)
         Me.menubarMainWindow.PerformLayout()
@@ -337,7 +337,7 @@ Partial Class aaformMainWindow
     Friend WithEvents radiobuttonShowOnlyPages As RadioButton
     Friend WithEvents radiobuttonHidePages As RadioButton
     Friend WithEvents groupboxPageList As GroupBox
-    Friend WithEvents groupboxRegistryKey As GroupBox
+    Friend WithEvents groupboxPreviewRegistryKeyValue As GroupBox
     Friend WithEvents buttonUndoChanges As Button
     Friend WithEvents buttonApplyChanges As Button
     Friend WithEvents buttonExit As Button
