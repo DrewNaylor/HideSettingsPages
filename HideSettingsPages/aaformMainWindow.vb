@@ -41,6 +41,11 @@ Public Class aaformMainWindow
         ' Close the application.
         Me.Close()
     End Sub
+
+    Private Sub linklabelViewLarger_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linklabelViewLarger.LinkClicked
+        ' Opens a larger window to preview the Registry key more easily.
+        aaformRegistryKeyLargePreview.Show()
+    End Sub
 #End Region
 
 #Region "Menubar buttons."
@@ -104,12 +109,15 @@ Public Class aaformMainWindow
         ' which pages the user chose for the Registry key.
         registryKeyBuilder.computeStringFullRegistryKey()
     End Sub
-
-    Private Sub linklabelViewLarger_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linklabelViewLarger.LinkClicked
-        ' Opens a larger window to preview the Registry key more easily.
-        aaformRegistryKeyLargePreview.Show()
-    End Sub
+#End Region
 #End Region
 
+
+#Region "Apply/undo Registry key subs."
+
+
+    Private Sub buttonUndoChanges_Click(sender As Object, e As EventArgs) Handles buttonUndoChanges.Click
+        ' Tell the registry key helper app to delete the key in the Registry.
+    End Sub
 #End Region
 End Class
