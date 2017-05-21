@@ -1,5 +1,5 @@
 ﻿'HideSettingsPages Registry Helper - Used to apply the Registry
-'key chosen in HideSettingsPages. Can also apply/remove key via arguments.
+'key value chosen in HideSettingsPages. Can also apply/remove key value via arguments.
 'Copyright (C) 2017  Drew Naylor
 'Microsoft Windows and all related words are copyright
 'and trademark Microsoft Corporation.
@@ -26,7 +26,7 @@
 
 
 Imports System.Windows.Forms
-Module applyOrRemoveRegistryKey
+Module applyOrRemoveRegistryKeyValue
 
 
     Public Sub Main(ByVal sArgs() As String)
@@ -39,8 +39,8 @@ Module applyOrRemoveRegistryKey
 
         ' Make some priate strings.
         Dim i As Integer = 0
-        ' fullKey is the Registry key from main app.
-        Dim fullKey As String = Nothing
+        ' fullKey is the Registry key value from main app.
+        Dim fullKeyValue As String = Nothing
         ' actionToTake is the "apply" or "undo" string
         ' from main app.
         Dim actionToTake As String = Nothing
@@ -62,17 +62,17 @@ Module applyOrRemoveRegistryKey
                 i = i + 1
 
                 If i.ToString = 1 Then
-                    fullKey = s
+                    fullKeyValue = s
                 ElseIf i.ToString = 2 Then
                     actionToTake = s
                 End If
             Next
         End If
 
-        Console.WriteLine(fullKey)
+        Console.WriteLine(fullKeyValue)
         Console.WriteLine(actionToTake)
 
-        MessageBox.Show("This is the full Registry key.")
+        MessageBox.Show("This is the full Registry key value.")
         MessageBox.Show("Stop.")
 
     End Sub
