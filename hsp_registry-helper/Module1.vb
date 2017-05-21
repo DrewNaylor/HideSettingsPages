@@ -26,6 +26,8 @@ Module Module1
             Next
         End If
 
+        Console.WriteLine(fullKey)
+        Console.WriteLine(actionToTake)
 
         MessageBox.Show("This is the full Registry key.")
         MessageBox.Show("Stop.")

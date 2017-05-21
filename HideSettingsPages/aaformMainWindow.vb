@@ -120,7 +120,7 @@ Public Class aaformMainWindow
         ' Tell the registry key helper app to delete the key in the Registry.
         Dim proc As New ProcessStartInfo
         proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
-        proc.Arguments = "registryKeyBuilder.stringFullRegistryKey undo"
+        proc.Arguments = registryKeyBuilder.stringFullRegistryKey & " undo"
         Process.Start(proc)
     End Sub
 #End Region
