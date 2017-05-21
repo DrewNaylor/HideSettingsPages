@@ -87,7 +87,7 @@ Public Class registryKeyValueBuilder
         stringFullRegistryKeyValue = stringKeyValueHideOrShowOnly & stringKeyValuePageList
 
         ' Set the text property in the preview textboxes.
-        aaformMainWindow.textboxRegistryKey.Text = stringFullRegistryKeyValue
+        aaformMainWindow.textboxRegistryKeyValue.Text = stringFullRegistryKeyValue
         aaformRegistryKeyValueValueLargePreview.textboxLargeRegistryKeyPreview.Text = stringFullRegistryKeyValue
     End Sub
 
