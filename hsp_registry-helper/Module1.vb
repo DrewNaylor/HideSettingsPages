@@ -31,8 +31,11 @@ Module applyOrRemoveRegistryKey
 
     Public Sub Main(ByVal sArgs() As String)
 
+        ' Create string to hold titlebar text for now.
+        Dim titlebarText As String = "HideSettingsPages Registry Helper v." & My.Application.Info.Version.ToString
+
         ' Set titlebar text to application name and version.
-        Console.Title = "HideSettingsPages Registry Helper v." & My.Application.Info.Version.ToString
+        Console.Title = titlebarText
 
         ' Make some priate strings.
         Dim i As Integer = 0
@@ -50,6 +53,8 @@ Module applyOrRemoveRegistryKey
 
         If sArgs.Length = 0 Then                'If there are no arguments
             Console.WriteLine("Hello World! <-no arguments passed->") 'Just output Hello World
+            ' Update titlebar to tell the user there's no arguments passed.
+            Console.Title = titlebarText & ": No arguments passed."
         Else                                    'We have some arguments 
 
             For Each s As String In My.Application.CommandLineArgs
