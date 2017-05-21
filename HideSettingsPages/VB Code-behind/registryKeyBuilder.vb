@@ -50,9 +50,9 @@ Public Class registryKeyValueBuilder
         ' change stringKeyHideOrShowOnly.
 
         If aaformMainWindow.radiobuttonHidePages.Checked = True Then
-            stringKeyHideOrShowOnly = "hide:"
+            stringKeyValueHideOrShowOnly = "hide:"
         ElseIf aaformMainWindow.radiobuttonShowOnlyPages.Checked = True Then
-            stringKeyHideOrShowOnly = "showonly:"
+            stringKeyValueHideOrShowOnly = "showonly:"
         End If
     End Sub
 #End Region
@@ -88,7 +88,7 @@ Public Class registryKeyValueBuilder
 
         ' Set the text property in the preview textboxes.
         aaformMainWindow.textboxRegistryKey.Text = stringFullRegistryKey
-        aaformRegistryKeyLargePreview.textboxLargeRegistryKeyPreview.Text = stringFullRegistryKey
+        aaformRegistryKeyValueValueLargePreview.textboxLargeRegistryKeyPreview.Text = stringFullRegistryKey
     End Sub
 
 #End Region

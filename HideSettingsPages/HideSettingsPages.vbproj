@@ -118,10 +118,10 @@
       <DependentUpon>aaformMainWindow.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="aaformRegistryKeyLargePreview.Designer.vb">
-      <DependentUpon>aaformRegistryKeyLargePreview.vb</DependentUpon>
+    <Compile Include="aaformRegistryKeyValueLargePreview.Designer.vb">
+      <DependentUpon>aaformRegistryKeyValueLargePreview.vb</DependentUpon>
     </Compile>
-    <Compile Include="aaformRegistryKeyLargePreview.vb">
+    <Compile Include="aaformRegistryKeyValueLargePreview.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -148,8 +148,8 @@
     <EmbeddedResource Include="aaformMainWindow.resx">
       <DependentUpon>aaformMainWindow.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="aaformRegistryKeyLargePreview.resx">
-      <DependentUpon>aaformRegistryKeyLargePreview.vb</DependentUpon>
+    <EmbeddedResource Include="aaformRegistryKeyValueLargePreview.resx">
+      <DependentUpon>aaformRegistryKeyValueLargePreview.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

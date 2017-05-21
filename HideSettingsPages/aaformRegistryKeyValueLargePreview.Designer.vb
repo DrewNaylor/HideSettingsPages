@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class aaformRegistryKeyLargePreview
+Partial Class aaformRegistryKeyValueValueLargePreview
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -29,24 +29,26 @@ Partial Class aaformRegistryKeyLargePreview
         '
         Me.textboxLargeRegistryKeyPreview.Dock = System.Windows.Forms.DockStyle.Fill
         Me.textboxLargeRegistryKeyPreview.Location = New System.Drawing.Point(0, 0)
+        Me.textboxLargeRegistryKeyPreview.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.textboxLargeRegistryKeyPreview.Multiline = True
         Me.textboxLargeRegistryKeyPreview.Name = "textboxLargeRegistryKeyPreview"
         Me.textboxLargeRegistryKeyPreview.ReadOnly = True
         Me.textboxLargeRegistryKeyPreview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.textboxLargeRegistryKeyPreview.Size = New System.Drawing.Size(284, 262)
+        Me.textboxLargeRegistryKeyPreview.Size = New System.Drawing.Size(568, 524)
         Me.textboxLargeRegistryKeyPreview.TabIndex = 0
         '
-        'aaformRegistryKeyLargePreview
+        'aaformRegistryKeyValueValueLargePreview
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(192.0!, 192.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
-        Me.ClientSize = New System.Drawing.Size(284, 262)
+        Me.ClientSize = New System.Drawing.Size(568, 524)
         Me.Controls.Add(Me.textboxLargeRegistryKeyPreview)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
-        Me.Name = "aaformRegistryKeyLargePreview"
+        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.Name = "aaformRegistryKeyValueValueLargePreview"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
-        Me.Text = "Registry Key Preview"
+        Me.Text = "Registry Key Value Preview"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
