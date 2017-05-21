@@ -50,13 +50,16 @@ Module applyOrRemoveRegistryKeyValue
         ' Also, this code was modified from this
         ' MSDN article:
         ' https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.arguments%28v=vs.110%29.aspx?f=255&MSPPError=-2147217396
-
-        If sArgs.Length = 0 Then                'If there are no arguments
-            Console.WriteLine("Hello World! <-no arguments passed->") 'Just output Hello World
+#Region "Figure out all the arguments."
+        If sArgs.Length = 0 Then
+            'If there are no arguments, print app info and 
+            ' tell the user what arguments are accepted.
+            Console.WriteLine("Hello World! <-no arguments passed->")
             ' Update titlebar to tell the user there's no arguments passed.
             Console.Title = titlebarText & ": No arguments passed."
         Else                                    'We have some arguments 
 
+            ' Print out all the arguments.
             For Each s As String In My.Application.CommandLineArgs
                 Console.WriteLine("[" + i.ToString() + "] = " + s)
                 i = i + 1
@@ -68,6 +71,7 @@ Module applyOrRemoveRegistryKeyValue
                 End If
             Next
         End If
+#End Region
 
         Console.WriteLine(fullKeyValue)
         Console.WriteLine(actionToTake)
