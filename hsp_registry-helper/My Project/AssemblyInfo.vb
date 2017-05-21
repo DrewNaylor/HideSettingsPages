@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("hsp_registry-helper")>
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyTitle("HideSettingsPages Registry Helper")>
+<Assembly: AssemblyDescription("Used to apply the Registry key chosen in HideSettingsPages. Can also apply/remove key via arguments.")>
 <Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("hsp_registry-helper")>
-<Assembly: AssemblyCopyright("Copyright ©  2017")>
+<Assembly: AssemblyProduct("HideSettingsPages Registry Helper")>
+<Assembly: AssemblyCopyright("Copyright ©  2017 Drew Naylor. Licensed under Gnu GPLv3+.")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("0.1.0.0")>
+<Assembly: AssemblyFileVersion("0.1.0.0")>
