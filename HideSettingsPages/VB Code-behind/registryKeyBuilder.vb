@@ -31,23 +31,23 @@ Public Class registryKeyValueBuilder
     ' and it gets updated when the user checks checkboxes or changes the radio
     ' buttons at the top.
 
-    ' Create a friend, shared string called stringKeyHideOrShowOnly
+    ' Create a friend, shared string called stringKeyValueHideOrShowOnly
     ' that updates based on which of the radio buttons at the 
     ' top the user clicks.
     Friend Shared stringKeyValueHideOrShowOnly As String
-    ' Create a friend, shared string called stringKeyPageList
+    ' Create a friend, shared string called stringKeyValuePageList
     ' to store the list of pages the user wants to hide or shor only
     ' in the Settings app.
     Friend Shared stringKeyValuePageList As String
-    ' Create a friend, shared string called stringFullRegistryKey
+    ' Create a friend, shared string called stringFullRegistryKeyValue
     ' to store the completed Registry key value.
     Friend Shared stringFullRegistryKeyValue As String
 
 
 #Region "computeStringKeyHideOrShowOnly to figure out stringKeyHideOrShowOnly."
-    Friend Shared Sub computeStringKeyHideOrShowOnly()
+    Friend Shared Sub computeStringKeyValueHideOrShowOnly()
         ' Depending on which Radio Button at the top is checked,
-        ' change stringKeyHideOrShowOnly.
+        ' change stringKeyValueHideOrShowOnly.
 
         If aaformMainWindow.radiobuttonHidePages.Checked = True Then
             stringKeyValueHideOrShowOnly = "hide:"
@@ -57,8 +57,8 @@ Public Class registryKeyValueBuilder
     End Sub
 #End Region
 
-#Region "computeStringKeyPageList to figure out stringKeyPageList."
-    Friend Shared Sub computeStringKeyPageList()
+#Region "computeStringKeyValuePageList to figure out stringKeyValuePageList."
+    Friend Shared Sub computeStringKeyValuePageList()
         ' Create private ints and objs to be able to get
         ' the list of the checked items. Code based on MSDN
         ' sample: https://msdn.microsoft.com/en-us/library/e954th47(v=vs.110).aspx
@@ -82,13 +82,13 @@ Public Class registryKeyValueBuilder
     Friend Shared Sub computeStringFullRegistryKeyValue()
         ' Put together final string to display in textbox
         ' and write to the Registry.
-        computeStringKeyHideOrShowOnly()
-        computeStringKeyPageList()
+        computeStringKeyValueHideOrShowOnly()
+        computeStringKeyValuePageList()
         stringFullRegistryKeyValue = stringKeyValueHideOrShowOnly & stringKeyValuePageList
 
         ' Set the text property in the preview textboxes.
         aaformMainWindow.textboxRegistryKeyValue.Text = stringFullRegistryKeyValue
-        aaformRegistryKeyValueValueLargePreview.textboxLargeRegistryKeyPreview.Text = stringFullRegistryKeyValue
+        aaformRegistryKeyValueValueLargePreview.textboxLargeRegistryKeyValuePreview.Text = stringFullRegistryKeyValue
     End Sub
 
 #End Region

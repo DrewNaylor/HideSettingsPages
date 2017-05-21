@@ -86,7 +86,7 @@ Public Class aaformMainWindow
 #Region "Registry computation code subs."
 
     Private Sub radiobuttonHidePages_Click(sender As Object, e As EventArgs) Handles radiobuttonHidePages.Click
-        ' Make sure the stringKeyHideOrShowOnly is updated
+        ' Make sure the stringKeyValueHideOrShowOnly is updated
         ' when clicking the radio buttons.
         registryKeyValueBuilder.computeStringFullRegistryKeyValue()
     End Sub

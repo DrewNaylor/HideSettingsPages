@@ -22,27 +22,27 @@ Partial Class aaformRegistryKeyValueValueLargePreview
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.textboxLargeRegistryKeyPreview = New System.Windows.Forms.TextBox()
+        Me.textboxLargeRegistryKeyValuePreview = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'textboxLargeRegistryKeyPreview
         '
-        Me.textboxLargeRegistryKeyPreview.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.textboxLargeRegistryKeyPreview.Location = New System.Drawing.Point(0, 0)
-        Me.textboxLargeRegistryKeyPreview.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.textboxLargeRegistryKeyPreview.Multiline = True
-        Me.textboxLargeRegistryKeyPreview.Name = "textboxLargeRegistryKeyPreview"
-        Me.textboxLargeRegistryKeyPreview.ReadOnly = True
-        Me.textboxLargeRegistryKeyPreview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.textboxLargeRegistryKeyPreview.Size = New System.Drawing.Size(568, 524)
-        Me.textboxLargeRegistryKeyPreview.TabIndex = 0
+        Me.textboxLargeRegistryKeyValuePreview.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.textboxLargeRegistryKeyValuePreview.Location = New System.Drawing.Point(0, 0)
+        Me.textboxLargeRegistryKeyValuePreview.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.textboxLargeRegistryKeyValuePreview.Multiline = True
+        Me.textboxLargeRegistryKeyValuePreview.Name = "textboxLargeRegistryKeyPreview"
+        Me.textboxLargeRegistryKeyValuePreview.ReadOnly = True
+        Me.textboxLargeRegistryKeyValuePreview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.textboxLargeRegistryKeyValuePreview.Size = New System.Drawing.Size(568, 524)
+        Me.textboxLargeRegistryKeyValuePreview.TabIndex = 0
         '
         'aaformRegistryKeyValueValueLargePreview
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(192.0!, 192.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.ClientSize = New System.Drawing.Size(568, 524)
-        Me.Controls.Add(Me.textboxLargeRegistryKeyPreview)
+        Me.Controls.Add(Me.textboxLargeRegistryKeyValuePreview)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
         Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.Name = "aaformRegistryKeyValueValueLargePreview"
@@ -53,5 +53,5 @@ Partial Class aaformRegistryKeyValueValueLargePreview
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents textboxLargeRegistryKeyPreview As TextBox
+    Friend WithEvents textboxLargeRegistryKeyValuePreview As TextBox
 End Class

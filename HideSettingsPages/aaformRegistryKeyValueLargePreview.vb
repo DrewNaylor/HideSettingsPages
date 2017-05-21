@@ -27,6 +27,6 @@ Public Class aaformRegistryKeyValueValueLargePreview
     Private Sub aaformRegistryKeyLargePreview_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Make sure the textbox is up-to-date with the current
         ' Registry key.
-        textboxLargeRegistryKeyPreview.Text = registryKeyValueBuilder.stringFullRegistryKeyValue
+        textboxLargeRegistryKeyValuePreview.Text = registryKeyValueBuilder.stringFullRegistryKeyValue
     End Sub
 End Class
