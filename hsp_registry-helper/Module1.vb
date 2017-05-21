@@ -20,6 +20,9 @@ Module Module1
 
         End If
 
+        Dim fullKey As String = My.Application.CommandLineArgs(1)
+        Dim actionToRun As String = My.Application.CommandLineArgs(2)
+
         MessageBox.Show("This is the full Registry key.")
         MessageBox.Show("Stop.")
 
