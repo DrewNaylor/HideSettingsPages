@@ -49,7 +49,7 @@ Module applyOrRemoveRegistryKeyValue
         If sArgs.Length = 0 Then
             'If there are no arguments, print app info and 
             ' tell the user what arguments are accepted.
-
+            noArgsOutput.outputText()
             ' Update titlebar to tell the user there's no arguments passed.
             Console.Title = titlebarText & ": No arguments passed."
         Else
@@ -58,15 +58,6 @@ Module applyOrRemoveRegistryKeyValue
             actionToTake = sArgs(1)
         End If
 #End Region
-
-        ' Show the user app info including title, version, copyright, and license.
-        Console.WriteLine(My.Application.Info.Title & " Version " & My.Application.Info.Version.ToString)
-        Console.WriteLine(My.Application.Info.Copyright)
-        Console.WriteLine("Visit <http://www.gnu.org/licenses/> for more information on the Gnu GPL.")
-        Console.WriteLine("")
-        Console.WriteLine("This program is non-interactive and only accepts command-line arguments.")
-        Console.WriteLine("Proper command syntax is shown below.")
-
 
 #Region "Figure out all the arguments."
         ' I got the code below from this SO answer:
