@@ -49,13 +49,14 @@ Module applyOrRemoveRegistryKeyValue
         If sArgs.Length = 0 Then
             'If there are no arguments, print app info and 
             ' tell the user what arguments are accepted.
-            noArgsOutput.outputText()
+            argsOutput.noCommandLineArgs()
             ' Update titlebar to tell the user there's no arguments passed.
             Console.Title = titlebarText & ": No arguments passed."
         Else
             ' Change value of commandline arguments if they exist.
             fullKeyValue = sArgs(0)
             actionToTake = sArgs(1)
+
         End If
 #End Region
 

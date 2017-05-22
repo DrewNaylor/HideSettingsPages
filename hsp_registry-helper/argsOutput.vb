@@ -25,8 +25,8 @@
 
 
 
-Public Class noArgsOutput
-    Friend Shared Sub outputText()
+Public Class argsOutput
+    Friend Shared Sub noCommandLineArgs()
         ' Show the user app info including title, version, copyright, and license.
         Console.WriteLine(My.Application.Info.Title & " Version " & My.Application.Info.Version.ToString)
         Console.WriteLine(My.Application.Info.Copyright)
