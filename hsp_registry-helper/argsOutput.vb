@@ -39,6 +39,10 @@ Public Class argsOutput
     End Sub
 
     Friend Shared Sub passCommandLineArgs()
+        Console.WriteLine(fullKeyValue)
+        Console.WriteLine(actionToTake)
 
+        MessageBox.Show("This is the full Registry key value.")
+        MessageBox.Show("Stop.")
     End Sub
 End Class

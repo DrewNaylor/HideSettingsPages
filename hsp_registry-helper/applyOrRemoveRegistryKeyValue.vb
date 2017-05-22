@@ -46,12 +46,11 @@ Public Module applyOrRemoveRegistryKeyValue
             'If there are no arguments, print app info and 
             ' tell the user what arguments are accepted.
             argsOutput.noCommandLineArgs()
-
         Else
             ' Change value of commandline arguments if they exist.
             fullKeyValue = sArgs(0)
             actionToTake = sArgs(1)
-
+            argsOutput.passCommandLineArgs()
         End If
 #End Region
 
@@ -67,11 +66,7 @@ Public Module applyOrRemoveRegistryKeyValue
 #End Region
 
 
-        Console.WriteLine(fullKeyValue)
-        Console.WriteLine(actionToTake)
 
-        MessageBox.Show("This is the full Registry key value.")
-        MessageBox.Show("Stop.")
 
     End Sub
 
