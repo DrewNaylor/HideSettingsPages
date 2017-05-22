@@ -27,6 +27,8 @@
 
 Public Class argsOutput
     Friend Shared Sub noCommandLineArgs()
+        ' Update titlebar to tell the user there's no arguments passed.
+        Console.Title = titlebarText & ": No arguments passed."
         ' Show the user app info including title, version, copyright, and license.
         Console.WriteLine(My.Application.Info.Title & " Version " & My.Application.Info.Version.ToString)
         Console.WriteLine(My.Application.Info.Copyright)

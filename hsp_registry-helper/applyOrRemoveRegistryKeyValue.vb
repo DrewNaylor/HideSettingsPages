@@ -26,18 +26,17 @@
 
 
 Imports System.Windows.Forms
-Module applyOrRemoveRegistryKeyValue
+Public Module applyOrRemoveRegistryKeyValue
 
     ' fullKey is the Registry key value from main app.
     Friend fullKeyValue As String = Nothing
     ' actionToTake is the "apply" or "undo" string
     ' from main app.
     Friend actionToTake As String = Nothing
+    ' Create string to hold titlebar text for now.
+    Friend titlebarText As String = "HideSettingsPages Registry Helper v." & My.Application.Info.Version.ToString
 
     Public Sub Main(ByVal sArgs() As String)
-
-        ' Create string to hold titlebar text for now.
-        Dim titlebarText As String = "HideSettingsPages Registry Helper v." & My.Application.Info.Version.ToString
 
         ' Set titlebar text to application name and version.
         Console.Title = titlebarText
@@ -47,8 +46,7 @@ Module applyOrRemoveRegistryKeyValue
             'If there are no arguments, print app info and 
             ' tell the user what arguments are accepted.
             argsOutput.noCommandLineArgs()
-            ' Update titlebar to tell the user there's no arguments passed.
-            Console.Title = titlebarText & ": No arguments passed."
+
         Else
             ' Change value of commandline arguments if they exist.
             fullKeyValue = sArgs(0)
