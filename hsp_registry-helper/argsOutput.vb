@@ -35,4 +35,8 @@ Public Class argsOutput
         Console.WriteLine("This program is non-interactive and only accepts command-line arguments.")
         Console.WriteLine("Proper command syntax is shown below.")
     End Sub
+
+    Friend Shared Sub passCommandLineArgs()
+
+    End Sub
 End Class
