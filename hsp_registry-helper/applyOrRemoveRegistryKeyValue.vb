@@ -28,6 +28,11 @@
 Imports System.Windows.Forms
 Module applyOrRemoveRegistryKeyValue
 
+    ' fullKey is the Registry key value from main app.
+    Friend fullKeyValue As String = Nothing
+    ' actionToTake is the "apply" or "undo" string
+    ' from main app.
+    Friend actionToTake As String = Nothing
 
     Public Sub Main(ByVal sArgs() As String)
 
@@ -38,14 +43,6 @@ Module applyOrRemoveRegistryKeyValue
         Console.Title = titlebarText
 
 #Region "Assign values to arguments."
-
-
-        ' fullKey is the Registry key value from main app.
-        Dim fullKeyValue As String = Nothing
-        ' actionToTake is the "apply" or "undo" string
-        ' from main app.
-        Dim actionToTake As String = Nothing
-
         If sArgs.Length = 0 Then
             'If there are no arguments, print app info and 
             ' tell the user what arguments are accepted.
