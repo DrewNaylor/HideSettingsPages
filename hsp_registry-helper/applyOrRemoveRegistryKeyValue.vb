@@ -37,6 +37,11 @@ Module applyOrRemoveRegistryKeyValue
         ' Set titlebar text to application name and version.
         Console.Title = titlebarText
 
+        ' Show the user app info including title, version, copyright, and license.
+        Console.WriteLine(My.Application.Info.Title & " Version " & My.Application.Info.Version.ToString)
+        Console.WriteLine(My.Application.Info.Copyright)
+
+
         ' Make some priate strings.
         Dim i As Integer = 0
         ' fullKey is the Registry key value from main app.
@@ -55,7 +60,7 @@ Module applyOrRemoveRegistryKeyValue
         If sArgs.Length = 0 Then
             'If there are no arguments, print app info and 
             ' tell the user what arguments are accepted.
-            Console.WriteLine(My.Application.Info.Title & " Version " & My.Application.Info.Version.ToString)
+
 
             ' Update titlebar to tell the user there's no arguments passed.
             Console.Title = titlebarText & ": No arguments passed."
