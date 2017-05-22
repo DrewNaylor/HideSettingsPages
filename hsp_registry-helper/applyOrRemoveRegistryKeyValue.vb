@@ -37,6 +37,28 @@ Module applyOrRemoveRegistryKeyValue
         ' Set titlebar text to application name and version.
         Console.Title = titlebarText
 
+#Region "Assign values to arguments."
+
+
+        ' fullKey is the Registry key value from main app.
+        Dim fullKeyValue As String = Nothing
+        ' actionToTake is the "apply" or "undo" string
+        ' from main app.
+        Dim actionToTake As String = Nothing
+
+        If sArgs.Length = 0 Then
+            'If there are no arguments, print app info and 
+            ' tell the user what arguments are accepted.
+
+            ' Update titlebar to tell the user there's no arguments passed.
+            Console.Title = titlebarText & ": No arguments passed."
+        Else
+            ' Change value of commandline arguments if they exist.
+            fullKeyValue = sArgs(0)
+            actionToTake = sArgs(1)
+        End If
+#End Region
+
         ' Show the user app info including title, version, copyright, and license.
         Console.WriteLine(My.Application.Info.Title & " Version " & My.Application.Info.Version.ToString)
         Console.WriteLine(My.Application.Info.Copyright)
@@ -46,45 +68,17 @@ Module applyOrRemoveRegistryKeyValue
         Console.WriteLine("Proper command syntax is shown below.")
 
 
-        ' Make some private strings.
-        Dim i As Integer = 0
-        ' fullKey is the Registry key value from main app.
-        Dim fullKeyValue As String = Nothing
-        ' actionToTake is the "apply" or "undo" string
-        ' from main app.
-        Dim actionToTake As String = Nothing
-
+#Region "Figure out all the arguments."
         ' I got the code below from this SO answer:
         ' http://stackoverflow.com/a/26323809
         ' Also, this code was modified from this
         ' MSDN article:
-        ' https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.arguments%28v=vs.110%29.aspx?f=255&MSPPError=-2147217396
-#Region "Figure out all the arguments."
-
-        If sArgs.Length = 0 Then
-            'If there are no arguments, print app info and 
-            ' tell the user what arguments are accepted.
+        ' https://msdn.microsoft.com/en-us/library/system.diagnostics.ProcessStartInfo.Arguments28v=vs.110%29.aspx?f=255&MSPPError=-2147217396
 
 
-            ' Update titlebar to tell the user there's no arguments passed.
-            Console.Title = titlebarText & ": No arguments passed."
 
-            'We have some arguments 
-        Else
-
-            ' Print out all the arguments.
-            For Each s As String In My.Application.CommandLineArgs
-                Console.WriteLine("[" + i.ToString() + "] = " + s)
-                i = i + 1
-
-                If i.ToString = 1 Then
-                    fullKeyValue = s
-                ElseIf i.ToString = 2 Then
-                    actionToTake = s
-                End If
-            Next
-        End If
 #End Region
+
 
         Console.WriteLine(fullKeyValue)
         Console.WriteLine(actionToTake)
