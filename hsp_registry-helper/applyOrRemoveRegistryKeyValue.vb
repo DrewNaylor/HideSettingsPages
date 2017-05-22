@@ -51,12 +51,15 @@ Module applyOrRemoveRegistryKeyValue
         ' MSDN article:
         ' https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.arguments%28v=vs.110%29.aspx?f=255&MSPPError=-2147217396
 #Region "Figure out all the arguments."
+
         If sArgs.Length = 0 Then
             'If there are no arguments, print app info and 
             ' tell the user what arguments are accepted.
-            Console.WriteLine("Hello World! <-no arguments passed->")
+            Console.WriteLine(My.Application.Info.Title & " Version " & My.Application.Info.Version.ToString)
+
             ' Update titlebar to tell the user there's no arguments passed.
             Console.Title = titlebarText & ": No arguments passed."
+
         Else                                    'We have some arguments 
 
             ' Print out all the arguments.
