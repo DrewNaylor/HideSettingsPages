@@ -42,7 +42,8 @@ Module applyOrRemoveRegistryKeyValue
         Console.WriteLine(My.Application.Info.Copyright)
 
 
-        ' Make some priate strings.
+
+        ' Make some private strings.
         Dim i As Integer = 0
         ' fullKey is the Registry key value from main app.
         Dim fullKeyValue As String = Nothing
@@ -65,7 +66,8 @@ Module applyOrRemoveRegistryKeyValue
             ' Update titlebar to tell the user there's no arguments passed.
             Console.Title = titlebarText & ": No arguments passed."
 
-        Else                                    'We have some arguments 
+            'We have some arguments 
+        Else
 
             ' Print out all the arguments.
             For Each s As String In My.Application.CommandLineArgs
