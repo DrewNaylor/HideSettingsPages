@@ -59,6 +59,7 @@ Public Class argsOutput
         Console.WriteLine("Examples:")
         Console.WriteLine("")
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /apply hide:display;about")
+        Console.WriteLine(vbTab & "hsp_registry-helper.exe /apply showonly:display;about")
         MessageBox.Show("No arguments passed.")
     End Sub
 
