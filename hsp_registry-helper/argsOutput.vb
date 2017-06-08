@@ -48,6 +48,9 @@ Public Class argsOutput
         Console.WriteLine("Syntax:")
         Console.WriteLine("")
         Console.WriteLine(vbTab & "hsp_registry-helper.exe <action> <key value>")
+        Console.WriteLine("")
+        Console.WriteLine(vbTab & "Where <action> is either /apply (apply registry key value) or /undo" _
+            & " (remove registry key value.)")
         MessageBox.Show("No arguments passed.")
     End Sub
 
