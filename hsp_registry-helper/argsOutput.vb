@@ -44,6 +44,10 @@ Public Class argsOutput
         Console.WriteLine("")
         Console.WriteLine("This program is non-interactive and only accepts command-line arguments.")
         Console.WriteLine("Proper command syntax is shown below.")
+        Console.WriteLine("")
+        Console.WriteLine("Syntax:")
+        Console.WriteLine("")
+        Console.WriteLine(vbTab & "hsp_registry-helper.exe <action> <key value>")
         MessageBox.Show("No arguments passed.")
     End Sub
 
