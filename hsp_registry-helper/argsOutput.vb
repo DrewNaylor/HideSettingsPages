@@ -48,7 +48,7 @@ Public Class argsOutput
         Console.WriteLine("")
         Console.WriteLine(vbTab & "Where <action> is either /apply (apply Registry key value) or /undo" _
             & " (remove Registry key value.)")
-        Console.WriteLine(vbTab & "<key value> is the Registry key to apply to the system.")
+        Console.WriteLine(vbTab & "<key value> is the Registry key to apply to the system in the form of <hide or showonly>:<page>;<more pages>")
         Console.WriteLine("")
         Console.WriteLine(vbTab & "Even if /undo-ing the Registry key value, there must be something in the <key value>")
         Console.WriteLine(vbTab & "section or the app will crash. I want to make it ignore the second argument if <action> is /undo.")
