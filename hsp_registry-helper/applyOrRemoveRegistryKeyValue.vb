@@ -1,5 +1,6 @@
 ﻿'HideSettingsPages Registry Helper - Used to apply the Registry
 'key value chosen in HideSettingsPages. Can also apply/remove key value via arguments.
+'This key value will hide or show pages in the Windows 10 Settings app on the Creators Update and newer.
 'Copyright (C) 2017  Drew Naylor
 'Microsoft Windows and all related words are copyright
 'and trademark Microsoft Corporation.
@@ -26,65 +27,33 @@
 
 
 Imports System.Windows.Forms
-Module applyOrRemoveRegistryKeyValue
+Public Module applyOrRemoveRegistryKeyValue
 
+    ' fullKey is the Registry key value from main app.
+    Friend fullKeyValue As String = Nothing
+    ' actionToTake is the "apply" or "undo" string
+    ' from main app.
+    Friend actionToTake As String = Nothing
+    ' Create string to hold titlebar text for now.
+    Friend titlebarText As String = "HideSettingsPages Registry Helper v." & My.Application.Info.Version.ToString
 
     Public Sub Main(ByVal sArgs() As String)
-
-        ' Create string to hold titlebar text for now.
-        Dim titlebarText As String = "HideSettingsPages Registry Helper v." & My.Application.Info.Version.ToString
 
         ' Set titlebar text to application name and version.
         Console.Title = titlebarText
 
 #Region "Assign values to arguments."
-
-
-        ' fullKey is the Registry key value from main app.
-        Dim fullKeyValue As String = Nothing
-        ' actionToTake is the "apply" or "undo" string
-        ' from main app.
-        Dim actionToTake As String = Nothing
-
         If sArgs.Length = 0 Then
             'If there are no arguments, print app info and 
             ' tell the user what arguments are accepted.
-
-            ' Update titlebar to tell the user there's no arguments passed.
-            Console.Title = titlebarText & ": No arguments passed."
+            argsOutput.noCommandLineArgs()
         Else
             ' Change value of commandline arguments if they exist.
             fullKeyValue = sArgs(0)
             actionToTake = sArgs(1)
+            argsOutput.passCommandLineArgs()
         End If
 #End Region
-
-        ' Show the user app info including title, version, copyright, and license.
-        Console.WriteLine(My.Application.Info.Title & " Version " & My.Application.Info.Version.ToString)
-        Console.WriteLine(My.Application.Info.Copyright)
-        Console.WriteLine("Visit <http://www.gnu.org/licenses/> for more information on the Gnu GPL.")
-        Console.WriteLine("")
-        Console.WriteLine("This program is non-interactive and only accepts command-line arguments.")
-        Console.WriteLine("Proper command syntax is shown below.")
-
-
-#Region "Figure out all the arguments."
-        ' I got the code below from this SO answer:
-        ' http://stackoverflow.com/a/26323809
-        ' Also, this code was modified from this
-        ' MSDN article:
-        ' https://msdn.microsoft.com/en-us/library/system.diagnostics.ProcessStartInfo.Arguments28v=vs.110%29.aspx?f=255&MSPPError=-2147217396
-
-
-
-#End Region
-
-
-        Console.WriteLine(fullKeyValue)
-        Console.WriteLine(actionToTake)
-
-        MessageBox.Show("This is the full Registry key value.")
-        MessageBox.Show("Stop.")
 
     End Sub
 
