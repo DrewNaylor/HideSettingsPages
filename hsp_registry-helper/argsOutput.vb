@@ -52,9 +52,13 @@ Public Class argsOutput
         Console.WriteLine(vbTab & "Where <action> is either /apply (apply Registry key value) or /undo" _
             & " (remove Registry key value.)")
         Console.WriteLine(vbTab & "<key value> is the Registry key to apply to the system.")
+        Console.WriteLine("")
         Console.WriteLine(vbTab & "Even if /undo-ing the Registry key value, there must be something in the <key value>")
         Console.WriteLine(vbTab & "section or the app will crash. I want to make it ignore the second argument if <action> is /undo.")
-        Console.WriteLine(vbTab & "")
+        Console.WriteLine("")
+        Console.WriteLine("Examples:")
+        Console.WriteLine("")
+        Console.WriteLine(vbTab & "hsp_registry-helper.exe /apply hide:display;about")
         MessageBox.Show("No arguments passed.")
     End Sub
 
