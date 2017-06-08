@@ -34,6 +34,8 @@ Public Class argsOutput
         Console.WriteLine(My.Application.Info.Copyright)
         Console.WriteLine("Visit <http://www.gnu.org/licenses/> for more information on the Gnu GPL.")
         Console.WriteLine("")
+        Console.WriteLine("Description:")
+        Console.WriteLine(vbTab & "Applies the Registry key value chosen in HideSettingsPages. Can also apply/remove key value via arguments.")
         Console.WriteLine("This program is non-interactive and only accepts command-line arguments.")
         Console.WriteLine("Proper command syntax is shown below.")
         MessageBox.Show("No arguments passed.")
