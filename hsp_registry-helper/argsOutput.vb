@@ -50,8 +50,7 @@ Public Class argsOutput
             & vbCrLf & vbTab & "/apply" & vbTab & vbTab & "Apply Registry key value. Requires admin permissions." _
             & vbCrLf & vbTab & "/undo" & vbTab & vbTab & "Remove Registry key value. Requires admin permissions." _
             & vbCrLf & vbTab & "/verify" & vbTab & vbTab & "Show the current Registry key value if it exists.")
-        Console.WriteLine(vbTab & "Where <action> can be /apply (apply Registry key value,) /undo" _
-            & vbCrLf & vbTab & "(remove Registry key value,) or /verify (show current Registry key value if it exists.)")
+        Console.WriteLine("")
         Console.WriteLine(vbTab & "<key value> is the Registry key to apply to the system in the form of <hide or showonly>:<page>;<more pages>")
         Console.WriteLine("")
         Console.WriteLine(vbTab & "Even if /undo-ing the Registry key value, there must be something in the <key value>")
