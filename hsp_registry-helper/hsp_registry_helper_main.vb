@@ -43,27 +43,16 @@ Public Module hsp_registry_helper_main
         Console.Title = titlebarText
 
 #Region "Assign values to arguments."
-        If sArgs.Length = 0 Then
+        If sArgs.Length < 2 Then
             'If there are no arguments, print app info and 
             ' tell the user what arguments are accepted.
-            argsOutput.noCommandLineArgs()
+            argsOutput.noOrInvalidCommandLineArgs("Not enough arguments passed.")
         Else
             ' Change value of commandline arguments if they exist.
-            Try
-                actionToTake = sArgs(0)
-            Catch ex As IndexOutOfRangeException
-                ' If the user didn't give us an action, tell them.
-            End Try
+            actionToTake = sArgs(0)
+            fullKeyValue = sArgs(1)
 
-            Try
-                fullKeyValue = sArgs(1)
-            Catch ex As IndexOutOfRangeException
-                ' If the user didn't give us an action, tell them.
-                MessageBox.Show("No argument passed for Registry key value." _
-                                & vbCrLf & "Aborting...")
-                Exit Sub
-            End Try
-
+            ' Output current args.
             argsOutput.passCommandLineArgs()
         End If
 #End Region
