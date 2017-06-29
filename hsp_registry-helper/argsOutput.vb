@@ -27,7 +27,7 @@
 
 
 Public Class argsOutput
-    Friend Shared Sub noCommandLineArgs()
+    Friend Shared Sub noOrInvalidCommandLineArgs(message As String)
         ' Update titlebar to tell the user there's no arguments passed.
         Console.Title = titlebarText & ": No arguments passed."
         ' Show the user app info including title, version, copyright, and license.
@@ -63,7 +63,7 @@ Public Class argsOutput
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /undo hide:display;about")
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /undo showonly:display;about")
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /undo literallyAnythingElseSinceThisAppIgnoresThisPartIfUsingSlashUndo")
-        MessageBox.Show("No arguments passed.")
+        MessageBox.Show(message)
     End Sub
 
     Friend Shared Sub passCommandLineArgs()

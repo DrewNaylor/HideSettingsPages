@@ -59,7 +59,8 @@ Public Module hsp_registry_helper_main
                 fullKeyValue = sArgs(1)
             Catch ex As IndexOutOfRangeException
                 ' If the user didn't give us an action, tell them.
-                MessageBox.Show("No argument passed for Registry key value.")
+                MessageBox.Show("No argument passed for Registry key value." _
+                                & vbCrLf & "Aborting...")
                 Exit Sub
             End Try
 
