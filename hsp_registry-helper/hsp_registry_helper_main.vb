@@ -43,11 +43,15 @@ Public Module hsp_registry_helper_main
         Console.Title = titlebarText
 
 #Region "Assign values to arguments."
-        If sArgs.Length < 2 Then
+        If sArgs.Length = 0 Then
             'If there are no arguments, print app info and 
             ' tell the user what arguments are accepted.
-            argsOutput.noOrInvalidCommandLineArgs("Not enough arguments passed.")
-        Else
+            argsOutput.noOrInvalidCommandLineArgs("No arguments passed.")
+        ElseIf sArgs.Length = 1 Then
+            If sArgs(0) = "/apply" Then
+                argsOutput.noOrInvalidCommandLineArgs("")
+            End If
+
             ' Change value of commandline arguments if they exist.
             actionToTake = sArgs(0)
             fullKeyValue = sArgs(1)
