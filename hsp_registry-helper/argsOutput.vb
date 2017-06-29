@@ -63,6 +63,7 @@ Public Class argsOutput
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /undo hide:display;about")
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /undo showonly:display;about")
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /undo literallyAnythingElseSinceThisAppIgnoresThisPartIfUsingSlashUndo")
+        Console.WriteLine(vbTab & "hsp_registry-helper.exe /verify moreStuffIGuess")
         MessageBox.Show(message)
     End Sub
 
