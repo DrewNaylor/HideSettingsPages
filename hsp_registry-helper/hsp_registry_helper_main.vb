@@ -49,8 +49,19 @@ Public Module hsp_registry_helper_main
             argsOutput.noCommandLineArgs()
         Else
             ' Change value of commandline arguments if they exist.
-            fullKeyValue = sArgs(0)
-            actionToTake = sArgs(1)
+            Try
+                fullKeyValue = sArgs(0)
+            Catch ex As IndexOutOfRangeException
+                ' If the user didn't give us an action, tell them.
+            End Try
+            Try
+                actionToTake = sArgs(1)
+            Catch ex As IndexOutOfRangeException
+                ' If the user didn't give us an action, tell them.
+                MessageBox.Show("No argument passed for Registry key value.")
+                Application.Exit()
+            End Try
+
             argsOutput.passCommandLineArgs()
         End If
 #End Region
