@@ -47,12 +47,26 @@ Public Module hsp_registry_helper_main
             'If there are no arguments, print app info and 
             ' tell the user what arguments are accepted.
             argsOutput.noOrInvalidCommandLineArgs("No arguments passed.")
+
         ElseIf sArgs.Length = 1 Then
+            ' If there's only one argument and /apply is being used, complain.
             If sArgs(0) = "/apply" Then
-                argsOutput.noOrInvalidCommandLineArgs("")
+                argsOutput.noOrInvalidCommandLineArgs("<key value> must be available if trying to use /apply as <action>.")
             End If
 
-            ' Change value of commandline arguments if they exist.
+        ElseIf sArgs.Length >= 1 Then
+            ' If /apply isn't being used, only assign the first argument.
+            If Not sArgs(0) = "/apply" Then
+                actionToTake = sArgs(0)
+                fullKeyValue = " blank"
+                ' Output current args.
+                'argsOutput.passCommandLineArgs()
+                MessageBox.Show("actionToTake: " & actionToTake _
+                                & vbCrLf & "fullKeyValue: " & fullKeyValue)
+            End If
+        Else
+
+            ' Change value of commandline arguments if both of them exist if using /apply.
             actionToTake = sArgs(0)
             fullKeyValue = sArgs(1)
 
@@ -60,7 +74,6 @@ Public Module hsp_registry_helper_main
             argsOutput.passCommandLineArgs()
         End If
 #End Region
-
     End Sub
 
 End Module
