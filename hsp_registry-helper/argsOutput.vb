@@ -46,6 +46,8 @@ Public Class argsOutput
         Console.WriteLine("")
         Console.WriteLine(vbTab & "hsp_registry-helper.exe <action> <key value>")
         Console.WriteLine("")
+        Console.WriteLine(vbTab & "Action:" & vbTab & vbTab & "Description:" _
+            & vbCrLf & vbTab & "/apply" & vbTab & vbTab & "Apply Registry key value.")
         Console.WriteLine(vbTab & "Where <action> can be /apply (apply Registry key value,) /undo" _
             & vbCrLf & vbTab & "(remove Registry key value,) or /verify (show current Registry key value if it exists.)")
         Console.WriteLine(vbTab & "<key value> is the Registry key to apply to the system in the form of <hide or showonly>:<page>;<more pages>")
