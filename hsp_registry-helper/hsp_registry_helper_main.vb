@@ -54,20 +54,10 @@ Public Module hsp_registry_helper_main
             ' If there's only one argument and /apply is being used, complain.
             If sArgs(0) = "/apply" Then
                 argsOutput.noOrInvalidCommandLineArgs("<key value> must be available if trying to use /apply as <action>.")
+            ElseIf Not sArgs(0) = "/apply" Then
+                ' If the argument isn't /apply, 
             End If
 
-        ElseIf sArgs.Length = 1 Then
-            ' If /apply isn't being used, only assign the first argument.
-
-            If Not sArgs(0) = "/apply" Then
-                MessageBox.Show("Not using /apply.")
-                actionToTake = sArgs(0)
-                fullKeyValue = " blank"
-                ' Output current args.
-                'argsOutput.passCommandLineArgs()
-                MessageBox.Show("actionToTake: " & actionToTake _
-                                & vbCrLf & "fullKeyValue: " & fullKeyValue)
-            End If
         Else
 
             ' Change value of commandline arguments if both of them exist if using /apply.
