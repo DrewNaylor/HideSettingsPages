@@ -59,10 +59,8 @@ Public Class argsOutput
         Console.WriteLine("")
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /apply hide:display;about")
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /apply showonly:display;about")
-        Console.WriteLine(vbTab & "hsp_registry-helper.exe /undo hide:display;about")
-        Console.WriteLine(vbTab & "hsp_registry-helper.exe /undo showonly:display;about")
-        Console.WriteLine(vbTab & "hsp_registry-helper.exe /undo literallyAnythingElseSinceThisAppIgnoresThisPartIfUsingSlashUndo")
-        Console.WriteLine(vbTab & "hsp_registry-helper.exe /verify moreStuffIGuess")
+        Console.WriteLine(vbTab & "hsp_registry-helper.exe /undo")
+        Console.WriteLine(vbTab & "hsp_registry-helper.exe /verify")
         MessageBox.Show(message)
     End Sub
 
