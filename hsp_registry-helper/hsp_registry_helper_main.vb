@@ -43,6 +43,8 @@ Public Module hsp_registry_helper_main
         Console.Title = titlebarText
 
 #Region "Assign values to arguments."
+
+
         If sArgs.Length = 0 Then
             'If there are no arguments, print app info and 
             ' tell the user what arguments are accepted.
@@ -54,9 +56,11 @@ Public Module hsp_registry_helper_main
                 argsOutput.noOrInvalidCommandLineArgs("<key value> must be available if trying to use /apply as <action>.")
             End If
 
-        ElseIf sArgs.Length >= 1 Then
+        ElseIf sArgs.Length = 1 Then
             ' If /apply isn't being used, only assign the first argument.
+
             If Not sArgs(0) = "/apply" Then
+                MessageBox.Show("Not using /apply.")
                 actionToTake = sArgs(0)
                 fullKeyValue = " blank"
                 ' Output current args.
