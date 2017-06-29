@@ -55,7 +55,9 @@ Public Module hsp_registry_helper_main
             If sArgs(0) = "/apply" Then
                 argsOutput.noOrInvalidCommandLineArgs("<key value> must be available if trying to use /apply as <action>.")
             ElseIf Not sArgs(0) = "/apply" Then
-                ' If the argument isn't /apply, 
+                ' If the argument isn't /apply, don't complain and set the first arg correctly.
+                actionToTake = sArgs(0)
+                fullKeyValue = ""
             End If
 
         Else
@@ -67,6 +69,8 @@ Public Module hsp_registry_helper_main
             ' Output current args.
             argsOutput.passCommandLineArgs()
         End If
+        ' Output current args.
+        argsOutput.passCommandLineArgs()
 #End Region
     End Sub
 
