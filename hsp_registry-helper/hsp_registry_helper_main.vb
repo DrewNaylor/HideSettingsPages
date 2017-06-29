@@ -64,7 +64,6 @@ Public Module hsp_registry_helper_main
             End If
 
         Else
-
             ' Change value of commandline arguments if both of them exist. Doesn't matter if /apply is being used
             ' or not with this code.
             actionToTake = sArgs(0)
