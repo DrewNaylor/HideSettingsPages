@@ -54,23 +54,25 @@ Public Module hsp_registry_helper_main
             ' If there's only one argument and /apply is being used, complain.
             If sArgs(0) = "/apply" Then
                 argsOutput.noOrInvalidCommandLineArgs("<key value> must be available if trying to use /apply as <action>.")
+
             ElseIf Not sArgs(0) = "/apply" Then
                 ' If the argument isn't /apply, don't complain and set the first arg correctly.
                 actionToTake = sArgs(0)
                 fullKeyValue = ""
+                ' Output current args.
+                argsOutput.passCommandLineArgs()
             End If
 
         Else
 
-            ' Change value of commandline arguments if both of them exist if using /apply.
+            ' Change value of commandline arguments if both of them exist. Doesn't matter if /apply is being used
+            ' or not with this code.
             actionToTake = sArgs(0)
             fullKeyValue = sArgs(1)
 
             ' Output current args.
             argsOutput.passCommandLineArgs()
         End If
-        ' Output current args.
-        argsOutput.passCommandLineArgs()
 #End Region
     End Sub
 
