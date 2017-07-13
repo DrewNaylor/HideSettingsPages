@@ -29,5 +29,8 @@
 
 
 Public Class regkeyvalue_Verify
+    ' If the user chooses to /verify the current Registry key value,
+    ' retrieve the proper key value from the Registry if it exists.
+
 
 End Class
