@@ -32,7 +32,7 @@ Public Class regkeyvalue_Undo
     ' delete the proper key value if it exists.
 
     Friend Shared Sub runDeletion()
-
+        MessageBox.Show("/undo was chosen.")
     End Sub
 
 End Class
