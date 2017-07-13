@@ -33,7 +33,7 @@ Public Class regkeyvalue_Verify
     ' retrieve the proper key value from the Registry if it exists.
 
     ' I'm using a solution based on this thread:
-    ' https://stackoverflow.com/questions/9206172/delete-key-from-registery
+    ' https://social.msdn.microsoft.com/Forums/en-US/7272f987-bfb5-4bac-a72c-dfde5745832f/how-to-use-add-read-change-delete-registry-keys-with-vbnet?forum=Vsexpressvb
 
     Public Shared Sub runVerification()
 
