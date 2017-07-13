@@ -44,6 +44,10 @@ Public Class regkeyvalue_Undo
         If tempVal IsNot Nothing Then
             ' Next, if the user is admin, delete the key value.
             ' Code based on this: https://stackoverflow.com/a/6099113
+
+            Dim currentIdentity = WindowsIdentity.GetCurrent
+            Dim principal = New WindowsPrincipal(currentIdentity)
+            Dim isElevated As Boolean = principal.IsInRole(WindowsBuiltInRole.Administrator)
         End If
 
     End Sub
