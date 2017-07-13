@@ -75,6 +75,8 @@ Public Class argsOutput
 
         If actionToTake = "/verify" Then
             regkeyvalue_Verify.runVerification()
+        ElseIf actionToTake = "/undo" Then
+            regkeyvalue_Undo.runDeletion
         End If
     End Sub
 End Class
