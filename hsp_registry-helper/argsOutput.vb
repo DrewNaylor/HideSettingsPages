@@ -1,5 +1,6 @@
 ﻿'HideSettingsPages Registry Helper - Used to apply the Registry
-'key value chosen in HideSettingsPages. Can also apply/remove key value via arguments.
+'key value chosen in HideSettingsPages. Can also apply/remove key value via arguments
+'and show the current value in the Registry, also with arguments.
 'This key value will hide or show pages in the Windows 10 Settings app on the Creators Update and newer.
 'Copyright (C) 2017  Drew Naylor
 'Microsoft Windows and all related words are copyright
@@ -38,7 +39,8 @@ Public Class argsOutput
         Console.WriteLine("Description:")
         Console.WriteLine("")
         Console.WriteLine(vbTab & "Applies the Registry key value chosen in HideSettingsPages.")
-        Console.WriteLine(vbTab & "Can also apply/remove key value via arguments.")
+        Console.WriteLine(vbTab & "Can also apply/remove key value via arguments and show the")
+        Console.WriteLine(vbTab & "current Registry key value in the Registry, also with arguments.")
         Console.WriteLine(vbTab & "This key value will hide or show pages in the Windows 10 Settings app")
         Console.WriteLine(vbTab & "on the Creators Update and newer.")
         Console.WriteLine("")
@@ -70,5 +72,9 @@ Public Class argsOutput
 
         MessageBox.Show("This is the full Registry key value.")
         MessageBox.Show("Stop.")
+
+        If actionToTake = "/verify" Then
+            regkeyvalue_Verify.runVerification()
+        End If
     End Sub
 End Class
