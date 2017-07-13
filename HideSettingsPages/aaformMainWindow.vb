@@ -121,6 +121,7 @@ Public Class aaformMainWindow
         Dim proc As New ProcessStartInfo
         proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
         proc.Arguments = "/undo "
+        'proc.Verb = "runas"
         Process.Start(proc)
     End Sub
 #End Region
