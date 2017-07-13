@@ -47,11 +47,15 @@ Public Class regkeyvalue_Undo
 
             Dim currentIdentity = WindowsIdentity.GetCurrent
             Dim principal = New WindowsPrincipal(currentIdentity)
-            Dim isElevated As Boolean = principal.IsInRole(WindowsBuiltInRole.Administrator)
+            Dim isElevated As Boolean = principal.IsInRole(WindowsBuiltInRole.PowerUser)
 
             ' Check current elevation status.
             If isElevated = True Then
                 ' Now we can delete the key value.
+                ' Code from:
+                ' https://social.msdn.microsoft.com/Forums/en-US/7272f987-bfb5-4bac-a72c-dfde5745832f/how-to-use-add-read-change-delete-registry-keys-with-vbnet?forum=Vsexpressvb
+
+                My.Computer.Registry.LocalMachine.DeleteValue(tempVal)
 
             End If
         End If
