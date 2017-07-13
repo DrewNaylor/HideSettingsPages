@@ -27,7 +27,7 @@
 
 
 Public Class argsOutput
-    Friend Shared Sub noCommandLineArgs()
+    Friend Shared Sub noOrInvalidCommandLineArgs(message As String)
         ' Update titlebar to tell the user there's no arguments passed.
         Console.Title = titlebarText & ": No arguments passed."
         ' Show the user app info including title, version, copyright, and license.
@@ -46,26 +46,27 @@ Public Class argsOutput
         Console.WriteLine("")
         Console.WriteLine(vbTab & "hsp_registry-helper.exe <action> <key value>")
         Console.WriteLine("")
-        Console.WriteLine(vbTab & "Where <action> is either /apply (apply Registry key value) or /undo" _
-            & " (remove Registry key value.)")
+        Console.WriteLine(vbTab & "Action:" & vbTab & vbTab & "Description:" _
+            & vbCrLf & vbTab & "/apply" & vbTab & vbTab & "Apply Registry key value. Requires admin permissions." _
+            & vbCrLf & vbTab & "/undo" & vbTab & vbTab & "Remove Registry key value. Requires admin permissions." _
+            & vbCrLf & vbTab & "/verify" & vbTab & vbTab & "Show the current Registry key value if it exists.")
+        Console.WriteLine("")
         Console.WriteLine(vbTab & "<key value> is the Registry key to apply to the system in the form of <hide or showonly>:<page>;<more pages>")
         Console.WriteLine("")
-        Console.WriteLine(vbTab & "Even if /undo-ing the Registry key value, there must be something in the <key value>")
-        Console.WriteLine(vbTab & "section or the app will crash. I want to make it ignore the second argument if <action> is /undo.")
+        Console.WriteLine(vbTab & "A <key value> is only required if using ""/apply"" as an <action>.")
         Console.WriteLine("")
         Console.WriteLine("Examples:")
         Console.WriteLine("")
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /apply hide:display;about")
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /apply showonly:display;about")
-        Console.WriteLine(vbTab & "hsp_registry-helper.exe /undo hide:display;about")
-        Console.WriteLine(vbTab & "hsp_registry-helper.exe /undo showonly:display;about")
-        Console.WriteLine(vbTab & "hsp_registry-helper.exe /undo literallyAnythingElseSinceThisAppIgnoresThisPartIfUsingSlashUndo")
-        MessageBox.Show("No arguments passed.")
+        Console.WriteLine(vbTab & "hsp_registry-helper.exe /undo")
+        Console.WriteLine(vbTab & "hsp_registry-helper.exe /verify")
+        MessageBox.Show(message)
     End Sub
 
     Friend Shared Sub passCommandLineArgs()
-        Console.WriteLine(fullKeyValue)
         Console.WriteLine(actionToTake)
+        Console.WriteLine(fullKeyValue)
 
         MessageBox.Show("This is the full Registry key value.")
         MessageBox.Show("Stop.")

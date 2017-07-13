@@ -27,7 +27,7 @@
 
 
 Imports System.Windows.Forms
-Public Module applyOrRemoveRegistryKeyValue
+Public Module hsp_registry_helper_main
 
     ' fullKey is the Registry key value from main app.
     Friend fullKeyValue As String = Nothing
@@ -43,18 +43,36 @@ Public Module applyOrRemoveRegistryKeyValue
         Console.Title = titlebarText
 
 #Region "Assign values to arguments."
+
+
         If sArgs.Length = 0 Then
             'If there are no arguments, print app info and 
             ' tell the user what arguments are accepted.
-            argsOutput.noCommandLineArgs()
+            argsOutput.noOrInvalidCommandLineArgs("No arguments passed.")
+
+        ElseIf sArgs.Length = 1 Then
+            ' If there's only one argument and /apply is being used, complain.
+            If sArgs(0) = "/apply" Then
+                argsOutput.noOrInvalidCommandLineArgs("<key value> must be available if trying to use /apply as <action>.")
+
+            ElseIf Not sArgs(0) = "/apply" Then
+                ' If the argument isn't /apply, don't complain and set the first arg correctly.
+                actionToTake = sArgs(0)
+                fullKeyValue = ""
+                ' Output current args.
+                argsOutput.passCommandLineArgs()
+            End If
+
         Else
-            ' Change value of commandline arguments if they exist.
-            fullKeyValue = sArgs(0)
-            actionToTake = sArgs(1)
+            ' Change value of commandline arguments if both of them exist. Doesn't matter if /apply is being used
+            ' or not with this code.
+            actionToTake = sArgs(0)
+            fullKeyValue = sArgs(1)
+
+            ' Output current args.
             argsOutput.passCommandLineArgs()
         End If
 #End Region
-
     End Sub
 
 End Module

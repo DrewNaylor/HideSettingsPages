@@ -120,7 +120,8 @@ Public Class aaformMainWindow
         ' Tell the registry helper app to delete the key value in the Registry.
         Dim proc As New ProcessStartInfo
         proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
-        proc.Arguments = registryKeyValueBuilder.stringFullRegistryKeyValue & " undo"
+        proc.Arguments = "/undo "
+        'proc.Verb = "runas"
         Process.Start(proc)
     End Sub
 #End Region
