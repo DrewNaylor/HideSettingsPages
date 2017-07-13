@@ -26,9 +26,11 @@
 'along with hsp_registry-helper.  If not, see <http://www.gnu.org/licenses/>.
 
 
-' System.Security.Principal is used to see
-' if the user is admin or not.
-Imports System.Security.Principal
+
+
+' Microsoft.Win32 is used for registry stuff.
+Imports Microsoft.Win32
+
 Public Class regkeyvalue_Undo
     ' If the user chooses to /undo the Registry key value,
     ' delete the proper key value if it exists.
@@ -42,22 +44,23 @@ Public Class regkeyvalue_Undo
 
         ' First see if there's a key value to delete.
         If tempVal IsNot Nothing Then
-            ' Next, if the user is admin, delete the key value.
-            ' Code based on this: https://stackoverflow.com/a/6099113
+            ' Next, if the user is admin, delete the key value. Using a try/catch because I don't know
+            ' how to do it properly. Can't find any examples in VB.
 
-            Dim currentIdentity = WindowsIdentity.GetCurrent
-            Dim principal = New WindowsPrincipal(currentIdentity)
-            Dim isElevated As Boolean = principal.IsInRole(WindowsBuiltInRole.PowerUser)
+            ' Now we can delete the key value.
+            ' Code from:
+            ' https://social.msdn.microsoft.com/Forums/en-US/7272f987-bfb5-4bac-a72c-dfde5745832f/how-to-use-add-read-change-delete-registry-keys-with-vbnet?forum=Vsexpressvb
 
-            ' Check current elevation status.
-            If isElevated = True Then
-                ' Now we can delete the key value.
-                ' Code from:
-                ' https://social.msdn.microsoft.com/Forums/en-US/7272f987-bfb5-4bac-a72c-dfde5745832f/how-to-use-add-read-change-delete-registry-keys-with-vbnet?forum=Vsexpressvb
-
+            Try
+                Dim deleteFrom As RegistryKey = My.Computer.Registry.LocalMachine.OpenSubKey("\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", True)
                 My.Computer.Registry.LocalMachine.DeleteValue(tempVal)
+            Catch ex As Security.SecurityException
+                ' Tell the user if they're not elevated.
 
-            End If
+                MessageBox.Show("The Registry key value cannot be deleted because the app isn't running as Administrator. Please elevate and try again.")
+            End Try
+
+
         End If
 
     End Sub
