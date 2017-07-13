@@ -45,7 +45,7 @@ Public Class regkeyvalue_Verify
 
         Else
             ' If the registry key value does exist, tell the user what it is.
-            MessageBox.Show()
+            MessageBox.Show("Registry key value exists." & vbCrLf & "Data:" & vbCrLf & tempVal)
 
         End If
 
