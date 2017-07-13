@@ -31,5 +31,8 @@ Public Class regkeyvalue_Undo
     ' If the user chooses to /undo the Registry key value,
     ' delete the proper key value if it exists.
 
+    Friend Shared Sub runDeletion()
+
+    End Sub
 
 End Class
