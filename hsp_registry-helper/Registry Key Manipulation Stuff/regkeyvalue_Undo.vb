@@ -52,9 +52,9 @@ Public Class regkeyvalue_Undo
             ' https://social.msdn.microsoft.com/Forums/en-US/7272f987-bfb5-4bac-a72c-dfde5745832f/how-to-use-add-read-change-delete-registry-keys-with-vbnet?forum=Vsexpressvb
 
             Try
-                Dim deleteFrom As RegistryKey = My.Computer.Registry.LocalMachine.OpenSubKey("\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", True)
-                My.Computer.Registry.LocalMachine.DeleteValue(tempVal)
-            Catch ex As Security.SecurityException
+                Dim deleteFrom As RegistryKey = My.Computer.Registry.LocalMachine.CreateSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", True)
+                deleteFrom.DeleteValue("SettingsPageVisibility")
+            Catch ex As UnauthorizedAccessException
                 ' Tell the user if they're not elevated.
 
                 MessageBox.Show("The Registry key value cannot be deleted because the app isn't running as Administrator. Please elevate and try again.")
