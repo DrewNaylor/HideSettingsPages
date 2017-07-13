@@ -26,7 +26,9 @@
 'along with hsp_registry-helper.  If not, see <http://www.gnu.org/licenses/>.
 
 
-
+' System.Security.Principal is used to see
+' if the user is admin or not.
+Imports System.Security.Principal
 Public Class regkeyvalue_Undo
     ' If the user chooses to /undo the Registry key value,
     ' delete the proper key value if it exists.
@@ -36,6 +38,14 @@ Public Class regkeyvalue_Undo
 
     Friend Shared Sub runDeletion()
         MessageBox.Show("/undo was chosen.")
+        Dim tempVal As String = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", "SettingsPageVisibility", Nothing)
+
+        ' First see if there's a key value to delete.
+        If tempVal IsNot Nothing Then
+            ' Next, if the user is admin, delete the key value.
+            ' Code based on this: https://stackoverflow.com/a/6099113
+        End If
+
     End Sub
 
 End Class
