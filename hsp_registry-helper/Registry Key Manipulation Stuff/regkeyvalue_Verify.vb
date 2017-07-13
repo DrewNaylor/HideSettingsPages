@@ -32,5 +32,12 @@ Public Class regkeyvalue_Verify
     ' If the user chooses to /verify the current Registry key value,
     ' retrieve the proper key value from the Registry if it exists.
 
+    ' I'm using a solution based on this thread:
+    ' https://stackoverflow.com/questions/9206172/delete-key-from-registery
+
+    Public Shared Sub runVerification()
+
+    End Sub
+
 
 End Class
