@@ -1,5 +1,6 @@
 ﻿'HideSettingsPages Registry Helper - Used to apply the Registry
-'key value chosen in HideSettingsPages. Can also apply/remove key value via arguments.
+'key value chosen in HideSettingsPages. Can also apply/remove key value via arguments
+'and show the current value in the Registry.
 'This key value will hide or show pages in the Windows 10 Settings app on the Creators Update and newer.
 'Copyright (C) 2017  Drew Naylor
 'Microsoft Windows and all related words are copyright
