@@ -72,5 +72,9 @@ Public Class argsOutput
 
         MessageBox.Show("This is the full Registry key value.")
         MessageBox.Show("Stop.")
+
+        If actionToTake = "/verify" Then
+            regkeyvalue_Verify.runVerification()
+        End If
     End Sub
 End Class
