@@ -48,6 +48,12 @@ Public Class regkeyvalue_Undo
             Dim currentIdentity = WindowsIdentity.GetCurrent
             Dim principal = New WindowsPrincipal(currentIdentity)
             Dim isElevated As Boolean = principal.IsInRole(WindowsBuiltInRole.Administrator)
+
+            ' Check current elevation status.
+            If isElevated = True Then
+                ' Now we can delete the key value.
+
+            End If
         End If
 
     End Sub
