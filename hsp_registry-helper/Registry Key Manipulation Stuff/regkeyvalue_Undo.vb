@@ -31,6 +31,9 @@ Public Class regkeyvalue_Undo
     ' If the user chooses to /undo the Registry key value,
     ' delete the proper key value if it exists.
 
+    ' I'm using a solution based on this thread:
+    ' https://social.msdn.microsoft.com/Forums/en-US/7272f987-bfb5-4bac-a72c-dfde5745832f/how-to-use-add-read-change-delete-registry-keys-with-vbnet?forum=Vsexpressvb
+
     Friend Shared Sub runDeletion()
         MessageBox.Show("/undo was chosen.")
     End Sub
