@@ -128,7 +128,7 @@ Partial Class aaformMainWindow
         Me.panelScrollablePageList.Controls.Add(Me.labelChoosePages)
         Me.panelScrollablePageList.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelScrollablePageList.Location = New System.Drawing.Point(3, 16)
-        Me.panelScrollablePageList.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.panelScrollablePageList.Margin = New System.Windows.Forms.Padding(2)
         Me.panelScrollablePageList.Name = "panelScrollablePageList"
         Me.panelScrollablePageList.Size = New System.Drawing.Size(317, 420)
         Me.panelScrollablePageList.TabIndex = 13
@@ -138,7 +138,7 @@ Partial Class aaformMainWindow
         Me.checkedlistboxPageList.CheckOnClick = True
         Me.checkedlistboxPageList.Items.AddRange(New Object() {"about", "activation", "appsfeatures", "appsforwebsites", "autoplay", "backup", "batterysaver", "batterysaver-usagedetails", "bluetooth", "camera", "colors", "connecteddevices", "cortana", "cortana-moredetails", "cortana-permissions", "crossdevice", "datausage", "dateandtime", "defaultapps", "developers", "deviceencryption", "display", "easeofaccess-closedcaptioning", "easeofaccess-highcontrast", "easeofaccess-keyboard", "easeofaccess-magnifier", "easeofaccess-mouse", "easeofaccess-narrator", "easeofaccess-otheroptions", "emailandaccounts", "extras", "findmydevice", "gaming-broadcasting", "gaming-gamebar", "gaming-gamedvr", "gaming-gamemode", "holographic", "holographic-audio", "lockscreen", "maps", "mousetouchpad", "multitasking", "network-airplanemode", "network-cellular", "network-dialup", "network-directaccess", "network-ethernet", "network-mobilehotspot", "network-proxy", "network-status", "network-vpn", "network-wifi", "network-wifisettings", "nfctransactions", "notifications", "optionalfeatures", "otherusers", "pen", "personalization-background", "personalization-start", "powersleep", "printers", "privacy", "privacy-accountinfo", "privacy-appdiagnostics", "privacy-backgroundapps", "privacy-calendar", "privacy-callhistory", "privacy-contacts", "privacy-customdevices", "privacy-email", "privacy-feedback", "privacy-location", "privacy-messaging", "privacy-microphone", "privacy-motion", "privacy-notifications", "privacy-radios", "privacy-speechtyping", "privacy-tasks", "privacy-webcam", "project", "recovery", "regionlanguage", "signinoptions", "speech", "storagesense", "sync", "tabletmode", "taskbar", "themes", "troubleshoot", "typing", "usb", "windowsdefender", "windowsinsider", "windowsupdate", "windowsupdate-action", "windowsupdate-history", "windowsupdate-options", "windowsupdate-restartoptions", "workplace", "yourinfo"})
         Me.checkedlistboxPageList.Location = New System.Drawing.Point(3, 22)
-        Me.checkedlistboxPageList.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.checkedlistboxPageList.Margin = New System.Windows.Forms.Padding(2)
         Me.checkedlistboxPageList.Name = "checkedlistboxPageList"
         Me.checkedlistboxPageList.Size = New System.Drawing.Size(311, 394)
         Me.checkedlistboxPageList.TabIndex = 17
@@ -190,7 +190,7 @@ Partial Class aaformMainWindow
         Me.panelApplyUndoExit.Controls.Add(Me.buttonApplyChanges)
         Me.panelApplyUndoExit.Controls.Add(Me.buttonUndoChanges)
         Me.panelApplyUndoExit.Location = New System.Drawing.Point(2, 625)
-        Me.panelApplyUndoExit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.panelApplyUndoExit.Margin = New System.Windows.Forms.Padding(2)
         Me.panelApplyUndoExit.Name = "panelApplyUndoExit"
         Me.panelApplyUndoExit.Size = New System.Drawing.Size(324, 34)
         Me.panelApplyUndoExit.TabIndex = 4
@@ -291,7 +291,7 @@ Partial Class aaformMainWindow
         Me.Controls.Add(Me.menubarMainWindow)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.menubarMainWindow
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "aaformMainWindow"
         Me.Text = "HideSettingsPages"
         Me.flowlayoutpanelMainWindow.ResumeLayout(False)

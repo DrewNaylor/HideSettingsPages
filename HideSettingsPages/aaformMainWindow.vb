@@ -124,5 +124,14 @@ Public Class aaformMainWindow
         proc.Verb = "runas"
         Process.Start(proc)
     End Sub
+
+    Private Sub buttonApplyChanges_Click(sender As Object, e As EventArgs) Handles buttonApplyChanges.Click
+        ' Tell the registry helper app to apply the key value in the Registry.
+        Dim proc As New ProcessStartInfo
+        proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
+        proc.Arguments = "/apply " & registryKeyValueBuilder.stringFullRegistryKeyValue
+        proc.Verb = "runas"
+        Process.Start(proc)
+    End Sub
 #End Region
 End Class
