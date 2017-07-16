@@ -32,13 +32,13 @@
 Imports Microsoft.Win32
 
 Public Class regkeyvalue_Apply
-    ' If the user chooses to /undo the Registry key value,
-    ' delete the proper key value if it exists.
+    ' If the user chooses to /apply the Registry key value,
+    ' create or edit the proper key value if it exists.
 
     ' I'm using a solution based on this thread:
     ' https://social.msdn.microsoft.com/Forums/en-US/7272f987-bfb5-4bac-a72c-dfde5745832f/how-to-use-add-read-change-delete-registry-keys-with-vbnet?forum=Vsexpressvb
 
-    Friend Shared Sub runDeletion()
+    Friend Shared Sub runApplying()
         MessageBox.Show("/apply was chosen.")
         Dim tempVal As String = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", "SettingsPageVisibility", Nothing)
 
