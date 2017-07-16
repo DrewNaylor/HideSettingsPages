@@ -28,9 +28,9 @@
 
 
 Public Class argsOutput
-    Friend Shared Sub noOrInvalidCommandLineArgs(message As String, errorTitleBar As String)
+    Friend Shared Sub noOrInvalidCommandLineArgs(message As String, messageTitle As String)
         ' Update titlebar to tell the user there's no arguments passed.
-        Console.Title = titlebarText & errorTitleBar
+        Console.Title = titlebarText & ": " & messageTitle & "."
         ' Show the user app info including title, version, copyright, and license.
         Console.WriteLine(My.Application.Info.Title & " Version " & My.Application.Info.Version.ToString)
         Console.WriteLine(My.Application.Info.Copyright)
@@ -63,7 +63,7 @@ Public Class argsOutput
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /apply showonly:display;about")
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /undo")
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /verify")
-        MessageBox.Show(message)
+        MessageBox.Show(message, messageTitle)
     End Sub
 
     Friend Shared Sub passCommandLineArgs()
@@ -83,7 +83,7 @@ Public Class argsOutput
             ' If the argument isn't valid,
             ' tell the user and display
             ' the valid args.
-            noOrInvalidCommandLineArgs("Invalid commandline argument: " & actionToTake, ": Invalid commandline argument.")
+            noOrInvalidCommandLineArgs("Invalid commandline argument: " & actionToTake, "Invalid commandline argument")
         End If
     End Sub
 End Class
