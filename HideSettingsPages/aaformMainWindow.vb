@@ -97,17 +97,16 @@ Public Class aaformMainWindow
         registryKeyValueBuilder.computeStringFullRegistryKeyValue()
     End Sub
 
-#Region "Ensure the Registry key value is properly recomputed when the user uses the mouse or keyboard."
-    Private Sub checkedlistboxPageList_MouseUp(sender As Object, e As MouseEventArgs) Handles checkedlistboxPageList.MouseUp
+#Region "Ensure the Registry key value is properly recomputed however the user activates the items."
+    Private Sub checkedlistboxPageList_ItemCheck(sender As Object, e As ItemCheckEventArgs) Handles checkedlistboxPageList.ItemCheck
         ' When the user checks checkboxes, update the string that displays
         ' which pages the user chose for the Registry key value.
-        registryKeyValueBuilder.computeStringFullRegistryKeyValue()
-    End Sub
 
-    Private Sub checkedlistboxPageList_KeyUp(sender As Object, e As KeyEventArgs) Handles checkedlistboxPageList.KeyUp
-        ' When the user checks checkboxes, update the string that displays
-        ' which pages the user chose for the Registry key value.
-        registryKeyValueBuilder.computeStringFullRegistryKeyValue()
+        ' I've found a better way to get all the items in the CheckedListBox
+        ' rather than just relying on MouseUp and KeyUp events.
+        ' Based on code from: https://stackoverflow.com/a/4454594
+        ' Converted with: http://converter.telerik.com/
+        Me.BeginInvoke(DirectCast(Sub() registryKeyValueBuilder.computeStringFullRegistryKeyValue(), MethodInvoker))
     End Sub
 #End Region
 #End Region
