@@ -40,50 +40,25 @@ Public Class regkeyvalue_Apply
 
     Friend Shared Sub runApplying()
         MessageBox.Show("/apply was chosen.")
-        Dim tempVal As Object = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", "SettingsPageVisibility", Nothing)
 
-        ' First see if there's a key value to edit.
-        If tempVal IsNot Nothing Then
-            ' Next, if the user is admin, edit the key value. Using a try/catch because I don't know
-            ' how to do it properly. Can't find any examples in VB.
+        ' If the user is admin, edit the key value. Using a try/catch because I don't know
+        ' how to do it properly. Can't find any examples in VB.
 
-            ' Now we can edit the key value with the user's choice.
-            ' Code from:
-            ' https://social.msdn.microsoft.com/Forums/en-US/7272f987-bfb5-4bac-a72c-dfde5745832f/how-to-use-add-read-change-delete-registry-keys-with-vbnet?forum=Vsexpressvb
+        ' Now we can edit the key value with the user's choice.
+        ' Code from:
+        ' https://social.msdn.microsoft.com/Forums/en-US/7272f987-bfb5-4bac-a72c-dfde5745832f/how-to-use-add-read-change-delete-registry-keys-with-vbnet?forum=Vsexpressvb
 
-            Try
-                Dim editFrom As RegistryKey = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", True)
-                ' Now edit the Registry key value.
-                editFrom.SetValue("SettingsPageVisibility", fullKeyValue)
-                editFrom.Close()
-            Catch ex As Security.SecurityException
-                ' Tell the user if they're not elevated.
+        Try
+            Dim editFrom As RegistryKey = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", True)
+            ' Now edit the Registry key value.
+            ' This also creates a new Registry key value if there
+            ' isn't one there already.
+            editFrom.SetValue("SettingsPageVisibility", fullKeyValue)
+            editFrom.Close()
+        Catch ex As Security.SecurityException
+            ' Tell the user if they're not elevated.
 
-                MessageBox.Show("The Registry key value cannot be edited because the app isn't running as Administrator. Please elevate and try again.")
-            End Try
-
-        Else
-            ' Otherwise, just make a new Registry key value
-            ' and modify it.
-
-            ' If the user is admin, make a new key value. Using a try/catch because I don't know
-            ' how to do it properly. Can't find any examples in VB.
-
-            ' Now we can make a new key value with the user's choice.
-            ' Code from:
-            ' https://social.msdn.microsoft.com/Forums/en-US/7272f987-bfb5-4bac-a72c-dfde5745832f/how-to-use-add-read-change-delete-registry-keys-with-vbnet?forum=Vsexpressvb
-
-            Try
-                Dim editFrom As RegistryKey = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", True)
-                ' Now edit the Registry key value.
-                editFrom.SetValue("SettingsPageVisibility", fullKeyValue)
-                editFrom.Close()
-            Catch ex As Security.SecurityException
-                ' Tell the user if they're not elevated.
-
-                MessageBox.Show("The Registry key value cannot be edited because the app isn't running as Administrator. Please elevate and try again.")
-            End Try
-
-        End If
+            MessageBox.Show("The Registry key value cannot be edited because the app isn't running as Administrator. Please elevate and try again.")
+        End Try
     End Sub
 End Class
