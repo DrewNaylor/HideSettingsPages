@@ -47,7 +47,7 @@ Public Class regkeyvalue_Apply
             ' Next, if the user is admin, edit the key value. Using a try/catch because I don't know
             ' how to do it properly. Can't find any examples in VB.
 
-            ' Now we can edit the key value.
+            ' Now we can edit the key value with the user's choice.
             ' Code from:
             ' https://social.msdn.microsoft.com/Forums/en-US/7272f987-bfb5-4bac-a72c-dfde5745832f/how-to-use-add-read-change-delete-registry-keys-with-vbnet?forum=Vsexpressvb
 
@@ -65,6 +65,24 @@ Public Class regkeyvalue_Apply
         Else
             ' Otherwise, just make a new Registry key value
             ' and modify it.
+
+            ' If the user is admin, make a new key value. Using a try/catch because I don't know
+            ' how to do it properly. Can't find any examples in VB.
+
+            ' Now we can make a new key value with the user's choice.
+            ' Code from:
+            ' https://social.msdn.microsoft.com/Forums/en-US/7272f987-bfb5-4bac-a72c-dfde5745832f/how-to-use-add-read-change-delete-registry-keys-with-vbnet?forum=Vsexpressvb
+
+            Try
+                Dim editFrom As RegistryKey = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", True)
+                ' Now edit the Registry key value.
+                editFrom.SetValue("SettingsPageVisibility", fullKeyValue)
+                editFrom.Close()
+            Catch ex As Security.SecurityException
+                ' Tell the user if they're not elevated.
+
+                MessageBox.Show("The Registry key value cannot be edited because the app isn't running as Administrator. Please elevate and try again.")
+            End Try
 
         End If
     End Sub
