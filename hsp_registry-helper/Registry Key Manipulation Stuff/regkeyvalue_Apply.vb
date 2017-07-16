@@ -40,7 +40,7 @@ Public Class regkeyvalue_Apply
 
     Friend Shared Sub runApplying()
         MessageBox.Show("/apply was chosen.")
-        Dim tempVal As String = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", "SettingsPageVisibility", Nothing)
+        Dim tempVal As String = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", "SettingsPageVisibility", Nothing).ToString
 
         ' First see if there's a key value to edit.
         If tempVal IsNot Nothing Then

@@ -40,7 +40,7 @@ Public Class regkeyvalue_Undo
 
     Friend Shared Sub runDeletion()
         MessageBox.Show("/undo was chosen.")
-        Dim tempVal As String = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", "SettingsPageVisibility", Nothing)
+        Dim tempVal As String = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", "SettingsPageVisibility", Nothing).ToString
 
         ' First see if there's a key value to delete.
         If tempVal IsNot Nothing Then
