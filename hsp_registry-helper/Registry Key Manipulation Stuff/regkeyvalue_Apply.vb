@@ -52,8 +52,10 @@ Public Class regkeyvalue_Apply
             ' https://social.msdn.microsoft.com/Forums/en-US/7272f987-bfb5-4bac-a72c-dfde5745832f/how-to-use-add-read-change-delete-registry-keys-with-vbnet?forum=Vsexpressvb
 
             Try
-                Dim deleteFrom As RegistryKey = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", True)
-                deleteFrom.DeleteValue("SettingsPageVisibility")
+                Dim editFrom As RegistryKey = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", True)
+                ' Now edit the Registry key value.
+                editFrom.SetValue("SettingsPageVisibility", fullKeyValue)
+                editFrom.Close()
             Catch ex As Security.SecurityException
                 ' Tell the user if they're not elevated.
 
