@@ -131,7 +131,15 @@ Public Class aaformMainWindow
         proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
         proc.Arguments = "/apply " & registryKeyValueBuilder.stringFullRegistryKeyValue
         proc.Verb = "runas"
-        Process.Start(proc)
+        Try
+            Process.Start(proc)
+            ' We have to catch this exception
+            ' in case the user clicks "No" in the UAC
+            ' dialog. Otherwise, we get an error
+            ' that says that the operation was
+            ' canceled by the user.
+        Catch ex As ComponentModel.Win32Exception
+        End Try
     End Sub
 #End Region
 End Class
