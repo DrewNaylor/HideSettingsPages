@@ -42,12 +42,12 @@ Public Class regkeyvalue_Apply
         MessageBox.Show("/apply was chosen.")
         Dim tempVal As String = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", "SettingsPageVisibility", Nothing)
 
-        ' First see if there's a key value to delete.
+        ' First see if there's a key value to edit.
         If tempVal IsNot Nothing Then
-            ' Next, if the user is admin, delete the key value. Using a try/catch because I don't know
+            ' Next, if the user is admin, edit the key value. Using a try/catch because I don't know
             ' how to do it properly. Can't find any examples in VB.
 
-            ' Now we can delete the key value.
+            ' Now we can edit the key value.
             ' Code from:
             ' https://social.msdn.microsoft.com/Forums/en-US/7272f987-bfb5-4bac-a72c-dfde5745832f/how-to-use-add-read-change-delete-registry-keys-with-vbnet?forum=Vsexpressvb
 
