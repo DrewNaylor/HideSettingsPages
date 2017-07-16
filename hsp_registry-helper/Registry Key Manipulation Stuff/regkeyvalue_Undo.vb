@@ -53,6 +53,7 @@ Public Class regkeyvalue_Undo
 
             Try
                 Dim deleteFrom As RegistryKey = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", True)
+                ' Now delete the key value.
                 deleteFrom.DeleteValue("SettingsPageVisibility")
             Catch ex As Security.SecurityException
                 ' Tell the user if they're not elevated.

@@ -57,7 +57,7 @@ Public Class regkeyvalue_Apply
             Catch ex As Security.SecurityException
                 ' Tell the user if they're not elevated.
 
-                MessageBox.Show("The Registry key value cannot be deleted because the app isn't running as Administrator. Please elevate and try again.")
+                MessageBox.Show("The Registry key value cannot be edited because the app isn't running as Administrator. Please elevate and try again.")
             End Try
         End If
     End Sub
