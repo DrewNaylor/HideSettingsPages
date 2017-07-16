@@ -134,11 +134,13 @@ Public Class aaformMainWindow
     End Sub
 
     Private Sub buttonApplyChanges_Click(sender As Object, e As EventArgs) Handles buttonApplyChanges.Click
+
+
         ' Tell the registry helper app to apply the key value in the Registry.
         Dim proc As New ProcessStartInfo
-        proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
-        proc.Arguments = "/apply " & registryKeyValueBuilder.stringFullRegistryKeyValue
-        proc.Verb = "runas"
+            proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
+            proc.Arguments = "/apply " & registryKeyValueBuilder.stringFullRegistryKeyValue
+            proc.Verb = "runas"
         Try
             Process.Start(proc)
             ' We have to catch this exception
@@ -147,6 +149,15 @@ Public Class aaformMainWindow
             ' that says that the operation was
             ' canceled by the user.
         Catch ex As ComponentModel.Win32Exception
+            ' Complain and ask the user to download a new copy
+            ' if we can't launch the registry helper app.
+            MessageBox.Show("We couldn't find hsp_registry-helper.exe in the current folder." & vbCrLf &
+                                "Because this file is used to apply or undo the Registry key value chosen above," & vbCrLf &
+                                "it's recommended that a new copy of HideSettingsPages be downloaded from" & vbCrLf &
+                                "https://www.github.com/DrewNaylor/HideSettingsPages/releases" & vbCrLf &
+                                vbCrLf &
+                                "It's also possible that the User Account Control dialog was canceled, in which case," &
+                                " please try again.")
         End Try
     End Sub
 #End Region
