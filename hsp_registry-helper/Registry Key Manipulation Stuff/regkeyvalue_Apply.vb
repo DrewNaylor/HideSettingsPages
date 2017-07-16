@@ -28,29 +28,37 @@
 
 
 
-Public Class regkeyvalue_Verify
-    ' If the user chooses to /verify the current Registry key value,
-    ' retrieve the proper key value from the Registry if it exists.
+' Microsoft.Win32 is used for registry stuff.
+Imports Microsoft.Win32
+
+Public Class regkeyvalue_Apply
+    ' If the user chooses to /apply the Registry key value,
+    ' create or edit the proper key value if it exists.
 
     ' I'm using a solution based on this thread:
     ' https://social.msdn.microsoft.com/Forums/en-US/7272f987-bfb5-4bac-a72c-dfde5745832f/how-to-use-add-read-change-delete-registry-keys-with-vbnet?forum=Vsexpressvb
 
-    Public Shared Sub runVerification()
+    Friend Shared Sub runApplying()
+        MessageBox.Show("/apply was chosen.")
 
+        ' If the user is admin, edit the key value. Using a try/catch because I don't know
+        ' how to do it properly. Can't find any examples in VB.
 
-        Dim tempVal As Object = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", "SettingsPageVisibility", Nothing)
+        ' Now we can edit the key value with the user's choice.
+        ' Code from:
+        ' https://social.msdn.microsoft.com/Forums/en-US/7272f987-bfb5-4bac-a72c-dfde5745832f/how-to-use-add-read-change-delete-registry-keys-with-vbnet?forum=Vsexpressvb
 
-        If tempVal Is Nothing Then
-            ' If the registry key value doesn't exist, tell the user.
-            MessageBox.Show("Registry key value does not exist.", "Verify key value")
+        Try
+            Dim editFrom As RegistryKey = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", True)
+            ' Now edit the Registry key value.
+            ' This also creates a new Registry key value if there
+            ' isn't one there already.
+            editFrom.SetValue("SettingsPageVisibility", fullKeyValue)
+            editFrom.Close()
+        Catch ex As Security.SecurityException
+            ' Tell the user if they're not elevated.
 
-        Else
-            ' If the registry key value does exist, tell the user what it is.
-            MessageBox.Show("Registry key value exists." & vbCrLf & vbCrLf & vbCrLf & "Data:" & vbCrLf & vbCrLf & tempVal.ToString, "Verify key value")
-
-        End If
-
+            MessageBox.Show("The Registry key value cannot be edited because the app isn't running as Administrator. Please elevate and try again.", "Apply changes")
+        End Try
     End Sub
-
-
 End Class

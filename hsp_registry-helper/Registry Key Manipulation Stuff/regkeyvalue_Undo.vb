@@ -40,7 +40,7 @@ Public Class regkeyvalue_Undo
 
     Friend Shared Sub runDeletion()
         MessageBox.Show("/undo was chosen.")
-        Dim tempVal As String = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", "SettingsPageVisibility", Nothing)
+        Dim tempVal As Object = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", "SettingsPageVisibility", Nothing)
 
         ' First see if there's a key value to delete.
         If tempVal IsNot Nothing Then
@@ -53,12 +53,18 @@ Public Class regkeyvalue_Undo
 
             Try
                 Dim deleteFrom As RegistryKey = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", True)
+                ' Now delete the key value.
                 deleteFrom.DeleteValue("SettingsPageVisibility")
             Catch ex As Security.SecurityException
                 ' Tell the user if they're not elevated.
-
-                MessageBox.Show("The Registry key value cannot be deleted because the app isn't running as Administrator. Please elevate and try again.")
+                MessageBox.Show("The Registry key value cannot be deleted because the app isn't running as Administrator. Please elevate and try again.", "Undo all changes")
             End Try
+
+        Else
+            ' If there's no Registry key value to delete,
+            ' tell the user.
+            MessageBox.Show("There's no Registry key value to delete.", "Undo all changes")
+
         End If
     End Sub
 End Class

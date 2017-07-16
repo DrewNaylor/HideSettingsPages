@@ -122,7 +122,33 @@ Public Class aaformMainWindow
         proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
         proc.Arguments = "/undo "
         proc.Verb = "runas"
-        Process.Start(proc)
+        Try
+            Process.Start(proc)
+            ' We have to catch this exception
+            ' in case the user clicks "No" in the UAC
+            ' dialog. Otherwise, we get an error
+            ' that says that the operation was
+            ' canceled by the user.
+        Catch ex As ComponentModel.Win32Exception
+        End Try
+
+    End Sub
+
+    Private Sub buttonApplyChanges_Click(sender As Object, e As EventArgs) Handles buttonApplyChanges.Click
+        ' Tell the registry helper app to apply the key value in the Registry.
+        Dim proc As New ProcessStartInfo
+        proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
+        proc.Arguments = "/apply " & registryKeyValueBuilder.stringFullRegistryKeyValue
+        proc.Verb = "runas"
+        Try
+            Process.Start(proc)
+            ' We have to catch this exception
+            ' in case the user clicks "No" in the UAC
+            ' dialog. Otherwise, we get an error
+            ' that says that the operation was
+            ' canceled by the user.
+        Catch ex As ComponentModel.Win32Exception
+        End Try
     End Sub
 #End Region
 End Class
