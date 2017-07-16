@@ -79,6 +79,11 @@ Public Class argsOutput
             regkeyvalue_Undo.runDeletion()
         ElseIf actionToTake = "/apply" Then
             regkeyvalue_Apply.runApplying()
+        Else
+            ' If the argument isn't valid,
+            ' tell the user and display
+            ' the valid args.
+            noOrInvalidCommandLineArgs("Invalid commandline argument: " & actionToTake)
         End If
     End Sub
 End Class
