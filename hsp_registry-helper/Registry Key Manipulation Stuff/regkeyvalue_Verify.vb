@@ -40,8 +40,6 @@ Public Class regkeyvalue_Verify
 
         Dim tempVal As Object = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", "SettingsPageVisibility", Nothing)
 
-
-
         If tempVal Is Nothing Then
             ' If the registry key value doesn't exist, tell the user.
             MessageBox.Show("Registry key value does not exist.", "Verify key value")

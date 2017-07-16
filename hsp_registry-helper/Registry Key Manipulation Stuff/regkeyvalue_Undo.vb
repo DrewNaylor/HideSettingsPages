@@ -57,8 +57,7 @@ Public Class regkeyvalue_Undo
                 deleteFrom.DeleteValue("SettingsPageVisibility")
             Catch ex As Security.SecurityException
                 ' Tell the user if they're not elevated.
-
-                MessageBox.Show("The Registry key value cannot be deleted because the app isn't running as Administrator. Please elevate and try again.")
+                MessageBox.Show("The Registry key value cannot be deleted because the app isn't running as Administrator. Please elevate and try again.", "Undo all changes")
             End Try
 
         Else
