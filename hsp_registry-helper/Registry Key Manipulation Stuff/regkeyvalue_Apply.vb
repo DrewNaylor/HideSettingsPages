@@ -61,6 +61,11 @@ Public Class regkeyvalue_Apply
 
                 MessageBox.Show("The Registry key value cannot be edited because the app isn't running as Administrator. Please elevate and try again.")
             End Try
+
+        Else
+            ' Otherwise, just make a new Registry key value
+            ' and modify it.
+
         End If
     End Sub
 End Class
