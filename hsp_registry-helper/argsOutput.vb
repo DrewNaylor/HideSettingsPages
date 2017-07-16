@@ -28,9 +28,9 @@
 
 
 Public Class argsOutput
-    Friend Shared Sub noOrInvalidCommandLineArgs(message As String)
+    Friend Shared Sub noOrInvalidCommandLineArgs(message As String, errorTitleBar As String)
         ' Update titlebar to tell the user there's no arguments passed.
-        Console.Title = titlebarText & ": No arguments passed."
+        Console.Title = titlebarText & errorTitleBar
         ' Show the user app info including title, version, copyright, and license.
         Console.WriteLine(My.Application.Info.Title & " Version " & My.Application.Info.Version.ToString)
         Console.WriteLine(My.Application.Info.Copyright)
@@ -83,7 +83,7 @@ Public Class argsOutput
             ' If the argument isn't valid,
             ' tell the user and display
             ' the valid args.
-            noOrInvalidCommandLineArgs("Invalid commandline argument: " & actionToTake)
+            noOrInvalidCommandLineArgs("Invalid commandline argument: " & actionToTake, ": Invalid commandline argument.")
         End If
     End Sub
 End Class
