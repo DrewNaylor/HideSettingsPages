@@ -64,7 +64,7 @@ Public Class registryKeyValueBuilder
         ' sample: https://msdn.microsoft.com/en-us/library/e954th47(v=vs.110).aspx
 
         ' Determine if there are any items checked.  
-        If aaformMainWindow.checkedlistboxPageList.CheckedItems.Count <> 0 Then
+        If aaformMainWindow.checkedlistboxPageList.CheckedItems.Count > 0 Then
             ' If so, loop through all checked items and print results.  
             Dim x As Integer
             Dim s As String = ""
@@ -73,6 +73,11 @@ Public Class registryKeyValueBuilder
             Next x
             stringKeyValuePageList = s
             stringKeyValuePageList = stringKeyValuePageList.TrimEnd(CType(";", Char()))
+
+        ElseIf aaformMainWindow.checkedlistboxPageList.CheckedItems.Count = 0 Then
+
+            ' If nothing is checked, then make the string empty.
+            stringKeyValuePageList = ""
         End If
 
     End Sub
