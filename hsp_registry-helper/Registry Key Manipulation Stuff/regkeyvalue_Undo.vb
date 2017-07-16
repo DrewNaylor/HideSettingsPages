@@ -61,6 +61,11 @@ Public Class regkeyvalue_Undo
                 MessageBox.Show("The Registry key value cannot be deleted because the app isn't running as Administrator. Please elevate and try again.")
             End Try
 
+        Else
+            ' If there's no Registry key value to delete,
+            ' tell the user.
+            MessageBox.Show("There's no Registry key value to delete.", "Undo all changes")
+
         End If
     End Sub
 End Class
