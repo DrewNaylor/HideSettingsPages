@@ -63,7 +63,7 @@ Public Class argsOutput
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /apply showonly:display;about")
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /undo")
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /verify")
-        MessageBox.Show(message, messageTitle)
+        MessageBox.Show(message, messageTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
     End Sub
 
     Friend Shared Sub passCommandLineArgs()
