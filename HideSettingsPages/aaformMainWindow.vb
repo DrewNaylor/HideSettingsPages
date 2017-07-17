@@ -80,6 +80,11 @@ Public Class aaformMainWindow
         ' Go to the GitHub wiki.
         Process.Start("https://github.com/DrewNaylor/HideSettingsPages/wiki")
     End Sub
+
+    Private Sub menubarVerifyKeyValueButton_Click(sender As Object, e As EventArgs) Handles menubarVerifyKeyValueButton.Click
+        ' Launch hsp_registry-helper.exe and have it tell the user what the current Registry key value is.
+
+    End Sub
 #End Region
 #End Region
 
