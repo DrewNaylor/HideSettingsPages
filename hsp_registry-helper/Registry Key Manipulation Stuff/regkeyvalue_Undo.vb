@@ -60,7 +60,7 @@ Friend Class regkeyvalue_Undo
                 MessageBox.Show(tempVal.ToString)
 
                 ' After deleting the value, tell the user.
-                MessageBox.Show("Successfully removed Registry key value." & vbCrLf & "Please start or restart the Settings app to see your changes.")
+                MessageBox.Show("Successfully removed Registry key value." & vbCrLf & "Please start or restart the Settings app to see your changes.", "Undo all changes", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             Catch ex As Security.SecurityException
                 ' Tell the user if they're not elevated.
