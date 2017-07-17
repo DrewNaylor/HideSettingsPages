@@ -86,6 +86,7 @@ Public Class aaformMainWindow
         ' Tell the registry helper app to apply the key value in the Registry.
         Dim proc As New ProcessStartInfo
         proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
+        proc.WindowStyle = ProcessWindowStyle.Hidden
         proc.Arguments = "/verify"
         Try
             Process.Start(proc)
@@ -159,6 +160,7 @@ Public Class aaformMainWindow
         ' Tell the registry helper app to delete the key value in the Registry.
         Dim proc As New ProcessStartInfo
         proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
+        proc.WindowStyle = ProcessWindowStyle.Hidden
         proc.Arguments = "/undo "
         proc.Verb = "runas"
         Try
@@ -210,6 +212,7 @@ Public Class aaformMainWindow
         ' Tell the registry helper app to apply the key value in the Registry.
         Dim proc As New ProcessStartInfo
         proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
+        proc.WindowStyle = ProcessWindowStyle.Hidden
         proc.Arguments = "/apply " & registryKeyValueBuilder.stringFullRegistryKeyValue
         proc.Verb = "runas"
         Try
