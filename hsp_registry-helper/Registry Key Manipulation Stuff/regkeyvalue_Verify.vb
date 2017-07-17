@@ -42,11 +42,11 @@ Public Class regkeyvalue_Verify
 
         If tempVal Is Nothing Then
             ' If the registry key value doesn't exist, tell the user.
-            MessageBox.Show("The Registry key value does not exist.", "Verify key value", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("The Registry key value does not exist.", "Verify current key value", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
         Else
             ' If the registry key value does exist, tell the user what it is.
-            MessageBox.Show("The Registry key value exists." & vbCrLf & vbCrLf & vbCrLf & "Data:" & vbCrLf & vbCrLf & tempVal.ToString, "Verify key value", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("The Registry key value exists." & vbCrLf & vbCrLf & vbCrLf & "Current data:" & vbCrLf & vbCrLf & tempVal.ToString, "Verify current key value", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
         End If
 
