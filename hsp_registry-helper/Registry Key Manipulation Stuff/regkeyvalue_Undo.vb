@@ -31,7 +31,7 @@
 ' Microsoft.Win32 is used for registry stuff.
 Imports Microsoft.Win32
 
-Public Class regkeyvalue_Undo
+Friend Class regkeyvalue_Undo
     ' If the user chooses to /undo the Registry key value,
     ' delete the proper key value if it exists.
 

@@ -31,7 +31,7 @@
 ' Microsoft.Win32 is used for registry stuff.
 Imports Microsoft.Win32
 
-Public Class regkeyvalue_Apply
+Friend Class regkeyvalue_Apply
     ' If the user chooses to /apply the Registry key value,
     ' create or edit the proper key value if it exists.
 
