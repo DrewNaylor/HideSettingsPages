@@ -114,9 +114,9 @@ Public Class aaformMainWindow
 
 #Region "Apply/undo Registry key value subs."
 
-
+#Region "Undo key value."
     Private Sub buttonUndoChanges_Click(sender As Object, e As EventArgs) Handles buttonUndoChanges.Click
-
+#Region "Ask user if they want to delete the key value."
         ' Ask the user if they want to delete the Registry key value.
         ' Code from: https://stackoverflow.com/a/20203356
         Select Case MsgBox("Are you sure you want to undo all changes?" & vbCrLf &
@@ -129,7 +129,8 @@ Public Class aaformMainWindow
                 ' This stops the key value from being deleted.
                 Exit Sub
         End Select
-
+#End Region
+#Region "Start up registry helper and delete the key if the user wants to."
         ' Tell the registry helper app to delete the key value in the Registry.
         Dim proc As New ProcessStartInfo
         proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
@@ -158,8 +159,9 @@ Public Class aaformMainWindow
                 Case MsgBoxResult.No
             End Select
         End Try
-
     End Sub
+#End Region
+#End Region
 
     Private Sub buttonApplyChanges_Click(sender As Object, e As EventArgs) Handles buttonApplyChanges.Click
 
