@@ -67,11 +67,10 @@ Public Class argsOutput
     End Sub
 
     Friend Shared Sub passCommandLineArgs()
+
+        ' Write current args to the console window.
         Console.WriteLine(actionToTake)
         Console.WriteLine(fullKeyValue)
-
-        MessageBox.Show("This is the full Registry key value.")
-        MessageBox.Show("Stop.")
 
         If actionToTake = "/verify" Then
             regkeyvalue_Verify.runVerification()
