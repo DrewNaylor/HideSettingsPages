@@ -62,13 +62,13 @@ Friend Class regkeyvalue_Undo
 
             Catch ex As Security.SecurityException
                 ' Tell the user if they're not elevated.
-                MessageBox.Show("The Registry key value cannot be deleted because the app isn't running as Administrator. Please elevate and try again.", "Undo all changes")
+                MessageBox.Show("The Registry key value could not be deleted because the app isn't running as Administrator. Please elevate and try again.", "Undo all changes", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
 
         Else
             ' If there's no Registry key value to delete,
             ' tell the user.
-            MessageBox.Show("There's no Registry key value to delete.", "Undo all changes")
+            MessageBox.Show("There's no Registry key value to delete.", "Undo all changes", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
         End If
     End Sub

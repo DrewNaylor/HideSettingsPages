@@ -62,7 +62,7 @@ Friend Class regkeyvalue_Apply
         Catch ex As Security.SecurityException
             ' Tell the user if they're not elevated.
 
-            MessageBox.Show("The Registry key value cannot be edited because the app isn't running as Administrator. Please elevate and try again.", "Apply changes")
+            MessageBox.Show("The Registry key value could not be applied because the app isn't running as Administrator. Please elevate and try again.", "Apply changes", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class
