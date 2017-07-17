@@ -168,6 +168,21 @@ Public Class aaformMainWindow
 #Region "Apply key value"
     Private Sub buttonApplyChanges_Click(sender As Object, e As EventArgs) Handles buttonApplyChanges.Click
 
+#Region "Ask user if they want to apply the key value."
+        ' Ask the user if they want to apply the Registry key value.
+        ' Code from: https://stackoverflow.com/a/20203356
+        Select Case MsgBox("Are you sure you want to apply your changes?" & vbCrLf &
+                           "This will cause pages in the Settings app to be hidden based on your selections." & vbCrLf &
+                           "User Account Control will ask for admin permissions." & vbCrLf &
+                           "I couldn't find a way to put the shield on buttons in VB.Net.", MsgBoxStyle.YesNo, "Apply changes")
+            Case MsgBoxResult.Yes
+                ' This just continues the Sub and applies the key value.
+            Case MsgBoxResult.No
+                ' This stops the key value from being applied.
+                Exit Sub
+        End Select
+#End Region
+
 #Region "Start up registry helper and apply the key value if the user wants to."
         ' Tell the registry helper app to apply the key value in the Registry.
         Dim proc As New ProcessStartInfo
