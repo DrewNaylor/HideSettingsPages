@@ -86,33 +86,22 @@ Public Class aaformMainWindow
         ' Tell the registry helper app to apply the key value in the Registry.
         Dim proc As New ProcessStartInfo
         proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
-        proc.Arguments = "/apply " & registryKeyValueBuilder.stringFullRegistryKeyValue
-        proc.Verb = "runas"
+        proc.Arguments = "/verify"
         Try
             Process.Start(proc)
-            ' We have to catch this exception
-            ' in case the user clicks "No" in the UAC
-            ' dialog. Otherwise, we get an error
-            ' that says that the operation was
-            ' canceled by the user.
         Catch ex As ComponentModel.Win32Exception
             ' Complain and ask the user to download a new copy
             ' if we can't launch the registry helper app.
             ' Code from: https://stackoverflow.com/a/20203356
             Select Case MsgBox("We couldn't find hsp_registry-helper.exe in the current folder." & vbCrLf &
-                                "Because this file is used to apply or undo the Registry key value chosen above," & vbCrLf &
+                                "Because this file is used to show the current Registry key value's data," & vbCrLf &
                                 "it's recommended that a new copy of HideSettingsPages be downloaded." & vbCrLf &
-                                "Would you like to download a new copy?" & vbCrLf &
-                                vbCrLf &
-                                "It's also possible that the User Account Control dialog was canceled, in which case," &
-                                " please try again.", MsgBoxStyle.YesNo, "Couldn't launch Registry helper")
+                                "Would you like to download a new copy?", MsgBoxStyle.YesNo, "Couldn't launch Registry helper")
                 Case MsgBoxResult.Yes
                     Process.Start("https://www.github.com/DrewNaylor/HideSettingsPages/releases")
                 Case MsgBoxResult.No
             End Select
         End Try
-    End Sub
-
     End Sub
 #End Region
 #End Region
