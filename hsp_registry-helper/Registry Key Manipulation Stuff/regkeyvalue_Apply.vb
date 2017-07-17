@@ -39,7 +39,6 @@ Friend Class regkeyvalue_Apply
     ' https://social.msdn.microsoft.com/Forums/en-US/7272f987-bfb5-4bac-a72c-dfde5745832f/how-to-use-add-read-change-delete-registry-keys-with-vbnet?forum=Vsexpressvb
 
     Friend Shared Sub runApplying()
-        MessageBox.Show("/apply was chosen.")
 
         ' If the user is admin, edit the key value. Using a try/catch because I don't know
         ' how to do it properly. Can't find any examples in VB.
