@@ -39,7 +39,7 @@ Friend Class regkeyvalue_Undo
     ' https://social.msdn.microsoft.com/Forums/en-US/7272f987-bfb5-4bac-a72c-dfde5745832f/how-to-use-add-read-change-delete-registry-keys-with-vbnet?forum=Vsexpressvb
 
     Friend Shared Sub runDeletion()
-        MessageBox.Show("/undo was chosen.")
+
         Dim tempVal As Object = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", "SettingsPageVisibility", Nothing)
 
         ' First see if there's a key value to delete.
@@ -57,10 +57,8 @@ Friend Class regkeyvalue_Undo
                 deleteFrom.DeleteValue("SettingsPageVisibility")
                 deleteFrom.Close()
 
-                MessageBox.Show(tempVal.ToString)
-
                 ' After deleting the value, tell the user.
-                MessageBox.Show("Successfully removed Registry key value." & vbCrLf & "Please start or restart the Settings app to see your changes.", "Undo all changes", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Successfully removed the Registry key value." & vbCrLf & "Please start or restart the Settings app to see your changes.", "Undo all changes", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             Catch ex As Security.SecurityException
                 ' Tell the user if they're not elevated.
