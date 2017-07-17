@@ -55,6 +55,13 @@ Friend Class regkeyvalue_Undo
                 Dim deleteFrom As RegistryKey = My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", True)
                 ' Now delete the key value.
                 deleteFrom.DeleteValue("SettingsPageVisibility")
+                deleteFrom.Close()
+
+                MessageBox.Show(tempVal.ToString)
+
+                ' After deleting the value, tell the user.
+                MessageBox.Show("Successfully removed Registry key value. Please start or restart the Settings app to see your changes.")
+
             Catch ex As Security.SecurityException
                 ' Tell the user if they're not elevated.
                 MessageBox.Show("The Registry key value cannot be deleted because the app isn't running as Administrator. Please elevate and try again.", "Undo all changes")
