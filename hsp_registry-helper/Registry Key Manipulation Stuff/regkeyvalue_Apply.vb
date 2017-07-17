@@ -55,6 +55,11 @@ Friend Class regkeyvalue_Apply
             ' isn't one there already.
             editFrom.SetValue("SettingsPageVisibility", fullKeyValue)
             editFrom.Close()
+
+            ' After applying the value, tell the user.
+            MessageBox.Show("Successfully applied the Registry key value." & vbCrLf & "Please start or restart the Settings app to see your changes.", "Apply changes", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+
         Catch ex As Security.SecurityException
             ' Tell the user if they're not elevated.
 
