@@ -116,6 +116,7 @@ Public Class aaformMainWindow
 
 #Region "Undo key value."
     Private Sub buttonUndoChanges_Click(sender As Object, e As EventArgs) Handles buttonUndoChanges.Click
+
 #Region "Ask user if they want to delete the key value."
         ' Ask the user if they want to delete the Registry key value.
         ' Code from: https://stackoverflow.com/a/20203356
@@ -130,7 +131,8 @@ Public Class aaformMainWindow
                 Exit Sub
         End Select
 #End Region
-#Region "Start up registry helper and delete the key if the user wants to."
+
+#Region "Start up registry helper and delete the key value if the user wants to."
         ' Tell the registry helper app to delete the key value in the Registry.
         Dim proc As New ProcessStartInfo
         proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
@@ -163,14 +165,15 @@ Public Class aaformMainWindow
 #End Region
 #End Region
 
+#Region "Apply key value"
     Private Sub buttonApplyChanges_Click(sender As Object, e As EventArgs) Handles buttonApplyChanges.Click
 
-
+#Region "Start up registry helper and apply the key value if the user wants to."
         ' Tell the registry helper app to apply the key value in the Registry.
         Dim proc As New ProcessStartInfo
-            proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
-            proc.Arguments = "/apply " & registryKeyValueBuilder.stringFullRegistryKeyValue
-            proc.Verb = "runas"
+        proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
+        proc.Arguments = "/apply " & registryKeyValueBuilder.stringFullRegistryKeyValue
+        proc.Verb = "runas"
         Try
             Process.Start(proc)
             ' We have to catch this exception
@@ -193,8 +196,9 @@ Public Class aaformMainWindow
                     Process.Start("https://www.github.com/DrewNaylor/HideSettingsPages/releases")
                 Case MsgBoxResult.No
             End Select
-
         End Try
     End Sub
+#End Region
+#End Region
 #End Region
 End Class
