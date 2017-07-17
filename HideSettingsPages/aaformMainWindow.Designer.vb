@@ -41,6 +41,7 @@ Partial Class aaformMainWindow
         Me.buttonUndoChanges = New System.Windows.Forms.Button()
         Me.menubarMainWindow = New System.Windows.Forms.MenuStrip()
         Me.menubarFileMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarVerifyKeyValueButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarExitButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarHelpMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarHelpTopicsButton = New System.Windows.Forms.ToolStripMenuItem()
@@ -234,15 +235,23 @@ Partial Class aaformMainWindow
         '
         'menubarFileMenu
         '
-        Me.menubarFileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarExitButton})
+        Me.menubarFileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarVerifyKeyValueButton, Me.menubarExitButton})
         Me.menubarFileMenu.Name = "menubarFileMenu"
         Me.menubarFileMenu.Size = New System.Drawing.Size(37, 20)
-        Me.menubarFileMenu.Text = "File"
+        Me.menubarFileMenu.Text = "&File"
+        '
+        'menubarVerifyKeyValueButton
+        '
+        Me.menubarVerifyKeyValueButton.Name = "menubarVerifyKeyValueButton"
+        Me.menubarVerifyKeyValueButton.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
+        Me.menubarVerifyKeyValueButton.Size = New System.Drawing.Size(246, 22)
+        Me.menubarVerifyKeyValueButton.Text = "&Verify current key value..."
+        Me.menubarVerifyKeyValueButton.ToolTipText = "Shows the current data in the Registry key value this app modifies."
         '
         'menubarExitButton
         '
         Me.menubarExitButton.Name = "menubarExitButton"
-        Me.menubarExitButton.Size = New System.Drawing.Size(92, 22)
+        Me.menubarExitButton.Size = New System.Drawing.Size(246, 22)
         Me.menubarExitButton.Text = "E&xit"
         '
         'menubarHelpMenu
@@ -250,7 +259,7 @@ Partial Class aaformMainWindow
         Me.menubarHelpMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarHelpTopicsButton, Me.zseparatorHelpMenu, Me.menubarAuthorsButton, Me.menubarLicenseButton, Me.menubarAboutButton})
         Me.menubarHelpMenu.Name = "menubarHelpMenu"
         Me.menubarHelpMenu.Size = New System.Drawing.Size(44, 20)
-        Me.menubarHelpMenu.Text = "Help"
+        Me.menubarHelpMenu.Text = "&Help"
         '
         'menubarHelpTopicsButton
         '
@@ -335,4 +344,5 @@ Partial Class aaformMainWindow
     Friend WithEvents zseparatorHelpMenu As ToolStripSeparator
     Friend WithEvents menubarAuthorsButton As ToolStripMenuItem
     Friend WithEvents menubarLicenseButton As ToolStripMenuItem
+    Friend WithEvents menubarVerifyKeyValueButton As ToolStripMenuItem
 End Class

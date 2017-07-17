@@ -25,7 +25,7 @@
 
 
 Public Class aaformMainWindow
-#Region "Other app code subs."
+#Region "Form1 load code, exit button, and Registry key View Larger link label."
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Set the window title based on the name, dev, and version number.
         Me.Text = "HideSettingsPages v." & My.Application.Info.Version.ToString
