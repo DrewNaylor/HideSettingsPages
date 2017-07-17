@@ -124,8 +124,10 @@ Public Class aaformMainWindow
                            "User Account Control will ask for admin permissions." & vbCrLf &
                            "I couldn't find a way to put the shield on buttons in VB.Net.", MsgBoxStyle.YesNo, "Undo all changes")
             Case MsgBoxResult.Yes
-                Process.Start("https://www.github.com/DrewNaylor/HideSettingsPages/releases")
+                ' This just continues the Sub and deletes the key value.
             Case MsgBoxResult.No
+                ' This stops the key value from being deleted.
+                Exit Sub
         End Select
 
         ' Tell the registry helper app to delete the key value in the Registry.
