@@ -116,6 +116,18 @@ Public Class aaformMainWindow
 
 
     Private Sub buttonUndoChanges_Click(sender As Object, e As EventArgs) Handles buttonUndoChanges.Click
+
+        ' Ask the user if they want to delete the Registry key value.
+        ' Code from: https://stackoverflow.com/a/20203356
+        Select Case MsgBox("Are you sure you want to undo all changes?" & vbCrLf &
+                           "This will cause all Settings app pages available on your system to be shown." & vbCrLf &
+                           "User Account Control will ask for admin permissions." & vbCrLf &
+                           "I couldn't find a way to put the shield on buttons in VB.Net.", MsgBoxStyle.YesNo, "Undo all changes")
+            Case MsgBoxResult.Yes
+                Process.Start("https://www.github.com/DrewNaylor/HideSettingsPages/releases")
+            Case MsgBoxResult.No
+        End Select
+
         ' Tell the registry helper app to delete the key value in the Registry.
         Dim proc As New ProcessStartInfo
         proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
