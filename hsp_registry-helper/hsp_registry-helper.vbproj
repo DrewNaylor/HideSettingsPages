@@ -112,7 +112,6 @@
     </Compile>
     <Compile Include="argsOutput.vb" />
     <Compile Include="Registry Key Manipulation Stuff\regkeyvalue_Apply.vb" />
-    <Compile Include="Registry Key Manipulation Stuff\regkeyvalue_ModificationMessage.vb" />
     <Compile Include="Registry Key Manipulation Stuff\regkeyvalue_Undo.vb" />
     <Compile Include="Registry Key Manipulation Stuff\regkeyvalue_Verify.vb" />
   </ItemGroup>
