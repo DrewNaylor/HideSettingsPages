@@ -69,6 +69,9 @@ Public Class aaformMainWindow
         ' Code based on UXL Launcher's "Always On Top" button
         ' code.
 
+        ' If the checkbox is unchecked, when it's clicked, set
+        ' My.Settings.messageShowStartupWarning to True
+        ' and the control's CheckState to CheckState.Checked.
         If menubarShowStartupWarningMessageButton.CheckState = CheckState.Unchecked Then
             menubarShowStartupWarningMessageButton.CheckState = CheckState.Checked
             If My.Settings.messageShowStartupWarning = False Then
@@ -76,6 +79,22 @@ Public Class aaformMainWindow
             End If
             My.Settings.Save()
             My.Settings.Reload()
+
+            Debug.WriteLine("My.Settings.messageShowStartupWarning current value: " & My.Settings.messageShowStartupWarning)
+
+            ' However, if the checkbox is checked, when it's clicked, set
+            ' My.Settings.messageShowStartupWarning to False
+            ' and the control's CheckState to CheckState.Unchecked.
+        ElseIf menubarShowStartupWarningMessageButton.CheckState = CheckState.Checked Then
+            menubarShowStartupWarningMessageButton.CheckState = CheckState.Unchecked
+            If My.Settings.messageShowStartupWarning = True Then
+                My.Settings.messageShowStartupWarning = False
+            End If
+            My.Settings.Save()
+            My.Settings.Reload()
+
+            Debug.WriteLine("My.Settings.messageShowStartupWarning current value: " & My.Settings.messageShowStartupWarning)
+
         End If
 
     End Sub
