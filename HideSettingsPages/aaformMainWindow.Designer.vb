@@ -266,6 +266,7 @@ Partial Class aaformMainWindow
         '
         'menubarShowStartupWarningMessageButton
         '
+        Me.menubarShowStartupWarningMessageButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.menubarShowStartupWarningMessageButton.Name = "menubarShowStartupWarningMessageButton"
         Me.menubarShowStartupWarningMessageButton.Size = New System.Drawing.Size(286, 22)
         Me.menubarShowStartupWarningMessageButton.Text = "Show s&tartup &warning message"

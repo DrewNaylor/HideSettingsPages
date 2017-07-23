@@ -69,7 +69,14 @@ Public Class aaformMainWindow
         ' Code based on UXL Launcher's "Always On Top" button
         ' code.
 
-        If menubarShowStartupWarningMessageButton.
+        If menubarShowStartupWarningMessageButton.CheckState = CheckState.Unchecked Then
+            menubarShowStartupWarningMessageButton.CheckState = CheckState.Checked
+            If My.Settings.messageShowStartupWarning = False Then
+                My.Settings.messageShowStartupWarning = True
+            End If
+            My.Settings.Save()
+            My.Settings.Reload()
+        End If
 
     End Sub
 
