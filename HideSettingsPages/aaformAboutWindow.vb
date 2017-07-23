@@ -32,6 +32,16 @@ Imports System.ComponentModel
 Public Class aaformAboutWindow
 #Region "Code that runs when the About window is opened."
     Private Sub RealAboutWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        ' Here's the text to show for hsp_registry-helper's info in the About window.
+        Dim infoHSPRegistryHelper As String = " "
+        Dim fileversionHSPRegistryHelper As FileVersionInfo = FileVersionInfo.GetVersionInfo(My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe")
+
+        ' Now figure out what hsp_registry-helper's info text is.
+        If My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe" IsNot Nothing Then
+            infoHSPRegistryHelper = "hsp_registry-helper.exe version: " & fileversionHSPRegistryHelper.FileVersion
+        End If
+
         ' Create a string with the BuildDate.txt file.
         Dim BuildDateString As String = My.Resources.BuildDate
         BuildDateString = BuildDateString.TrimEnd(CType(vbCrLf, Char()))
@@ -40,7 +50,8 @@ Public Class aaformAboutWindow
         textboxAboutApp.Text = ("HideSettingsPages - Hide Windows 10 Settings App Pages" & vbCrLf &
 "Version " & My.Application.Info.Version.ToString & " Git" & vbCrLf &
 "App compiled at UTC: " & BuildDateString & vbCrLf &
-"Copyright (C) 2017  Drew Naylor" & vbCrLf &
+"Copyright (C) 2017  Drew Naylor" & vbCrLf & vbCrLf &
+infoHSPRegistryHelper & vbCrLf &
 "" & vbCrLf &
 "HideSettingsPages is a GUI to set a Registry key value to hide individual pages in the Windows 10 Settings app on the Creators Update and newer." & vbCrLf &
 "" & vbCrLf &
