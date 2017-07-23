@@ -28,7 +28,7 @@ Public Class aaformMainWindow
 #Region "Form1 load code, exit button, and Registry key View Larger link label."
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Set the window title based on the name and version number.
-        Me.Text = "HideSettingsPages v." & My.Application.Info.Version.ToString
+        Me.Text = "HideSettingsPages v" & My.Application.Info.Version.Major.ToString & "." & My.Application.Info.Version.Minor.ToString
 
         ' Make sure the Registry key value is updated as soon as the window
         ' opens because sometimes the "Hide" radio button is unchecked
