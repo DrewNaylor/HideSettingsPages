@@ -65,6 +65,12 @@ Public Class aaformMainWindow
         ' if they know what they're doing and that it could
         ' cause their Settings app to crash if too many pages
         ' are hidden in certain categories.
+
+        ' Code based on UXL Launcher's "Always On Top" button
+        ' code.
+
+
+
     End Sub
 
 #End Region
