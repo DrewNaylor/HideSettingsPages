@@ -39,7 +39,7 @@ Public Class aaformAboutWindow
 
         ' Now figure out what hsp_registry-helper's info text is.
         If My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe" IsNot Nothing Then
-            infoHSPRegistryHelper = "hsp_registry-helper.exe version: " & fileversionHSPRegistryHelper.FileVersion
+            infoHSPRegistryHelper = "HideSettingsPages Registry Helper Version: " & fileversionHSPRegistryHelper.FileVersion
         End If
 
         ' Create a string with the BuildDate.txt file.
