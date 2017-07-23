@@ -199,7 +199,10 @@ Public Class aaformMainWindow
         Select Case MsgBox("Are you sure you want to apply your changes?" & vbCrLf &
                            "This will cause pages in the Settings app to be hidden based on your selections." & vbCrLf &
                            "User Account Control will ask for admin permissions." & vbCrLf &
-                           "I couldn't find a way to put the shield on buttons in VB.Net.", MsgBoxStyle.YesNo, "Apply changes")
+                           "I couldn't find a way to put the shield on buttons in VB.Net." & vbCrLf & vbCrLf & vbCrLf &
+                           "Your selections:" & vbCrLf &
+                           vbCrLf &
+                           registryKeyValueBuilder.stringFullRegistryKeyValue, MsgBoxStyle.YesNo, "Apply changes")
             Case MsgBoxResult.Yes
                 ' This just continues the Sub and applies the key value.
             Case MsgBoxResult.No
