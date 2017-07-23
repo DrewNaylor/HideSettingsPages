@@ -43,15 +43,15 @@ Partial Class aaformMainWindow
         Me.menubarFileMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarVerifyKeyValueButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarExitButton = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarOptionsMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarbuttonShowStartupWarningMessage = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarbuttonShowSystemRestoreReminderMessage = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarHelpMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarHelpTopicsButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.zseparatorHelpMenu = New System.Windows.Forms.ToolStripSeparator()
         Me.menubarAuthorsButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarLicenseButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarAboutButton = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menubarOptionsMenu = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ShowStartupWarningMessageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ShowSystemRestoreReminderMessageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
@@ -257,6 +257,25 @@ Partial Class aaformMainWindow
         Me.menubarExitButton.Size = New System.Drawing.Size(246, 22)
         Me.menubarExitButton.Text = "E&xit"
         '
+        'menubarOptionsMenu
+        '
+        Me.menubarOptionsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarbuttonShowStartupWarningMessage, Me.menubarbuttonShowSystemRestoreReminderMessage})
+        Me.menubarOptionsMenu.Name = "menubarOptionsMenu"
+        Me.menubarOptionsMenu.Size = New System.Drawing.Size(61, 20)
+        Me.menubarOptionsMenu.Text = "&Options"
+        '
+        'menubarbuttonShowStartupWarningMessage
+        '
+        Me.menubarbuttonShowStartupWarningMessage.Name = "menubarbuttonShowStartupWarningMessage"
+        Me.menubarbuttonShowStartupWarningMessage.Size = New System.Drawing.Size(286, 22)
+        Me.menubarbuttonShowStartupWarningMessage.Text = "Show s&tartup &warning message"
+        '
+        'menubarbuttonShowSystemRestoreReminderMessage
+        '
+        Me.menubarbuttonShowSystemRestoreReminderMessage.Name = "menubarbuttonShowSystemRestoreReminderMessage"
+        Me.menubarbuttonShowSystemRestoreReminderMessage.Size = New System.Drawing.Size(286, 22)
+        Me.menubarbuttonShowSystemRestoreReminderMessage.Text = "Show System Restore &reminder message"
+        '
         'menubarHelpMenu
         '
         Me.menubarHelpMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarHelpTopicsButton, Me.zseparatorHelpMenu, Me.menubarAuthorsButton, Me.menubarLicenseButton, Me.menubarAboutButton})
@@ -293,25 +312,6 @@ Partial Class aaformMainWindow
         Me.menubarAboutButton.Name = "menubarAboutButton"
         Me.menubarAboutButton.Size = New System.Drawing.Size(211, 22)
         Me.menubarAboutButton.Text = "&About"
-        '
-        'menubarOptionsMenu
-        '
-        Me.menubarOptionsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowStartupWarningMessageToolStripMenuItem, Me.ShowSystemRestoreReminderMessageToolStripMenuItem})
-        Me.menubarOptionsMenu.Name = "menubarOptionsMenu"
-        Me.menubarOptionsMenu.Size = New System.Drawing.Size(61, 20)
-        Me.menubarOptionsMenu.Text = "&Options"
-        '
-        'ShowStartupWarningMessageToolStripMenuItem
-        '
-        Me.ShowStartupWarningMessageToolStripMenuItem.Name = "ShowStartupWarningMessageToolStripMenuItem"
-        Me.ShowStartupWarningMessageToolStripMenuItem.Size = New System.Drawing.Size(286, 22)
-        Me.ShowStartupWarningMessageToolStripMenuItem.Text = "Show s&tartup &warning message"
-        '
-        'ShowSystemRestoreReminderMessageToolStripMenuItem
-        '
-        Me.ShowSystemRestoreReminderMessageToolStripMenuItem.Name = "ShowSystemRestoreReminderMessageToolStripMenuItem"
-        Me.ShowSystemRestoreReminderMessageToolStripMenuItem.Size = New System.Drawing.Size(286, 22)
-        Me.ShowSystemRestoreReminderMessageToolStripMenuItem.Text = "Show System Restore &reminder message"
         '
         'aaformMainWindow
         '
@@ -368,6 +368,6 @@ Partial Class aaformMainWindow
     Friend WithEvents menubarLicenseButton As ToolStripMenuItem
     Friend WithEvents menubarVerifyKeyValueButton As ToolStripMenuItem
     Friend WithEvents menubarOptionsMenu As ToolStripMenuItem
-    Friend WithEvents ShowStartupWarningMessageToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ShowSystemRestoreReminderMessageToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents menubarbuttonShowStartupWarningMessage As ToolStripMenuItem
+    Friend WithEvents menubarbuttonShowSystemRestoreReminderMessage As ToolStripMenuItem
 End Class

@@ -49,10 +49,21 @@ Public Class aaformMainWindow
 #End Region
 
 #Region "Menubar buttons."
+
+#Region "File menubar buttons."
     Private Sub menubarExitButton_Click(sender As Object, e As EventArgs) Handles menubarExitButton.Click
         ' Close the application.
         Me.Close()
     End Sub
+#End Region
+
+#Region "Options menubar buttons."
+
+    Private Sub menubarbuttonShowStartupWarningMessage_Click(sender As Object, e As EventArgs) Handles menubarbuttonShowStartupWarningMessage.Click
+
+    End Sub
+
+#End Region
 
 #Region "Help menubar buttons."
     Private Sub menubarAboutButton_Click(sender As Object, e As EventArgs) Handles menubarAboutButton.Click
