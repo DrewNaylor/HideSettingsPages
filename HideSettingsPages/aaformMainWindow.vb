@@ -80,6 +80,7 @@ Public Class aaformMainWindow
             My.Settings.Save()
             My.Settings.Reload()
 
+            ' Print the current value of My.Settings.messageShowStartupWarning.
             Debug.WriteLine("My.Settings.messageShowStartupWarning current value: " & My.Settings.messageShowStartupWarning)
 
             ' However, if the checkbox is checked, when it's clicked, set
@@ -93,6 +94,7 @@ Public Class aaformMainWindow
             My.Settings.Save()
             My.Settings.Reload()
 
+            ' Print the current value of My.Settings.messageShowStartupWarning.
             Debug.WriteLine("My.Settings.messageShowStartupWarning current value: " & My.Settings.messageShowStartupWarning)
 
         End If
