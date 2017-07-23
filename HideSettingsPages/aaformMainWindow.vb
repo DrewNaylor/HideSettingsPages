@@ -59,7 +59,7 @@ Public Class aaformMainWindow
 
 #Region "Options menubar buttons."
 
-    Private Sub menubarbuttonShowStartupWarningMessage_Click(sender As Object, e As EventArgs) Handles menubarbuttonShowStartupWarningMessage.Click
+    Private Sub menubarShowStartupWarningMessageButton_Click(sender As Object, e As EventArgs) Handles menubarShowStartupWarningMessageButton.Click
         ' Toggles on or off the warning message on startup
         ' that tells the user this app should only be used
         ' if they know what they're doing and that it could
@@ -69,7 +69,7 @@ Public Class aaformMainWindow
         ' Code based on UXL Launcher's "Always On Top" button
         ' code.
 
-
+        If menubarShowStartupWarningMessageButton.
 
     End Sub
 
