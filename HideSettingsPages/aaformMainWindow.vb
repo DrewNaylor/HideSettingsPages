@@ -60,7 +60,11 @@ Public Class aaformMainWindow
 #Region "Options menubar buttons."
 
     Private Sub menubarbuttonShowStartupWarningMessage_Click(sender As Object, e As EventArgs) Handles menubarbuttonShowStartupWarningMessage.Click
-
+        ' Toggles on or off the warning message on startup
+        ' that tells the user this app should only be used
+        ' if they know what they're doing and that it could
+        ' cause their Settings app to crash if too many pages
+        ' are hidden in certain categories.
     End Sub
 
 #End Region
