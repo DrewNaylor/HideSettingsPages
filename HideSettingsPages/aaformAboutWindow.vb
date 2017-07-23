@@ -33,15 +33,24 @@ Public Class aaformAboutWindow
 #Region "Code that runs when the About window is opened."
     Private Sub RealAboutWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+#Region "hsp_registry-helper.exe info."
         ' Here's the text to show for hsp_registry-helper's info in the About window.
         Dim infoHSPRegistryHelper As String = " "
-        Dim fileversionHSPRegistryHelper As FileVersionInfo = FileVersionInfo.GetVersionInfo(My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe")
 
         ' Now figure out what hsp_registry-helper's info text is.
-        If My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe" IsNot Nothing Then
+        Try
+            ' Properly set the variables above to the correct values.
+            Dim fileversionHSPRegistryHelper As FileVersionInfo = FileVersionInfo.GetVersionInfo(My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe")
+
+            ' Properly set info for hsp_registry-helper.
             infoHSPRegistryHelper = "HideSettingsPages Registry Helper Version: " & fileversionHSPRegistryHelper.FileVersion & vbCrLf &
                 "HideSettingsPages Registry Helper Copyright: " & fileversionHSPRegistryHelper.LegalCopyright
-        End If
+
+        Catch ex As IO.FileNotFoundException
+            ' If hsp_registry-helper is missing, let the user know.
+            infoHSPRegistryHelper = "HideSettingsPages Registry Helper is missing. Please download a new copy of HideSettingsPages by clicking on the ""Check for updates"" link below."
+        End Try
+#End Region
 
         ' Create a string with the BuildDate.txt file.
         Dim BuildDateString As String = My.Resources.BuildDate
