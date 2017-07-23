@@ -49,6 +49,9 @@ Partial Class aaformMainWindow
         Me.menubarAuthorsButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarLicenseButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarAboutButton = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarOptionsMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShowStartupWarningMessageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShowSystemRestoreReminderMessageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
@@ -226,7 +229,7 @@ Partial Class aaformMainWindow
         'menubarMainWindow
         '
         Me.menubarMainWindow.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.menubarMainWindow.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarFileMenu, Me.menubarHelpMenu})
+        Me.menubarMainWindow.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarFileMenu, Me.menubarOptionsMenu, Me.menubarHelpMenu})
         Me.menubarMainWindow.Location = New System.Drawing.Point(0, 0)
         Me.menubarMainWindow.Name = "menubarMainWindow"
         Me.menubarMainWindow.Size = New System.Drawing.Size(331, 24)
@@ -291,6 +294,25 @@ Partial Class aaformMainWindow
         Me.menubarAboutButton.Size = New System.Drawing.Size(211, 22)
         Me.menubarAboutButton.Text = "&About"
         '
+        'menubarOptionsMenu
+        '
+        Me.menubarOptionsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowStartupWarningMessageToolStripMenuItem, Me.ShowSystemRestoreReminderMessageToolStripMenuItem})
+        Me.menubarOptionsMenu.Name = "menubarOptionsMenu"
+        Me.menubarOptionsMenu.Size = New System.Drawing.Size(61, 20)
+        Me.menubarOptionsMenu.Text = "&Options"
+        '
+        'ShowStartupWarningMessageToolStripMenuItem
+        '
+        Me.ShowStartupWarningMessageToolStripMenuItem.Name = "ShowStartupWarningMessageToolStripMenuItem"
+        Me.ShowStartupWarningMessageToolStripMenuItem.Size = New System.Drawing.Size(286, 22)
+        Me.ShowStartupWarningMessageToolStripMenuItem.Text = "Show s&tartup &warning message"
+        '
+        'ShowSystemRestoreReminderMessageToolStripMenuItem
+        '
+        Me.ShowSystemRestoreReminderMessageToolStripMenuItem.Name = "ShowSystemRestoreReminderMessageToolStripMenuItem"
+        Me.ShowSystemRestoreReminderMessageToolStripMenuItem.Size = New System.Drawing.Size(286, 22)
+        Me.ShowSystemRestoreReminderMessageToolStripMenuItem.Text = "Show System Restore &reminder message"
+        '
         'aaformMainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -345,4 +367,7 @@ Partial Class aaformMainWindow
     Friend WithEvents menubarAuthorsButton As ToolStripMenuItem
     Friend WithEvents menubarLicenseButton As ToolStripMenuItem
     Friend WithEvents menubarVerifyKeyValueButton As ToolStripMenuItem
+    Friend WithEvents menubarOptionsMenu As ToolStripMenuItem
+    Friend WithEvents ShowStartupWarningMessageToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ShowSystemRestoreReminderMessageToolStripMenuItem As ToolStripMenuItem
 End Class
