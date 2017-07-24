@@ -66,7 +66,6 @@ Public Class aaformMainWindow
         ElseIf My.Settings.messageShowSystemRestoreReminder = False Then
             menubarShowSystemRestoreReminderMessageButton.CheckState = CheckState.Unchecked
         End If
-
 #End Region
 
     End Sub
@@ -337,6 +336,18 @@ Public Class aaformMainWindow
                 ' This stops the key value from being applied.
                 Exit Sub
         End Select
+#End Region
+
+#Region "Remind the user about System Restore if they want to."
+
+        ' If the user has it enabled in the Options menu, remind the user about
+        ' making a System Restore Point and link them to guides after opening the
+        ' System Properties Protection tab.
+
+        If My.Settings.messageShowSystemRestoreReminder = True Then
+
+        End If
+
 #End Region
 
 #Region "Start up registry helper and apply the key value if the user wants to."
