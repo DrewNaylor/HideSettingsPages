@@ -53,7 +53,19 @@ Public Class aaformMainWindow
         ' are in the CheckState.Checked if the My.Settings value for
         ' it is True and CheckState.Unchecked if it's False.
 
+        ' First up, the Show startup warning checkbox.
+        If My.Settings.messageShowStartupWarning = True Then
+            menubarShowStartupWarningMessageButton.CheckState = CheckState.Checked
+        ElseIf My.Settings.messageShowStartupWarning = False Then
+            menubarShowStartupWarningMessageButton.CheckState = CheckState.Unchecked
+        End If
 
+        ' Next, the System Restore reminder message checkbox.
+        If My.Settings.messageShowSystemRestoreReminder = True Then
+            menubarShowSystemRestoreReminderMessageButton.CheckState = CheckState.Checked
+        ElseIf My.Settings.messageShowSystemRestoreReminder = False Then
+            menubarShowSystemRestoreReminderMessageButton.CheckState = CheckState.Unchecked
+        End If
 
 #End Region
 
