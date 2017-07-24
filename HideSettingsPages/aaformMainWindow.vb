@@ -40,6 +40,10 @@ Public Class aaformMainWindow
         ' This warning is to let the user know that HideSettingsPages can cause
         ' problems with their Settings app if all the pages in certain categories
         ' are hidden AND that this message can be disabled from "Options>Show startup warning message".
+
+
+        MessageBox.Show("Please be aware that hiding too many pages from certain categories (such as ""Apps"") may cause the Settings app to crash when clicking on those categories.", "HideSettingsPages", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+
 #End Region
 
     End Sub
