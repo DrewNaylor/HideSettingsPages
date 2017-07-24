@@ -273,6 +273,7 @@ Partial Class aaformMainWindow
         '
         'menubarShowSystemRestoreReminderMessageButton
         '
+        Me.menubarShowSystemRestoreReminderMessageButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.menubarShowSystemRestoreReminderMessageButton.Name = "menubarShowSystemRestoreReminderMessageButton"
         Me.menubarShowSystemRestoreReminderMessageButton.Size = New System.Drawing.Size(286, 22)
         Me.menubarShowSystemRestoreReminderMessageButton.Text = "Show System Restore &reminder message"
