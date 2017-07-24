@@ -35,6 +35,13 @@ Public Class aaformMainWindow
         ' when I lauch this app from the Debug folder on Windows 7.
         registryKeyValueBuilder.computeStringFullRegistryKeyValue()
         textboxRegistryKeyValue.Text = registryKeyValueBuilder.stringFullRegistryKeyValue
+
+#Region "Startup warning message."
+        ' This warning is to let the user know that HideSettingsPages can cause
+        ' problems with their Settings app if all the pages in certain categories
+        ' are hidden AND that this message can be disabled from "Options>Show startup warning message".
+#End Region
+
     End Sub
 
     Private Sub buttonExit_Click(sender As Object, e As EventArgs) Handles buttonExit.Click
