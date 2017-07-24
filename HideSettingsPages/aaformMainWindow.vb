@@ -114,32 +114,32 @@ Public Class aaformMainWindow
         ' code.
 
         ' If the checkbox is unchecked, when it's clicked, set
-        ' My.Settings.messageShowStartupWarning to True
+        ' My.Settings.messageShowSystemRestoreReminder to True
         ' and the control's CheckState to CheckState.Checked.
-        If menubarShowStartupWarningMessageButton.CheckState = CheckState.Unchecked Then
-            menubarShowStartupWarningMessageButton.CheckState = CheckState.Checked
-            If My.Settings.messageShowStartupWarning = False Then
-                My.Settings.messageShowStartupWarning = True
+        If menubarShowSystemRestoreReminderMessageButton.CheckState = CheckState.Unchecked Then
+            menubarShowSystemRestoreReminderMessageButton.CheckState = CheckState.Checked
+            If My.Settings.messageShowSystemRestoreReminder = False Then
+                My.Settings.messageShowSystemRestoreReminder = True
             End If
             My.Settings.Save()
             My.Settings.Reload()
 
-            ' Print the current value of My.Settings.messageShowStartupWarning.
-            Debug.WriteLine("My.Settings.messageShowStartupWarning current value: " & My.Settings.messageShowStartupWarning)
+            ' Print the current value of My.Settings.messageShowSystemRestoreReminder.
+            Debug.WriteLine("My.Settings.messageShowSystemRestoreReminder current value: " & My.Settings.messageShowSystemRestoreReminder)
 
             ' However, if the checkbox is checked, when it's clicked, set
-            ' My.Settings.messageShowStartupWarning to False
+            ' My.Settings.messageShowSystemRestoreReminder to False
             ' and the control's CheckState to CheckState.Unchecked.
-        ElseIf menubarShowStartupWarningMessageButton.CheckState = CheckState.Checked Then
-            menubarShowStartupWarningMessageButton.CheckState = CheckState.Unchecked
-            If My.Settings.messageShowStartupWarning = True Then
-                My.Settings.messageShowStartupWarning = False
+        ElseIf menubarShowSystemRestoreReminderMessageButton.CheckState = CheckState.Checked Then
+            menubarShowSystemRestoreReminderMessageButton.CheckState = CheckState.Unchecked
+            If My.Settings.messageShowSystemRestoreReminder = True Then
+                My.Settings.messageShowSystemRestoreReminder = False
             End If
             My.Settings.Save()
             My.Settings.Reload()
 
-            ' Print the current value of My.Settings.messageShowStartupWarning.
-            Debug.WriteLine("My.Settings.messageShowStartupWarning current value: " & My.Settings.messageShowStartupWarning)
+            ' Print the current value of My.Settings.messageShowSystemRestoreReminder.
+            Debug.WriteLine("My.Settings.messageShowSystemRestoreReminder current value: " & My.Settings.messageShowSystemRestoreReminder)
 
         End If
     End Sub
