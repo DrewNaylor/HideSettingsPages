@@ -59,6 +59,7 @@ Public Class aaformMainWindow
 
 #Region "Options menubar buttons."
 
+#Region "menubarShowStartupWarningMessageButton toggle."
     Private Sub menubarShowStartupWarningMessageButton_Click(sender As Object, e As EventArgs) Handles menubarShowStartupWarningMessageButton.Click
         ' Toggles on or off the warning message on startup
         ' that tells the user this app should only be used
@@ -98,8 +99,15 @@ Public Class aaformMainWindow
             Debug.WriteLine("My.Settings.messageShowStartupWarning current value: " & My.Settings.messageShowStartupWarning)
 
         End If
+    End Sub
+#End Region
+
+#Region "menubarShowSystemRestoreReminderMessage toggle."
+    Private Sub menubarShowSystemRestoreReminderMessageButton_Click(sender As Object, e As EventArgs) Handles menubarShowSystemRestoreReminderMessageButton.Click
 
     End Sub
+
+#End Region
 
 #End Region
 
