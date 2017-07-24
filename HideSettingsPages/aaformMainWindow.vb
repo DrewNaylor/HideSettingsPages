@@ -46,6 +46,14 @@ Public Class aaformMainWindow
             vbCrLf &
             "This message can be disabled via ""Options>Show startup warning message"".", "HideSettingsPages", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
+#End Region
+
+#Region "Options menubar checkboxes."
+        ' When the app starts up, we have to make sure the checkboxes
+        ' are in the CheckState.Checked if the My.Settings value for
+        ' it is True and CheckState.Unchecked if it's False.
+
+
 
 #End Region
 
