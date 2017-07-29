@@ -62,9 +62,9 @@ Public Class aaformMainWindow
 
         ' Next, the System Restore reminder message checkbox.
         If My.Settings.messageShowSystemRestoreReminder = True Then
-            menubarShowSystemRestoreReminderMessageButton.CheckState = CheckState.Checked
+            menubarShowRestorePointReminderMessageButton.CheckState = CheckState.Checked
         ElseIf My.Settings.messageShowSystemRestoreReminder = False Then
-            menubarShowSystemRestoreReminderMessageButton.CheckState = CheckState.Unchecked
+            menubarShowRestorePointReminderMessageButton.CheckState = CheckState.Unchecked
         End If
 #End Region
 
@@ -135,8 +135,8 @@ Public Class aaformMainWindow
     End Sub
 #End Region
 
-#Region "menubarShowSystemRestoreReminderMessage toggle."
-    Private Sub menubarShowSystemRestoreReminderMessageButton_Click(sender As Object, e As EventArgs) Handles menubarShowSystemRestoreReminderMessageButton.Click
+#Region "menubarShowRestorePointReminderMessage toggle."
+    Private Sub menubarShowRestorePointReminderMessageButton_Click(sender As Object, e As EventArgs) Handles menubarShowRestorePointReminderMessageButton.Click
         ' Toggles on or off the reminder message
         ' that asks the user if they want to create a
         ' system restore point and tells them how to do it
@@ -149,8 +149,8 @@ Public Class aaformMainWindow
         ' If the checkbox is unchecked, when it's clicked, set
         ' My.Settings.messageShowSystemRestoreReminder to True
         ' and the control's CheckState to CheckState.Checked.
-        If menubarShowSystemRestoreReminderMessageButton.CheckState = CheckState.Unchecked Then
-            menubarShowSystemRestoreReminderMessageButton.CheckState = CheckState.Checked
+        If menubarShowRestorePointReminderMessageButton.CheckState = CheckState.Unchecked Then
+            menubarShowRestorePointReminderMessageButton.CheckState = CheckState.Checked
             If My.Settings.messageShowSystemRestoreReminder = False Then
                 My.Settings.messageShowSystemRestoreReminder = True
             End If
@@ -163,8 +163,8 @@ Public Class aaformMainWindow
             ' However, if the checkbox is checked, when it's clicked, set
             ' My.Settings.messageShowSystemRestoreReminder to False
             ' and the control's CheckState to CheckState.Unchecked.
-        ElseIf menubarShowSystemRestoreReminderMessageButton.CheckState = CheckState.Checked Then
-            menubarShowSystemRestoreReminderMessageButton.CheckState = CheckState.Unchecked
+        ElseIf menubarShowRestorePointReminderMessageButton.CheckState = CheckState.Checked Then
+            menubarShowRestorePointReminderMessageButton.CheckState = CheckState.Unchecked
             If My.Settings.messageShowSystemRestoreReminder = True Then
                 My.Settings.messageShowSystemRestoreReminder = False
             End If
@@ -343,9 +343,18 @@ Public Class aaformMainWindow
         ' If the user has it enabled in the Options menu, remind the user about
         ' making a System Restore Point and link them to guides after opening the
         ' System Properties Protection tab.
+        ' Code from: https://stackoverflow.com/a/20203356
 
         If My.Settings.messageShowSystemRestoreReminder = True Then
+            Select Case MsgBox("Would you like to manually create a restore point?" & vbCrLf &
+                               "Doing so will open two guides, one on enabling System Protection" & vbCrLf &
+                               "and another on creating a restore point. The System Properties Protection tab will also appear." & vbCrLf &
+                               "In each guide, start at part 6 and only follow ""Option One"" on the restore point creation guide." & vbCrLf &
+                               "I could do this in code, but Windows 8 and above only allows one restore point per day if done programmatically." & vbCrLf &
+                               vbCrLf &
+                               "This message can be disabled via ""Options>Show System Restore reminder message"".")
 
+            End Select
         End If
 
 #End Region

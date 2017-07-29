@@ -45,7 +45,7 @@ Partial Class aaformMainWindow
         Me.menubarExitButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarOptionsMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarShowStartupWarningMessageButton = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menubarShowSystemRestoreReminderMessageButton = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarShowRestorePointReminderMessageButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarHelpMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarHelpTopicsButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.zseparatorHelpMenu = New System.Windows.Forms.ToolStripSeparator()
@@ -259,7 +259,7 @@ Partial Class aaformMainWindow
         '
         'menubarOptionsMenu
         '
-        Me.menubarOptionsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarShowStartupWarningMessageButton, Me.menubarShowSystemRestoreReminderMessageButton})
+        Me.menubarOptionsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarShowStartupWarningMessageButton, Me.menubarShowRestorePointReminderMessageButton})
         Me.menubarOptionsMenu.Name = "menubarOptionsMenu"
         Me.menubarOptionsMenu.Size = New System.Drawing.Size(61, 20)
         Me.menubarOptionsMenu.Text = "&Options"
@@ -268,15 +268,15 @@ Partial Class aaformMainWindow
         '
         Me.menubarShowStartupWarningMessageButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.menubarShowStartupWarningMessageButton.Name = "menubarShowStartupWarningMessageButton"
-        Me.menubarShowStartupWarningMessageButton.Size = New System.Drawing.Size(286, 22)
+        Me.menubarShowStartupWarningMessageButton.Size = New System.Drawing.Size(273, 22)
         Me.menubarShowStartupWarningMessageButton.Text = "Show startup &warning message"
         '
-        'menubarShowSystemRestoreReminderMessageButton
+        'menubarShowRestorePointReminderMessageButton
         '
-        Me.menubarShowSystemRestoreReminderMessageButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.menubarShowSystemRestoreReminderMessageButton.Name = "menubarShowSystemRestoreReminderMessageButton"
-        Me.menubarShowSystemRestoreReminderMessageButton.Size = New System.Drawing.Size(286, 22)
-        Me.menubarShowSystemRestoreReminderMessageButton.Text = "Show System Restore &reminder message"
+        Me.menubarShowRestorePointReminderMessageButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.menubarShowRestorePointReminderMessageButton.Name = "menubarShowRestorePointReminderMessageButton"
+        Me.menubarShowRestorePointReminderMessageButton.Size = New System.Drawing.Size(273, 22)
+        Me.menubarShowRestorePointReminderMessageButton.Text = "Show restore point &reminder message"
         '
         'menubarHelpMenu
         '
@@ -371,5 +371,5 @@ Partial Class aaformMainWindow
     Friend WithEvents menubarVerifyKeyValueButton As ToolStripMenuItem
     Friend WithEvents menubarOptionsMenu As ToolStripMenuItem
     Friend WithEvents menubarShowStartupWarningMessageButton As ToolStripMenuItem
-    Friend WithEvents menubarShowSystemRestoreReminderMessageButton As ToolStripMenuItem
+    Friend WithEvents menubarShowRestorePointReminderMessageButton As ToolStripMenuItem
 End Class
