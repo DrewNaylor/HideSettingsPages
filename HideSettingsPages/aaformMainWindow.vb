@@ -359,7 +359,8 @@ Public Class aaformMainWindow
                     Process.Start("https://www.tenforums.com/tutorials/4533-turn-off-system-protection-drives-windows-10-a.html")
                     Process.Start("https://www.tenforums.com/tutorials/4571-create-system-restore-point-windows-10-a.html")
                     Process.Start("control.exe", "system")
-
+                Case MsgBoxResult.No
+                    ' This just skips this code.
             End Select
         End If
 
