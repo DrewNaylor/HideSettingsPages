@@ -353,6 +353,11 @@ Public Class aaformMainWindow
                                "I could do this in code, but Windows 8 and above only allow one restore point per day if done programmatically." & vbCrLf &
                                vbCrLf &
                                "This message can be disabled via ""Options>Show System Restore reminder message"".", MsgBoxStyle.YesNo, "Apply changes")
+                Case MsgBoxResult.Yes
+                    ' Open the appropriate links and applications.
+                    Process.Start("https://www.tenforums.com/tutorials/4533-turn-off-system-protection-drives-windows-10-a.html")
+                    Process.Start("https://www.tenforums.com/tutorials/4571-create-system-restore-point-windows-10-a.html")
+                    Process.Start("cmd.exe SystemPropertiesProtection.exe")
 
             End Select
         End If
