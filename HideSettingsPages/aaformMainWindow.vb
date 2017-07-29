@@ -348,9 +348,10 @@ Public Class aaformMainWindow
         If My.Settings.messageShowSystemRestoreReminder = True Then
             Select Case MsgBox("Would you like to manually create a restore point?" & vbCrLf &
                                "Doing so will open two guides, one on enabling System Protection" & vbCrLf &
-                               "and another on creating a restore point. The System Properties Protection tab will also appear." & vbCrLf &
-                               "In each guide, start at part 6 and only follow ""Option One"" on the restore point creation guide." & vbCrLf &
+                               "and another on creating a restore point. The System Properties page in the Control Panel will also appear." & vbCrLf &
+                               "In each guide, start at part 5 and only follow ""Option One"" on the restore point creation guide." & vbCrLf &
                                "I could do this in code, but Windows 8 and above only allow one restore point per day if done programmatically." & vbCrLf &
+                               "There's not a universal way to go straight to the System Properties Protection tab, so this workaround will hopefully work until Microsoft removes the Control Panel." & vbCrLf &
                                vbCrLf &
                                "This message can be disabled via ""Options>Show System Restore reminder message"".", MsgBoxStyle.YesNo, "Apply changes")
                 Case MsgBoxResult.Yes
