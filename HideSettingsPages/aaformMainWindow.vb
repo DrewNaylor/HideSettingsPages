@@ -350,9 +350,9 @@ Public Class aaformMainWindow
                                "Doing so will open two guides, one on enabling System Protection" & vbCrLf &
                                "and another on creating a restore point. The System Properties Protection tab will also appear." & vbCrLf &
                                "In each guide, start at part 6 and only follow ""Option One"" on the restore point creation guide." & vbCrLf &
-                               "I could do this in code, but Windows 8 and above only allows one restore point per day if done programmatically." & vbCrLf &
+                               "I could do this in code, but Windows 8 and above only allow one restore point per day if done programmatically." & vbCrLf &
                                vbCrLf &
-                               "This message can be disabled via ""Options>Show System Restore reminder message"".")
+                               "This message can be disabled via ""Options>Show System Restore reminder message"".", MsgBoxStyle.YesNo, "Apply changes")
 
             End Select
         End If
