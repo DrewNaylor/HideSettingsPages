@@ -357,7 +357,7 @@ Public Class aaformMainWindow
                     ' Open the appropriate links and applications.
                     Process.Start("https://www.tenforums.com/tutorials/4533-turn-off-system-protection-drives-windows-10-a.html")
                     Process.Start("https://www.tenforums.com/tutorials/4571-create-system-restore-point-windows-10-a.html")
-                    Process.Start("cmd.exe SystemPropertiesProtection.exe")
+                    Process.Start("control.exe", "system")
 
             End Select
         End If
