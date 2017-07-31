@@ -58,7 +58,7 @@ Public Class aaformAboutWindow
 
         ' Put the text in the About box on launch.
         textboxAboutApp.Text = ("HideSettingsPages - Hide Windows 10 Settings App Pages" & vbCrLf &
-"Version " & My.Application.Info.Version.ToString & " Git" & vbCrLf &
+"Version " & My.Application.Info.Version.ToString & " " & My.Resources.isStable & vbCrLf &
 "App compiled at UTC: " & BuildDateString & vbCrLf &
 "Copyright (C) 2017  Drew Naylor" & vbCrLf & vbCrLf &
 infoHSPRegistryHelper & vbCrLf &
