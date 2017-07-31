@@ -264,4 +264,8 @@
         85//DyBuP/GgRg+JAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="isStable" xml:space="preserve">
+    <value>Git</value>
+    <comment>This value is used in the About window description to tell the user if this app is stable or not. "Git" means that it's in development. "Alpha" means it's an alpha. "Beta" means it's a beta. "Release Candidate" means Release Candidate, plus any numbers. "Stable" means a stable release. There may be other values to represent the current state of development on the project.</comment>
+  </data>
 </root>

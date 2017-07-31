@@ -61,16 +61,12 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to {\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Symbol;}}
-        '''{\*\generator Riched20 10.0.14393}\viewkind4\uc1 
-        '''\pard\sl240\slmult1\qc\b\f0\fs10\lang9\par
-        '''
-        '''\pard\sl276\slmult1\qc\fs32 UXL Launcher Acknowledgements\b0\par
-        '''
+        '''  Looks up a localized string similar to {\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fswiss\fprq2\fcharset0 Calibri;}{\f2\fnil\fcharset2 Symbol;}}
+        '''{\colortbl ;\red0\green0\blue255;}
+        '''{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sl240\slmult1\qc\lang9\b\f0\fs10\par
+        '''\pard\sl276\slmult1\qc\fs32 HideSettingsPages Acknowledgements\b0\par
         '''\pard\sl360\slmult1\fs24\par
-        '''
-        '''\pard{\pntext\f1\&apos;B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\&apos;B7}}\fi-360\li720\sl360\slmult1 Original idea: God\par
-        '''{\pntext\f1\&apos;B7\tab}Moral support: My mom, Nana, Mitty, and all my friend [rest of string was truncated]&quot;;.
+        '''\pard{\pntext\f2\&apos;B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\&apos;B7}}\fi-360\li720\sl360\slmult1\lang1033\f1\fs22 Guidance\lang9\f0\f [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property Acknowledgements_RTF() As String
             Get
@@ -79,7 +75,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 2017-05-20T04:37:37
+        '''  Looks up a localized string similar to 2017-07-29T04:22:18
         '''.
         '''</summary>
         Friend ReadOnly Property BuildDate() As String
@@ -119,6 +115,15 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("HideSettingsPages_Banner", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Git.
+        '''</summary>
+        Friend ReadOnly Property isStable() As String
+            Get
+                Return ResourceManager.GetString("isStable", resourceCulture)
             End Get
         End Property
     End Module
