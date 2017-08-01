@@ -283,6 +283,40 @@ Public Class aaformMainWindow
         End Select
 #End Region
 
+#Region "Remind the user about System Restore if they want to."
+
+        ' If the user has it enabled in the Options menu, remind the user about
+        ' making a System Restore Point and link them to guides after opening the
+        ' System Properties Protection tab.
+        ' Code from: https://stackoverflow.com/a/20203356
+
+        If My.Settings.messageShowSystemRestoreReminder = True Then
+            Select Case MsgBox("Would you like to manually create a restore point?" & vbCrLf &
+                               "Doing so will open two guides, one on enabling System Protection" & vbCrLf &
+                               "and another on creating a restore point. The System Properties page in the Control Panel will also appear." & vbCrLf &
+                               "In each guide, start at part 5 and only follow ""Option One"" on the restore point creation guide." & vbCrLf &
+                               "I could do this in code, but Windows 8 and above only allow one restore point per day if done programmatically." & vbCrLf &
+                               "There's not a universal way to go straight to the System Properties Protection tab, so this workaround will hopefully work until Microsoft removes the Control Panel." & vbCrLf &
+                               vbCrLf &
+                               "This message can be disabled via ""Options>Show System Restore reminder message"".", MsgBoxStyle.YesNo, "Undo all changes")
+                Case MsgBoxResult.Yes
+                    ' Open the appropriate links and applications.
+                    Process.Start("https://www.tenforums.com/tutorials/4533-turn-off-system-protection-drives-windows-10-a.html")
+                    Process.Start("https://www.tenforums.com/tutorials/4571-create-system-restore-point-windows-10-a.html")
+                    Process.Start("control.exe", "system")
+
+                    ' Put another messagebox in so that the user
+                    ' has enough time to make a restore point.
+                    MessageBox.Show("Once you're ready to apply the key value, click OK.", "Apply key value")
+
+                Case MsgBoxResult.No
+                    ' This just skips this code.
+            End Select
+        End If
+
+#End Region
+
+
 #Region "Start up registry helper and delete the key value if the user wants to."
         ' Tell the registry helper app to delete the key value in the Registry.
         Dim proc As New ProcessStartInfo
