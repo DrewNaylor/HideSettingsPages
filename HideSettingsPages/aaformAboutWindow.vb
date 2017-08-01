@@ -62,20 +62,7 @@ Public Class aaformAboutWindow
 "App compiled at UTC: " & BuildDateString & vbCrLf &
 "Copyright (C) 2017  Drew Naylor" & vbCrLf & vbCrLf &
 infoHSPRegistryHelper & vbCrLf &
-"" & vbCrLf &
-"HideSettingsPages is a GUI to set a Registry key value to hide individual pages in the Windows 10 Settings app on the Creators Update and newer." & vbCrLf &
-"" & vbCrLf &
-"License notice:" & vbCrLf &
-"HideSettingsPages is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by" &
-" the Free Software Foundation, either version 3 of the License, or (at your option) any later version." & vbCrLf &
-"" & vbCrLf &
-"HideSettingsPages is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details." & vbCrLf &
-"" & vbCrLf &
-"You should have received a copy of the GNU General Public License along with HideSettingsPages. If not, see <http://www.gnu.org/licenses/>." & vbCrLf &
-"" & vbCrLf &
-"Copyright notice: Microsoft Windows and all related words (by MSFT) are Copyright [a long time ago]-[sometime in the future] Microsoft Corp. All Rights Reserved for Microsoft" & "'" & "s copyrights." & vbCrLf &
-"Any other companies mentioned own their respective copyrights/trademarks.")
+My.Resources.HideSettingsPagesAboutWindowInfo_TXT)
 
 
         ' Load the GPL document in the RTF Textbox control.
