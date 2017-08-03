@@ -52,8 +52,8 @@ Public Class argsOutput
             & vbCrLf & vbTab & "/apply" & vbTab & vbTab & "Apply Registry key value. Requires admin permissions." _
             & vbCrLf & vbTab & "/undo" & vbTab & vbTab & "Remove Registry key value. Requires admin permissions." _
             & vbCrLf & vbTab & "/verify" & vbTab & vbTab & "Show the current Registry key value if it exists." _
-            & vbCrLf & vbTab & "/help" & vbTab & vbTab & "Display this text." _
-            & vbCrLf & vbTab & "/?" & vbTab & vbTab & "Display this text.")
+            & vbCrLf & vbTab & "/help" & vbTab & vbTab & "Display this help text." _
+            & vbCrLf & vbTab & "/?" & vbTab & vbTab & "Display this help text.")
         Console.WriteLine("")
         Console.WriteLine(vbTab & "<key value> is the Registry key to apply to the system in the form of <hide or showonly>:<page>;<more pages>")
         Console.WriteLine("")
@@ -71,7 +71,7 @@ Public Class argsOutput
         ' Only shows an error message if showMessageBox is set to True.
         If showMessageBox = True Then
             MessageBox.Show(message, messageTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
-            ' Otherwise, if no messagebox will be shown, ask the user to push any key to continue.
+            ' Otherwise, if no messagebox will be shown, ask the user to push Enter to continue.
         ElseIf showMessageBox = False Then
             Console.WriteLine("")
             Console.WriteLine("Press Enter to continue...")
