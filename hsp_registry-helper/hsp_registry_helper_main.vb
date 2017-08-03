@@ -49,12 +49,12 @@ Public Module hsp_registry_helper_main
         If sArgs.Length = 0 Then
             'If there are no arguments, print app info and 
             ' tell the user what arguments are accepted.
-            argsOutput.noOrInvalidCommandLineArgs("No arguments passed.", "No arguments passed")
+            argsOutput.noOrInvalidCommandLineArgs("No arguments passed.", "No arguments passed", True)
 
         ElseIf sArgs.Length = 1 Then
             ' If there's only one argument and /apply is being used, complain.
             If sArgs(0) = "/apply" Then
-                argsOutput.noOrInvalidCommandLineArgs("<key value> must be available if trying to use /apply as <action>.", "Argument missing")
+                argsOutput.noOrInvalidCommandLineArgs("<key value> must be available if trying to use /apply as <action>.", "Argument missing", True)
 
             ElseIf Not sArgs(0) = "/apply" Then
                 ' If the argument isn't /apply, don't complain and set the first arg correctly.

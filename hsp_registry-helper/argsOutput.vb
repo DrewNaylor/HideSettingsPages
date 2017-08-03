@@ -28,7 +28,7 @@
 
 
 Public Class argsOutput
-    Friend Shared Sub noOrInvalidCommandLineArgs(message As String, messageTitle As String)
+    Friend Shared Sub noOrInvalidCommandLineArgs(message As String, messageTitle As String, showMessageBox As Boolean)
         ' Update titlebar to tell the user there's no arguments passed.
         Console.Title = titlebarText & ": " & messageTitle & "."
         ' Show the user app info including title, version, copyright, and license.
@@ -51,9 +51,11 @@ Public Class argsOutput
         Console.WriteLine(vbTab & "Action:" & vbTab & vbTab & "Description:" _
             & vbCrLf & vbTab & "/apply" & vbTab & vbTab & "Apply Registry key value. Requires admin permissions." _
             & vbCrLf & vbTab & "/undo" & vbTab & vbTab & "Remove Registry key value. Requires admin permissions." _
-            & vbCrLf & vbTab & "/verify" & vbTab & vbTab & "Show the current Registry key value if it exists.")
+            & vbCrLf & vbTab & "/verify" & vbTab & vbTab & "Show the current Registry key value if it exists." _
+            & vbCrLf & vbTab & "/help" & vbTab & vbTab & "Display this help text." _
+            & vbCrLf & vbTab & "/?" & vbTab & vbTab & "Display this help text.")
         Console.WriteLine("")
-        Console.WriteLine(vbTab & "<key value> is the Registry key to apply to the system in the form of <hide or showonly>:<page>;<more pages>")
+        Console.WriteLine(vbTab & "<key value> is the Registry key value to apply to the system in the form of" & vbCrLf & vbTab & vbTab & "<hide or showonly>:<page>;<more pages>")
         Console.WriteLine("")
         Console.WriteLine(vbTab & "A <key value> is only required if using ""/apply"" as an <action>.")
         Console.WriteLine("")
@@ -63,7 +65,18 @@ Public Class argsOutput
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /apply showonly:display;about")
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /undo")
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /verify")
-        MessageBox.Show(message, messageTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Console.WriteLine(vbTab & "hsp_registry-helper.exe /help")
+        Console.WriteLine(vbTab & "hsp_registry-helper.exe /?")
+
+        ' Only shows an error message if showMessageBox is set to True.
+        If showMessageBox = True Then
+            MessageBox.Show(message, messageTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            ' Otherwise, if no messagebox will be shown, ask the user to push Enter to continue.
+        ElseIf showMessageBox = False Then
+            Console.WriteLine("")
+            Console.WriteLine("Press Enter to continue...")
+            Console.ReadLine()
+        End If
     End Sub
 
     Friend Shared Sub passCommandLineArgs()
@@ -78,11 +91,13 @@ Public Class argsOutput
             regkeyvalue_Undo.runDeletion()
         ElseIf actionToTake = "/apply" Then
             regkeyvalue_Apply.runApplying()
+        ElseIf actionToTake = "/help" Or actionToTake = "/?" Then
+            noOrInvalidCommandLineArgs("", "Help info", False)
         Else
             ' If the argument isn't valid,
             ' tell the user and display
             ' the valid args.
-            noOrInvalidCommandLineArgs("Invalid commandline argument: " & actionToTake, "Invalid commandline argument")
+            noOrInvalidCommandLineArgs("Invalid commandline argument: " & actionToTake, "Invalid commandline argument", True)
         End If
     End Sub
 End Class
