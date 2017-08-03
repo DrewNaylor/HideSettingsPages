@@ -62,7 +62,7 @@ Public Class aaformAboutWindow
         textboxAboutApp.Text = ("HideSettingsPages - Hide Windows 10 Settings App Pages" & vbCrLf &
 "Version " & My.Application.Info.Version.ToString & " " & My.Resources.isStable & vbCrLf &
 "App compiled at UTC: " & BuildDateString & vbCrLf &
-"Copyright (C) 2017  Drew Naylor" & vbCrLf &
+"Copyright (C) 2017  Drew Naylor. Lincensed under Gnu GPLv3+." & vbCrLf &
 My.Resources.HideSettingsPagesInfo_TXT & vbCrLf & vbCrLf & ' HideSettingsPages info for warranty and stuff that used to be here directly.
 My.Resources.separator & vbCrLf & vbCrLf & ' separator line.
 infoHSPRegistryHelper) ' hsp_registry-helper.exe info as defined above.

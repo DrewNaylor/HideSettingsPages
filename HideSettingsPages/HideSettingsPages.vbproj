@@ -190,7 +190,7 @@
   <ItemGroup>
     <Content Include="HideSettingsPages-OfficialIcon.ico" />
     <None Include="Resources\HSPRegistryHelperInfo_TXT.txt" />
-    <None Include="Resources\HideSettingsPagesAboutWindowInfo_TXT.txt" />
+    <None Include="Resources\HideSettingsPagesInfo_TXT.txt" />
     <None Include="Resources\HideSettingsPages_Banner.png" />
     <None Include="Resources\dummyfile.txt" />
     <None Include="Resources\BuildDate.txt" />
