@@ -1,5 +1,7 @@
 
-HideSettingsPages is a GUI to set a Registry key value to hide individual pages in the Windows 10 Settings app on the Creators Update and newer.
+HideSettingsPages Registry Helper is used to apply the Registry
+key value chosen in HideSettingsPages. Can also apply/remove key value via arguments
+and show the current value in the Registry, also with arguments.
 
 License notice:
 HideSettingsPages is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as

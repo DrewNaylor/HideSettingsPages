@@ -45,8 +45,9 @@ Public Class aaformAboutWindow
             ' Properly set info for hsp_registry-helper.
             infoHSPRegistryHelper =
                 "HideSettingsPages Registry Helper" & vbCrLf &
-                "Version " & fileversionHSPRegistryHelper.FileVersion & vbCrLf &
-                fileversionHSPRegistryHelper.LegalCopyright
+                "Version " & fileversionHSPRegistryHelper.FileVersion & vbCrLf & ' hsp_registry-helper version number.
+                fileversionHSPRegistryHelper.LegalCopyright & vbCrLf & ' hsp_registry-helper copyright info.
+                My.Resources.HSPRegistryHelperInfo_TXT ' Boilerplate warranty info and stuff for hsp_registry-helper.
 
         Catch ex As IO.FileNotFoundException
             ' If hsp_registry-helper is missing, let the user know.
