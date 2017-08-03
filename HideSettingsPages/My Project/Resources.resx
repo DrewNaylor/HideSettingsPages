@@ -268,8 +268,11 @@
     <value>Git</value>
     <comment>This value is used in the About window description to tell the user if this app is stable or not. "Git" means that it's in development. "Alpha" means it's an alpha. "Beta" means it's a beta. "Release Candidate" means Release Candidate, plus any numbers. "Stable" means a stable release. There may be other values to represent the current state of development on the project.</comment>
   </data>
-  <data name="HideSettingsPagesAboutWindowInfo_TXT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HideSettingsPagesAboutWindowInfo_TXT.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  <data name="HideSettingsPagesInfo_TXT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HideSettingsPagesAboutWindowInfo_TXT.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;iso-8859-1</value>
+  </data>
+  <data name="HSPRegistryHelperInfo_TXT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\hspregistryhelperinfo_txt.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="separator" xml:space="preserve">
     <value>----------------------------------------------------------------------------------------</value>

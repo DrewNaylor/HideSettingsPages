@@ -75,7 +75,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 2017-08-03T01:43:31
+        '''  Looks up a localized string similar to 2017-08-03T01:55:14
         '''.
         '''</summary>
         Friend ReadOnly Property BuildDate() As String
@@ -129,9 +129,26 @@ Namespace My.Resources
         '''HideSettingsPages is distributed in the hope that it will be useful,
         '''but WITHOUT ANY WARRANTY;  [rest of string was truncated]&quot;;.
         '''</summary>
-        Friend ReadOnly Property HideSettingsPagesAboutWindowInfo_TXT() As String
+        Friend ReadOnly Property HideSettingsPagesInfo_TXT() As String
             Get
-                Return ResourceManager.GetString("HideSettingsPagesAboutWindowInfo_TXT", resourceCulture)
+                Return ResourceManager.GetString("HideSettingsPagesInfo_TXT", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 
+        '''HideSettingsPages is a GUI to set a Registry key value to hide individual pages in the Windows 10 Settings app on the Creators Update and newer.
+        '''
+        '''License notice:
+        '''HideSettingsPages is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as
+        '''published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+        '''
+        '''HideSettingsPages is distributed in the hope that it will be useful,
+        '''but WITHOUT ANY WARRANTY;  [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property HSPRegistryHelperInfo_TXT() As String
+            Get
+                Return ResourceManager.GetString("HSPRegistryHelperInfo_TXT", resourceCulture)
             End Get
         End Property
         
