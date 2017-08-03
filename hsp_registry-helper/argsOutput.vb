@@ -55,7 +55,7 @@ Public Class argsOutput
             & vbCrLf & vbTab & "/help" & vbTab & vbTab & "Display this help text." _
             & vbCrLf & vbTab & "/?" & vbTab & vbTab & "Display this help text.")
         Console.WriteLine("")
-        Console.WriteLine(vbTab & "<key value> is the Registry key to apply to the system in the form of <hide or showonly>:<page>;<more pages>")
+        Console.WriteLine(vbTab & "<key value> is the Registry key value to apply to the system in the form of" & vbCrLf & vbTab & vbTab & "<hide or showonly>:<page>;<more pages>")
         Console.WriteLine("")
         Console.WriteLine(vbTab & "A <key value> is only required if using ""/apply"" as an <action>.")
         Console.WriteLine("")
