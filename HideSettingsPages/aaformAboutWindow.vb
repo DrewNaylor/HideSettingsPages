@@ -60,9 +60,9 @@ Public Class aaformAboutWindow
         textboxAboutApp.Text = ("HideSettingsPages - Hide Windows 10 Settings App Pages" & vbCrLf &
 "Version " & My.Application.Info.Version.ToString & " " & My.Resources.isStable & vbCrLf &
 "App compiled at UTC: " & BuildDateString & vbCrLf &
-"Copyright (C) 2017  Drew Naylor" & vbCrLf & vbCrLf &
-My.Resources.HideSettingsPagesAboutWindowInfo_TXT & vbCrLf &
-My.Resources.separator & vbCrLf &
+"Copyright (C) 2017  Drew Naylor" & vbCrLf &
+My.Resources.HideSettingsPagesAboutWindowInfo_TXT & vbCrLf & vbCrLf &
+My.Resources.separator & vbCrLf & vbCrLf &
 infoHSPRegistryHelper)
 
 
