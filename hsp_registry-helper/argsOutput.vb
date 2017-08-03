@@ -81,9 +81,7 @@ Public Class argsOutput
 
     Friend Shared Sub passCommandLineArgs()
 
-        ' Write current args to the console window.
-        Console.WriteLine(actionToTake)
-        Console.WriteLine(fullKeyValue)
+        ' Make sure to run the correct code based on the args the user chose.
 
         If actionToTake = "/verify" Then
             regkeyvalue_Verify.runVerification()
