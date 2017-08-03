@@ -63,9 +63,9 @@ Public Class aaformAboutWindow
 "Version " & My.Application.Info.Version.ToString & " " & My.Resources.isStable & vbCrLf &
 "App compiled at UTC: " & BuildDateString & vbCrLf &
 "Copyright (C) 2017  Drew Naylor" & vbCrLf &
-My.Resources.HideSettingsPagesAboutWindowInfo_TXT & vbCrLf & vbCrLf &
-My.Resources.separator & vbCrLf & vbCrLf &
-infoHSPRegistryHelper)
+My.Resources.HideSettingsPagesAboutWindowInfo_TXT & vbCrLf & vbCrLf & ' HideSettingsPages info for warranty and stuff that used to be here directly.
+My.Resources.separator & vbCrLf & vbCrLf & ' separator line.
+infoHSPRegistryHelper) ' hsp_registry-helper.exe info as defined above.
 
 
         ' Load the GPL document in the RTF Textbox control.
