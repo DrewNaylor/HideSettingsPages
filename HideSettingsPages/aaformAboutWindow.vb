@@ -43,8 +43,10 @@ Public Class aaformAboutWindow
             Dim fileversionHSPRegistryHelper As FileVersionInfo = FileVersionInfo.GetVersionInfo(My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe")
 
             ' Properly set info for hsp_registry-helper.
-            infoHSPRegistryHelper = "HideSettingsPages Registry Helper Version: " & fileversionHSPRegistryHelper.FileVersion & vbCrLf &
-                "HideSettingsPages Registry Helper Copyright: " & fileversionHSPRegistryHelper.LegalCopyright
+            infoHSPRegistryHelper =
+                "HideSettingsPages Registry Helper" & vbCrLf &
+                "Version " & fileversionHSPRegistryHelper.FileVersion & vbCrLf &
+                fileversionHSPRegistryHelper.LegalCopyright
 
         Catch ex As IO.FileNotFoundException
             ' If hsp_registry-helper is missing, let the user know.
