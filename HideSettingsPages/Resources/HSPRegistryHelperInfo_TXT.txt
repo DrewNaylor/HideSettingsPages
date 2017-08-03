@@ -1,16 +1,16 @@
 
 HideSettingsPages Registry Helper is used to apply the Registry
-key value chosen in HideSettingsPages. Can also apply/remove key value via arguments
-and show the current value in the Registry, also with arguments.
+key value chosen in HideSettingsPages. Can also apply/remove
+key value via arguments and show the current value in the Registry, also with arguments.
 
 License notice:
-HideSettingsPages is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as
-published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+HideSettingsPages Registry Helper is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation,
+either version 3 of the License, or (at your option) any later version.
 
-HideSettingsPages is distributed in the hope that it will be useful,
+HideSettingsPages Registry Helper is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License along with HideSettingsPages. If not, see <http://www.gnu.org/licenses/>.
+You should have received a copy of the GNU General Public License along with HideSettingsPages Registry Helper. If not, see <http://www.gnu.org/licenses/>.
 
 Copyright notice: Microsoft Windows and all related words (by MSFT) are Copyright [a long time ago]-[sometime in the future] Microsoft Corp. All Rights Reserved for Microsoft's copyrights.
 Any other companies mentioned own their respective copyrights/trademarks.
