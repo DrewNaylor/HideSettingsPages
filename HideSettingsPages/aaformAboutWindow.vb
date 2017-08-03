@@ -61,10 +61,9 @@ Public Class aaformAboutWindow
 "Version " & My.Application.Info.Version.ToString & " " & My.Resources.isStable & vbCrLf &
 "App compiled at UTC: " & BuildDateString & vbCrLf &
 "Copyright (C) 2017  Drew Naylor" & vbCrLf & vbCrLf &
-infoHSPRegistryHelper & vbCrLf &
 My.Resources.HideSettingsPagesAboutWindowInfo_TXT & vbCrLf &
 My.Resources.separator & vbCrLf &
-"text")
+infoHSPRegistryHelper)
 
 
         ' Load the GPL document in the RTF Textbox control.
