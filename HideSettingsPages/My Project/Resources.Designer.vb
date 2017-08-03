@@ -75,7 +75,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 2017-08-01T01:50:38
+        '''  Looks up a localized string similar to 2017-08-02T01:35:56
         '''.
         '''</summary>
         Friend ReadOnly Property BuildDate() As String
@@ -119,14 +119,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to &quot;&quot; &amp; vbCrLf &amp;
-        '''&quot;HideSettingsPages is a GUI to set a Registry key value to hide individual pages in the Windows 10 Settings app on the Creators Update and newer.&quot; &amp; vbCrLf &amp;
-        '''&quot;&quot; &amp; vbCrLf &amp;
-        '''&quot;License notice:&quot; &amp; vbCrLf &amp;
-        '''&quot;HideSettingsPages is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by&quot; &amp;
-        '''&quot; the Free Software Foundation, either version 3 of the License, or (at your option) any later version.&quot; &amp; vbCrLf &amp;
-        '''&quot;&quot; &amp; vbCrLf &amp;
-        '''&quot;HideSettings [rest of string was truncated]&quot;;.
+        '''  Looks up a localized string similar to 
+        '''HideSettingsPages is a GUI to set a Registry key value to hide individual pages in the Windows 10 Settings app on the Creators Update and newer.
+        '''
+        '''License notice:
+        '''HideSettingsPages is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as
+        '''published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+        '''
+        '''HideSettingsPages is distributed in the hope that it will be useful,
+        '''but WITHOUT ANY WARRANTY;  [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property HideSettingsPagesAboutWindowInfo_TXT() As String
             Get
@@ -140,6 +141,15 @@ Namespace My.Resources
         Friend ReadOnly Property isStable() As String
             Get
                 Return ResourceManager.GetString("isStable", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to ---------------------------------------.
+        '''</summary>
+        Friend ReadOnly Property separator() As String
+            Get
+                Return ResourceManager.GetString("separator", resourceCulture)
             End Get
         End Property
     End Module
