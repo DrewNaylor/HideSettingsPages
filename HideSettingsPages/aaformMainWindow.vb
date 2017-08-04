@@ -307,7 +307,7 @@ Public Class aaformMainWindow
 
                     ' Put another messagebox in so that the user
                     ' has enough time to make a restore point.
-                    MessageBox.Show("Once you're ready to apply the key value, click OK.", "Apply key value")
+                    MessageBox.Show("Once you're ready to apply the key value, click OK.", "Undo all changes")
 
                 Case MsgBoxResult.No
                     ' This just skips this code.
@@ -396,7 +396,7 @@ Public Class aaformMainWindow
 
                     ' Put another messagebox in so that the user
                     ' has enough time to make a restore point.
-                    MessageBox.Show("Once you're ready to apply the key value, click OK.", "Apply key value")
+                    MessageBox.Show("Once you're ready to apply the key value, click OK.", "Apply changes")
 
                 Case MsgBoxResult.No
                     ' This just skips this code.
