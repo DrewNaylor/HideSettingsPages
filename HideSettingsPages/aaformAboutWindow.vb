@@ -37,9 +37,9 @@ Public Class aaformAboutWindow
         ' Here's the text to show for hsp_registry-helper's info in the About window.
         Dim infoHSPRegistryHelper As String = " "
 
-        ' Now figure out what hsp_registry-helper's info text is.
-        Try
-            ' Properly set the variables above to the correct values.
+        ' Now see if hsp_registry-helper exists in the current folder.
+        If My.Computer.FileSystem.FileExists(My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe") Then
+            ' Properly set the variables above to the correct values if it does exist.
             Dim fileversionHSPRegistryHelper As FileVersionInfo = FileVersionInfo.GetVersionInfo(My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe")
 
             ' Properly set info for hsp_registry-helper.
@@ -49,10 +49,10 @@ Public Class aaformAboutWindow
                 fileversionHSPRegistryHelper.LegalCopyright & vbCrLf & ' hsp_registry-helper copyright info.
                 My.Resources.HSPRegistryHelperInfo_TXT ' Boilerplate warranty info and stuff for hsp_registry-helper.
 
-        Catch ex As IO.FileNotFoundException
+        Else
             ' If hsp_registry-helper is missing, let the user know.
             infoHSPRegistryHelper = "HideSettingsPages Registry Helper is missing. Please download a new copy of HideSettingsPages by clicking on the ""Check for updates"" link below."
-        End Try
+        End If
 #End Region
 
         ' Create a string with the BuildDate.txt file.
