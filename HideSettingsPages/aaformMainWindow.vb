@@ -372,7 +372,7 @@ Public Class aaformMainWindow
         End Select
 #End Region
 
-#Region "Remind the user about System Restore if they want to."
+#Region "Remind the user about making a restore point if they want to."
 
         ' If the user has it enabled in the Options menu, remind the user about
         ' making a System Restore Point and link them to guides after opening the
@@ -387,7 +387,7 @@ Public Class aaformMainWindow
                                "I could do this in code, but Windows 8 and above only allow one restore point per day if done programmatically." & vbCrLf &
                                "There's not a universal way to go straight to the System Properties Protection tab, so this workaround will hopefully work until Microsoft removes the Control Panel." & vbCrLf &
                                vbCrLf &
-                               "This message can be disabled via ""Options>Show System Restore reminder message"".", MsgBoxStyle.YesNo, "Apply changes")
+                               "This message can be disabled via ""Options>Show restore point reminder message"".", MsgBoxStyle.YesNo, "Apply changes")
                 Case MsgBoxResult.Yes
                     ' Open the appropriate links and applications.
                     Process.Start("https://www.tenforums.com/tutorials/4533-turn-off-system-protection-drives-windows-10-a.html")
@@ -430,8 +430,8 @@ Public Class aaformMainWindow
             ' if we can't launch the registry helper app.
             ' Code from: https://stackoverflow.com/a/20203356
             Select Case MsgBox("We couldn't find hsp_registry-helper.exe in the current folder." & vbCrLf &
-                                "Because this file is used to apply or undo the Registry key value chosen above," & vbCrLf &
-                                "it's recommended that a new copy of HideSettingsPages be downloaded." & vbCrLf &
+                                "Because this file is used to apply or undo the Registry key value chosen via" & vbCrLf &
+                                "HideSettingsPages, it's recommended that a new copy of this app be downloaded." & vbCrLf &
                                 "Would you like to download a new copy?", MsgBoxStyle.YesNo, "Couldn't launch Registry helper")
                 Case MsgBoxResult.Yes
                     Process.Start("https://www.github.com/DrewNaylor/HideSettingsPages/releases")
