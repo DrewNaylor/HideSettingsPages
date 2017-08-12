@@ -412,29 +412,32 @@ Public Class aaformMainWindow
         proc.WindowStyle = ProcessWindowStyle.Hidden
         proc.Arguments = "/apply " & registryKeyValueBuilder.stringFullRegistryKeyValue
         proc.Verb = "runas"
-        Try
-            Process.Start(proc)
-            ' We have to catch this exception
-            ' in case the user clicks "No" in the UAC
-            ' dialog. Otherwise, we get an error
-            ' that says that the operation was
-            ' canceled by the user.
-        Catch ex As ComponentModel.Win32Exception
+        ' First we need to make sure the user has hsp_registry-helper.
+        If My.Computer.FileSystem.FileExists(proc.FileName) Then
+            Try
+                Process.Start(proc)
+                ' We have to catch this exception
+                ' in case the user clicks "No" in the UAC
+                ' dialog. Otherwise, we get an error
+                ' that says that the operation was
+                ' canceled by the user.
+            Catch ex As ComponentModel.Win32Exception
+            End Try
+
+            ' If hsp_registry-helper isn't found, tell the user.
+        Else
             ' Complain and ask the user to download a new copy
             ' if we can't launch the registry helper app.
             ' Code from: https://stackoverflow.com/a/20203356
             Select Case MsgBox("We couldn't find hsp_registry-helper.exe in the current folder." & vbCrLf &
                                 "Because this file is used to apply or undo the Registry key value chosen above," & vbCrLf &
                                 "it's recommended that a new copy of HideSettingsPages be downloaded." & vbCrLf &
-                                "Would you like to download a new copy?" & vbCrLf &
-                                vbCrLf &
-                                "It's also possible that the User Account Control dialog was canceled, in which case," &
-                                " please try again.", MsgBoxStyle.YesNo, "Couldn't launch Registry helper")
+                                "Would you like to download a new copy?", MsgBoxStyle.YesNo, "Couldn't launch Registry helper")
                 Case MsgBoxResult.Yes
                     Process.Start("https://www.github.com/DrewNaylor/HideSettingsPages/releases")
                 Case MsgBoxResult.No
             End Select
-        End Try
+        End If
     End Sub
 #End Region
 #End Region
