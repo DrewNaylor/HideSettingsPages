@@ -91,7 +91,6 @@ Public Class aaformMainWindow
 
     Private Sub menubarVerifyKeyValueButton_Click(sender As Object, e As EventArgs) Handles menubarVerifyKeyValueButton.Click
         ' Launch hsp_registry-helper.exe and have it tell the user what the current Registry key value is.
-        ' Tell the registry helper app to apply the key value in the Registry.
         Dim proc As New ProcessStartInfo
         proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
         proc.WindowStyle = ProcessWindowStyle.Hidden
