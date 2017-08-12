@@ -95,21 +95,24 @@ Public Class aaformMainWindow
         proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
         proc.WindowStyle = ProcessWindowStyle.Hidden
         proc.Arguments = "/verify"
-        Try
+        ' First we need to make sure the user has hsp_registry-helper.
+        If My.Computer.FileSystem.FileExists(proc.FileName) Then
             Process.Start(proc)
-        Catch ex As ComponentModel.Win32Exception
+
+            ' If hsp_registry-helper isn't found, tell the user.
+        Else
             ' Complain and ask the user to download a new copy
             ' if we can't launch the registry helper app.
             ' Code from: https://stackoverflow.com/a/20203356
             Select Case MsgBox("We couldn't find hsp_registry-helper.exe in the current folder." & vbCrLf &
                                 "Because this file is used to show the current Registry key value's data," & vbCrLf &
-                                "it's recommended that a new copy of HideSettingsPages be downloaded." & vbCrLf &
-                                "Would you like to download a new copy?", MsgBoxStyle.YesNo, "Couldn't launch Registry helper")
+                                "it's recommended that a new copy of this app be downloaded." & vbCrLf &
+                                "Would you like to download a new copy of HideSettingsPages?", MsgBoxStyle.YesNo, "Couldn't launch Registry helper")
                 Case MsgBoxResult.Yes
                     Process.Start("https://www.github.com/DrewNaylor/HideSettingsPages/releases")
                 Case MsgBoxResult.No
             End Select
-        End Try
+        End If
     End Sub
 
 #End Region
