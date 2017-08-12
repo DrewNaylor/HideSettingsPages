@@ -283,7 +283,7 @@ Public Class aaformMainWindow
         End Select
 #End Region
 
-#Region "Remind the user about System Restore if they want to."
+#Region "Remind the user about making a restore point if they want to."
 
         ' If the user has it enabled in the Options menu, remind the user about
         ' making a System Restore Point and link them to guides after opening the
@@ -298,7 +298,7 @@ Public Class aaformMainWindow
                                "I could do this in code, but Windows 8 and above only allow one restore point per day if done programmatically." & vbCrLf &
                                "There's not a universal way to go straight to the System Properties Protection tab, so this workaround will hopefully work until Microsoft removes the Control Panel." & vbCrLf &
                                vbCrLf &
-                               "This message can be disabled via ""Options>Show System Restore reminder message"".", MsgBoxStyle.YesNo, "Undo all changes")
+                               "This message can be disabled via ""Options>Show restore point reminder message"".", MsgBoxStyle.YesNo, "Undo all changes")
                 Case MsgBoxResult.Yes
                     ' Open the appropriate links and applications.
                     Process.Start("https://www.tenforums.com/tutorials/4533-turn-off-system-protection-drives-windows-10-a.html")
@@ -324,29 +324,33 @@ Public Class aaformMainWindow
         proc.WindowStyle = ProcessWindowStyle.Hidden
         proc.Arguments = "/undo "
         proc.Verb = "runas"
-        Try
-            Process.Start(proc)
-            ' We have to catch this exception
-            ' in case the user clicks "No" in the UAC
-            ' dialog. Otherwise, we get an error
-            ' that says that the operation was
-            ' canceled by the user.
-        Catch ex As ComponentModel.Win32Exception
+        ' First we need to make sure the user has hsp_registry-helper.
+        If My.Computer.FileSystem.FileExists(proc.FileName) Then
+            ' Then we use Try...Catch to prevent errors if the user cancels UAC.
+            Try
+                Process.Start(proc)
+                ' We have to catch this exception
+                ' in case the user clicks "No" in the UAC
+                ' dialog. Otherwise, we get an error
+                ' that says that the operation was
+                ' canceled by the user.
+            Catch ex As ComponentModel.Win32Exception
+            End Try
+
+            ' If hsp_registry-helper isn't found, tell the user.
+        Else
             ' Complain and ask the user to download a new copy
             ' if we can't launch the registry helper app.
             ' Code from: https://stackoverflow.com/a/20203356
             Select Case MsgBox("We couldn't find hsp_registry-helper.exe in the current folder." & vbCrLf &
-                                "Because this file is used to apply or undo the Registry key value chosen above," & vbCrLf &
-                                "it's recommended that a new copy of HideSettingsPages be downloaded." & vbCrLf &
-                                "Would you like to download a new copy?" & vbCrLf &
-                                vbCrLf &
-                                "It's also possible that the User Account Control dialog was canceled, in which case," &
-                                " please try again.", MsgBoxStyle.YesNo, "Couldn't launch Registry helper")
+                                "Because this file is used to apply or undo the Registry key value chosen via" & vbCrLf &
+                                "HideSettingsPages, it's recommended that a new copy of this app be downloaded." & vbCrLf &
+                                "Would you like to download a new copy?", MsgBoxStyle.YesNo, "Couldn't launch Registry helper")
                 Case MsgBoxResult.Yes
                     Process.Start("https://www.github.com/DrewNaylor/HideSettingsPages/releases")
                 Case MsgBoxResult.No
             End Select
-        End Try
+        End If
     End Sub
 #End Region
 #End Region
@@ -414,6 +418,7 @@ Public Class aaformMainWindow
         proc.Verb = "runas"
         ' First we need to make sure the user has hsp_registry-helper.
         If My.Computer.FileSystem.FileExists(proc.FileName) Then
+            ' Then we use Try...Catch to prevent errors if the user cancels UAC.
             Try
                 Process.Start(proc)
                 ' We have to catch this exception
