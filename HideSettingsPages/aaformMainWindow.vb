@@ -348,7 +348,7 @@ Public Class aaformMainWindow
             Select Case MsgBox("We couldn't find hsp_registry-helper.exe in the current folder." & vbCrLf &
                                 "Because this file is used to apply or undo the Registry key value chosen via" & vbCrLf &
                                 "HideSettingsPages, it's recommended that a new copy of this app be downloaded." & vbCrLf &
-                                "Would you like to download a new copy?", MsgBoxStyle.YesNo, "Couldn't launch Registry helper")
+                                "Would you like to download a new copy of HideSettingsPages?", MsgBoxStyle.YesNo, "Couldn't launch Registry helper")
                 Case MsgBoxResult.Yes
                     Process.Start("https://www.github.com/DrewNaylor/HideSettingsPages/releases")
                 Case MsgBoxResult.No
@@ -440,7 +440,7 @@ Public Class aaformMainWindow
             Select Case MsgBox("We couldn't find hsp_registry-helper.exe in the current folder." & vbCrLf &
                                 "Because this file is used to apply or undo the Registry key value chosen via" & vbCrLf &
                                 "HideSettingsPages, it's recommended that a new copy of this app be downloaded." & vbCrLf &
-                                "Would you like to download a new copy?", MsgBoxStyle.YesNo, "Couldn't launch Registry helper")
+                                "Would you like to download a new copy of HideSettingsPages?", MsgBoxStyle.YesNo, "Couldn't launch Registry helper")
                 Case MsgBoxResult.Yes
                     Process.Start("https://www.github.com/DrewNaylor/HideSettingsPages/releases")
                 Case MsgBoxResult.No
