@@ -141,9 +141,6 @@ Public Class aaformMainWindow
             My.Settings.Save()
             My.Settings.Reload()
 
-            ' Print the current value of My.Settings.messageShowStartupWarning.
-            Debug.WriteLine("My.Settings.messageShowStartupWarning current value: " & My.Settings.messageShowStartupWarning)
-
             ' However, if the checkbox is checked, when it's clicked, set
             ' My.Settings.messageShowStartupWarning to False
             ' and the control's CheckState to CheckState.Unchecked.
@@ -154,9 +151,6 @@ Public Class aaformMainWindow
             End If
             My.Settings.Save()
             My.Settings.Reload()
-
-            ' Print the current value of My.Settings.messageShowStartupWarning.
-            Debug.WriteLine("My.Settings.messageShowStartupWarning current value: " & My.Settings.messageShowStartupWarning)
 
         End If
     End Sub
@@ -184,9 +178,6 @@ Public Class aaformMainWindow
             My.Settings.Save()
             My.Settings.Reload()
 
-            ' Print the current value of My.Settings.messageShowSystemRestoreReminder.
-            Debug.WriteLine("My.Settings.messageShowSystemRestoreReminder current value: " & My.Settings.messageShowSystemRestoreReminder)
-
             ' However, if the checkbox is checked, when it's clicked, set
             ' My.Settings.messageShowSystemRestoreReminder to False
             ' and the control's CheckState to CheckState.Unchecked.
@@ -197,9 +188,6 @@ Public Class aaformMainWindow
             End If
             My.Settings.Save()
             My.Settings.Reload()
-
-            ' Print the current value of My.Settings.messageShowSystemRestoreReminder.
-            Debug.WriteLine("My.Settings.messageShowSystemRestoreReminder current value: " & My.Settings.messageShowSystemRestoreReminder)
 
         End If
     End Sub
