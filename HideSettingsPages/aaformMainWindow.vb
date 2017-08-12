@@ -88,6 +88,31 @@ Public Class aaformMainWindow
         ' Close the application.
         Me.Close()
     End Sub
+
+    Private Sub menubarVerifyKeyValueButton_Click(sender As Object, e As EventArgs) Handles menubarVerifyKeyValueButton.Click
+        ' Launch hsp_registry-helper.exe and have it tell the user what the current Registry key value is.
+        ' Tell the registry helper app to apply the key value in the Registry.
+        Dim proc As New ProcessStartInfo
+        proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
+        proc.WindowStyle = ProcessWindowStyle.Hidden
+        proc.Arguments = "/verify"
+        Try
+            Process.Start(proc)
+        Catch ex As ComponentModel.Win32Exception
+            ' Complain and ask the user to download a new copy
+            ' if we can't launch the registry helper app.
+            ' Code from: https://stackoverflow.com/a/20203356
+            Select Case MsgBox("We couldn't find hsp_registry-helper.exe in the current folder." & vbCrLf &
+                                "Because this file is used to show the current Registry key value's data," & vbCrLf &
+                                "it's recommended that a new copy of HideSettingsPages be downloaded." & vbCrLf &
+                                "Would you like to download a new copy?", MsgBoxStyle.YesNo, "Couldn't launch Registry helper")
+                Case MsgBoxResult.Yes
+                    Process.Start("https://www.github.com/DrewNaylor/HideSettingsPages/releases")
+                Case MsgBoxResult.No
+            End Select
+        End Try
+    End Sub
+
 #End Region
 
 #Region "Options menubar buttons."
@@ -206,30 +231,6 @@ Public Class aaformMainWindow
     Private Sub menubarHelpTopicsButton_Click(sender As Object, e As EventArgs) Handles menubarHelpTopicsButton.Click
         ' Go to the GitHub wiki.
         Process.Start("https://github.com/DrewNaylor/HideSettingsPages/wiki")
-    End Sub
-
-    Private Sub menubarVerifyKeyValueButton_Click(sender As Object, e As EventArgs) Handles menubarVerifyKeyValueButton.Click
-        ' Launch hsp_registry-helper.exe and have it tell the user what the current Registry key value is.
-        ' Tell the registry helper app to apply the key value in the Registry.
-        Dim proc As New ProcessStartInfo
-        proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
-        proc.WindowStyle = ProcessWindowStyle.Hidden
-        proc.Arguments = "/verify"
-        Try
-            Process.Start(proc)
-        Catch ex As ComponentModel.Win32Exception
-            ' Complain and ask the user to download a new copy
-            ' if we can't launch the registry helper app.
-            ' Code from: https://stackoverflow.com/a/20203356
-            Select Case MsgBox("We couldn't find hsp_registry-helper.exe in the current folder." & vbCrLf &
-                                "Because this file is used to show the current Registry key value's data," & vbCrLf &
-                                "it's recommended that a new copy of HideSettingsPages be downloaded." & vbCrLf &
-                                "Would you like to download a new copy?", MsgBoxStyle.YesNo, "Couldn't launch Registry helper")
-                Case MsgBoxResult.Yes
-                    Process.Start("https://www.github.com/DrewNaylor/HideSettingsPages/releases")
-                Case MsgBoxResult.No
-            End Select
-        End Try
     End Sub
 #End Region
 #End Region
