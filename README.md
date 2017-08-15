@@ -18,6 +18,17 @@ You may also notice this app is running on Windows 7. Although this app can run 
 <br>
 <br>
 
+# Known issues
+
+[See all known issues.](https://github.com/DrewNaylor/HideSettingsPages/labels/known%20issue)
+
+- ~~If the user clicks items in the checkedlistbox too quickly, the Registry key doesn't update. [issue #6](https://github.com/DrewNaylor/HideSettingsPages/issues/6)~~ [Fixed in 3def4cc](https://github.com/DrewNaylor/HideSettingsPages/commit/3def4cc576c3282d948daaf4d728af5fab92e1ab) and [improved in c86a013](https://github.com/DrewNaylor/HideSettingsPages/commit/c86a0136d358e9244b1165a971addf96d80fec34)
+
+- ~~If the user toggles items in the checkedlistbox using the spacebar, the Registry key won't update until they move with the arrow keys. [(issue #7)](https://github.com/DrewNaylor/HideSettingsPages/issues/7)~~ [Fixed in 3def4cc](https://github.com/DrewNaylor/HideSettingsPages/commit/3def4cc576c3282d948daaf4d728af5fab92e1ab) and [improved in c86a013](https://github.com/DrewNaylor/HideSettingsPages/commit/c86a0136d358e9244b1165a971addf96d80fec34)
+
+<br>
+<br>
+
 # System Requirements
 
 ## System Requirements for running HideSettingsPages
