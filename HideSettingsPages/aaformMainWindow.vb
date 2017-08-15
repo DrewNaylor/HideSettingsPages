@@ -77,6 +77,8 @@ Public Class aaformMainWindow
 
     Private Sub linklabelViewLarger_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linklabelViewLarger.LinkClicked
         ' Opens a larger window to preview the Registry key value more easily.
+        ' We have to hide the window before showing it or we get an exception
+        ' when using Show(Me).
         aaformRegistryKeyValueValueLargePreview.Visible = False
         aaformRegistryKeyValueValueLargePreview.Show(Me)
     End Sub
