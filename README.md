@@ -29,7 +29,7 @@ To run HideSettingsPages, your computer requires the following:
   - Ignore the ad on that page, scroll down, and click the orange Download button. Note that this is the web installer and it'll download its components after it's opened. May take a while to download.
 
 - Windows versions: Windows 7 SP1, 10.
-  - Windows 8.0 and Windows 8.1 untested although they might work. HideSettingsPages is intended to be used on Windows 10 Creators Update and above, though it does work on Windows 7 SP1.
+  - Windows 8.0 and Windows 8.1 are untested although they might work. HideSettingsPages is intended to be used on Windows 10 Creators Update and above, though it does work on Windows 7 SP1.
 
 - Architectures: x86 (32-bit) and x64 (64-bit.)
 
@@ -55,14 +55,16 @@ If [Visual Studio 2015 Community](https://www.visualstudio.com/vs/) is installed
 
 Here's how to manually build HideSettingsPages:
 
-1. First, clone the Git repository by running: <code>git clone https://github.com/DrewNaylor/UXL-Launcher.git</code> or [download the Zip file for the master branch](https://github.com/DrewNaylor/UXL-Launcher/archive/master.zip) and remember where you saved your files.
+1. First, clone the Git repository by running: <code>git clone https://github.com/DrewNaylor/HideSettingsPages.git</code> or [download the Zip file for the master branch](https://github.com/DrewNaylor/HideSettingsPages/archive/master.zip) and remember where you saved your files.
 
 2. Next, open the command prompt from the Start menu (<code>cmd.exe</code>) and type or copy/paste <code>cd C:\Program Files (x86)\MSBuild\14.0\Bin\ </code> if you have a 64-bit Windows install or <code>cd C:\Program Files\MSBuild\14.0\Bin\ </code> if you have a 32-bit Windows install. Press the Enter or Return key when it's pasted. Don't run <code>cmd.exe</code> from the Git Shell or else the next step won't work.
 
-3. Third, type <code>msbuild.exe</code>, press the spacebar, and drag the <code>UXL-Launcher.vbproj</code> into the command prompt window and press the Enter or Return key.
+3. Third, type <code>msbuild.exe</code>, press the spacebar, and drag the <code>HideSettingsPages.sln</code> file into the command prompt window and press the Enter or Return key.
 
-4. And finally, once the project is done being built, you'll find the UXL Launcher EXE file in <code>UXL-Launcher\UXL-Launcher\bin\Debug </code> wherever you saved the files to earlier along with a config file, a PDB file, and an XML file.
+4. And finally, once the solution is done being built, you'll find both the main HideSettingsPages EXE file and the hsp_registry-helper EXE file in <code>HideSettingsPages\HideSettingsPages\bin\Debug </code> wherever you saved the files to earlier along with a config file, a PDB file, and an XML file for both EXE files.
+
+5. Double-click on <code>HideSettingsPages.exe</code> to open the main HideSettingsPages GUI.
 
 ## How to Modify the Source Code
 
-In order to play around with the source code, it's recommended to install [Visual Studio 2015 Community](https://www.visualstudio.com/vs/) in addition to the software to run UXL Launcher. To poke around in the code, simply double-click the <code>UXL-Launcher.sln</code> file in the root of the Git repository.
+In order to play around with the source code, it's recommended to install [Visual Studio 2015 Community](https://www.visualstudio.com/vs/) in addition to the software to run HideSettingsPages. To poke around in the code, simply double-click the <code>HideSettingsPages.sln</code> file in the root of the Git repository.
