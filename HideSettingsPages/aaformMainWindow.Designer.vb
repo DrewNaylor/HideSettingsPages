@@ -322,9 +322,11 @@ Partial Class aaformMainWindow
         Me.ClientSize = New System.Drawing.Size(331, 684)
         Me.Controls.Add(Me.flowlayoutpanelMainWindow)
         Me.Controls.Add(Me.menubarMainWindow)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.menubarMainWindow
         Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.MaximizeBox = False
         Me.Name = "aaformMainWindow"
         Me.Text = "HideSettingsPages"
         Me.flowlayoutpanelMainWindow.ResumeLayout(False)
