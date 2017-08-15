@@ -59,9 +59,9 @@ Here's how to manually build HideSettingsPages:
 
 2. Next, open the command prompt from the Start menu (<code>cmd.exe</code>) and type or copy/paste <code>cd C:\Program Files (x86)\MSBuild\14.0\Bin\ </code> if you have a 64-bit Windows install or <code>cd C:\Program Files\MSBuild\14.0\Bin\ </code> if you have a 32-bit Windows install. Press the Enter or Return key when it's pasted. Don't run <code>cmd.exe</code> from the Git Shell or else the next step won't work.
 
-3. Third, type <code>msbuild.exe</code>, press the spacebar, and drag the <code>HideSettingsPages.sln</code> file into the command prompt window and press the Enter or Return key.
+3. Third, type <code>msbuild.exe</code>, press the spacebar, and drag the <code>HideSettingsPages.sln</code> file into the command prompt window and press the Enter or Return key. This file may be in <code>HideSettingsPages-[branch]\HideSettingsPages-[branch]\ </code>. [branch] is the branch cloned from, in this case master.
 
-4. And finally, once the solution is done being built, you'll find both the main HideSettingsPages EXE file and the hsp_registry-helper EXE file in <code>HideSettingsPages\HideSettingsPages\bin\Debug </code> wherever you saved the files to earlier along with a config file, a PDB file, and an XML file for both EXE files.
+4. And finally, once the solution is done being built, you'll find both the main HideSettingsPages EXE file and the hsp_registry-helper EXE file in <code>HideSettingsPages-[branch]\HideSettingsPages-[branch]\HideSettingsPages\bin\Debug </code> wherever you saved the files to earlier along with a config file, a PDB file, and an XML file for both EXE files. You'll also find a Windows Registry Editor file to undo any modifications to the Registry key value that hides Settings app pages, if necessary. [branch] is the branch cloned from, in this case master.
 
 5. Double-click on <code>HideSettingsPages.exe</code> to open the main HideSettingsPages GUI.
 
