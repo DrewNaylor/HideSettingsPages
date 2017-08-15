@@ -15,6 +15,8 @@ As you can see, the GUI is complete for version 0.3, the first pre-release. Hide
 
 You may also notice this app is running on Windows 7. Although this app can run on any version of Windows supported by the .Net Framework 4.6.1, the Registry key value it modifies/sets only does things on PCs running the Windows 10 Creators Update or higher.
 
+More screenshots are visible on the [Wiki](https://github.com/DrewNaylor/HideSettingsPages/wiki/HideSettingsPages-Screenshots).
+
 <br>
 <br>
 
