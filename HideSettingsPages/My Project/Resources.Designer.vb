@@ -75,7 +75,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 2017-08-03T01:55:14
+        '''  Looks up a localized string similar to 2017-08-03T02:33:30
         '''.
         '''</summary>
         Friend ReadOnly Property BuildDate() As String
@@ -137,14 +137,15 @@ Namespace My.Resources
         
         '''<summary>
         '''  Looks up a localized string similar to 
-        '''HideSettingsPages is a GUI to set a Registry key value to hide individual pages in the Windows 10 Settings app on the Creators Update and newer.
+        '''HideSettingsPages Registry Helper is used to apply the Registry
+        '''key value chosen in HideSettingsPages. Can also apply/remove
+        '''key value via arguments and show the current value in the Registry, also with arguments.
+        '''This key value will hide or show pages in the Windows 10 Settings app on the Creators Update and newer.
+        '''
+        '''HideSettingsPages Registry Helper is also known as hsp_registry-helper.
         '''
         '''License notice:
-        '''HideSettingsPages is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as
-        '''published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-        '''
-        '''HideSettingsPages is distributed in the hope that it will be useful,
-        '''but WITHOUT ANY WARRANTY;  [rest of string was truncated]&quot;;.
+        '''hsp_registry-helper is free software: you can redistribute it and/or modify it under the terms [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property HSPRegistryHelperInfo_TXT() As String
             Get
@@ -153,7 +154,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Git.
+        '''  Looks up a localized string similar to Beta.
         '''</summary>
         Friend ReadOnly Property isStable() As String
             Get
