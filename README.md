@@ -46,7 +46,7 @@ To run HideSettingsPages, your computer requires the following:
   - Ignore the ad on that page, scroll down, and click the orange Download button. Note that this is the web installer and it'll download its components after it's opened. May take a while to download.
 
 - Windows versions: Windows 7 SP1, 10.
-  - Windows 8.0 and Windows 8.1 are untested although they might work. HideSettingsPages is intended to be used on Windows 10 Creators Update and above, though it does work on Windows 7 SP1.
+  - Windows 8.0 and Windows 8.1 are untested although they might work. HideSettingsPages is intended to be used on Windows 10 Creators Update and above, though it does work on Windows 7 SP1. This app does not support Windows 10 S due to it being limited to running apps from the Windows Store.
 
 - Architectures: x86 (32-bit) and x64 (64-bit.)
 
