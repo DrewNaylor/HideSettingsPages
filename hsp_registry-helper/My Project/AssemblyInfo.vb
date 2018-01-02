@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Used to apply the Registry key value chosen in HideSettingsPages. Can also apply/remove key value via arguments. This key value will hide or show pages in the Windows 10 Settings app on the Creators Update and newer.")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("HideSettingsPages Registry Helper")>
-<Assembly: AssemblyCopyright("Copyright (C)  2017 Drew Naylor. Licensed under Gnu GPLv3+.")>
+<Assembly: AssemblyCopyright("Copyright (C)  2017-2018 Drew Naylor. Licensed under Gnu GPLv3+.")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>

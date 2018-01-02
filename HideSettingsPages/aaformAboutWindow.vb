@@ -1,6 +1,6 @@
 ﻿'HideSettingsPages - GUI to set a Registry key value to hide individual pages
 'in the Windows 10 Settings app on the Creators Update and newer.
-'Copyright (C) 2017  Drew Naylor
+'Copyright (C) 2017-2018 Drew Naylor
 'Microsoft Windows and all related words are copyright
 'and trademark Microsoft Corporation.
 'Any other companies mentioned own their respective copyrights/trademarks.
@@ -63,7 +63,7 @@ Public Class aaformAboutWindow
         textboxAboutApp.Text = ("HideSettingsPages - Hide Windows 10 Settings App Pages" & vbCrLf &
 "Version " & My.Application.Info.Version.ToString & " " & My.Resources.isStable & vbCrLf &
 "App compiled at UTC: " & BuildDateString & vbCrLf &
-"Copyright (C) 2017  Drew Naylor. Lincensed under Gnu GPLv3+." & vbCrLf &
+"Copyright (C) 2017-2018 Drew Naylor. Lincensed under Gnu GPLv3+." & vbCrLf &
 My.Resources.HideSettingsPagesInfo_TXT & vbCrLf & vbCrLf & ' HideSettingsPages info for warranty and stuff that used to be here directly.
 My.Resources.separator & vbCrLf & vbCrLf & ' separator line.
 infoHSPRegistryHelper) ' hsp_registry-helper.exe info as defined above.
