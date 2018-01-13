@@ -41,6 +41,7 @@ Partial Class aaformMainWindow
         Me.buttonUndoChanges = New System.Windows.Forms.Button()
         Me.menubarMainWindow = New System.Windows.Forms.MenuStrip()
         Me.menubarFileMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarDirectlyApplyKeyValueButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarVerifyKeyValueButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarExitButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarOptionsMenu = New System.Windows.Forms.ToolStripMenuItem()
@@ -52,7 +53,6 @@ Partial Class aaformMainWindow
         Me.menubarAuthorsButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarLicenseButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarAboutButton = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menubarDirectlyApplyKeyValueButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
@@ -244,6 +244,13 @@ Partial Class aaformMainWindow
         Me.menubarFileMenu.Size = New System.Drawing.Size(37, 20)
         Me.menubarFileMenu.Text = "&File"
         '
+        'menubarDirectlyApplyKeyValueButton
+        '
+        Me.menubarDirectlyApplyKeyValueButton.Name = "menubarDirectlyApplyKeyValueButton"
+        Me.menubarDirectlyApplyKeyValueButton.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
+        Me.menubarDirectlyApplyKeyValueButton.Size = New System.Drawing.Size(249, 22)
+        Me.menubarDirectlyApplyKeyValueButton.Text = "&Directly apply key value..."
+        '
         'menubarVerifyKeyValueButton
         '
         Me.menubarVerifyKeyValueButton.Name = "menubarVerifyKeyValueButton"
@@ -315,13 +322,6 @@ Partial Class aaformMainWindow
         Me.menubarAboutButton.Name = "menubarAboutButton"
         Me.menubarAboutButton.Size = New System.Drawing.Size(211, 22)
         Me.menubarAboutButton.Text = "&About"
-        '
-        'menubarDirectlyApplyKeyValueButton
-        '
-        Me.menubarDirectlyApplyKeyValueButton.Name = "menubarDirectlyApplyKeyValueButton"
-        Me.menubarDirectlyApplyKeyValueButton.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
-        Me.menubarDirectlyApplyKeyValueButton.Size = New System.Drawing.Size(249, 22)
-        Me.menubarDirectlyApplyKeyValueButton.Text = "&Directly apply key value..."
         '
         'aaformMainWindow
         '

@@ -92,6 +92,11 @@ Public Class aaformMainWindow
         Me.Close()
     End Sub
 
+    Private Sub menubarDirectlyApplyKeyValueButton_Click(sender As Object, e As EventArgs) Handles menubarDirectlyApplyKeyValueButton.Click
+        ' Open a window so that the user can just type in the pages they want to show or hide.
+        aaformDirectlyApplyKeyValue.Show(Me)
+    End Sub
+
     Private Sub menubarVerifyKeyValueButton_Click(sender As Object, e As EventArgs) Handles menubarVerifyKeyValueButton.Click
         ' Launch hsp_registry-helper.exe and have it tell the user what the current Registry key value is.
         Dim proc As New ProcessStartInfo
