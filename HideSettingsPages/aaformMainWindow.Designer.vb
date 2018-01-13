@@ -52,6 +52,7 @@ Partial Class aaformMainWindow
         Me.menubarAuthorsButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarLicenseButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarAboutButton = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarDirectlyApplyKeyValueButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
@@ -238,7 +239,7 @@ Partial Class aaformMainWindow
         '
         'menubarFileMenu
         '
-        Me.menubarFileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarVerifyKeyValueButton, Me.menubarExitButton})
+        Me.menubarFileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarDirectlyApplyKeyValueButton, Me.menubarVerifyKeyValueButton, Me.menubarExitButton})
         Me.menubarFileMenu.Name = "menubarFileMenu"
         Me.menubarFileMenu.Size = New System.Drawing.Size(37, 20)
         Me.menubarFileMenu.Text = "&File"
@@ -247,14 +248,14 @@ Partial Class aaformMainWindow
         '
         Me.menubarVerifyKeyValueButton.Name = "menubarVerifyKeyValueButton"
         Me.menubarVerifyKeyValueButton.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
-        Me.menubarVerifyKeyValueButton.Size = New System.Drawing.Size(246, 22)
+        Me.menubarVerifyKeyValueButton.Size = New System.Drawing.Size(249, 22)
         Me.menubarVerifyKeyValueButton.Text = "&Verify current key value..."
         Me.menubarVerifyKeyValueButton.ToolTipText = "Shows the current data in the Registry key value this app modifies."
         '
         'menubarExitButton
         '
         Me.menubarExitButton.Name = "menubarExitButton"
-        Me.menubarExitButton.Size = New System.Drawing.Size(246, 22)
+        Me.menubarExitButton.Size = New System.Drawing.Size(249, 22)
         Me.menubarExitButton.Text = "E&xit"
         '
         'menubarOptionsMenu
@@ -315,6 +316,13 @@ Partial Class aaformMainWindow
         Me.menubarAboutButton.Size = New System.Drawing.Size(211, 22)
         Me.menubarAboutButton.Text = "&About"
         '
+        'menubarDirectlyApplyKeyValueButton
+        '
+        Me.menubarDirectlyApplyKeyValueButton.Name = "menubarDirectlyApplyKeyValueButton"
+        Me.menubarDirectlyApplyKeyValueButton.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
+        Me.menubarDirectlyApplyKeyValueButton.Size = New System.Drawing.Size(249, 22)
+        Me.menubarDirectlyApplyKeyValueButton.Text = "&Directly apply key value..."
+        '
         'aaformMainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -374,4 +382,5 @@ Partial Class aaformMainWindow
     Friend WithEvents menubarOptionsMenu As ToolStripMenuItem
     Friend WithEvents menubarShowStartupWarningMessageButton As ToolStripMenuItem
     Friend WithEvents menubarShowRestorePointReminderMessageButton As ToolStripMenuItem
+    Friend WithEvents menubarDirectlyApplyKeyValueButton As ToolStripMenuItem
 End Class
