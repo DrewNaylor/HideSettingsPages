@@ -94,7 +94,7 @@ Public Class aaformMainWindow
 
     Private Sub menubarDirectlyApplyKeyValueButton_Click(sender As Object, e As EventArgs) Handles menubarDirectlyApplyKeyValueButton.Click
         ' Open a window so that the user can just type in the pages they want to show or hide.
-        aaformDirectlyApplyKeyValue.Show(Me)
+        aaformDirectlyApplyKeyValue.ShowDialog(Me)
     End Sub
 
     Private Sub menubarVerifyKeyValueButton_Click(sender As Object, e As EventArgs) Handles menubarVerifyKeyValueButton.Click

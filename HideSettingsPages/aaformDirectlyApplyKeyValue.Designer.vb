@@ -29,7 +29,12 @@ Partial Class aaformDirectlyApplyKeyValue
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(412, 184)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "aaformDirectlyApplyKeyValue"
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
         Me.Text = "aaformDirectlyApplyKeyValue"
         Me.ResumeLayout(False)
 
