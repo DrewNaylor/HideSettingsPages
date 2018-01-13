@@ -22,13 +22,23 @@ Partial Class aaformDirectlyApplyKeyValue
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.flowlayoutpanelBox = New System.Windows.Forms.FlowLayoutPanel()
         Me.SuspendLayout()
+        '
+        'flowlayoutpanelBox
+        '
+        Me.flowlayoutpanelBox.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.flowlayoutpanelBox.Location = New System.Drawing.Point(0, 0)
+        Me.flowlayoutpanelBox.Name = "flowlayoutpanelBox"
+        Me.flowlayoutpanelBox.Size = New System.Drawing.Size(412, 184)
+        Me.flowlayoutpanelBox.TabIndex = 0
         '
         'aaformDirectlyApplyKeyValue
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(412, 184)
+        Me.Controls.Add(Me.flowlayoutpanelBox)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -39,4 +49,6 @@ Partial Class aaformDirectlyApplyKeyValue
         Me.ResumeLayout(False)
 
     End Sub
+
+    Friend WithEvents flowlayoutpanelBox As FlowLayoutPanel
 End Class
