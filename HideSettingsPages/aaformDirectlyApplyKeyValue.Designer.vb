@@ -35,7 +35,7 @@ Partial Class aaformDirectlyApplyKeyValue
         Me.Name = "aaformDirectlyApplyKeyValue"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
-        Me.Text = "aaformDirectlyApplyKeyValue"
+        Me.Text = "Directly Apply Key Value"
         Me.ResumeLayout(False)
 
     End Sub
