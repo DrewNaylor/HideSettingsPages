@@ -13,7 +13,7 @@ Screenshot:
 
 As you can see, the GUI is complete for version 0.3, the first pre-release. HideSettingsPages can, as of August 15, 2017, generate the necessary Registry key value that hides (or only shows) pages in the Settings app. If the user clicks either "Apply changes" or "Undo all changes" at the bottom, HideSettingsPages will pass the appropriate commands and data to hsp_registry-helper via command-line args. The user can also check the current key value by clicking "File>Verify current key value..." or by pressing <code>Ctrl+E</code>.
 
-You may also notice this app is running on Windows 7. Although this app can run on any version of Windows supported by the .Net Framework 4.6.1, the Registry key value it modifies/sets only does things on PCs running the Windows 10 Creators Update or higher. Windows 10 S is not supported due to it being limited to running apps from the Windows Store.
+You may also notice this app is running on Windows 7. Although this app can run on any version of Windows supported by the .Net Framework 4.6.1, the Registry key value it modifies/sets only does things on PCs running the Windows 10 Creators Update or higher. Windows 10 S and Windows 10 in S Mode are not supported due to them being limited to running apps from the Windows Store.
 
 More screenshots are visible on the [Wiki](https://github.com/DrewNaylor/HideSettingsPages/wiki/HideSettingsPages-Screenshots).
 
