@@ -3,6 +3,9 @@
 'Copyright (C) 2017-2018 Drew Naylor
 'Microsoft Windows and all related words are copyright
 'and trademark Microsoft Corporation.
+'Microsoft is not affiliated with either the HideSettingsPages project or Drew Naylor
+'and does not endorse this software.
+'Any other companies mentioned own their respective copyrights/trademarks.
 '(Note that the copyright years include the years left out by the hyphen.)
 '
 'This file is part of HideSettingsPages
