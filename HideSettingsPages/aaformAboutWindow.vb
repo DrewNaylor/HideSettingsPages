@@ -49,8 +49,8 @@ Public Class aaformAboutWindow
                 "HideSettingsPages Registry Helper" & vbCrLf &
                 "Version " & fileversionHSPRegistryHelper.FileVersion & vbCrLf & ' hsp_registry-helper version number.
                 fileversionHSPRegistryHelper.LegalCopyright & vbCrLf & ' hsp_registry-helper copyright info.
-                My.Resources.HSPRegistryHelperInfo_TXT ' Boilerplate warranty info and stuff for hsp_registry-helper.
-
+                My.Resources.HSPRegistryHelperInfo_TXT.Replace(vbLf, vbCrLf) ' Boilerplate warranty info and stuff for hsp_registry-helper.
+            '  The Replace(vbLf, vbCrLf) function is required for text to have Windows line endings if building from downloading the master branch code from GitHub.
         Else
             ' If hsp_registry-helper is missing, let the user know.
             infoHSPRegistryHelper = "HideSettingsPages Registry Helper is missing. Please download a new copy of HideSettingsPages by clicking on the ""Check for updates"" link below."
@@ -65,7 +65,7 @@ Public Class aaformAboutWindow
         textboxAboutApp.Text = ("HideSettingsPages - Hide Windows 10 Settings App Pages" & vbCrLf &
 "Version " & My.Application.Info.Version.ToString & " " & My.Resources.isStable & vbCrLf &
 "App compiled at UTC: " & BuildDateString & vbCrLf &
-My.Resources.HideSettingsPagesInfo_TXT.Replace(vbLf, vbCrLf) & vbCrLf & vbCrLf & ' HideSettingsPages info for copyright and stuff that used to be here directly.
+My.Resources.HideSettingsPagesInfo_TXT.Replace(vbLf, vbCrLf) & vbCrLf & vbCrLf & ' HideSettingsPages info for copyright and stuff that used to be here directly. The Replace(vbLf, vbCrLf) function is required for text to have Windows line endings if building from downloading the master branch code from GitHub.
 My.Resources.separator & vbCrLf & vbCrLf & ' separator line.
 infoHSPRegistryHelper) ' hsp_registry-helper.exe info as defined above.
 
