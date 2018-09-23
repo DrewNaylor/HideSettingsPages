@@ -57,7 +57,7 @@ network-proxy
 network-status
 network-vpn
 network-wifi
-network-wifisettings
+network-wificalling
 nfctransactions
 notifications
 optionalfeatures
