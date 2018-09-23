@@ -141,7 +141,6 @@ Partial Class aaformMainWindow
         'checkedlistboxPageList
         '
         Me.checkedlistboxPageList.CheckOnClick = True
-        Me.checkedlistboxPageList.Items.AddRange(New Object() {"about", "activation", "appsfeatures", "appsforwebsites", "autoplay", "backup", "batterysaver", "batterysaver-usagedetails", "bluetooth", "camera", "colors", "connecteddevices", "cortana", "cortana-moredetails", "cortana-permissions", "crossdevice", "datausage", "dateandtime", "defaultapps", "developers", "deviceencryption", "display", "easeofaccess-closedcaptioning", "easeofaccess-highcontrast", "easeofaccess-keyboard", "easeofaccess-magnifier", "easeofaccess-mouse", "easeofaccess-narrator", "easeofaccess-otheroptions", "emailandaccounts", "extras", "findmydevice", "gaming-broadcasting", "gaming-gamebar", "gaming-gamedvr", "gaming-gamemode", "holographic", "holographic-audio", "lockscreen", "maps", "mousetouchpad", "multitasking", "network-airplanemode", "network-cellular", "network-dialup", "network-directaccess", "network-ethernet", "network-mobilehotspot", "network-proxy", "network-status", "network-vpn", "network-wifi", "network-wifisettings", "nfctransactions", "notifications", "optionalfeatures", "otherusers", "pen", "personalization-background", "personalization-start", "powersleep", "printers", "privacy", "privacy-accountinfo", "privacy-appdiagnostics", "privacy-backgroundapps", "privacy-calendar", "privacy-callhistory", "privacy-contacts", "privacy-customdevices", "privacy-email", "privacy-feedback", "privacy-location", "privacy-messaging", "privacy-microphone", "privacy-motion", "privacy-notifications", "privacy-radios", "privacy-speechtyping", "privacy-tasks", "privacy-webcam", "project", "recovery", "regionlanguage", "signinoptions", "speech", "storagesense", "sync", "tabletmode", "taskbar", "themes", "troubleshoot", "typing", "usb", "windowsdefender", "windowsinsider", "windowsupdate", "windowsupdate-action", "windowsupdate-history", "windowsupdate-options", "windowsupdate-restartoptions", "workplace", "yourinfo"})
         Me.checkedlistboxPageList.Location = New System.Drawing.Point(3, 22)
         Me.checkedlistboxPageList.Margin = New System.Windows.Forms.Padding(2)
         Me.checkedlistboxPageList.Name = "checkedlistboxPageList"
@@ -297,30 +296,30 @@ Partial Class aaformMainWindow
         '
         Me.menubarHelpTopicsButton.Name = "menubarHelpTopicsButton"
         Me.menubarHelpTopicsButton.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F1), System.Windows.Forms.Keys)
-        Me.menubarHelpTopicsButton.Size = New System.Drawing.Size(211, 22)
+        Me.menubarHelpTopicsButton.Size = New System.Drawing.Size(210, 22)
         Me.menubarHelpTopicsButton.Text = "&View Help Topics"
         '
         'zseparatorHelpMenu
         '
         Me.zseparatorHelpMenu.Name = "zseparatorHelpMenu"
-        Me.zseparatorHelpMenu.Size = New System.Drawing.Size(208, 6)
+        Me.zseparatorHelpMenu.Size = New System.Drawing.Size(207, 6)
         '
         'menubarAuthorsButton
         '
         Me.menubarAuthorsButton.Name = "menubarAuthorsButton"
-        Me.menubarAuthorsButton.Size = New System.Drawing.Size(211, 22)
+        Me.menubarAuthorsButton.Size = New System.Drawing.Size(210, 22)
         Me.menubarAuthorsButton.Text = "A&cknowledgments"
         '
         'menubarLicenseButton
         '
         Me.menubarLicenseButton.Name = "menubarLicenseButton"
-        Me.menubarLicenseButton.Size = New System.Drawing.Size(211, 22)
+        Me.menubarLicenseButton.Size = New System.Drawing.Size(210, 22)
         Me.menubarLicenseButton.Text = "&License"
         '
         'menubarAboutButton
         '
         Me.menubarAboutButton.Name = "menubarAboutButton"
-        Me.menubarAboutButton.Size = New System.Drawing.Size(211, 22)
+        Me.menubarAboutButton.Size = New System.Drawing.Size(210, 22)
         Me.menubarAboutButton.Text = "&About"
         '
         'aaformMainWindow
