@@ -67,13 +67,16 @@ Public Class registryKeyValueBuilder
 
         ' Determine if there are any items checked.  
         If aaformMainWindow.checkedlistboxPageList.CheckedItems.Count > 0 Then
-            ' If so, loop through all checked items and print results.  
+            ' If so, loop through all checked items and print results.
             Dim x As Integer
             Dim s As String = ""
             For x = 0 To aaformMainWindow.checkedlistboxPageList.CheckedItems.Count - 1
-                s = s & aaformMainWindow.checkedlistboxPageList.CheckedItems(x).ToString & ";"
+                ' Blank lines need to be removed using ".TrimEnd" before the semicolon.
+                ' This is a side effect of pulling the page list from My.Resources or a text file. 
+                s = s & aaformMainWindow.checkedlistboxPageList.CheckedItems(x).ToString.TrimEnd & ";"
             Next x
             stringKeyValuePageList = s
+            ' Remove ending semicolon since it's a separator character.
             stringKeyValuePageList = stringKeyValuePageList.TrimEnd(CType(";", Char()))
 
         ElseIf aaformMainWindow.checkedlistboxPageList.CheckedItems.Count = 0 Then
