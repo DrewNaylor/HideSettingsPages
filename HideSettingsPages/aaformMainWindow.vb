@@ -76,7 +76,10 @@ Public Class aaformMainWindow
 
         ' First, if there's "pagelist.txt" by the EXE, use that.
         If My.Computer.FileSystem.FileExists(My.Application.Info.DirectoryPath & "\pagelist.txt") Then
-
+            pageList = My.Application.Info.DirectoryPath & "\pagelist.txt".Replace(vbLf, vbCrLf)
+        Else
+            ' Otherwise, use the built-in pageList resource.
+            pageList = My.Resources.pagesList_TXT.Replace(vbLf, vbCrLf)
         End If
 #End Region
 
