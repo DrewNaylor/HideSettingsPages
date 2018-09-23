@@ -77,6 +77,7 @@ privacy-calendar
 privacy-callhistory
 privacy-contacts
 privacy-customdevices
+privacy-documents
 privacy-email
 privacy-feedback
 privacy-location
@@ -84,9 +85,11 @@ privacy-messaging
 privacy-microphone
 privacy-motion
 privacy-notifications
+privacy-pictures
 privacy-radios
 privacy-speechtyping
 privacy-tasks
+privacy-videos
 privacy-webcam
 project
 recovery
