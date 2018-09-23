@@ -70,6 +70,16 @@ Public Class aaformMainWindow
         End If
 #End Region
 
+#Region "Fill in the page list box."
+        ' Make a string to store page list.
+        Dim pageList As String = ""
+
+        ' First, if there's "pagelist.txt" by the EXE, use that.
+        If My.Computer.FileSystem.FileExists(My.Application.Info.DirectoryPath & "\pagelist.txt") Then
+
+        End If
+#End Region
+
     End Sub
 
     Private Sub buttonExit_Click(sender As Object, e As EventArgs) Handles buttonExit.Click
