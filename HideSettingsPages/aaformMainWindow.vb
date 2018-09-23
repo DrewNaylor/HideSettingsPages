@@ -90,6 +90,11 @@ Public Class aaformMainWindow
 
         ' Page list needs to be split.
         Dim pageListSplit() As String = pageList.Split(delimiter)
+
+        ' Add all the items from pageListSplit to the checkedlistbox.
+        checkedlistboxPageList.Items.AddRange(pageListSplit)
+        ' Set the data source of the checkedlistbox to the pageListSplit string.
+        checkedlistboxPageList.DataSource = pageListSplit
 #End Region
 
     End Sub
