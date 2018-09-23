@@ -5,7 +5,6 @@ appsforwebsites
 autoplay
 backup
 batterysaver
-batterysaver-usagedetails
 bluetooth
 camera
 colors
