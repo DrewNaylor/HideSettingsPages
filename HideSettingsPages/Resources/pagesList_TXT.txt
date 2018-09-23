@@ -19,6 +19,7 @@ dateandtime
 defaultapps
 developers
 display
+easeofaccess-audio
 easeofaccess-closedcaptioning
 easeofaccess-colorfilter
 easeofaccess-display
