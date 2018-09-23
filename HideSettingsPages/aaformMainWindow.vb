@@ -87,6 +87,9 @@ Public Class aaformMainWindow
         Dim delimiter As Char = ";"c
         ' Replace all vbCrLf characters with semicolons.
         pageList = pageList.Replace(vbCrLf, ";")
+
+        ' Page list needs to be split.
+        Dim pageListSplit() As String = pageList.Split(delimiter)
 #End Region
 
     End Sub
