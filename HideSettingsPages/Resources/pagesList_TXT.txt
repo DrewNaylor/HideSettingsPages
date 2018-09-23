@@ -71,6 +71,7 @@ privacy
 privacy-accountinfo
 privacy-activityhistory
 privacy-appdiagnostics
+privacy-automaticfiledownloads
 privacy-backgroundapps
 privacy-calendar
 privacy-callhistory
