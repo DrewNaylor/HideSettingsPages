@@ -53,9 +53,6 @@ Partial Class aaformMainWindow
         Me.menubarAuthorsButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarLicenseButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarAboutButton = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DeselectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
@@ -232,7 +229,7 @@ Partial Class aaformMainWindow
         'menubarMainWindow
         '
         Me.menubarMainWindow.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.menubarMainWindow.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarFileMenu, Me.menubarOptionsMenu, Me.menubarHelpMenu, Me.ToolsToolStripMenuItem})
+        Me.menubarMainWindow.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarFileMenu, Me.menubarOptionsMenu, Me.menubarHelpMenu})
         Me.menubarMainWindow.Location = New System.Drawing.Point(0, 0)
         Me.menubarMainWindow.Name = "menubarMainWindow"
         Me.menubarMainWindow.Size = New System.Drawing.Size(331, 24)
@@ -325,25 +322,6 @@ Partial Class aaformMainWindow
         Me.menubarAboutButton.Size = New System.Drawing.Size(210, 22)
         Me.menubarAboutButton.Text = "&About"
         '
-        'ToolsToolStripMenuItem
-        '
-        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectAllToolStripMenuItem, Me.DeselectAllToolStripMenuItem})
-        Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(63, 20)
-        Me.ToolsToolStripMenuItem.Text = "Page list"
-        '
-        'SelectAllToolStripMenuItem
-        '
-        Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
-        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.SelectAllToolStripMenuItem.Text = "Select all"
-        '
-        'DeselectAllToolStripMenuItem
-        '
-        Me.DeselectAllToolStripMenuItem.Name = "DeselectAllToolStripMenuItem"
-        Me.DeselectAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.DeselectAllToolStripMenuItem.Text = "Deselect all"
-        '
         'aaformMainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -404,7 +382,4 @@ Partial Class aaformMainWindow
     Friend WithEvents menubarShowStartupWarningMessageButton As ToolStripMenuItem
     Friend WithEvents menubarShowRestorePointReminderMessageButton As ToolStripMenuItem
     Friend WithEvents menubarDirectlyApplyKeyValueButton As ToolStripMenuItem
-    Friend WithEvents ToolsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SelectAllToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DeselectAllToolStripMenuItem As ToolStripMenuItem
 End Class
