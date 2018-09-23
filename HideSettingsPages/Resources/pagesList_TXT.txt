@@ -34,6 +34,7 @@ easeofaccess-speechrecognition
 emailandaccounts
 extras
 findmydevice
+fonts
 gaming-broadcasting
 gaming-gamebar
 gaming-gamedvr
