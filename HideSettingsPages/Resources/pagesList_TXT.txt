@@ -95,9 +95,5 @@ usb
 windowsdefender
 windowsinsider
 windowsupdate
-windowsupdate-action
-windowsupdate-history
-windowsupdate-options
-windowsupdate-restartoptions
 workplace
 yourinfo
