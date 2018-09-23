@@ -20,6 +20,8 @@ defaultapps
 developers
 display
 easeofaccess-closedcaptioning
+easeofaccess-colorfilter
+easeofaccess-display
 easeofaccess-highcontrast
 easeofaccess-keyboard
 easeofaccess-magnifier
