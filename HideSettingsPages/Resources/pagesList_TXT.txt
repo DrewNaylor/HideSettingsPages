@@ -11,6 +11,7 @@ colors
 connecteddevices
 cortana
 cortana-moredetails
+cortana-notifications
 cortana-permissions
 crossdevice
 datausage
