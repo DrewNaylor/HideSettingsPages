@@ -22,6 +22,7 @@ display
 easeofaccess-closedcaptioning
 easeofaccess-colorfilter
 easeofaccess-display
+easeofaccess-eyecontrol
 easeofaccess-highcontrast
 easeofaccess-keyboard
 easeofaccess-magnifier
