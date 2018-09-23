@@ -38,6 +38,8 @@ gaming-broadcasting
 gaming-gamebar
 gaming-gamedvr
 gaming-gamemode
+gaming-trueplay
+gaming-xboxnetworking
 holographic
 holographic-audio
 lockscreen
