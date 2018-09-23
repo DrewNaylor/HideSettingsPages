@@ -66,7 +66,7 @@ Namespace My.Resources
         '''{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sl240\slmult1\qc\lang9\b\f0\fs10\par
         '''\pard\sl276\slmult1\qc\fs32 HideSettingsPages Acknowledgements\b0\par
         '''\pard\sl360\slmult1\fs24\par
-        '''\pard{\pntext\f2\&apos;B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\&apos;B7}}\fi-360\li720\sl360\slmult1\lang1033\f1\fs22 Guidance\lang9\f0\f [rest of string was truncated]&quot;;.
+        '''\pard{\pntext\f2\&apos;B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\&apos;B7}}\fi-360\li720\sl360\slmult1\lang1033\f1 Guidance\lang9\f0 : God\ [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property Acknowledgements_RTF() As String
             Get
@@ -75,7 +75,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 2017-08-03T02:33:30
+        '''  Looks up a localized string similar to 2018-09-23T01:40:50
         '''.
         '''</summary>
         Friend ReadOnly Property BuildDate() As String
@@ -119,15 +119,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 
+        '''  Looks up a localized string similar to Copyright (C) 2017-2018 Drew Naylor. Lincensed under Gnu GPLv3+.
+        '''
         '''HideSettingsPages is a GUI to set a Registry key value to hide individual pages in the Windows 10 Settings app on the Creators Update and newer.
         '''
         '''License notice:
         '''HideSettingsPages is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as
         '''published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
         '''
-        '''HideSettingsPages is distributed in the hope that it will be useful,
-        '''but WITHOUT ANY WARRANTY;  [rest of string was truncated]&quot;;.
+        '''HideSettingsPages is distribut [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property HideSettingsPagesInfo_TXT() As String
             Get
@@ -159,6 +159,47 @@ Namespace My.Resources
         Friend ReadOnly Property isStable() As String
             Get
                 Return ResourceManager.GetString("isStable", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to about
+        '''activation
+        '''appsfeatures
+        '''appsforwebsites
+        '''autoplay
+        '''backup
+        '''batterysaver
+        '''batterysaver-usagedetails
+        '''bluetooth
+        '''camera
+        '''colors
+        '''connecteddevices
+        '''cortana
+        '''cortana-moredetails
+        '''cortana-permissions
+        '''crossdevice
+        '''datausage
+        '''dateandtime
+        '''defaultapps
+        '''developers
+        '''deviceencryption
+        '''display
+        '''easeofaccess-closedcaptioning
+        '''easeofaccess-highcontrast
+        '''easeofaccess-keyboard
+        '''easeofaccess-magnifier
+        '''easeofaccess-mouse
+        '''easeofaccess-narrator
+        '''easeofaccess-otheroptions
+        '''emailandaccounts
+        '''extras
+        '''findmydevice
+        '''gam [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property pagesList_TXT() As String
+            Get
+                Return ResourceManager.GetString("pagesList_TXT", resourceCulture)
             End Get
         End Property
         
