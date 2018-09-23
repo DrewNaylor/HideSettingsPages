@@ -42,6 +42,7 @@ gaming-trueplay
 gaming-xboxnetworking
 holographic
 holographic-audio
+holographic-headset
 lockscreen
 maps
 mousetouchpad
