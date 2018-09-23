@@ -60,7 +60,6 @@ network-wifi
 network-wificalling
 nfctransactions
 notifications
-optionalfeatures
 otherusers
 pen
 personalization-background
