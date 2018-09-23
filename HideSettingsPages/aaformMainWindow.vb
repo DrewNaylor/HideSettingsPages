@@ -76,7 +76,7 @@ Public Class aaformMainWindow
 
         ' First, if there's "pagelist.txt" by the EXE, use that. Replace Unix line ending with Windows ones.
         If My.Computer.FileSystem.FileExists(My.Application.Info.DirectoryPath & "\pagelist.txt") Then
-            pageList = My.Application.Info.DirectoryPath & "\pagelist.txt".Replace(vbLf, vbCrLf)
+            pageList = IO.File.ReadAllText(My.Application.Info.DirectoryPath & "\pagelist.txt").Replace(vbLf, vbCrLf)
         Else
             ' Otherwise, use the built-in pageList resource. Replace Unix line ending with Windows ones.
             pageList = My.Resources.pagesList_TXT.Replace(vbLf, vbCrLf)
