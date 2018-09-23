@@ -69,6 +69,7 @@ powersleep
 printers
 privacy
 privacy-accountinfo
+privacy-activityhistory
 privacy-appdiagnostics
 privacy-backgroundapps
 privacy-calendar
