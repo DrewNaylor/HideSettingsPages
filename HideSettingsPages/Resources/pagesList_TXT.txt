@@ -29,6 +29,7 @@ easeofaccess-magnifier
 easeofaccess-mouse
 easeofaccess-narrator
 easeofaccess-otheroptions
+easeofaccess-speechrecognition
 emailandaccounts
 extras
 findmydevice
