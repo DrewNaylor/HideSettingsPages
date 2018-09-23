@@ -74,13 +74,19 @@ Public Class aaformMainWindow
         ' Make a string to store page list.
         Dim pageList As String = ""
 
-        ' First, if there's "pagelist.txt" by the EXE, use that.
+        ' First, if there's "pagelist.txt" by the EXE, use that. Replace Unix line ending with Windows ones.
         If My.Computer.FileSystem.FileExists(My.Application.Info.DirectoryPath & "\pagelist.txt") Then
             pageList = My.Application.Info.DirectoryPath & "\pagelist.txt".Replace(vbLf, vbCrLf)
         Else
-            ' Otherwise, use the built-in pageList resource.
+            ' Otherwise, use the built-in pageList resource. Replace Unix line ending with Windows ones.
             pageList = My.Resources.pagesList_TXT.Replace(vbLf, vbCrLf)
         End If
+
+        ' Now, take the pageList string and make the checkedlistbox use that string for items.
+        ' A delimiter is needed before continuing.
+        Dim delimiter As Char = ";"c
+        ' Replace all vbCrLf characters with semicolons.
+        pageList = pageList.Replace(vbCrLf, ";")
 #End Region
 
     End Sub
