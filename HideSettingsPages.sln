@@ -7,6 +7,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "HideSettingsPages", "HideSe
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "hsp_registry-helper", "hsp_registry-helper\hsp_registry-helper.vbproj", "{FBE5ABFD-5A61-49EB-BE55-85AE7748F1F1}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CrLf2Semicolon", "CrLf2Semicolon\CrLf2Semicolon.vbproj", "{49EA38DC-1F9F-48CE-83FC-91FE7BD35BB5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FBE5ABFD-5A61-49EB-BE55-85AE7748F1F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBE5ABFD-5A61-49EB-BE55-85AE7748F1F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBE5ABFD-5A61-49EB-BE55-85AE7748F1F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49EA38DC-1F9F-48CE-83FC-91FE7BD35BB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49EA38DC-1F9F-48CE-83FC-91FE7BD35BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49EA38DC-1F9F-48CE-83FC-91FE7BD35BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49EA38DC-1F9F-48CE-83FC-91FE7BD35BB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
