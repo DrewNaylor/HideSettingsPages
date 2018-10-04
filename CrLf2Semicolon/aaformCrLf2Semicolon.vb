@@ -40,4 +40,16 @@
         ' Write temp string to Output textbox.
         textboxOutput.Text = stringCrLfReplacedBySemicolons
     End Sub
+
+    Private Sub linklabelAbout_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linklabelAbout.LinkClicked
+        ' Show about dialog.
+        MessageBox.Show(My.Application.Info.Title & vbCrLf &
+                        "Version " & My.Application.Info.Version.ToString & vbCrLf &
+                        My.Application.Info.Description & vbCrLf &
+                        My.Application.Info.Copyright & vbCrLf &
+                        vbCrLf &
+                        "This application is part of the HideSettingsPages project." & vbCrLf &
+                        "You can get the code for HideSettingsPages from:" & vbCrLf &
+                        "https://github.com/DrewNaylor/HideSettingsPages/")
+    End Sub
 End Class

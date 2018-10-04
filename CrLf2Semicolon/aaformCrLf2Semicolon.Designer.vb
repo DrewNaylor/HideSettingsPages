@@ -32,6 +32,7 @@ Partial Class aaformCrLf2Semicolon
         Me.buttonSelectOutput = New System.Windows.Forms.Button()
         Me.checkboxConvertLf = New System.Windows.Forms.CheckBox()
         Me.tooltipConvertLf = New System.Windows.Forms.ToolTip(Me.components)
+        Me.linklabelAbout = New System.Windows.Forms.LinkLabel()
         Me.SuspendLayout()
         '
         'textboxInput
@@ -116,11 +117,22 @@ Partial Class aaformCrLf2Semicolon
         Me.tooltipConvertLf.ReshowDelay = 100
         Me.tooltipConvertLf.ToolTipTitle = "Also convert Lf characters"
         '
+        'linklabelAbout
+        '
+        Me.linklabelAbout.AutoSize = True
+        Me.linklabelAbout.Location = New System.Drawing.Point(631, 327)
+        Me.linklabelAbout.Name = "linklabelAbout"
+        Me.linklabelAbout.Size = New System.Drawing.Size(35, 13)
+        Me.linklabelAbout.TabIndex = 8
+        Me.linklabelAbout.TabStop = True
+        Me.linklabelAbout.Text = "About"
+        '
         'aaformCrLf2Semicolon
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.ClientSize = New System.Drawing.Size(678, 367)
+        Me.Controls.Add(Me.linklabelAbout)
         Me.Controls.Add(Me.checkboxConvertLf)
         Me.Controls.Add(Me.buttonSelectOutput)
         Me.Controls.Add(Me.buttonSelectInput)
@@ -145,4 +157,5 @@ Partial Class aaformCrLf2Semicolon
     Friend WithEvents buttonSelectOutput As Button
     Friend WithEvents checkboxConvertLf As CheckBox
     Friend WithEvents tooltipConvertLf As ToolTip
+    Friend WithEvents linklabelAbout As LinkLabel
 End Class
