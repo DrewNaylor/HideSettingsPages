@@ -24,6 +24,7 @@ Partial Class aaformCrLf2Semicolon
     Private Sub InitializeComponent()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.labelInput = New System.Windows.Forms.Label()
+        Me.buttonReplaceCrLfWithSemicolons = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -43,11 +44,21 @@ Partial Class aaformCrLf2Semicolon
         Me.labelInput.TabIndex = 1
         Me.labelInput.Text = "Input text with CrLf (Windows line endings) characters:"
         '
+        'buttonReplaceCrLfWithSemicolons
+        '
+        Me.buttonReplaceCrLfWithSemicolons.Location = New System.Drawing.Point(274, 138)
+        Me.buttonReplaceCrLfWithSemicolons.Name = "buttonReplaceCrLfWithSemicolons"
+        Me.buttonReplaceCrLfWithSemicolons.Size = New System.Drawing.Size(118, 55)
+        Me.buttonReplaceCrLfWithSemicolons.TabIndex = 2
+        Me.buttonReplaceCrLfWithSemicolons.Text = "Replace CrLf characters with semicolons    --->"
+        Me.buttonReplaceCrLfWithSemicolons.UseVisualStyleBackColor = True
+        '
         'aaformCrLf2Semicolon
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.ClientSize = New System.Drawing.Size(661, 367)
+        Me.Controls.Add(Me.buttonReplaceCrLfWithSemicolons)
         Me.Controls.Add(Me.labelInput)
         Me.Controls.Add(Me.TextBox1)
         Me.Name = "aaformCrLf2Semicolon"
@@ -59,4 +70,5 @@ Partial Class aaformCrLf2Semicolon
 
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents labelInput As Label
+    Friend WithEvents buttonReplaceCrLfWithSemicolons As Button
 End Class
