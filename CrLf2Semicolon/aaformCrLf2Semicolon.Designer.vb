@@ -24,12 +24,12 @@ Partial Class aaformCrLf2Semicolon
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'aaformMainWindow
+        'aaformCrLf2Semicolon
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
-        Me.ClientSize = New System.Drawing.Size(284, 261)
-        Me.Name = "aaformMainWindow"
+        Me.ClientSize = New System.Drawing.Size(661, 302)
+        Me.Name = "aaformCrLf2Semicolon"
         Me.Text = "CrLf2Semicolon"
         Me.ResumeLayout(False)
 
