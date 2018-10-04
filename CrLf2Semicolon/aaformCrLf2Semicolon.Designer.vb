@@ -29,6 +29,7 @@ Partial Class aaformCrLf2Semicolon
         Me.textboxOutput = New System.Windows.Forms.TextBox()
         Me.buttonSelectInput = New System.Windows.Forms.Button()
         Me.buttonSelectOutput = New System.Windows.Forms.Button()
+        Me.checkboxConvertLf = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'textboxInput
@@ -92,11 +93,22 @@ Partial Class aaformCrLf2Semicolon
         Me.buttonSelectOutput.Text = "Select all (output textbox)"
         Me.buttonSelectOutput.UseVisualStyleBackColor = True
         '
+        'checkboxConvertLf
+        '
+        Me.checkboxConvertLf.AutoSize = True
+        Me.checkboxConvertLf.Location = New System.Drawing.Point(274, 114)
+        Me.checkboxConvertLf.Name = "checkboxConvertLf"
+        Me.checkboxConvertLf.Size = New System.Drawing.Size(122, 43)
+        Me.checkboxConvertLf.TabIndex = 7
+        Me.checkboxConvertLf.Text = "Also convert Lf" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "characters (Unix line" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "endings)"
+        Me.checkboxConvertLf.UseVisualStyleBackColor = True
+        '
         'aaformCrLf2Semicolon
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.ClientSize = New System.Drawing.Size(678, 367)
+        Me.Controls.Add(Me.checkboxConvertLf)
         Me.Controls.Add(Me.buttonSelectOutput)
         Me.Controls.Add(Me.buttonSelectInput)
         Me.Controls.Add(Me.labelOutput)
@@ -118,4 +130,5 @@ Partial Class aaformCrLf2Semicolon
     Friend WithEvents textboxOutput As TextBox
     Friend WithEvents buttonSelectInput As Button
     Friend WithEvents buttonSelectOutput As Button
+    Friend WithEvents checkboxConvertLf As CheckBox
 End Class
