@@ -80,6 +80,30 @@ Public Class aaformCrLf2Semicolon
                         vbCrLf &
                         "This application is part of the HideSettingsPages project." & vbCrLf &
                         "You can get the code for HideSettingsPages from:" & vbCrLf &
-                        "https://github.com/DrewNaylor/HideSettingsPages/")
+                        "https://github.com/DrewNaylor/HideSettingsPages/" & vbCrLf &
+                        vbCrLf &
+                        "Below is part of the Gnu GPLv3+ as it applies to " & My.Application.Info.Title & "." & vbCrLf &
+                        "Visit http://www.gnu.org/licenses/gpl.html for the full license." & vbCrLf &
+                        vbCrLf &
+                        "CrLf2Semicolon is free software: you can redistribute it and/or modify" & vbCrLf &
+                        "it under the terms of the GNU General Public License as published by" & vbCrLf &
+                        "the Free Software Foundation, either version 3 of the License, or" & vbCrLf &
+                        "(at your option) any later version." & vbCrLf &
+                        vbCrLf &
+                        "CrLf2Semicolon is distributed in the hope that it will be useful," & vbCrLf &
+                        "but WITHOUT ANY WARRANTY; without even the implied warranty of" & vbCrLf &
+                        "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the" & vbCrLf &
+                        "GNU General Public License for more details." & vbCrLf &
+                        vbCrLf &
+                        "Copyright notice: Microsoft Windows and all related words and" & vbCrLf &
+                        "trademarks/registered trademarks owned by Microsoft in the United States" & vbCrLf &
+                        "and/or other countries are Copyright 2018 Microsoft Corporation. All" & vbCrLf &
+                        "Rights Reserved to Microsoft for Microsoft's copyrights, trademarks," & vbCrLf &
+                        "and registered trademarks." & vbCrLf &
+                        vbCrLf &
+                        "Any other companies mentioned own their respective copyrights/trademarks." & vbCrLf &
+                        vbCrLf &
+                        "Microsoft is not affiliated with either the HideSettingsPages project or" & vbCrLf &
+                        "Drew Naylor and does not endorse this software.")
     End Sub
 End Class
