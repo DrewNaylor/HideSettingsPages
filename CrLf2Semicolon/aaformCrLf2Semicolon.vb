@@ -32,5 +32,8 @@
         End If
         ' Replace vbCrLf characters in stringCrLfReplacedBySemicolons
         ' with semicolons.
+        stringCrLfReplacedBySemicolons = stringCrLfReplacedBySemicolons.Replace(vbCrLf, ";")
+        ' Write temp string to Output textbox.
+        textboxOutput.Text = stringCrLfReplacedBySemicolons
     End Sub
 End Class
