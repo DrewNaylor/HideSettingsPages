@@ -37,6 +37,7 @@ Partial Class aaformCrLf2Semicolon
         Me.textboxInput.Location = New System.Drawing.Point(12, 33)
         Me.textboxInput.Multiline = True
         Me.textboxInput.Name = "textboxInput"
+        Me.textboxInput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.textboxInput.Size = New System.Drawing.Size(256, 277)
         Me.textboxInput.TabIndex = 0
         '
@@ -72,6 +73,8 @@ Partial Class aaformCrLf2Semicolon
         Me.textboxOutput.Location = New System.Drawing.Point(410, 33)
         Me.textboxOutput.Multiline = True
         Me.textboxOutput.Name = "textboxOutput"
+        Me.textboxOutput.ReadOnly = True
+        Me.textboxOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.textboxOutput.Size = New System.Drawing.Size(256, 100)
         Me.textboxOutput.TabIndex = 3
         '
