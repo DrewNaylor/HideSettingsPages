@@ -1,4 +1,34 @@
-﻿Public Class aaformCrLf2Semicolon
+﻿'CrLf2Semicolon - Replaces CrLf characters with semicolons.
+'Copyright (C) 2018 Drew Naylor
+'CrLf2Semicolon is part of the HideSettingsPages project.
+'https://github.com/DrewNaylor/HideSettingsPages
+'
+'Microsoft Windows and all related words are copyright
+'and trademark Microsoft Corporation.
+'Microsoft is not affiliated with either the HideSettingsPages project or Drew Naylor
+'and does not endorse this software.
+'Any other companies mentioned own their respective copyrights/trademarks.
+'(Note that the copyright years include the years left out by the hyphen.)
+'
+'This file is part of CrLf2Semicolon
+'
+'CrLf2Semicolon is free software: you can redistribute it and/or modify
+'it under the terms of the GNU General Public License as published by
+'the Free Software Foundation, either version 3 of the License, or
+'(at your option) any later version.
+'
+'CrLf2Semicolon is distributed in the hope that it will be useful,
+'but WITHOUT ANY WARRANTY; without even the implied warranty of
+'MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+'GNU General Public License for more details.
+'
+'You should have received a copy of the GNU General Public License
+'along with CrLf2Semicolon.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+
+Public Class aaformCrLf2Semicolon
     Private Sub buttonSelectInput_Click(sender As Object, e As EventArgs) Handles buttonSelectInput.Click
         ' Select all text in Input textbox when clicked.
         textboxInput.Focus()
