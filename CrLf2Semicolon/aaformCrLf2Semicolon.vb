@@ -28,6 +28,10 @@
 
             ' This is only if the "Also convert Lf characters"
             ' checkbox is checked.
+
+            ' First, we need to replace all vbCrLf characters with
+            ' vbLf characters. Otherwise, lines will get cut off incorrectly.
+            stringCrLfReplacedBySemicolons = stringCrLfReplacedBySemicolons.Replace(vbCrLf, vbLf)
             stringCrLfReplacedBySemicolons = stringCrLfReplacedBySemicolons.Replace(vbLf, vbCrLf)
         End If
         ' Replace vbCrLf characters in stringCrLfReplacedBySemicolons

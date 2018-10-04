@@ -22,6 +22,7 @@ Partial Class aaformCrLf2Semicolon
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.textboxInput = New System.Windows.Forms.TextBox()
         Me.labelInput = New System.Windows.Forms.Label()
         Me.buttonReplaceCrLfWithSemicolons = New System.Windows.Forms.Button()
@@ -30,6 +31,7 @@ Partial Class aaformCrLf2Semicolon
         Me.buttonSelectInput = New System.Windows.Forms.Button()
         Me.buttonSelectOutput = New System.Windows.Forms.Button()
         Me.checkboxConvertLf = New System.Windows.Forms.CheckBox()
+        Me.tooltipConvertLf = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'textboxInput
@@ -104,7 +106,15 @@ Partial Class aaformCrLf2Semicolon
         Me.checkboxConvertLf.Size = New System.Drawing.Size(122, 43)
         Me.checkboxConvertLf.TabIndex = 7
         Me.checkboxConvertLf.Text = "Also convert Lf" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "characters (Unix line" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "endings)"
+        Me.tooltipConvertLf.SetToolTip(Me.checkboxConvertLf, "Try this if some (or all) semicolons don't show up correctly.")
         Me.checkboxConvertLf.UseVisualStyleBackColor = True
+        '
+        'tooltipConvertLf
+        '
+        Me.tooltipConvertLf.AutoPopDelay = 10000
+        Me.tooltipConvertLf.InitialDelay = 500
+        Me.tooltipConvertLf.ReshowDelay = 100
+        Me.tooltipConvertLf.ToolTipTitle = "Also convert Lf characters"
         '
         'aaformCrLf2Semicolon
         '
@@ -134,4 +144,5 @@ Partial Class aaformCrLf2Semicolon
     Friend WithEvents buttonSelectInput As Button
     Friend WithEvents buttonSelectOutput As Button
     Friend WithEvents checkboxConvertLf As CheckBox
+    Friend WithEvents tooltipConvertLf As ToolTip
 End Class
