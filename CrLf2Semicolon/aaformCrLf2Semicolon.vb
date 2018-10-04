@@ -104,6 +104,6 @@ Public Class aaformCrLf2Semicolon
                         "Any other companies mentioned own their respective copyrights/trademarks." & vbCrLf &
                         vbCrLf &
                         "Microsoft is not affiliated with either the HideSettingsPages project or" & vbCrLf &
-                        "Drew Naylor and does not endorse this software.")
+                        "Drew Naylor and does not endorse this software.", "About " & My.Application.Info.Title)
     End Sub
 End Class
