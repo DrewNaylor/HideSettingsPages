@@ -10,4 +10,15 @@
         textboxOutput.Focus()
         textboxOutput.SelectAll()
     End Sub
+
+    Private Sub buttonReplaceCrLfWithSemicolons_Click(sender As Object, e As EventArgs) Handles buttonReplaceCrLfWithSemicolons.Click
+        ' Take the text in the Input textbox and replace
+        ' all vbCrLf characters with semicolons, then
+        ' output the text in the Output textbox.
+
+        ' If the "Also convert Lf characters" checkbox
+        ' is checked, convert vbLf characters to vbCrLf
+        ' characters before replacing vbCrLf with
+        ' semicolons.
+    End Sub
 End Class
