@@ -15,10 +15,20 @@
         ' Take the text in the Input textbox and replace
         ' all vbCrLf characters with semicolons, then
         ' output the text in the Output textbox.
-
+        Dim stringCrLfReplacedBySemicolons As String = ""
         ' If the "Also convert Lf characters" checkbox
         ' is checked, convert vbLf characters to vbCrLf
         ' characters before replacing vbCrLf with
         ' semicolons.
+        If checkboxConvertLf.Checked = True Then
+            ' Assign a temporary variable to the text in the
+            ' Input column and replace vbLf characters with
+            ' vbCrLf characters at the same time.
+
+            ' This is only if the "Also convert Lf characters"
+            ' checkbox is checked.
+            stringCrLfReplacedBySemicolons = textboxInput.Text.Replace(vbLf, vbCrLf)
+
+        End If
     End Sub
 End Class
