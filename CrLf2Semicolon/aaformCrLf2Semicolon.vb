@@ -15,6 +15,8 @@
         ' Take the text in the Input textbox and replace
         ' all vbCrLf characters with semicolons, then
         ' output the text in the Output textbox.
+
+        ' First, store Input textbox text in temp string.
         Dim stringCrLfReplacedBySemicolons As String = textboxInput.Text
         ' If the "Also convert Lf characters" checkbox
         ' is checked, convert vbLf characters to vbCrLf
