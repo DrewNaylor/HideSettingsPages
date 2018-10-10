@@ -22,6 +22,7 @@ Partial Class aaformMainWindow
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(aaformMainWindow))
         Me.flowlayoutpanelMainWindow = New System.Windows.Forms.FlowLayoutPanel()
         Me.groupboxSettingsPageVisibility = New System.Windows.Forms.GroupBox()
@@ -31,6 +32,9 @@ Partial Class aaformMainWindow
         Me.groupboxPageList = New System.Windows.Forms.GroupBox()
         Me.panelScrollablePageList = New System.Windows.Forms.Panel()
         Me.checkedlistboxPageList = New System.Windows.Forms.CheckedListBox()
+        Me.contextmenuPageList = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.menuitemCheckAll = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menuitemUncheckAll = New System.Windows.Forms.ToolStripMenuItem()
         Me.labelChoosePages = New System.Windows.Forms.Label()
         Me.groupboxPreviewRegistryKeyValue = New System.Windows.Forms.GroupBox()
         Me.linklabelViewLarger = New System.Windows.Forms.LinkLabel()
@@ -57,6 +61,7 @@ Partial Class aaformMainWindow
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
         Me.panelScrollablePageList.SuspendLayout()
+        Me.contextmenuPageList.SuspendLayout()
         Me.groupboxPreviewRegistryKeyValue.SuspendLayout()
         Me.panelApplyUndoExit.SuspendLayout()
         Me.menubarMainWindow.SuspendLayout()
@@ -141,11 +146,30 @@ Partial Class aaformMainWindow
         'checkedlistboxPageList
         '
         Me.checkedlistboxPageList.CheckOnClick = True
+        Me.checkedlistboxPageList.ContextMenuStrip = Me.contextmenuPageList
         Me.checkedlistboxPageList.Location = New System.Drawing.Point(3, 22)
         Me.checkedlistboxPageList.Margin = New System.Windows.Forms.Padding(2)
         Me.checkedlistboxPageList.Name = "checkedlistboxPageList"
         Me.checkedlistboxPageList.Size = New System.Drawing.Size(311, 394)
         Me.checkedlistboxPageList.TabIndex = 17
+        '
+        'contextmenuPageList
+        '
+        Me.contextmenuPageList.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuitemCheckAll, Me.menuitemUncheckAll})
+        Me.contextmenuPageList.Name = "contextmenuPageList"
+        Me.contextmenuPageList.Size = New System.Drawing.Size(136, 48)
+        '
+        'menuitemCheckAll
+        '
+        Me.menuitemCheckAll.Name = "menuitemCheckAll"
+        Me.menuitemCheckAll.Size = New System.Drawing.Size(135, 22)
+        Me.menuitemCheckAll.Text = "Check all"
+        '
+        'menuitemUncheckAll
+        '
+        Me.menuitemUncheckAll.Name = "menuitemUncheckAll"
+        Me.menuitemUncheckAll.Size = New System.Drawing.Size(135, 22)
+        Me.menuitemUncheckAll.Text = "Uncheck all"
         '
         'labelChoosePages
         '
@@ -342,6 +366,7 @@ Partial Class aaformMainWindow
         Me.groupboxPageList.ResumeLayout(False)
         Me.panelScrollablePageList.ResumeLayout(False)
         Me.panelScrollablePageList.PerformLayout()
+        Me.contextmenuPageList.ResumeLayout(False)
         Me.groupboxPreviewRegistryKeyValue.ResumeLayout(False)
         Me.groupboxPreviewRegistryKeyValue.PerformLayout()
         Me.panelApplyUndoExit.ResumeLayout(False)
@@ -382,4 +407,7 @@ Partial Class aaformMainWindow
     Friend WithEvents menubarShowStartupWarningMessageButton As ToolStripMenuItem
     Friend WithEvents menubarShowRestorePointReminderMessageButton As ToolStripMenuItem
     Friend WithEvents menubarDirectlyApplyKeyValueButton As ToolStripMenuItem
+    Friend WithEvents contextmenuPageList As ContextMenuStrip
+    Friend WithEvents menuitemCheckAll As ToolStripMenuItem
+    Friend WithEvents menuitemUncheckAll As ToolStripMenuItem
 End Class
