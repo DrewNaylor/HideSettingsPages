@@ -25,6 +25,7 @@ Partial Class aaformMainWindow
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(aaformMainWindow))
         Me.flowlayoutpanelMainWindow = New System.Windows.Forms.FlowLayoutPanel()
         Me.groupboxSettingsPageVisibility = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.radiobuttonShowOnlyPages = New System.Windows.Forms.RadioButton()
         Me.radiobuttonHidePages = New System.Windows.Forms.RadioButton()
         Me.labelPageVisibility = New System.Windows.Forms.Label()
@@ -76,6 +77,7 @@ Partial Class aaformMainWindow
         '
         'groupboxSettingsPageVisibility
         '
+        Me.groupboxSettingsPageVisibility.Controls.Add(Me.Button1)
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.radiobuttonShowOnlyPages)
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.radiobuttonHidePages)
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.labelPageVisibility)
@@ -85,6 +87,15 @@ Partial Class aaformMainWindow
         Me.groupboxSettingsPageVisibility.TabIndex = 0
         Me.groupboxSettingsPageVisibility.TabStop = False
         Me.groupboxSettingsPageVisibility.Text = "Settings page visibility"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(178, 42)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 3
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'radiobuttonShowOnlyPages
         '
@@ -382,4 +393,5 @@ Partial Class aaformMainWindow
     Friend WithEvents menubarShowStartupWarningMessageButton As ToolStripMenuItem
     Friend WithEvents menubarShowRestorePointReminderMessageButton As ToolStripMenuItem
     Friend WithEvents menubarDirectlyApplyKeyValueButton As ToolStripMenuItem
+    Friend WithEvents Button1 As Button
 End Class
