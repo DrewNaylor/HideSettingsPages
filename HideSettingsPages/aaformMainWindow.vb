@@ -474,10 +474,10 @@ Public Class aaformMainWindow
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Debug.WriteLine("Total items: " & checkedlistboxPageList.Items.Count)
+        'Debug.WriteLine("Total items: " & checkedlistboxPageList.Items.Count)
         For i As Integer = 0 To checkedlistboxPageList.Items.Count - 1
             checkedlistboxPageList.SetItemChecked(i, True)
-            Debug.WriteLine("Item #{0} checked.", i)
+            'Debug.WriteLine("Item #{0} checked.", i)
         Next
     End Sub
 #End Region
