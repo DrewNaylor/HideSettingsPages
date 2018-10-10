@@ -1,4 +1,8 @@
 # HideSettingsPages
+Project build status: [![Build status](https://ci.appveyor.com/api/projects/status/x2rnocd9r332x18i?svg=true)](https://ci.appveyor.com/project/DrewNaylor/hidesettingspages)
+
+Master branch build status: [![Build status](https://ci.appveyor.com/api/projects/status/x2rnocd9r332x18i/branch/master?svg=true)](https://ci.appveyor.com/project/DrewNaylor/hidesettingspages/branch/master)
+
 GUI to set a Registry key value to hide individual pages in the Windows 10 Settings app on the Creators Update and newer. Microsoft is not affiliated with either the HideSettingsPages project or Drew Naylor and does not endorse this software.
 
 
