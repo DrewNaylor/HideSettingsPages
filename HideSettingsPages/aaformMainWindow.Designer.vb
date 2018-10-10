@@ -33,6 +33,9 @@ Partial Class aaformMainWindow
         Me.groupboxPageList = New System.Windows.Forms.GroupBox()
         Me.panelScrollablePageList = New System.Windows.Forms.Panel()
         Me.checkedlistboxPageList = New System.Windows.Forms.CheckedListBox()
+        Me.contextmenuPageList = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.menuitemCheckAll = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menuitemUncheckAll = New System.Windows.Forms.ToolStripMenuItem()
         Me.labelChoosePages = New System.Windows.Forms.Label()
         Me.groupboxPreviewRegistryKeyValue = New System.Windows.Forms.GroupBox()
         Me.linklabelViewLarger = New System.Windows.Forms.LinkLabel()
@@ -55,17 +58,14 @@ Partial Class aaformMainWindow
         Me.menubarAuthorsButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarLicenseButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarAboutButton = New System.Windows.Forms.ToolStripMenuItem()
-        Me.contextmenuPageList = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.menuitemCheckAll = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menuitemUncheckAll = New System.Windows.Forms.ToolStripMenuItem()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
         Me.panelScrollablePageList.SuspendLayout()
+        Me.contextmenuPageList.SuspendLayout()
         Me.groupboxPreviewRegistryKeyValue.SuspendLayout()
         Me.panelApplyUndoExit.SuspendLayout()
         Me.menubarMainWindow.SuspendLayout()
-        Me.contextmenuPageList.SuspendLayout()
         Me.SuspendLayout()
         '
         'flowlayoutpanelMainWindow
@@ -163,6 +163,24 @@ Partial Class aaformMainWindow
         Me.checkedlistboxPageList.Name = "checkedlistboxPageList"
         Me.checkedlistboxPageList.Size = New System.Drawing.Size(311, 394)
         Me.checkedlistboxPageList.TabIndex = 17
+        '
+        'contextmenuPageList
+        '
+        Me.contextmenuPageList.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuitemCheckAll, Me.menuitemUncheckAll})
+        Me.contextmenuPageList.Name = "contextmenuPageList"
+        Me.contextmenuPageList.Size = New System.Drawing.Size(153, 70)
+        '
+        'menuitemCheckAll
+        '
+        Me.menuitemCheckAll.Name = "menuitemCheckAll"
+        Me.menuitemCheckAll.Size = New System.Drawing.Size(152, 22)
+        Me.menuitemCheckAll.Text = "Check all"
+        '
+        'menuitemUncheckAll
+        '
+        Me.menuitemUncheckAll.Name = "menuitemUncheckAll"
+        Me.menuitemUncheckAll.Size = New System.Drawing.Size(152, 22)
+        Me.menuitemUncheckAll.Text = "Uncheck all"
         '
         'labelChoosePages
         '
@@ -339,24 +357,6 @@ Partial Class aaformMainWindow
         Me.menubarAboutButton.Size = New System.Drawing.Size(210, 22)
         Me.menubarAboutButton.Text = "&About"
         '
-        'contextmenuPageList
-        '
-        Me.contextmenuPageList.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuitemCheckAll, Me.menuitemUncheckAll})
-        Me.contextmenuPageList.Name = "contextmenuPageList"
-        Me.contextmenuPageList.Size = New System.Drawing.Size(136, 48)
-        '
-        'menuitemCheckAll
-        '
-        Me.menuitemCheckAll.Name = "menuitemCheckAll"
-        Me.menuitemCheckAll.Size = New System.Drawing.Size(135, 22)
-        Me.menuitemCheckAll.Text = "Check all"
-        '
-        'menuitemUncheckAll
-        '
-        Me.menuitemUncheckAll.Name = "menuitemUncheckAll"
-        Me.menuitemUncheckAll.Size = New System.Drawing.Size(135, 22)
-        Me.menuitemUncheckAll.Text = "Uncheck all"
-        '
         'aaformMainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -377,12 +377,12 @@ Partial Class aaformMainWindow
         Me.groupboxPageList.ResumeLayout(False)
         Me.panelScrollablePageList.ResumeLayout(False)
         Me.panelScrollablePageList.PerformLayout()
+        Me.contextmenuPageList.ResumeLayout(False)
         Me.groupboxPreviewRegistryKeyValue.ResumeLayout(False)
         Me.groupboxPreviewRegistryKeyValue.PerformLayout()
         Me.panelApplyUndoExit.ResumeLayout(False)
         Me.menubarMainWindow.ResumeLayout(False)
         Me.menubarMainWindow.PerformLayout()
-        Me.contextmenuPageList.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
