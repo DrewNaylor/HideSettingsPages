@@ -265,42 +265,33 @@ Public Class aaformMainWindow
 #Region "Context menus"
     Private Sub menuitemCheckAll_Click(sender As Object, e As EventArgs) Handles menuitemCheckAll.Click
         ' When clicked, all the checkboxes in the CheckedListBox will be checked.
-        ' If you're having trouble making this work in your own project, change
-        ' the control and variable names in the commented-out debug code
-        ' to match your project and it might help in the debug process.
+        ' Code copied to its own sub.
 
-
-        'Debug.WriteLine("Total items: " & checkedlistboxPageList.Items.Count)
-
-        For i As Integer = 0 To checkedlistboxPageList.Items.Count - 1
-            ' Above code goes from an integer (i) set to 0, to the entire
-            ' count of the items in the checkedlistbox, minus 1 to stay in bounds.
-            checkedlistboxPageList.SetItemChecked(i, True)
-            ' Above code checks all those items.
-
-            'Debug.WriteLine("Item #{0} checked.", i)
-        Next
-        ' And repeat.
+        itemCheckSetter(True)
     End Sub
 
     Private Sub menuitemUncheckAll_Click(sender As Object, e As EventArgs) Handles menuitemUncheckAll.Click
         ' When clicked, all the checkboxes in the CheckedListBox will be unchecked.
-        ' If you're having trouble making this work in your own project, change
-        ' the control and variable names in the commented-out debug code
-        ' to match your project and it might help in the debug process.
+        ' Code copied to its own sub.
 
+        itemCheckSetter(False)
+    End Sub
 
-        'Debug.WriteLine("Total items: " & checkedlistboxPageList.Items.Count)
+    Private Sub itemCheckSetter(checkAllItems As Boolean)
+        ' This is the code that handles checking and unchecking the checkboxes
+        ' in the page list.
+        ' Code copied from original subs used for handling the "Click" event
+        ' on the "Check all"/"Uncheck all" context menu buttons.
 
         For i As Integer = 0 To checkedlistboxPageList.Items.Count - 1
             ' Above code goes from an integer (i) set to 0, to the entire
             ' count of the items in the checkedlistbox, minus 1 to stay in bounds.
-            checkedlistboxPageList.SetItemChecked(i, False)
-            ' Above code unchecks all those items.
-
-            'Debug.WriteLine("Item #{0} unchecked.", i)
+            checkedlistboxPageList.SetItemChecked(i, checkAllItems)
+            ' Above code unchecks or checks all those items, based on checkAllItems.
+            ' If checkAllItems is = "False", all items will be unchecked.
+            ' Otherwise, if it's = "True", all the items will be checked.
         Next
-        ' And repeat.
+        ' And repeat until finished.
     End Sub
 #End Region
 
