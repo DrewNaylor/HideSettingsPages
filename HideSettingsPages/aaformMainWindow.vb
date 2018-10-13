@@ -277,11 +277,17 @@ Public Class aaformMainWindow
         itemCheckSetter(False)
     End Sub
 
-    Private Sub itemCheckSetter(checkAllItems As Boolean)
+    Private Async Sub itemCheckSetter(checkAllItems As Boolean)
         ' This is the code that handles checking and unchecking the checkboxes
         ' in the page list.
         ' Code copied from original subs used for handling the "Click" event
         ' on the "Check all"/"Uncheck all" context menu buttons.
+
+        ' Before unchecking/checking all items in the page list,
+        ' disable the page list and "Apply" button.
+
+        checkedlistboxPageList.Enabled = False
+        buttonApplyChanges.Enabled = False
 
         For i As Integer = 0 To checkedlistboxPageList.Items.Count - 1
             ' Above code goes from an integer (i) set to 0, to the entire
@@ -290,8 +296,15 @@ Public Class aaformMainWindow
             ' Above code unchecks or checks all those items, based on checkAllItems.
             ' If checkAllItems is = "False", all items will be unchecked.
             ' Otherwise, if it's = "True", all the items will be checked.
+            Await Task.Delay(1)
+
         Next
         ' And repeat until finished.
+
+        ' Now enable controls.
+        checkedlistboxPageList.Enabled = True
+        buttonApplyChanges.Enabled = True
+
     End Sub
 #End Region
 
