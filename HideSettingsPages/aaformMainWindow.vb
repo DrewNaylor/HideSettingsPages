@@ -277,7 +277,7 @@ Public Class aaformMainWindow
         itemCheckSetter(False)
     End Sub
 
-    Private Async Sub itemCheckSetter(checkAllItems As Boolean)
+    Private Sub itemCheckSetter(checkAllItems As Boolean)
         ' This is the code that handles checking and unchecking the checkboxes
         ' in the page list.
         ' Code copied from original subs used for handling the "Click" event
@@ -296,8 +296,6 @@ Public Class aaformMainWindow
             ' Above code unchecks or checks all those items, based on checkAllItems.
             ' If checkAllItems is = "False", all items will be unchecked.
             ' Otherwise, if it's = "True", all the items will be checked.
-            Await Task.Delay(1)
-
         Next
         ' And repeat until finished.
 
