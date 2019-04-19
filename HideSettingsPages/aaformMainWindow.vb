@@ -313,6 +313,11 @@ Public Class aaformMainWindow
         checkedlistboxPageList.Enabled = True
         buttonApplyChanges.Enabled = True
 
+        ' Focus the page list so that the key preview thing doesn't
+        ' get focused. There's not much of a point in focusing that
+        ' right now.
+        checkedlistboxPageList.Focus()
+
     End Sub
 #End Region
 
