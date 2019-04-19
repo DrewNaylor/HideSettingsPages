@@ -45,6 +45,8 @@ Partial Class aaformMainWindow
         Me.buttonUndoChanges = New System.Windows.Forms.Button()
         Me.menubarMainWindow = New System.Windows.Forms.MenuStrip()
         Me.menubarFileMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarLaunchSettings = New System.Windows.Forms.ToolStripMenuItem()
+        Me.zSeparatorAboveKeyValueStuff = New System.Windows.Forms.ToolStripSeparator()
         Me.menubarDirectlyApplyKeyValueButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarVerifyKeyValueButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarExitButton = New System.Windows.Forms.ToolStripMenuItem()
@@ -57,8 +59,6 @@ Partial Class aaformMainWindow
         Me.menubarAuthorsButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarLicenseButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarAboutButton = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menubarLaunchSettings = New System.Windows.Forms.ToolStripMenuItem()
-        Me.zSeparatorAboveKeyValueStuff = New System.Windows.Forms.ToolStripSeparator()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
@@ -153,6 +153,7 @@ Partial Class aaformMainWindow
         Me.checkedlistboxPageList.Margin = New System.Windows.Forms.Padding(2)
         Me.checkedlistboxPageList.Name = "checkedlistboxPageList"
         Me.checkedlistboxPageList.Size = New System.Drawing.Size(311, 394)
+        Me.checkedlistboxPageList.Sorted = True
         Me.checkedlistboxPageList.TabIndex = 17
         '
         'contextmenuPageList
@@ -269,6 +270,17 @@ Partial Class aaformMainWindow
         Me.menubarFileMenu.Size = New System.Drawing.Size(37, 20)
         Me.menubarFileMenu.Text = "&File"
         '
+        'menubarLaunchSettings
+        '
+        Me.menubarLaunchSettings.Name = "menubarLaunchSettings"
+        Me.menubarLaunchSettings.Size = New System.Drawing.Size(249, 22)
+        Me.menubarLaunchSettings.Text = "&Launch Settings app"
+        '
+        'zSeparatorAboveKeyValueStuff
+        '
+        Me.zSeparatorAboveKeyValueStuff.Name = "zSeparatorAboveKeyValueStuff"
+        Me.zSeparatorAboveKeyValueStuff.Size = New System.Drawing.Size(246, 6)
+        '
         'menubarDirectlyApplyKeyValueButton
         '
         Me.menubarDirectlyApplyKeyValueButton.Name = "menubarDirectlyApplyKeyValueButton"
@@ -347,17 +359,6 @@ Partial Class aaformMainWindow
         Me.menubarAboutButton.Name = "menubarAboutButton"
         Me.menubarAboutButton.Size = New System.Drawing.Size(210, 22)
         Me.menubarAboutButton.Text = "&About"
-        '
-        'menubarLaunchSettings
-        '
-        Me.menubarLaunchSettings.Name = "menubarLaunchSettings"
-        Me.menubarLaunchSettings.Size = New System.Drawing.Size(249, 22)
-        Me.menubarLaunchSettings.Text = "&Launch Settings app"
-        '
-        'zSeparatorAboveKeyValueStuff
-        '
-        Me.zSeparatorAboveKeyValueStuff.Name = "zSeparatorAboveKeyValueStuff"
-        Me.zSeparatorAboveKeyValueStuff.Size = New System.Drawing.Size(246, 6)
         '
         'aaformMainWindow
         '
