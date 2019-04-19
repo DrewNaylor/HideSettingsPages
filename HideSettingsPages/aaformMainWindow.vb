@@ -516,6 +516,11 @@ Public Class aaformMainWindow
             End Select
         End If
     End Sub
+
+    Private Sub menubarLaunchSettings_Click(sender As Object, e As EventArgs) Handles menubarLaunchSettings.Click
+        'Try
+        Process.Start("ms-settings:")
+    End Sub
 #End Region
 #End Region
 #End Region

@@ -57,6 +57,8 @@ Partial Class aaformMainWindow
         Me.menubarAuthorsButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarLicenseButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarAboutButton = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarLaunchSettings = New System.Windows.Forms.ToolStripMenuItem()
+        Me.zSeparatorAboveKeyValueStuff = New System.Windows.Forms.ToolStripSeparator()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
@@ -262,7 +264,7 @@ Partial Class aaformMainWindow
         '
         'menubarFileMenu
         '
-        Me.menubarFileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarDirectlyApplyKeyValueButton, Me.menubarVerifyKeyValueButton, Me.menubarExitButton})
+        Me.menubarFileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarLaunchSettings, Me.zSeparatorAboveKeyValueStuff, Me.menubarDirectlyApplyKeyValueButton, Me.menubarVerifyKeyValueButton, Me.menubarExitButton})
         Me.menubarFileMenu.Name = "menubarFileMenu"
         Me.menubarFileMenu.Size = New System.Drawing.Size(37, 20)
         Me.menubarFileMenu.Text = "&File"
@@ -346,6 +348,17 @@ Partial Class aaformMainWindow
         Me.menubarAboutButton.Size = New System.Drawing.Size(210, 22)
         Me.menubarAboutButton.Text = "&About"
         '
+        'menubarLaunchSettings
+        '
+        Me.menubarLaunchSettings.Name = "menubarLaunchSettings"
+        Me.menubarLaunchSettings.Size = New System.Drawing.Size(249, 22)
+        Me.menubarLaunchSettings.Text = "&Launch Settings app"
+        '
+        'zSeparatorAboveKeyValueStuff
+        '
+        Me.zSeparatorAboveKeyValueStuff.Name = "zSeparatorAboveKeyValueStuff"
+        Me.zSeparatorAboveKeyValueStuff.Size = New System.Drawing.Size(246, 6)
+        '
         'aaformMainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -410,4 +423,6 @@ Partial Class aaformMainWindow
     Friend WithEvents contextmenuPageList As ContextMenuStrip
     Friend WithEvents menuitemCheckAll As ToolStripMenuItem
     Friend WithEvents menuitemUncheckAll As ToolStripMenuItem
+    Friend WithEvents menubarLaunchSettings As ToolStripMenuItem
+    Friend WithEvents zSeparatorAboveKeyValueStuff As ToolStripSeparator
 End Class
