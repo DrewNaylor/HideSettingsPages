@@ -521,8 +521,8 @@ Public Class aaformMainWindow
         Try
             Process.Start("ms-settings:")
         Catch ex As System.ComponentModel.Win32Exception
-            MessageBox.Show("We couldn't launch the Settings app, which means that this app is likely running on Windows 7. Please run it on Windows 10" &
-                            "for best results.", "Couldn't launch Settings app", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Sorry, we couldn't launch the Settings app, which means that HideSettingsPages is likely running on Windows 7. Please run it on Windows 10" &
+                            " for best results.", "Couldn't launch Settings app", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 #End Region
