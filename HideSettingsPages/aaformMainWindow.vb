@@ -121,6 +121,16 @@ Public Class aaformMainWindow
         Me.Close()
     End Sub
 
+    Private Sub menubarLaunchSettings_Click(sender As Object, e As EventArgs) Handles menubarLaunchSettings.Click
+        ' Attempt to open the Settings app. If on Windows 7, this won't work, so the exception must be handled.
+        Try
+            Process.Start("ms-settings:")
+        Catch ex As System.ComponentModel.Win32Exception
+            MessageBox.Show("Sorry, we couldn't launch the Settings app, which means that HideSettingsPages is likely running on Windows 7. Please run it on Windows 10" &
+                            " for best results.", "Couldn't launch Settings app", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
     Private Sub menubarDirectlyApplyKeyValueButton_Click(sender As Object, e As EventArgs) Handles menubarDirectlyApplyKeyValueButton.Click
         ' Open a window so that the user can just type in the pages they want to show or hide.
         aaformDirectlyApplyKeyValue.ShowDialog(Me)
@@ -515,15 +525,6 @@ Public Class aaformMainWindow
                 Case MsgBoxResult.No
             End Select
         End If
-    End Sub
-
-    Private Sub menubarLaunchSettings_Click(sender As Object, e As EventArgs) Handles menubarLaunchSettings.Click
-        Try
-            Process.Start("ms-settings:")
-        Catch ex As System.ComponentModel.Win32Exception
-            MessageBox.Show("Sorry, we couldn't launch the Settings app, which means that HideSettingsPages is likely running on Windows 7. Please run it on Windows 10" &
-                            " for best results.", "Couldn't launch Settings app", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
     End Sub
 #End Region
 #End Region
