@@ -2,7 +2,7 @@
 'key value chosen in HideSettingsPages. Can also apply/remove key value via arguments
 'and show the current value in the Registry, also with arguments.
 'This key value will hide or show pages in the Windows 10 Settings app on the Creators Update and newer.
-'Copyright (C) 2017-2018 Drew Naylor
+'Copyright (C) 2017-2019 Drew Naylor
 'Microsoft Windows and all related words are copyright
 'and trademark Microsoft Corporation.
 'Microsoft is not affiliated with either the HideSettingsPages project or Drew Naylor

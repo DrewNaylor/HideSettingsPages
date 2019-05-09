@@ -1,6 +1,6 @@
 ﻿'HideSettingsPages - GUI to set a Registry key value to hide individual pages
 'in the Windows 10 Settings app on the Creators Update and newer.
-'Copyright (C) 2017-2018 Drew Naylor
+'Copyright (C) 2017-2019 Drew Naylor
 'Microsoft Windows and all related words are copyright
 'and trademark Microsoft Corporation.
 'Microsoft is not affiliated with either the HideSettingsPages project or Drew Naylor

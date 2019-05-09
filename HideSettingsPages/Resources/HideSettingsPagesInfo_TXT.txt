@@ -1,4 +1,4 @@
-Copyright (C) 2017-2018 Drew Naylor. Lincensed under Gnu GPLv3+.
+Copyright (C) 2017-2019 Drew Naylor. Lincensed under Gnu GPLv3+.
 
 HideSettingsPages is a GUI to set a Registry key value to hide individual pages in the Windows 10 Settings app on the Creators Update and newer.
 
