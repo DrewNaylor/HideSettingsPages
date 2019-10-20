@@ -22,24 +22,28 @@ Partial Class aaformDirectlyApplyKeyValue
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.flowlayoutpanelBox = New System.Windows.Forms.FlowLayoutPanel()
+        Me.labelTypePageOrList = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'flowlayoutpanelBox
+        'labelTypePageOrList
         '
-        Me.flowlayoutpanelBox.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.flowlayoutpanelBox.Location = New System.Drawing.Point(0, 0)
-        Me.flowlayoutpanelBox.Name = "flowlayoutpanelBox"
-        Me.flowlayoutpanelBox.Size = New System.Drawing.Size(412, 184)
-        Me.flowlayoutpanelBox.TabIndex = 0
+        Me.labelTypePageOrList.AutoSize = True
+        Me.labelTypePageOrList.Location = New System.Drawing.Point(13, 13)
+        Me.labelTypePageOrList.Name = "labelTypePageOrList"
+        Me.labelTypePageOrList.Size = New System.Drawing.Size(489, 68)
+        Me.labelTypePageOrList.TabIndex = 0
+        Me.labelTypePageOrList.Text = "Type a page or list of pages to hide or show only and HideSettingsPages will" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "app" &
+    "ly the key to the Registry so the relevant pages are hidden in Settings." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Form" &
+    "atting example: ""hide:about;display"""
         '
         'aaformDirectlyApplyKeyValue
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
-        Me.ClientSize = New System.Drawing.Size(412, 184)
-        Me.Controls.Add(Me.flowlayoutpanelBox)
+        Me.ClientSize = New System.Drawing.Size(515, 230)
+        Me.Controls.Add(Me.labelTypePageOrList)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "aaformDirectlyApplyKeyValue"
@@ -47,8 +51,9 @@ Partial Class aaformDirectlyApplyKeyValue
         Me.ShowInTaskbar = False
         Me.Text = "Directly Apply Key Value"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents flowlayoutpanelBox As FlowLayoutPanel
+    Friend WithEvents labelTypePageOrList As Label
 End Class
