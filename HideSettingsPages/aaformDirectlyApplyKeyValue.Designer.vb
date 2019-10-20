@@ -23,6 +23,8 @@ Partial Class aaformDirectlyApplyKeyValue
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.labelTypePageOrList = New System.Windows.Forms.Label()
+        Me.labelValue = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'labelTypePageOrList
@@ -33,14 +35,32 @@ Partial Class aaformDirectlyApplyKeyValue
         Me.labelTypePageOrList.Size = New System.Drawing.Size(489, 68)
         Me.labelTypePageOrList.TabIndex = 0
         Me.labelTypePageOrList.Text = "Type a page or list of pages to hide or show only and HideSettingsPages will" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "app" &
-    "ly the key to the Registry so the relevant pages are hidden in Settings." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Form" &
+    "ly the key value to the Registry to hide the relevant pages in Settings." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Form" &
     "atting example: ""hide:about;display"""
+        '
+        'labelValue
+        '
+        Me.labelValue.AutoSize = True
+        Me.labelValue.Location = New System.Drawing.Point(13, 116)
+        Me.labelValue.Name = "labelValue"
+        Me.labelValue.Size = New System.Drawing.Size(74, 17)
+        Me.labelValue.TabIndex = 1
+        Me.labelValue.Text = "Key value:"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(94, 116)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(408, 22)
+        Me.TextBox1.TabIndex = 2
         '
         'aaformDirectlyApplyKeyValue
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.ClientSize = New System.Drawing.Size(515, 230)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.labelValue)
         Me.Controls.Add(Me.labelTypePageOrList)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
@@ -56,4 +76,6 @@ Partial Class aaformDirectlyApplyKeyValue
     End Sub
 
     Friend WithEvents labelTypePageOrList As Label
+    Friend WithEvents labelValue As Label
+    Friend WithEvents TextBox1 As TextBox
 End Class
