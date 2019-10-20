@@ -28,6 +28,7 @@ Partial Class aaformDirectlyApplyKeyValue
         Me.buttonApply = New System.Windows.Forms.Button()
         Me.buttonUndo = New System.Windows.Forms.Button()
         Me.buttonClose = New System.Windows.Forms.Button()
+        Me.buttonClearTextbox = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'labelTypePageOrList
@@ -52,14 +53,14 @@ Partial Class aaformDirectlyApplyKeyValue
         '
         'textboxKeyValue
         '
-        Me.textboxKeyValue.Location = New System.Drawing.Point(93, 108)
+        Me.textboxKeyValue.Location = New System.Drawing.Point(89, 108)
         Me.textboxKeyValue.Name = "textboxKeyValue"
-        Me.textboxKeyValue.Size = New System.Drawing.Size(408, 22)
+        Me.textboxKeyValue.Size = New System.Drawing.Size(332, 22)
         Me.textboxKeyValue.TabIndex = 2
         '
         'buttonApply
         '
-        Me.buttonApply.Location = New System.Drawing.Point(69, 151)
+        Me.buttonApply.Location = New System.Drawing.Point(89, 151)
         Me.buttonApply.Name = "buttonApply"
         Me.buttonApply.Size = New System.Drawing.Size(134, 35)
         Me.buttonApply.TabIndex = 3
@@ -68,7 +69,7 @@ Partial Class aaformDirectlyApplyKeyValue
         '
         'buttonUndo
         '
-        Me.buttonUndo.Location = New System.Drawing.Point(217, 151)
+        Me.buttonUndo.Location = New System.Drawing.Point(229, 151)
         Me.buttonUndo.Name = "buttonUndo"
         Me.buttonUndo.Size = New System.Drawing.Size(134, 35)
         Me.buttonUndo.TabIndex = 4
@@ -77,18 +78,28 @@ Partial Class aaformDirectlyApplyKeyValue
         '
         'buttonClose
         '
-        Me.buttonClose.Location = New System.Drawing.Point(365, 151)
+        Me.buttonClose.Location = New System.Drawing.Point(369, 151)
         Me.buttonClose.Name = "buttonClose"
         Me.buttonClose.Size = New System.Drawing.Size(134, 35)
         Me.buttonClose.TabIndex = 5
         Me.buttonClose.Text = "Close"
         Me.buttonClose.UseVisualStyleBackColor = True
         '
+        'buttonClearTextbox
+        '
+        Me.buttonClearTextbox.Location = New System.Drawing.Point(427, 107)
+        Me.buttonClearTextbox.Name = "buttonClearTextbox"
+        Me.buttonClearTextbox.Size = New System.Drawing.Size(76, 25)
+        Me.buttonClearTextbox.TabIndex = 6
+        Me.buttonClearTextbox.Text = "Clear"
+        Me.buttonClearTextbox.UseVisualStyleBackColor = True
+        '
         'aaformDirectlyApplyKeyValue
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.ClientSize = New System.Drawing.Size(515, 198)
+        Me.Controls.Add(Me.buttonClearTextbox)
         Me.Controls.Add(Me.buttonClose)
         Me.Controls.Add(Me.buttonUndo)
         Me.Controls.Add(Me.buttonApply)
@@ -114,4 +125,5 @@ Partial Class aaformDirectlyApplyKeyValue
     Friend WithEvents buttonApply As Button
     Friend WithEvents buttonUndo As Button
     Friend WithEvents buttonClose As Button
+    Friend WithEvents buttonClearTextbox As Button
 End Class

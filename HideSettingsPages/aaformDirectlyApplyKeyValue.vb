@@ -42,4 +42,9 @@ Public Class aaformDirectlyApplyKeyValue
         ' Close window.
         Me.Close()
     End Sub
+
+    Private Sub buttonClearTextbox_Click(sender As Object, e As EventArgs) Handles buttonClearTextbox.Click
+        ' Clear the textbox.
+        textboxKeyValue.Clear()
+    End Sub
 End Class
