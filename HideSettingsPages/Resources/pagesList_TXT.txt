@@ -10,6 +10,7 @@ camera
 colors
 connecteddevices
 cortana
+cortana-talktocortana
 cortana-moredetails
 cortana-notifications
 cortana-permissions
@@ -48,6 +49,7 @@ holographic-audio
 holographic-headset
 lockscreen
 maps
+mobile-devices
 mousetouchpad
 multitasking
 network-airplanemode
@@ -75,6 +77,7 @@ privacy-activityhistory
 privacy-appdiagnostics
 privacy-automaticfiledownloads
 privacy-backgroundapps
+privacy-broadfilesystemaccess
 privacy-calendar
 privacy-callhistory
 privacy-contacts
