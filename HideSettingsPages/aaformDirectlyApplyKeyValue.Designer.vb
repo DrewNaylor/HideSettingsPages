@@ -24,7 +24,7 @@ Partial Class aaformDirectlyApplyKeyValue
     Private Sub InitializeComponent()
         Me.labelTypePageOrList = New System.Windows.Forms.Label()
         Me.labelValue = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.textboxKeyValue = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'labelTypePageOrList
@@ -47,19 +47,19 @@ Partial Class aaformDirectlyApplyKeyValue
         Me.labelValue.TabIndex = 1
         Me.labelValue.Text = "Key value:"
         '
-        'TextBox1
+        'textboxKeyValue
         '
-        Me.TextBox1.Location = New System.Drawing.Point(94, 116)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(408, 22)
-        Me.TextBox1.TabIndex = 2
+        Me.textboxKeyValue.Location = New System.Drawing.Point(94, 116)
+        Me.textboxKeyValue.Name = "textboxKeyValue"
+        Me.textboxKeyValue.Size = New System.Drawing.Size(408, 22)
+        Me.textboxKeyValue.TabIndex = 2
         '
         'aaformDirectlyApplyKeyValue
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.ClientSize = New System.Drawing.Size(515, 230)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.textboxKeyValue)
         Me.Controls.Add(Me.labelValue)
         Me.Controls.Add(Me.labelTypePageOrList)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -77,5 +77,5 @@ Partial Class aaformDirectlyApplyKeyValue
 
     Friend WithEvents labelTypePageOrList As Label
     Friend WithEvents labelValue As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents textboxKeyValue As TextBox
 End Class
