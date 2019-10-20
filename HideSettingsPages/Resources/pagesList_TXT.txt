@@ -18,10 +18,12 @@ datausage
 dateandtime
 defaultapps
 developers
+devices-touchpad
 display
 easeofaccess-audio
 easeofaccess-closedcaptioning
 easeofaccess-colorfilter
+easeofaccess-cursorandpointersize
 easeofaccess-display
 easeofaccess-eyecontrol
 easeofaccess-highcontrast
@@ -80,6 +82,7 @@ privacy-customdevices
 privacy-documents
 privacy-email
 privacy-feedback
+privacy-general
 privacy-location
 privacy-messaging
 privacy-microphone
