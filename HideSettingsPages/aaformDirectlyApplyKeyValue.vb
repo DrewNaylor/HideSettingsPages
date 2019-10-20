@@ -27,5 +27,8 @@
 
 
 Public Class aaformDirectlyApplyKeyValue
+    Private Sub buttonApply_Click(sender As Object, e As EventArgs) Handles buttonApply.Click
+        ' Pass along the text in the textbox to the relevant code.
 
+    End Sub
 End Class

@@ -445,6 +445,13 @@ Public Class aaformMainWindow
 #Region "Apply key value"
     Private Sub buttonApplyChanges_Click(sender As Object, e As EventArgs) Handles buttonApplyChanges.Click
 
+        ' Apply user's changes. Moved to its own sub so that it
+        ' can be called from elsewhere easily.
+        applyChanges(registryKeyValueBuilder.stringFullRegistryKeyValue)
+
+    End Sub
+
+    Friend Shared Sub applyChanges(pageListSource As String)
 #Region "Ask user if they want to apply the key value."
         ' Ask the user if they want to apply the Registry key value.
         ' Code from: https://stackoverflow.com/a/20203356
@@ -454,7 +461,7 @@ Public Class aaformMainWindow
                            "I couldn't find a way to put the shield on buttons in VB.Net." & vbCrLf & vbCrLf & vbCrLf &
                            "Your selections:" & vbCrLf &
                            vbCrLf &
-                           registryKeyValueBuilder.stringFullRegistryKeyValue, MsgBoxStyle.YesNo, "Apply changes")
+                           pageListSource, MsgBoxStyle.YesNo, "Apply changes")
             Case MsgBoxResult.Yes
                 ' This just continues the Sub and applies the key value.
             Case MsgBoxResult.No
@@ -501,7 +508,7 @@ Public Class aaformMainWindow
         Dim proc As New ProcessStartInfo
         proc.FileName = My.Application.Info.DirectoryPath & "\hsp_registry-helper.exe"
         proc.WindowStyle = ProcessWindowStyle.Hidden
-        proc.Arguments = "/apply " & registryKeyValueBuilder.stringFullRegistryKeyValue
+        proc.Arguments = "/apply " & pageListSource
         proc.Verb = "runas"
         ' First we need to make sure the user has hsp_registry-helper.
         If My.Computer.FileSystem.FileExists(proc.FileName) Then
