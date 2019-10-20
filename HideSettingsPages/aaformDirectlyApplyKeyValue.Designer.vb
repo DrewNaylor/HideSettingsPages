@@ -25,6 +25,9 @@ Partial Class aaformDirectlyApplyKeyValue
         Me.labelTypePageOrList = New System.Windows.Forms.Label()
         Me.labelValue = New System.Windows.Forms.Label()
         Me.textboxKeyValue = New System.Windows.Forms.TextBox()
+        Me.buttonApply = New System.Windows.Forms.Button()
+        Me.buttonUndo = New System.Windows.Forms.Button()
+        Me.buttonClose = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'labelTypePageOrList
@@ -54,11 +57,41 @@ Partial Class aaformDirectlyApplyKeyValue
         Me.textboxKeyValue.Size = New System.Drawing.Size(408, 22)
         Me.textboxKeyValue.TabIndex = 2
         '
+        'buttonApply
+        '
+        Me.buttonApply.Location = New System.Drawing.Point(69, 151)
+        Me.buttonApply.Name = "buttonApply"
+        Me.buttonApply.Size = New System.Drawing.Size(134, 35)
+        Me.buttonApply.TabIndex = 3
+        Me.buttonApply.Text = "Apply changes"
+        Me.buttonApply.UseVisualStyleBackColor = True
+        '
+        'buttonUndo
+        '
+        Me.buttonUndo.Location = New System.Drawing.Point(217, 151)
+        Me.buttonUndo.Name = "buttonUndo"
+        Me.buttonUndo.Size = New System.Drawing.Size(134, 35)
+        Me.buttonUndo.TabIndex = 4
+        Me.buttonUndo.Text = "Undo all changes"
+        Me.buttonUndo.UseVisualStyleBackColor = True
+        '
+        'buttonClose
+        '
+        Me.buttonClose.Location = New System.Drawing.Point(365, 151)
+        Me.buttonClose.Name = "buttonClose"
+        Me.buttonClose.Size = New System.Drawing.Size(134, 35)
+        Me.buttonClose.TabIndex = 5
+        Me.buttonClose.Text = "Close"
+        Me.buttonClose.UseVisualStyleBackColor = True
+        '
         'aaformDirectlyApplyKeyValue
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
-        Me.ClientSize = New System.Drawing.Size(515, 230)
+        Me.ClientSize = New System.Drawing.Size(515, 198)
+        Me.Controls.Add(Me.buttonClose)
+        Me.Controls.Add(Me.buttonUndo)
+        Me.Controls.Add(Me.buttonApply)
         Me.Controls.Add(Me.textboxKeyValue)
         Me.Controls.Add(Me.labelValue)
         Me.Controls.Add(Me.labelTypePageOrList)
@@ -78,4 +111,7 @@ Partial Class aaformDirectlyApplyKeyValue
     Friend WithEvents labelTypePageOrList As Label
     Friend WithEvents labelValue As Label
     Friend WithEvents textboxKeyValue As TextBox
+    Friend WithEvents buttonApply As Button
+    Friend WithEvents buttonUndo As Button
+    Friend WithEvents buttonClose As Button
 End Class
