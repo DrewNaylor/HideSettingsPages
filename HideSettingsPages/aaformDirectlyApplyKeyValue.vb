@@ -37,4 +37,9 @@ Public Class aaformDirectlyApplyKeyValue
         ' Undo the user's changes.
         aaformMainWindow.undoChanges()
     End Sub
+
+    Private Sub buttonClose_Click(sender As Object, e As EventArgs) Handles buttonClose.Click
+        ' Close window.
+        Me.Close()
+    End Sub
 End Class
