@@ -355,6 +355,13 @@ Public Class aaformMainWindow
 #Region "Undo key value."
     Private Sub buttonUndoChanges_Click(sender As Object, e As EventArgs) Handles buttonUndoChanges.Click
 
+        ' Undo user's changes. Moved to its own sub so that it
+        ' can be called from elsewhere easily.
+        undoChanges()
+
+    End Sub
+
+    Friend Shared Sub undoChanges()
 #Region "Ask user if they want to delete the key value."
         ' Ask the user if they want to delete the Registry key value.
         ' Code from: https://stackoverflow.com/a/20203356

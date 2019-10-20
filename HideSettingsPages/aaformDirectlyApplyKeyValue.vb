@@ -28,7 +28,13 @@
 
 Public Class aaformDirectlyApplyKeyValue
     Private Sub buttonApply_Click(sender As Object, e As EventArgs) Handles buttonApply.Click
-        ' Pass along the text in the textbox to the relevant code.
+        ' Pass along the text in the textbox to the relevant code
+        ' so it can be applied to the registry.
         aaformMainWindow.applyChanges(textboxKeyValue.Text)
+    End Sub
+
+    Private Sub buttonUndo_Click(sender As Object, e As EventArgs) Handles buttonUndo.Click
+        ' Undo the user's changes.
+        aaformMainWindow.undoChanges()
     End Sub
 End Class
