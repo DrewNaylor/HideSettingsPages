@@ -152,12 +152,13 @@ Partial Class aaformMainWindow
         Me.checkedlistboxPageList.Location = New System.Drawing.Point(3, 22)
         Me.checkedlistboxPageList.Margin = New System.Windows.Forms.Padding(2)
         Me.checkedlistboxPageList.Name = "checkedlistboxPageList"
-        Me.checkedlistboxPageList.Size = New System.Drawing.Size(311, 394)
+        Me.checkedlistboxPageList.Size = New System.Drawing.Size(311, 379)
         Me.checkedlistboxPageList.Sorted = True
         Me.checkedlistboxPageList.TabIndex = 17
         '
         'contextmenuPageList
         '
+        Me.contextmenuPageList.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.contextmenuPageList.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuitemCheckAll, Me.menuitemUncheckAll})
         Me.contextmenuPageList.Name = "contextmenuPageList"
         Me.contextmenuPageList.Size = New System.Drawing.Size(136, 48)
@@ -228,7 +229,7 @@ Partial Class aaformMainWindow
         '
         'buttonExit
         '
-        Me.buttonExit.Location = New System.Drawing.Point(231, 3)
+        Me.buttonExit.Location = New System.Drawing.Point(245, 6)
         Me.buttonExit.Name = "buttonExit"
         Me.buttonExit.Size = New System.Drawing.Size(62, 23)
         Me.buttonExit.TabIndex = 2
@@ -237,18 +238,18 @@ Partial Class aaformMainWindow
         '
         'buttonApplyChanges
         '
-        Me.buttonApplyChanges.Location = New System.Drawing.Point(32, 3)
+        Me.buttonApplyChanges.Location = New System.Drawing.Point(18, 6)
         Me.buttonApplyChanges.Name = "buttonApplyChanges"
-        Me.buttonApplyChanges.Size = New System.Drawing.Size(87, 23)
+        Me.buttonApplyChanges.Size = New System.Drawing.Size(90, 23)
         Me.buttonApplyChanges.TabIndex = 0
         Me.buttonApplyChanges.Text = "Apply changes"
         Me.buttonApplyChanges.UseVisualStyleBackColor = True
         '
         'buttonUndoChanges
         '
-        Me.buttonUndoChanges.Location = New System.Drawing.Point(125, 3)
+        Me.buttonUndoChanges.Location = New System.Drawing.Point(115, 6)
         Me.buttonUndoChanges.Name = "buttonUndoChanges"
-        Me.buttonUndoChanges.Size = New System.Drawing.Size(100, 23)
+        Me.buttonUndoChanges.Size = New System.Drawing.Size(123, 23)
         Me.buttonUndoChanges.TabIndex = 1
         Me.buttonUndoChanges.Text = "Undo all changes"
         Me.buttonUndoChanges.UseVisualStyleBackColor = True
