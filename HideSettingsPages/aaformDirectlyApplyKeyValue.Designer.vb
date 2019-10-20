@@ -96,8 +96,10 @@ Partial Class aaformDirectlyApplyKeyValue
         '
         'aaformDirectlyApplyKeyValue
         '
+        Me.AcceptButton = Me.buttonApply
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
+        Me.CancelButton = Me.buttonClose
         Me.ClientSize = New System.Drawing.Size(515, 198)
         Me.Controls.Add(Me.buttonClearTextbox)
         Me.Controls.Add(Me.buttonClose)
