@@ -8,9 +8,10 @@
     End Sub
 
     Private Sub buttonOpenRestorePointControlPanel_Click(sender As Object, e As EventArgs) Handles buttonOpenRestorePointControlPanel.Click
-        Debug.WriteLine("GetFolderPath: {0}", Environment.GetFolderPath(Environment.SpecialFolder.System))
-        Debug.WriteLine("GetFolderPath: {0}", Environment.GetFolderPath(Environment.SpecialFolder.SystemX86))
+
+        ' Define the ProcessStartInfo for SystemPropertiesProtection.exe.
         Dim proc As New ProcessStartInfo
+
         ' Check if Windows is 64-bit or 32-bit.
         If Environment.Is64BitOperatingSystem = True Then
             ' If Windows is 64-bit, then sysnative will need to be used
@@ -20,9 +21,12 @@
             ' Otherwise, Windows is 32-bit so just use the regular CMD.
             proc.FileName = "cmd.exe"
         End If
+
+        ' Now have the SystemPropertiesProtection.exe file as the argument.
         proc.Arguments = "/c %windir%\system32\SystemPropertiesProtection.exe"
-        Debug.WriteLine(proc.FileName)
-        'proc.Verb = "runas"
+        'Debug.WriteLine(proc.FileName)
+
+        ' Start cmd, which will then run SystemPropertiesProtection.exe.
         Process.Start(proc)
     End Sub
 End Class
