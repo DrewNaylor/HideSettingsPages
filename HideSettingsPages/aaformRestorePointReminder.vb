@@ -28,5 +28,8 @@
 
         ' Start cmd, which will then run SystemPropertiesProtection.exe.
         Process.Start(proc)
+
+        ' Now we need to close the window.
+        Me.Close()
     End Sub
 End Class
