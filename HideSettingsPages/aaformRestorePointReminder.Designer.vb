@@ -32,7 +32,7 @@ Partial Class aaformRestorePointReminder
         '
         'buttonOpenRestorePointControlPanel
         '
-        Me.buttonOpenRestorePointControlPanel.Location = New System.Drawing.Point(273, 260)
+        Me.buttonOpenRestorePointControlPanel.Location = New System.Drawing.Point(250, 260)
         Me.buttonOpenRestorePointControlPanel.Name = "buttonOpenRestorePointControlPanel"
         Me.buttonOpenRestorePointControlPanel.Size = New System.Drawing.Size(107, 33)
         Me.buttonOpenRestorePointControlPanel.TabIndex = 0
@@ -51,7 +51,7 @@ Partial Class aaformRestorePointReminder
         'linklabelTurnOnOrOffSystemProtection
         '
         Me.linklabelTurnOnOrOffSystemProtection.AutoSize = True
-        Me.linklabelTurnOnOrOffSystemProtection.Location = New System.Drawing.Point(16, 175)
+        Me.linklabelTurnOnOrOffSystemProtection.Location = New System.Drawing.Point(16, 167)
         Me.linklabelTurnOnOrOffSystemProtection.Name = "linklabelTurnOnOrOffSystemProtection"
         Me.linklabelTurnOnOrOffSystemProtection.Size = New System.Drawing.Size(346, 34)
         Me.linklabelTurnOnOrOffSystemProtection.TabIndex = 2
@@ -62,16 +62,16 @@ Partial Class aaformRestorePointReminder
         'linklabelCreateSystemRestorePoint
         '
         Me.linklabelCreateSystemRestorePoint.AutoSize = True
-        Me.linklabelCreateSystemRestorePoint.Location = New System.Drawing.Point(16, 216)
+        Me.linklabelCreateSystemRestorePoint.Location = New System.Drawing.Point(16, 208)
         Me.linklabelCreateSystemRestorePoint.Name = "linklabelCreateSystemRestorePoint"
-        Me.linklabelCreateSystemRestorePoint.Size = New System.Drawing.Size(477, 17)
+        Me.linklabelCreateSystemRestorePoint.Size = New System.Drawing.Size(424, 34)
         Me.linklabelCreateSystemRestorePoint.TabIndex = 3
         Me.linklabelCreateSystemRestorePoint.TabStop = True
-        Me.linklabelCreateSystemRestorePoint.Text = "TenForums: How to Create a System Restore Point in Windows 10 (step 5)"
+        Me.linklabelCreateSystemRestorePoint.Text = "TenForums: How to Create a System Restore Point in Windows 10" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(step 5)"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(386, 260)
+        Me.Button1.Location = New System.Drawing.Point(363, 260)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(107, 33)
         Me.Button1.TabIndex = 4
@@ -82,7 +82,7 @@ Partial Class aaformRestorePointReminder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
-        Me.ClientSize = New System.Drawing.Size(506, 305)
+        Me.ClientSize = New System.Drawing.Size(482, 305)
         Me.Controls.Add(Me.linklabelCreateSystemRestorePoint)
         Me.Controls.Add(Me.linklabelTurnOnOrOffSystemProtection)
         Me.Controls.Add(Me.labelRestorePointReminder)
