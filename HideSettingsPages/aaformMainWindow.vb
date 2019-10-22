@@ -395,9 +395,10 @@ Public Class aaformMainWindow
                                "This message can be disabled via ""Options>Show restore point reminder message"".", MsgBoxStyle.YesNo, "Undo all changes")
                 Case MsgBoxResult.Yes
                     ' Open the appropriate links and applications.
-                    Process.Start("https://www.tenforums.com/tutorials/4533-turn-off-system-protection-drives-windows-10-a.html")
-                    Process.Start("https://www.tenforums.com/tutorials/4571-create-system-restore-point-windows-10-a.html")
-                    Process.Start("control.exe", "system")
+                    'Process.Start("https://www.tenforums.com/tutorials/4533-turn-off-system-protection-drives-windows-10-a.html")
+                    'Process.Start("https://www.tenforums.com/tutorials/4571-create-system-restore-point-windows-10-a.html")
+                    'Process.Start("control.exe", "system")
+                    aaformRestorePointReminder.ShowDialog()
 
                     ' Put another messagebox in so that the user
                     ' has enough time to make a restore point.
