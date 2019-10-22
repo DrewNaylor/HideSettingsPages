@@ -484,7 +484,7 @@ Public Class aaformMainWindow
 
             ' Put another messagebox in so that the user
             ' has enough time to make a restore point.
-            MessageBox.Show("Once you're ready to undo all changes, click OK.", "Undo all changes")
+            MessageBox.Show("Once you're ready to apply changes, click OK.", "Apply changes")
         End If
 #End Region
 
