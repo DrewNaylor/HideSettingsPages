@@ -1,10 +1,10 @@
 ﻿Public Class aaformRestorePointReminder
-    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        Process.Start("https://www.tenforums.com/tutorials/4533-turn-off-system-protection-drives-windows-10-a.html")
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linklabelTurnOnOrOffSystemProtection.LinkClicked
+        Process.Start("https://www.tenforums.com/tutorials/4533-turn-off-system-protection-drives-windows-10-a.html#step6")
     End Sub
 
-    Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
-        Process.Start("https://www.tenforums.com/tutorials/4571-create-system-restore-point-windows-10-a.html")
+    Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linklabelCreateSystemRestorePoint.LinkClicked
+        Process.Start("https://www.tenforums.com/tutorials/4571-create-system-restore-point-windows-10-a.html#step5")
     End Sub
 
     Private Sub buttonOpenRestorePointControlPanel_Click(sender As Object, e As EventArgs) Handles buttonOpenRestorePointControlPanel.Click

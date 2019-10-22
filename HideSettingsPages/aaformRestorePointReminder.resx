@@ -117,4 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="labelRestorePointReminder.Text" xml:space="preserve">
+    <value>Once you've finished creating a restore point, please close this window.
+If you need help turning on System Restore or creating a restore point,
+the guides linked below should help. There's a lot of information above
+the linked sections that may be of value as well.</value>
+  </data>
 </root>
