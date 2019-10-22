@@ -34,7 +34,7 @@ Partial Class aaformRestorePointReminder
         Me.buttonOpenRestorePointControlPanel.Name = "buttonOpenRestorePointControlPanel"
         Me.buttonOpenRestorePointControlPanel.Size = New System.Drawing.Size(219, 70)
         Me.buttonOpenRestorePointControlPanel.TabIndex = 0
-        Me.buttonOpenRestorePointControlPanel.Text = "Open Create Restore Point window"
+        Me.buttonOpenRestorePointControlPanel.Text = "Open create restore point window"
         Me.buttonOpenRestorePointControlPanel.UseVisualStyleBackColor = True
         '
         'labelRestorePointReminder
@@ -78,7 +78,7 @@ Partial Class aaformRestorePointReminder
         Me.Controls.Add(Me.labelRestorePointReminder)
         Me.Controls.Add(Me.buttonOpenRestorePointControlPanel)
         Me.Name = "aaformRestorePointReminder"
-        Me.Text = "aaformRestorePointReminder"
+        Me.Text = "Restore point reminder"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
