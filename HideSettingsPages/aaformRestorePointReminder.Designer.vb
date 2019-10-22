@@ -103,7 +103,13 @@ Partial Class aaformRestorePointReminder
         Me.Controls.Add(Me.labelRestorePointReminder)
         Me.Controls.Add(Me.buttonOpenRestorePointControlPanel)
         Me.Controls.Add(Me.buttonDontCreateRestorePoint)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "aaformRestorePointReminder"
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Restore point reminder"
         Me.ResumeLayout(False)
         Me.PerformLayout()
