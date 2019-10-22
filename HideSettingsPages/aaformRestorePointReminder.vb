@@ -32,4 +32,23 @@
         ' Now we need to close the window.
         Me.Close()
     End Sub
+
+    Private Sub buttonDontCreateRestorePoint_Click(sender As Object, e As EventArgs) Handles buttonDontCreateRestorePoint.Click
+
+        ' If the user has the "Don't ask again" checkbox checked, turn off
+        ' the restore point reminder message.
+        If checkboxDontAskAgain.Checked = True Then
+            My.Settings.messageShowSystemRestoreReminder = False
+
+            ' Save and reload settings.
+            My.Settings.Save()
+            My.Settings.Reload()
+
+            ' Now update the dropdown in the menubar.
+            aaformMainWindow.menubarShowRestorePointReminderMessageButton.Checked = My.Settings.messageShowSystemRestoreReminder
+        End If
+
+        ' Now close the window.
+        Me.Close()
+    End Sub
 End Class
