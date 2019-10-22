@@ -387,11 +387,15 @@ Public Class aaformMainWindow
         If My.Settings.messageShowSystemRestoreReminder = True Then
 
             ' Open the custom dialog that's used for restore point reminders now.
-            aaformRestorePointReminder.ShowDialog()
 
-                    ' Put another messagebox in so that the user
-                    ' has enough time to make a restore point.
-                    MessageBox.Show("Once you're ready to apply the key value, click OK.", "Undo all changes")
+            ' Create a new instance of the restore point reminder dialog.
+            ' This is to ensure the controls reset.
+            Dim newRestorePointReminderDialog As New aaformRestorePointReminder
+            newRestorePointReminderDialog.ShowDialog()
+
+            ' Put another messagebox in so that the user
+            ' has enough time to make a restore point.
+            MessageBox.Show("Once you're ready to apply the key value, click OK.", "Undo all changes")
         End If
 
 #End Region

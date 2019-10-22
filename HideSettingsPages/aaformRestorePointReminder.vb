@@ -51,4 +51,10 @@
         ' Now close the window.
         Me.Close()
     End Sub
+
+    Private Sub aaformRestorePointReminder_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Make sure the form is initialized cleanly.
+        buttonOpenRestorePointControlPanel.Focus()
+        checkboxDontAskAgain.Checked = False
+    End Sub
 End Class
