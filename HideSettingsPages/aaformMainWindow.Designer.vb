@@ -152,7 +152,7 @@ Partial Class aaformMainWindow
         Me.checkedlistboxPageList.Location = New System.Drawing.Point(3, 22)
         Me.checkedlistboxPageList.Margin = New System.Windows.Forms.Padding(2)
         Me.checkedlistboxPageList.Name = "checkedlistboxPageList"
-        Me.checkedlistboxPageList.Size = New System.Drawing.Size(311, 379)
+        Me.checkedlistboxPageList.Size = New System.Drawing.Size(311, 394)
         Me.checkedlistboxPageList.Sorted = True
         Me.checkedlistboxPageList.TabIndex = 17
         '
@@ -178,7 +178,7 @@ Partial Class aaformMainWindow
         'labelChoosePages
         '
         Me.labelChoosePages.AutoSize = True
-        Me.labelChoosePages.Location = New System.Drawing.Point(0, 6)
+        Me.labelChoosePages.Location = New System.Drawing.Point(4, 5)
         Me.labelChoosePages.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.labelChoosePages.Name = "labelChoosePages"
         Me.labelChoosePages.Size = New System.Drawing.Size(175, 13)

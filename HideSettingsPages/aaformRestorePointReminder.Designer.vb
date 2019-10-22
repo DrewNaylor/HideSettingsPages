@@ -33,9 +33,10 @@ Partial Class aaformRestorePointReminder
         '
         'buttonOpenRestorePointControlPanel
         '
-        Me.buttonOpenRestorePointControlPanel.Location = New System.Drawing.Point(250, 240)
+        Me.buttonOpenRestorePointControlPanel.Location = New System.Drawing.Point(175, 193)
+        Me.buttonOpenRestorePointControlPanel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.buttonOpenRestorePointControlPanel.Name = "buttonOpenRestorePointControlPanel"
-        Me.buttonOpenRestorePointControlPanel.Size = New System.Drawing.Size(107, 33)
+        Me.buttonOpenRestorePointControlPanel.Size = New System.Drawing.Size(86, 26)
         Me.buttonOpenRestorePointControlPanel.TabIndex = 0
         Me.buttonOpenRestorePointControlPanel.Text = "Yes"
         Me.buttonOpenRestorePointControlPanel.UseVisualStyleBackColor = True
@@ -43,18 +44,20 @@ Partial Class aaformRestorePointReminder
         'labelRestorePointReminder
         '
         Me.labelRestorePointReminder.AutoSize = True
-        Me.labelRestorePointReminder.Location = New System.Drawing.Point(16, 9)
+        Me.labelRestorePointReminder.Location = New System.Drawing.Point(13, 7)
+        Me.labelRestorePointReminder.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.labelRestorePointReminder.Name = "labelRestorePointReminder"
-        Me.labelRestorePointReminder.Size = New System.Drawing.Size(453, 119)
+        Me.labelRestorePointReminder.Size = New System.Drawing.Size(338, 91)
         Me.labelRestorePointReminder.TabIndex = 1
         Me.labelRestorePointReminder.Text = resources.GetString("labelRestorePointReminder.Text")
         '
         'linklabelTurnOnOrOffSystemProtection
         '
         Me.linklabelTurnOnOrOffSystemProtection.AutoSize = True
-        Me.linklabelTurnOnOrOffSystemProtection.Location = New System.Drawing.Point(16, 147)
+        Me.linklabelTurnOnOrOffSystemProtection.Location = New System.Drawing.Point(13, 118)
+        Me.linklabelTurnOnOrOffSystemProtection.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.linklabelTurnOnOrOffSystemProtection.Name = "linklabelTurnOnOrOffSystemProtection"
-        Me.linklabelTurnOnOrOffSystemProtection.Size = New System.Drawing.Size(346, 34)
+        Me.linklabelTurnOnOrOffSystemProtection.Size = New System.Drawing.Size(259, 26)
         Me.linklabelTurnOnOrOffSystemProtection.TabIndex = 2
         Me.linklabelTurnOnOrOffSystemProtection.TabStop = True
         Me.linklabelTurnOnOrOffSystemProtection.Text = "TenForums: How to Turn On or Off System Protection" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "for Drives in Windows 10 (ste" &
@@ -63,9 +66,10 @@ Partial Class aaformRestorePointReminder
         'linklabelCreateSystemRestorePoint
         '
         Me.linklabelCreateSystemRestorePoint.AutoSize = True
-        Me.linklabelCreateSystemRestorePoint.Location = New System.Drawing.Point(16, 188)
+        Me.linklabelCreateSystemRestorePoint.Location = New System.Drawing.Point(13, 150)
+        Me.linklabelCreateSystemRestorePoint.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.linklabelCreateSystemRestorePoint.Name = "linklabelCreateSystemRestorePoint"
-        Me.linklabelCreateSystemRestorePoint.Size = New System.Drawing.Size(424, 34)
+        Me.linklabelCreateSystemRestorePoint.Size = New System.Drawing.Size(320, 26)
         Me.linklabelCreateSystemRestorePoint.TabIndex = 3
         Me.linklabelCreateSystemRestorePoint.TabStop = True
         Me.linklabelCreateSystemRestorePoint.Text = "TenForums: How to Create a System Restore Point in Windows 10" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(step 5)"
@@ -73,9 +77,10 @@ Partial Class aaformRestorePointReminder
         'buttonDontCreateRestorePoint
         '
         Me.buttonDontCreateRestorePoint.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.buttonDontCreateRestorePoint.Location = New System.Drawing.Point(363, 240)
+        Me.buttonDontCreateRestorePoint.Location = New System.Drawing.Point(265, 193)
+        Me.buttonDontCreateRestorePoint.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.buttonDontCreateRestorePoint.Name = "buttonDontCreateRestorePoint"
-        Me.buttonDontCreateRestorePoint.Size = New System.Drawing.Size(107, 33)
+        Me.buttonDontCreateRestorePoint.Size = New System.Drawing.Size(86, 26)
         Me.buttonDontCreateRestorePoint.TabIndex = 4
         Me.buttonDontCreateRestorePoint.Text = "No"
         Me.buttonDontCreateRestorePoint.UseVisualStyleBackColor = True
@@ -83,9 +88,10 @@ Partial Class aaformRestorePointReminder
         'checkboxDontAskAgain
         '
         Me.checkboxDontAskAgain.AutoSize = True
-        Me.checkboxDontAskAgain.Location = New System.Drawing.Point(19, 252)
+        Me.checkboxDontAskAgain.Location = New System.Drawing.Point(15, 202)
+        Me.checkboxDontAskAgain.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.checkboxDontAskAgain.Name = "checkboxDontAskAgain"
-        Me.checkboxDontAskAgain.Size = New System.Drawing.Size(128, 21)
+        Me.checkboxDontAskAgain.Size = New System.Drawing.Size(100, 17)
         Me.checkboxDontAskAgain.TabIndex = 5
         Me.checkboxDontAskAgain.Text = "Don't ask again"
         Me.checkboxDontAskAgain.UseVisualStyleBackColor = True
@@ -93,10 +99,10 @@ Partial Class aaformRestorePointReminder
         'aaformRestorePointReminder
         '
         Me.AcceptButton = Me.buttonOpenRestorePointControlPanel
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.CancelButton = Me.buttonDontCreateRestorePoint
-        Me.ClientSize = New System.Drawing.Size(482, 286)
+        Me.ClientSize = New System.Drawing.Size(362, 229)
         Me.Controls.Add(Me.checkboxDontAskAgain)
         Me.Controls.Add(Me.linklabelCreateSystemRestorePoint)
         Me.Controls.Add(Me.linklabelTurnOnOrOffSystemProtection)
@@ -104,6 +110,7 @@ Partial Class aaformRestorePointReminder
         Me.Controls.Add(Me.buttonOpenRestorePointControlPanel)
         Me.Controls.Add(Me.buttonDontCreateRestorePoint)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "aaformRestorePointReminder"
