@@ -11,7 +11,15 @@
         Debug.WriteLine("GetFolderPath: {0}", Environment.GetFolderPath(Environment.SpecialFolder.System))
         Debug.WriteLine("GetFolderPath: {0}", Environment.GetFolderPath(Environment.SpecialFolder.SystemX86))
         Dim proc As New ProcessStartInfo
-        proc.FileName = "C:\Windows\sysnative\cmd.exe"
+        ' Check if Windows is 64-bit or 32-bit.
+        If Environment.Is64BitOperatingSystem = True Then
+            ' If Windows is 64-bit, then sysnative will need to be used
+            ' in the path for running CMD.
+            proc.FileName = Environment.GetFolderPath(Environment.SpecialFolder.Windows) & "\sysnative\cmd.exe"
+        Else
+            ' Otherwise, Windows is 32-bit so just use the regular CMD.
+            proc.FileName = "cmd.exe"
+        End If
         proc.Arguments = "/c %windir%\system32\SystemPropertiesProtection.exe"
         Debug.WriteLine(proc.FileName)
         'proc.Verb = "runas"
