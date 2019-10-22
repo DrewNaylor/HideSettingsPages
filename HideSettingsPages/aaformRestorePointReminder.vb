@@ -11,9 +11,10 @@
         Debug.WriteLine("GetFolderPath: {0}", Environment.GetFolderPath(Environment.SpecialFolder.System))
         Debug.WriteLine("GetFolderPath: {0}", Environment.GetFolderPath(Environment.SpecialFolder.SystemX86))
         Dim proc As New ProcessStartInfo
-        proc.FileName = "C:\Windows\sysnative\SystemPropertiesProtection.exe"
+        proc.FileName = "C:\Windows\sysnative\cmd.exe"
+        proc.Arguments = "/c %windir%\system32\SystemPropertiesProtection.exe"
         Debug.WriteLine(proc.FileName)
         'proc.Verb = "runas"
-        Process.Start("C:\Windows\sysnative\SystemPropertiesProtection.exe")
+        Process.Start(proc)
     End Sub
 End Class
