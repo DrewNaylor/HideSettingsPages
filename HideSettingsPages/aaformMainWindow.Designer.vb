@@ -335,6 +335,7 @@ Partial Class aaformMainWindow
         Me.menubarAlwaysCopySelections.Name = "menubarAlwaysCopySelections"
         Me.menubarAlwaysCopySelections.Size = New System.Drawing.Size(482, 26)
         Me.menubarAlwaysCopySelections.Text = "Always copy selections into Directly apply key value window"
+        Me.menubarAlwaysCopySelections.ToolTipText = resources.GetString("menubarAlwaysCopySelections.ToolTipText")
         '
         'menubarShowStartupWarningMessageButton
         '
