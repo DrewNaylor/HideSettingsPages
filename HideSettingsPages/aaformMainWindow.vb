@@ -133,6 +133,17 @@ Public Class aaformMainWindow
 
     Private Sub menubarDirectlyApplyKeyValueButton_Click(sender As Object, e As EventArgs) Handles menubarDirectlyApplyKeyValueButton.Click
         ' Open a window so that the user can just type in the pages they want to show or hide.
+
+        ' If the user wants to copy over the selections, do so.
+        If My.Settings.alwaysCopyIntoDirectlyApplyKeyValueWindow = True Or ModifierKeys.HasFlag(Keys.Shift) Then
+            aaformDirectlyApplyKeyValue.textboxKeyValue.Text = textboxRegistryKeyValue.Text
+
+        Else
+            ' Otherwise, ensure the textbox is empty in case the user didn't hold Shift or turned
+            ' off the always-copy feature.
+            aaformDirectlyApplyKeyValue.textboxKeyValue.Clear()
+        End If
+
         aaformDirectlyApplyKeyValue.ShowDialog(Me)
     End Sub
 

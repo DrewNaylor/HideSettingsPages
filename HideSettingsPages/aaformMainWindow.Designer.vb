@@ -59,6 +59,7 @@ Partial Class aaformMainWindow
         Me.menubarAuthorsButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarLicenseButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarAboutButton = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarAlwaysCopySelections = New System.Windows.Forms.ToolStripMenuItem()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
@@ -76,9 +77,10 @@ Partial Class aaformMainWindow
         Me.flowlayoutpanelMainWindow.Controls.Add(Me.groupboxPreviewRegistryKeyValue)
         Me.flowlayoutpanelMainWindow.Controls.Add(Me.panelApplyUndoExit)
         Me.flowlayoutpanelMainWindow.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.flowlayoutpanelMainWindow.Location = New System.Drawing.Point(0, 24)
+        Me.flowlayoutpanelMainWindow.Location = New System.Drawing.Point(0, 28)
+        Me.flowlayoutpanelMainWindow.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.flowlayoutpanelMainWindow.Name = "flowlayoutpanelMainWindow"
-        Me.flowlayoutpanelMainWindow.Size = New System.Drawing.Size(331, 660)
+        Me.flowlayoutpanelMainWindow.Size = New System.Drawing.Size(414, 827)
         Me.flowlayoutpanelMainWindow.TabIndex = 0
         '
         'groupboxSettingsPageVisibility
@@ -86,9 +88,11 @@ Partial Class aaformMainWindow
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.radiobuttonShowOnlyPages)
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.radiobuttonHidePages)
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.labelPageVisibility)
-        Me.groupboxSettingsPageVisibility.Location = New System.Drawing.Point(3, 3)
+        Me.groupboxSettingsPageVisibility.Location = New System.Drawing.Point(4, 4)
+        Me.groupboxSettingsPageVisibility.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.groupboxSettingsPageVisibility.Name = "groupboxSettingsPageVisibility"
-        Me.groupboxSettingsPageVisibility.Size = New System.Drawing.Size(323, 88)
+        Me.groupboxSettingsPageVisibility.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.groupboxSettingsPageVisibility.Size = New System.Drawing.Size(404, 110)
         Me.groupboxSettingsPageVisibility.TabIndex = 0
         Me.groupboxSettingsPageVisibility.TabStop = False
         Me.groupboxSettingsPageVisibility.Text = "Settings page visibility"
@@ -96,9 +100,10 @@ Partial Class aaformMainWindow
         'radiobuttonShowOnlyPages
         '
         Me.radiobuttonShowOnlyPages.AutoSize = True
-        Me.radiobuttonShowOnlyPages.Location = New System.Drawing.Point(6, 63)
+        Me.radiobuttonShowOnlyPages.Location = New System.Drawing.Point(8, 79)
+        Me.radiobuttonShowOnlyPages.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.radiobuttonShowOnlyPages.Name = "radiobuttonShowOnlyPages"
-        Me.radiobuttonShowOnlyPages.Size = New System.Drawing.Size(76, 17)
+        Me.radiobuttonShowOnlyPages.Size = New System.Drawing.Size(96, 21)
         Me.radiobuttonShowOnlyPages.TabIndex = 2
         Me.radiobuttonShowOnlyPages.Text = "Show Only"
         Me.radiobuttonShowOnlyPages.UseVisualStyleBackColor = True
@@ -107,9 +112,10 @@ Partial Class aaformMainWindow
         '
         Me.radiobuttonHidePages.AutoSize = True
         Me.radiobuttonHidePages.Checked = True
-        Me.radiobuttonHidePages.Location = New System.Drawing.Point(6, 42)
+        Me.radiobuttonHidePages.Location = New System.Drawing.Point(8, 52)
+        Me.radiobuttonHidePages.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.radiobuttonHidePages.Name = "radiobuttonHidePages"
-        Me.radiobuttonHidePages.Size = New System.Drawing.Size(47, 17)
+        Me.radiobuttonHidePages.Size = New System.Drawing.Size(58, 21)
         Me.radiobuttonHidePages.TabIndex = 1
         Me.radiobuttonHidePages.TabStop = True
         Me.radiobuttonHidePages.Text = "Hide"
@@ -118,18 +124,21 @@ Partial Class aaformMainWindow
         'labelPageVisibility
         '
         Me.labelPageVisibility.AutoSize = True
-        Me.labelPageVisibility.Location = New System.Drawing.Point(4, 20)
+        Me.labelPageVisibility.Location = New System.Drawing.Point(5, 25)
+        Me.labelPageVisibility.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labelPageVisibility.Name = "labelPageVisibility"
-        Me.labelPageVisibility.Size = New System.Drawing.Size(283, 13)
+        Me.labelPageVisibility.Size = New System.Drawing.Size(377, 17)
         Me.labelPageVisibility.TabIndex = 0
         Me.labelPageVisibility.Text = "Choose whether to hide pages or show only certain pages."
         '
         'groupboxPageList
         '
         Me.groupboxPageList.Controls.Add(Me.panelScrollablePageList)
-        Me.groupboxPageList.Location = New System.Drawing.Point(3, 97)
+        Me.groupboxPageList.Location = New System.Drawing.Point(4, 122)
+        Me.groupboxPageList.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.groupboxPageList.Name = "groupboxPageList"
-        Me.groupboxPageList.Size = New System.Drawing.Size(323, 439)
+        Me.groupboxPageList.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.groupboxPageList.Size = New System.Drawing.Size(404, 549)
         Me.groupboxPageList.TabIndex = 1
         Me.groupboxPageList.TabStop = False
         Me.groupboxPageList.Text = "Settings page list"
@@ -139,20 +148,20 @@ Partial Class aaformMainWindow
         Me.panelScrollablePageList.Controls.Add(Me.checkedlistboxPageList)
         Me.panelScrollablePageList.Controls.Add(Me.labelChoosePages)
         Me.panelScrollablePageList.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panelScrollablePageList.Location = New System.Drawing.Point(3, 16)
+        Me.panelScrollablePageList.Location = New System.Drawing.Point(4, 19)
         Me.panelScrollablePageList.Margin = New System.Windows.Forms.Padding(2)
         Me.panelScrollablePageList.Name = "panelScrollablePageList"
-        Me.panelScrollablePageList.Size = New System.Drawing.Size(317, 420)
+        Me.panelScrollablePageList.Size = New System.Drawing.Size(396, 526)
         Me.panelScrollablePageList.TabIndex = 13
         '
         'checkedlistboxPageList
         '
         Me.checkedlistboxPageList.CheckOnClick = True
         Me.checkedlistboxPageList.ContextMenuStrip = Me.contextmenuPageList
-        Me.checkedlistboxPageList.Location = New System.Drawing.Point(3, 22)
+        Me.checkedlistboxPageList.Location = New System.Drawing.Point(4, 28)
         Me.checkedlistboxPageList.Margin = New System.Windows.Forms.Padding(2)
         Me.checkedlistboxPageList.Name = "checkedlistboxPageList"
-        Me.checkedlistboxPageList.Size = New System.Drawing.Size(311, 394)
+        Me.checkedlistboxPageList.Size = New System.Drawing.Size(388, 480)
         Me.checkedlistboxPageList.Sorted = True
         Me.checkedlistboxPageList.TabIndex = 17
         '
@@ -161,27 +170,27 @@ Partial Class aaformMainWindow
         Me.contextmenuPageList.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.contextmenuPageList.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuitemCheckAll, Me.menuitemUncheckAll})
         Me.contextmenuPageList.Name = "contextmenuPageList"
-        Me.contextmenuPageList.Size = New System.Drawing.Size(136, 48)
+        Me.contextmenuPageList.Size = New System.Drawing.Size(154, 52)
         '
         'menuitemCheckAll
         '
         Me.menuitemCheckAll.Name = "menuitemCheckAll"
-        Me.menuitemCheckAll.Size = New System.Drawing.Size(135, 22)
+        Me.menuitemCheckAll.Size = New System.Drawing.Size(153, 24)
         Me.menuitemCheckAll.Text = "Check all"
         '
         'menuitemUncheckAll
         '
         Me.menuitemUncheckAll.Name = "menuitemUncheckAll"
-        Me.menuitemUncheckAll.Size = New System.Drawing.Size(135, 22)
+        Me.menuitemUncheckAll.Size = New System.Drawing.Size(153, 24)
         Me.menuitemUncheckAll.Text = "Uncheck all"
         '
         'labelChoosePages
         '
         Me.labelChoosePages.AutoSize = True
-        Me.labelChoosePages.Location = New System.Drawing.Point(4, 5)
+        Me.labelChoosePages.Location = New System.Drawing.Point(5, 6)
         Me.labelChoosePages.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.labelChoosePages.Name = "labelChoosePages"
-        Me.labelChoosePages.Size = New System.Drawing.Size(175, 13)
+        Me.labelChoosePages.Size = New System.Drawing.Size(233, 17)
         Me.labelChoosePages.TabIndex = 13
         Me.labelChoosePages.Text = "Choose pages to hide or only show."
         '
@@ -189,9 +198,11 @@ Partial Class aaformMainWindow
         '
         Me.groupboxPreviewRegistryKeyValue.Controls.Add(Me.linklabelViewLarger)
         Me.groupboxPreviewRegistryKeyValue.Controls.Add(Me.textboxRegistryKeyValue)
-        Me.groupboxPreviewRegistryKeyValue.Location = New System.Drawing.Point(3, 542)
+        Me.groupboxPreviewRegistryKeyValue.Location = New System.Drawing.Point(4, 679)
+        Me.groupboxPreviewRegistryKeyValue.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.groupboxPreviewRegistryKeyValue.Name = "groupboxPreviewRegistryKeyValue"
-        Me.groupboxPreviewRegistryKeyValue.Size = New System.Drawing.Size(323, 78)
+        Me.groupboxPreviewRegistryKeyValue.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.groupboxPreviewRegistryKeyValue.Size = New System.Drawing.Size(404, 98)
         Me.groupboxPreviewRegistryKeyValue.TabIndex = 2
         Me.groupboxPreviewRegistryKeyValue.TabStop = False
         Me.groupboxPreviewRegistryKeyValue.Text = "Registry key value preview"
@@ -199,21 +210,23 @@ Partial Class aaformMainWindow
         'linklabelViewLarger
         '
         Me.linklabelViewLarger.AutoSize = True
-        Me.linklabelViewLarger.Location = New System.Drawing.Point(6, 62)
+        Me.linklabelViewLarger.Location = New System.Drawing.Point(8, 78)
+        Me.linklabelViewLarger.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.linklabelViewLarger.Name = "linklabelViewLarger"
-        Me.linklabelViewLarger.Size = New System.Drawing.Size(68, 13)
+        Me.linklabelViewLarger.Size = New System.Drawing.Size(90, 17)
         Me.linklabelViewLarger.TabIndex = 1
         Me.linklabelViewLarger.TabStop = True
         Me.linklabelViewLarger.Text = "View larger..."
         '
         'textboxRegistryKeyValue
         '
-        Me.textboxRegistryKeyValue.Location = New System.Drawing.Point(6, 20)
+        Me.textboxRegistryKeyValue.Location = New System.Drawing.Point(8, 25)
+        Me.textboxRegistryKeyValue.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.textboxRegistryKeyValue.Multiline = True
         Me.textboxRegistryKeyValue.Name = "textboxRegistryKeyValue"
         Me.textboxRegistryKeyValue.ReadOnly = True
         Me.textboxRegistryKeyValue.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.textboxRegistryKeyValue.Size = New System.Drawing.Size(311, 39)
+        Me.textboxRegistryKeyValue.Size = New System.Drawing.Size(388, 48)
         Me.textboxRegistryKeyValue.TabIndex = 0
         '
         'panelApplyUndoExit
@@ -221,35 +234,38 @@ Partial Class aaformMainWindow
         Me.panelApplyUndoExit.Controls.Add(Me.buttonExit)
         Me.panelApplyUndoExit.Controls.Add(Me.buttonApplyChanges)
         Me.panelApplyUndoExit.Controls.Add(Me.buttonUndoChanges)
-        Me.panelApplyUndoExit.Location = New System.Drawing.Point(2, 625)
+        Me.panelApplyUndoExit.Location = New System.Drawing.Point(2, 783)
         Me.panelApplyUndoExit.Margin = New System.Windows.Forms.Padding(2)
         Me.panelApplyUndoExit.Name = "panelApplyUndoExit"
-        Me.panelApplyUndoExit.Size = New System.Drawing.Size(324, 34)
+        Me.panelApplyUndoExit.Size = New System.Drawing.Size(405, 42)
         Me.panelApplyUndoExit.TabIndex = 4
         '
         'buttonExit
         '
-        Me.buttonExit.Location = New System.Drawing.Point(245, 6)
+        Me.buttonExit.Location = New System.Drawing.Point(306, 8)
+        Me.buttonExit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.buttonExit.Name = "buttonExit"
-        Me.buttonExit.Size = New System.Drawing.Size(62, 23)
+        Me.buttonExit.Size = New System.Drawing.Size(78, 29)
         Me.buttonExit.TabIndex = 2
         Me.buttonExit.Text = "Exit"
         Me.buttonExit.UseVisualStyleBackColor = True
         '
         'buttonApplyChanges
         '
-        Me.buttonApplyChanges.Location = New System.Drawing.Point(18, 6)
+        Me.buttonApplyChanges.Location = New System.Drawing.Point(22, 8)
+        Me.buttonApplyChanges.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.buttonApplyChanges.Name = "buttonApplyChanges"
-        Me.buttonApplyChanges.Size = New System.Drawing.Size(90, 23)
+        Me.buttonApplyChanges.Size = New System.Drawing.Size(112, 29)
         Me.buttonApplyChanges.TabIndex = 0
         Me.buttonApplyChanges.Text = "Apply changes"
         Me.buttonApplyChanges.UseVisualStyleBackColor = True
         '
         'buttonUndoChanges
         '
-        Me.buttonUndoChanges.Location = New System.Drawing.Point(115, 6)
+        Me.buttonUndoChanges.Location = New System.Drawing.Point(144, 8)
+        Me.buttonUndoChanges.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.buttonUndoChanges.Name = "buttonUndoChanges"
-        Me.buttonUndoChanges.Size = New System.Drawing.Size(123, 23)
+        Me.buttonUndoChanges.Size = New System.Drawing.Size(154, 29)
         Me.buttonUndoChanges.TabIndex = 1
         Me.buttonUndoChanges.Text = "Undo all changes"
         Me.buttonUndoChanges.UseVisualStyleBackColor = True
@@ -260,7 +276,8 @@ Partial Class aaformMainWindow
         Me.menubarMainWindow.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarFileMenu, Me.menubarOptionsMenu, Me.menubarHelpMenu})
         Me.menubarMainWindow.Location = New System.Drawing.Point(0, 0)
         Me.menubarMainWindow.Name = "menubarMainWindow"
-        Me.menubarMainWindow.Size = New System.Drawing.Size(331, 24)
+        Me.menubarMainWindow.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
+        Me.menubarMainWindow.Size = New System.Drawing.Size(414, 28)
         Me.menubarMainWindow.TabIndex = 1
         Me.menubarMainWindow.Text = "MenuStrip1"
         '
@@ -268,104 +285,110 @@ Partial Class aaformMainWindow
         '
         Me.menubarFileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarLaunchSettings, Me.zSeparatorAboveKeyValueStuff, Me.menubarDirectlyApplyKeyValueButton, Me.menubarVerifyKeyValueButton, Me.menubarExitButton})
         Me.menubarFileMenu.Name = "menubarFileMenu"
-        Me.menubarFileMenu.Size = New System.Drawing.Size(37, 20)
+        Me.menubarFileMenu.Size = New System.Drawing.Size(44, 24)
         Me.menubarFileMenu.Text = "&File"
         '
         'menubarLaunchSettings
         '
         Me.menubarLaunchSettings.Name = "menubarLaunchSettings"
-        Me.menubarLaunchSettings.Size = New System.Drawing.Size(249, 22)
+        Me.menubarLaunchSettings.Size = New System.Drawing.Size(303, 26)
         Me.menubarLaunchSettings.Text = "&Launch Settings app"
         '
         'zSeparatorAboveKeyValueStuff
         '
         Me.zSeparatorAboveKeyValueStuff.Name = "zSeparatorAboveKeyValueStuff"
-        Me.zSeparatorAboveKeyValueStuff.Size = New System.Drawing.Size(246, 6)
+        Me.zSeparatorAboveKeyValueStuff.Size = New System.Drawing.Size(300, 6)
         '
         'menubarDirectlyApplyKeyValueButton
         '
         Me.menubarDirectlyApplyKeyValueButton.Name = "menubarDirectlyApplyKeyValueButton"
         Me.menubarDirectlyApplyKeyValueButton.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
-        Me.menubarDirectlyApplyKeyValueButton.Size = New System.Drawing.Size(249, 22)
+        Me.menubarDirectlyApplyKeyValueButton.Size = New System.Drawing.Size(303, 26)
         Me.menubarDirectlyApplyKeyValueButton.Text = "&Directly apply key value..."
         '
         'menubarVerifyKeyValueButton
         '
         Me.menubarVerifyKeyValueButton.Name = "menubarVerifyKeyValueButton"
         Me.menubarVerifyKeyValueButton.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
-        Me.menubarVerifyKeyValueButton.Size = New System.Drawing.Size(249, 22)
+        Me.menubarVerifyKeyValueButton.Size = New System.Drawing.Size(303, 26)
         Me.menubarVerifyKeyValueButton.Text = "&Verify current key value..."
         Me.menubarVerifyKeyValueButton.ToolTipText = "Shows the current data in the Registry key value this app modifies."
         '
         'menubarExitButton
         '
         Me.menubarExitButton.Name = "menubarExitButton"
-        Me.menubarExitButton.Size = New System.Drawing.Size(249, 22)
+        Me.menubarExitButton.Size = New System.Drawing.Size(303, 26)
         Me.menubarExitButton.Text = "E&xit"
         '
         'menubarOptionsMenu
         '
-        Me.menubarOptionsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarShowStartupWarningMessageButton, Me.menubarShowRestorePointReminderMessageButton})
+        Me.menubarOptionsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarAlwaysCopySelections, Me.menubarShowStartupWarningMessageButton, Me.menubarShowRestorePointReminderMessageButton})
         Me.menubarOptionsMenu.Name = "menubarOptionsMenu"
-        Me.menubarOptionsMenu.Size = New System.Drawing.Size(61, 20)
+        Me.menubarOptionsMenu.Size = New System.Drawing.Size(73, 24)
         Me.menubarOptionsMenu.Text = "&Options"
         '
         'menubarShowStartupWarningMessageButton
         '
         Me.menubarShowStartupWarningMessageButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.menubarShowStartupWarningMessageButton.Name = "menubarShowStartupWarningMessageButton"
-        Me.menubarShowStartupWarningMessageButton.Size = New System.Drawing.Size(273, 22)
+        Me.menubarShowStartupWarningMessageButton.Size = New System.Drawing.Size(482, 26)
         Me.menubarShowStartupWarningMessageButton.Text = "Show startup &warning message"
         '
         'menubarShowRestorePointReminderMessageButton
         '
         Me.menubarShowRestorePointReminderMessageButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.menubarShowRestorePointReminderMessageButton.Name = "menubarShowRestorePointReminderMessageButton"
-        Me.menubarShowRestorePointReminderMessageButton.Size = New System.Drawing.Size(273, 22)
+        Me.menubarShowRestorePointReminderMessageButton.Size = New System.Drawing.Size(482, 26)
         Me.menubarShowRestorePointReminderMessageButton.Text = "Show restore point &reminder message"
         '
         'menubarHelpMenu
         '
         Me.menubarHelpMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarHelpTopicsButton, Me.zseparatorHelpMenu, Me.menubarAuthorsButton, Me.menubarLicenseButton, Me.menubarAboutButton})
         Me.menubarHelpMenu.Name = "menubarHelpMenu"
-        Me.menubarHelpMenu.Size = New System.Drawing.Size(44, 20)
+        Me.menubarHelpMenu.Size = New System.Drawing.Size(53, 24)
         Me.menubarHelpMenu.Text = "&Help"
         '
         'menubarHelpTopicsButton
         '
         Me.menubarHelpTopicsButton.Name = "menubarHelpTopicsButton"
         Me.menubarHelpTopicsButton.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F1), System.Windows.Forms.Keys)
-        Me.menubarHelpTopicsButton.Size = New System.Drawing.Size(210, 22)
+        Me.menubarHelpTopicsButton.Size = New System.Drawing.Size(255, 26)
         Me.menubarHelpTopicsButton.Text = "&View Help Topics"
         '
         'zseparatorHelpMenu
         '
         Me.zseparatorHelpMenu.Name = "zseparatorHelpMenu"
-        Me.zseparatorHelpMenu.Size = New System.Drawing.Size(207, 6)
+        Me.zseparatorHelpMenu.Size = New System.Drawing.Size(252, 6)
         '
         'menubarAuthorsButton
         '
         Me.menubarAuthorsButton.Name = "menubarAuthorsButton"
-        Me.menubarAuthorsButton.Size = New System.Drawing.Size(210, 22)
+        Me.menubarAuthorsButton.Size = New System.Drawing.Size(255, 26)
         Me.menubarAuthorsButton.Text = "A&cknowledgments"
         '
         'menubarLicenseButton
         '
         Me.menubarLicenseButton.Name = "menubarLicenseButton"
-        Me.menubarLicenseButton.Size = New System.Drawing.Size(210, 22)
+        Me.menubarLicenseButton.Size = New System.Drawing.Size(255, 26)
         Me.menubarLicenseButton.Text = "&License"
         '
         'menubarAboutButton
         '
         Me.menubarAboutButton.Name = "menubarAboutButton"
-        Me.menubarAboutButton.Size = New System.Drawing.Size(210, 22)
+        Me.menubarAboutButton.Size = New System.Drawing.Size(255, 26)
         Me.menubarAboutButton.Text = "&About"
+        '
+        'menubarAlwaysCopySelections
+        '
+        Me.menubarAlwaysCopySelections.Name = "menubarAlwaysCopySelections"
+        Me.menubarAlwaysCopySelections.Size = New System.Drawing.Size(482, 26)
+        Me.menubarAlwaysCopySelections.Text = "Always copy selections into Directly apply key value window"
         '
         'aaformMainWindow
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
-        Me.ClientSize = New System.Drawing.Size(331, 684)
+        Me.ClientSize = New System.Drawing.Size(414, 855)
         Me.Controls.Add(Me.flowlayoutpanelMainWindow)
         Me.Controls.Add(Me.menubarMainWindow)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -427,4 +450,5 @@ Partial Class aaformMainWindow
     Friend WithEvents menuitemUncheckAll As ToolStripMenuItem
     Friend WithEvents menubarLaunchSettings As ToolStripMenuItem
     Friend WithEvents zSeparatorAboveKeyValueStuff As ToolStripSeparator
+    Friend WithEvents menubarAlwaysCopySelections As ToolStripMenuItem
 End Class
