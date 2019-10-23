@@ -147,6 +147,16 @@ Public Class aaformMainWindow
         aaformDirectlyApplyKeyValue.ShowDialog(Me)
     End Sub
 
+
+    Private Sub menubarHiddenCopySelections_Click(sender As Object, e As EventArgs) Handles menubarHiddenCopySelections.Click
+        ' Under the "HiddenItems" menu, there's an entry just meant to copy over
+        ' the selections to the Directly apply key value window, and this code is
+        ' what it does when the user presses Ctrl+Shift+D.
+
+        aaformDirectlyApplyKeyValue.textboxKeyValue.Text = textboxRegistryKeyValue.Text
+        aaformDirectlyApplyKeyValue.ShowDialog(Me)
+    End Sub
+
     Private Sub menubarVerifyKeyValueButton_Click(sender As Object, e As EventArgs) Handles menubarVerifyKeyValueButton.Click
         ' Launch hsp_registry-helper.exe and have it tell the user what the current Registry key value is.
         Dim proc As New ProcessStartInfo

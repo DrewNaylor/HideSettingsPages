@@ -51,6 +51,7 @@ Partial Class aaformMainWindow
         Me.menubarVerifyKeyValueButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarExitButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarOptionsMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarAlwaysCopySelections = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarShowStartupWarningMessageButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarShowRestorePointReminderMessageButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarHelpMenu = New System.Windows.Forms.ToolStripMenuItem()
@@ -59,7 +60,8 @@ Partial Class aaformMainWindow
         Me.menubarAuthorsButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarLicenseButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarAboutButton = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menubarAlwaysCopySelections = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HiddenItemsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarHiddenCopySelections = New System.Windows.Forms.ToolStripMenuItem()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
@@ -78,7 +80,7 @@ Partial Class aaformMainWindow
         Me.flowlayoutpanelMainWindow.Controls.Add(Me.panelApplyUndoExit)
         Me.flowlayoutpanelMainWindow.Dock = System.Windows.Forms.DockStyle.Fill
         Me.flowlayoutpanelMainWindow.Location = New System.Drawing.Point(0, 28)
-        Me.flowlayoutpanelMainWindow.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.flowlayoutpanelMainWindow.Margin = New System.Windows.Forms.Padding(4)
         Me.flowlayoutpanelMainWindow.Name = "flowlayoutpanelMainWindow"
         Me.flowlayoutpanelMainWindow.Size = New System.Drawing.Size(414, 827)
         Me.flowlayoutpanelMainWindow.TabIndex = 0
@@ -89,9 +91,9 @@ Partial Class aaformMainWindow
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.radiobuttonHidePages)
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.labelPageVisibility)
         Me.groupboxSettingsPageVisibility.Location = New System.Drawing.Point(4, 4)
-        Me.groupboxSettingsPageVisibility.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.groupboxSettingsPageVisibility.Margin = New System.Windows.Forms.Padding(4)
         Me.groupboxSettingsPageVisibility.Name = "groupboxSettingsPageVisibility"
-        Me.groupboxSettingsPageVisibility.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.groupboxSettingsPageVisibility.Padding = New System.Windows.Forms.Padding(4)
         Me.groupboxSettingsPageVisibility.Size = New System.Drawing.Size(404, 110)
         Me.groupboxSettingsPageVisibility.TabIndex = 0
         Me.groupboxSettingsPageVisibility.TabStop = False
@@ -101,7 +103,7 @@ Partial Class aaformMainWindow
         '
         Me.radiobuttonShowOnlyPages.AutoSize = True
         Me.radiobuttonShowOnlyPages.Location = New System.Drawing.Point(8, 79)
-        Me.radiobuttonShowOnlyPages.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.radiobuttonShowOnlyPages.Margin = New System.Windows.Forms.Padding(4)
         Me.radiobuttonShowOnlyPages.Name = "radiobuttonShowOnlyPages"
         Me.radiobuttonShowOnlyPages.Size = New System.Drawing.Size(96, 21)
         Me.radiobuttonShowOnlyPages.TabIndex = 2
@@ -113,7 +115,7 @@ Partial Class aaformMainWindow
         Me.radiobuttonHidePages.AutoSize = True
         Me.radiobuttonHidePages.Checked = True
         Me.radiobuttonHidePages.Location = New System.Drawing.Point(8, 52)
-        Me.radiobuttonHidePages.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.radiobuttonHidePages.Margin = New System.Windows.Forms.Padding(4)
         Me.radiobuttonHidePages.Name = "radiobuttonHidePages"
         Me.radiobuttonHidePages.Size = New System.Drawing.Size(58, 21)
         Me.radiobuttonHidePages.TabIndex = 1
@@ -135,9 +137,9 @@ Partial Class aaformMainWindow
         '
         Me.groupboxPageList.Controls.Add(Me.panelScrollablePageList)
         Me.groupboxPageList.Location = New System.Drawing.Point(4, 122)
-        Me.groupboxPageList.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.groupboxPageList.Margin = New System.Windows.Forms.Padding(4)
         Me.groupboxPageList.Name = "groupboxPageList"
-        Me.groupboxPageList.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.groupboxPageList.Padding = New System.Windows.Forms.Padding(4)
         Me.groupboxPageList.Size = New System.Drawing.Size(404, 549)
         Me.groupboxPageList.TabIndex = 1
         Me.groupboxPageList.TabStop = False
@@ -199,9 +201,9 @@ Partial Class aaformMainWindow
         Me.groupboxPreviewRegistryKeyValue.Controls.Add(Me.linklabelViewLarger)
         Me.groupboxPreviewRegistryKeyValue.Controls.Add(Me.textboxRegistryKeyValue)
         Me.groupboxPreviewRegistryKeyValue.Location = New System.Drawing.Point(4, 679)
-        Me.groupboxPreviewRegistryKeyValue.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.groupboxPreviewRegistryKeyValue.Margin = New System.Windows.Forms.Padding(4)
         Me.groupboxPreviewRegistryKeyValue.Name = "groupboxPreviewRegistryKeyValue"
-        Me.groupboxPreviewRegistryKeyValue.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.groupboxPreviewRegistryKeyValue.Padding = New System.Windows.Forms.Padding(4)
         Me.groupboxPreviewRegistryKeyValue.Size = New System.Drawing.Size(404, 98)
         Me.groupboxPreviewRegistryKeyValue.TabIndex = 2
         Me.groupboxPreviewRegistryKeyValue.TabStop = False
@@ -221,7 +223,7 @@ Partial Class aaformMainWindow
         'textboxRegistryKeyValue
         '
         Me.textboxRegistryKeyValue.Location = New System.Drawing.Point(8, 25)
-        Me.textboxRegistryKeyValue.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.textboxRegistryKeyValue.Margin = New System.Windows.Forms.Padding(4)
         Me.textboxRegistryKeyValue.Multiline = True
         Me.textboxRegistryKeyValue.Name = "textboxRegistryKeyValue"
         Me.textboxRegistryKeyValue.ReadOnly = True
@@ -243,7 +245,7 @@ Partial Class aaformMainWindow
         'buttonExit
         '
         Me.buttonExit.Location = New System.Drawing.Point(306, 8)
-        Me.buttonExit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.buttonExit.Margin = New System.Windows.Forms.Padding(4)
         Me.buttonExit.Name = "buttonExit"
         Me.buttonExit.Size = New System.Drawing.Size(78, 29)
         Me.buttonExit.TabIndex = 2
@@ -253,7 +255,7 @@ Partial Class aaformMainWindow
         'buttonApplyChanges
         '
         Me.buttonApplyChanges.Location = New System.Drawing.Point(22, 8)
-        Me.buttonApplyChanges.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.buttonApplyChanges.Margin = New System.Windows.Forms.Padding(4)
         Me.buttonApplyChanges.Name = "buttonApplyChanges"
         Me.buttonApplyChanges.Size = New System.Drawing.Size(112, 29)
         Me.buttonApplyChanges.TabIndex = 0
@@ -263,7 +265,7 @@ Partial Class aaformMainWindow
         'buttonUndoChanges
         '
         Me.buttonUndoChanges.Location = New System.Drawing.Point(144, 8)
-        Me.buttonUndoChanges.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.buttonUndoChanges.Margin = New System.Windows.Forms.Padding(4)
         Me.buttonUndoChanges.Name = "buttonUndoChanges"
         Me.buttonUndoChanges.Size = New System.Drawing.Size(154, 29)
         Me.buttonUndoChanges.TabIndex = 1
@@ -273,7 +275,7 @@ Partial Class aaformMainWindow
         'menubarMainWindow
         '
         Me.menubarMainWindow.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.menubarMainWindow.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarFileMenu, Me.menubarOptionsMenu, Me.menubarHelpMenu})
+        Me.menubarMainWindow.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarFileMenu, Me.menubarOptionsMenu, Me.menubarHelpMenu, Me.HiddenItemsToolStripMenuItem})
         Me.menubarMainWindow.Location = New System.Drawing.Point(0, 0)
         Me.menubarMainWindow.Name = "menubarMainWindow"
         Me.menubarMainWindow.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
@@ -327,6 +329,12 @@ Partial Class aaformMainWindow
         Me.menubarOptionsMenu.Size = New System.Drawing.Size(73, 24)
         Me.menubarOptionsMenu.Text = "&Options"
         '
+        'menubarAlwaysCopySelections
+        '
+        Me.menubarAlwaysCopySelections.Name = "menubarAlwaysCopySelections"
+        Me.menubarAlwaysCopySelections.Size = New System.Drawing.Size(482, 26)
+        Me.menubarAlwaysCopySelections.Text = "Always copy selections into Directly apply key value window"
+        '
         'menubarShowStartupWarningMessageButton
         '
         Me.menubarShowStartupWarningMessageButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
@@ -378,11 +386,21 @@ Partial Class aaformMainWindow
         Me.menubarAboutButton.Size = New System.Drawing.Size(255, 26)
         Me.menubarAboutButton.Text = "&About"
         '
-        'menubarAlwaysCopySelections
+        'HiddenItemsToolStripMenuItem
         '
-        Me.menubarAlwaysCopySelections.Name = "menubarAlwaysCopySelections"
-        Me.menubarAlwaysCopySelections.Size = New System.Drawing.Size(482, 26)
-        Me.menubarAlwaysCopySelections.Text = "Always copy selections into Directly apply key value window"
+        Me.HiddenItemsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarHiddenCopySelections})
+        Me.HiddenItemsToolStripMenuItem.Name = "HiddenItemsToolStripMenuItem"
+        Me.HiddenItemsToolStripMenuItem.Size = New System.Drawing.Size(106, 24)
+        Me.HiddenItemsToolStripMenuItem.Text = "HiddenItems"
+        Me.HiddenItemsToolStripMenuItem.Visible = False
+        '
+        'menubarHiddenCopySelections
+        '
+        Me.menubarHiddenCopySelections.Name = "menubarHiddenCopySelections"
+        Me.menubarHiddenCopySelections.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
+        Me.menubarHiddenCopySelections.Size = New System.Drawing.Size(499, 26)
+        Me.menubarHiddenCopySelections.Text = "Copy selections into directly apply value window"
         '
         'aaformMainWindow
         '
@@ -451,4 +469,6 @@ Partial Class aaformMainWindow
     Friend WithEvents menubarLaunchSettings As ToolStripMenuItem
     Friend WithEvents zSeparatorAboveKeyValueStuff As ToolStripSeparator
     Friend WithEvents menubarAlwaysCopySelections As ToolStripMenuItem
+    Friend WithEvents HiddenItemsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents menubarHiddenCopySelections As ToolStripMenuItem
 End Class
