@@ -259,7 +259,40 @@ Public Class aaformMainWindow
 
         End If
     End Sub
+#End Region
 
+#Region "menubarAlwaysCopySelections toggle."
+    Private Sub menubarAlwaysCopySelections_Click(sender As Object, e As EventArgs) Handles menubarAlwaysCopySelections.Click
+        ' Toggles on or off always copying selections
+        ' into the Directly apply key value window.
+
+        ' Code based on UXL Launcher's "Always On Top" button
+        ' code.
+
+        ' If the checkbox is unchecked, when it's clicked, set
+        ' My.Settings.messageShowSystemRestoreReminder to True
+        ' and the control's CheckState to CheckState.Checked.
+        If menubarAlwaysCopySelections.CheckState = CheckState.Unchecked Then
+            menubarAlwaysCopySelections.CheckState = CheckState.Checked
+            If My.Settings.alwaysCopyIntoDirectlyApplyKeyValueWindow = False Then
+                My.Settings.alwaysCopyIntoDirectlyApplyKeyValueWindow = True
+            End If
+            My.Settings.Save()
+            My.Settings.Reload()
+
+            ' However, if the checkbox is checked, when it's clicked, set
+            ' My.Settings.messageShowSystemRestoreReminder to False
+            ' and the control's CheckState to CheckState.Unchecked.
+        ElseIf menubarAlwaysCopySelections.CheckState = CheckState.Checked Then
+            menubarAlwaysCopySelections.CheckState = CheckState.Unchecked
+            If My.Settings.alwaysCopyIntoDirectlyApplyKeyValueWindow = True Then
+                My.Settings.alwaysCopyIntoDirectlyApplyKeyValueWindow = False
+            End If
+            My.Settings.Save()
+            My.Settings.Reload()
+
+        End If
+    End Sub
 #End Region
 
 #End Region

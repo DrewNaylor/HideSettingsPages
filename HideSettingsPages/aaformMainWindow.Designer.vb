@@ -331,6 +331,7 @@ Partial Class aaformMainWindow
         '
         'menubarAlwaysCopySelections
         '
+        Me.menubarAlwaysCopySelections.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.menubarAlwaysCopySelections.Name = "menubarAlwaysCopySelections"
         Me.menubarAlwaysCopySelections.Size = New System.Drawing.Size(482, 26)
         Me.menubarAlwaysCopySelections.Text = "Always copy selections into Directly apply key value window"
