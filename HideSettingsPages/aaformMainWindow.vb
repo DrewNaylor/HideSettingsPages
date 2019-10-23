@@ -55,7 +55,14 @@ Public Class aaformMainWindow
         ' are in the CheckState.Checked if the My.Settings value for
         ' it is True and CheckState.Unchecked if it's False.
 
-        ' First up, the Show startup warning checkbox.
+        ' First up, the Always copy selections... checkbox.
+        If My.Settings.alwaysCopyIntoDirectlyApplyKeyValueWindow = True Then
+            menubarAlwaysCopySelections.CheckState = CheckState.Checked
+        ElseIf My.Settings.alwaysCopyIntoDirectlyApplyKeyValueWindow = False Then
+            menubarAlwaysCopySelections.CheckState = CheckState.Unchecked
+        End If
+
+        ' Next, the Show startup warning checkbox.
         If My.Settings.messageShowStartupWarning = True Then
             menubarShowStartupWarningMessageButton.CheckState = CheckState.Checked
         ElseIf My.Settings.messageShowStartupWarning = False Then
