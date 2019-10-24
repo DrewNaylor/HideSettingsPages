@@ -77,10 +77,10 @@ Public Class loadPageListSelections
         '        End If
         '    End If
         'Next
-        Dim pageName As Array = loaderPageList
+        Dim pageName As String() = loaderPageList
         For Each page In pageName
             For i As Integer = 0 To aaformMainWindow.checkedlistboxPageList.Items.Count - 1
-                If aaformMainWindow.checkedlistboxPageList.Items.Item(i) Is page Then
+                If aaformMainWindow.checkedlistboxPageList.GetItemText(i) = page Then
                     aaformMainWindow.checkedlistboxPageList.SetItemChecked(i, True)
                 End If
             Next
