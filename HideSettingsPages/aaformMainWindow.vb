@@ -588,6 +588,10 @@ Public Class aaformMainWindow
             End Select
         End If
     End Sub
+
+    Private Sub testInputFileButton_Click(sender As Object, e As EventArgs) Handles testInputFileButton.Click
+        loadPageListSelections.loaderTextFileSource(testInputFilePath.Text)
+    End Sub
 #End Region
 #End Region
 #End Region

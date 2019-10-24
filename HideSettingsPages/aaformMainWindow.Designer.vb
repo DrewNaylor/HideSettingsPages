@@ -62,6 +62,8 @@ Partial Class aaformMainWindow
         Me.menubarAboutButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.HiddenItemsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarHiddenCopySelections = New System.Windows.Forms.ToolStripMenuItem()
+        Me.testInputFileButton = New System.Windows.Forms.Button()
+        Me.testInputFilePath = New System.Windows.Forms.TextBox()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
@@ -87,6 +89,8 @@ Partial Class aaformMainWindow
         '
         'groupboxSettingsPageVisibility
         '
+        Me.groupboxSettingsPageVisibility.Controls.Add(Me.testInputFilePath)
+        Me.groupboxSettingsPageVisibility.Controls.Add(Me.testInputFileButton)
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.radiobuttonShowOnlyPages)
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.radiobuttonHidePages)
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.labelPageVisibility)
@@ -404,6 +408,22 @@ Partial Class aaformMainWindow
         Me.menubarHiddenCopySelections.Size = New System.Drawing.Size(499, 26)
         Me.menubarHiddenCopySelections.Text = "Copy selections into directly apply value window"
         '
+        'testInputFileButton
+        '
+        Me.testInputFileButton.Location = New System.Drawing.Point(327, 79)
+        Me.testInputFileButton.Name = "testInputFileButton"
+        Me.testInputFileButton.Size = New System.Drawing.Size(75, 23)
+        Me.testInputFileButton.TabIndex = 3
+        Me.testInputFileButton.Text = "Button1"
+        Me.testInputFileButton.UseVisualStyleBackColor = True
+        '
+        'testInputFilePath
+        '
+        Me.testInputFilePath.Location = New System.Drawing.Point(156, 79)
+        Me.testInputFilePath.Name = "testInputFilePath"
+        Me.testInputFilePath.Size = New System.Drawing.Size(165, 22)
+        Me.testInputFilePath.TabIndex = 4
+        '
         'aaformMainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
@@ -473,4 +493,6 @@ Partial Class aaformMainWindow
     Friend WithEvents menubarAlwaysCopySelections As ToolStripMenuItem
     Friend WithEvents HiddenItemsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents menubarHiddenCopySelections As ToolStripMenuItem
+    Friend WithEvents testInputFilePath As TextBox
+    Friend WithEvents testInputFileButton As Button
 End Class
