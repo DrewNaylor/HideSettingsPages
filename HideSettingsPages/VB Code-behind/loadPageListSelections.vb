@@ -32,10 +32,11 @@ Public Class loadPageListSelections
         ' See what the file starts with.
         ' If it starts with "hide:", then select the "Hide" radio button.
         If inputTextFile.StartsWith("hide:") Then
-            aaformMainWindow.radiobuttonHidePages.Checked = True
-            ' Now remove the beginning of the file.
-            inputTextFile.Remove(0, 5)
             Debug.WriteLine(inputTextFile)
+            aaformMainWindow.radiobuttonHidePages.Checked = True
+            ' Now remove the beginning of the file and have it be a new string.
+            Dim newFile As String = inputTextFile.Remove(0, 5)
+            Debug.WriteLine(newFile)
         End If
     End Sub
 
