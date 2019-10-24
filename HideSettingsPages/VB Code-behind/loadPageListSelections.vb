@@ -54,7 +54,8 @@ Public Class loadPageListSelections
             For Each pageName As String In loaderPageList
                 For i As Integer = 0 To aaformMainWindow.checkedlistboxPageList.Items.Count - 1
                     Debug.WriteLine("pageName: " & pageName)
-                    If aaformMainWindow.checkedlistboxPageList.GetItemText(i).Contains(pageName) Then
+                    Debug.WriteLine("current item text (i): " & aaformMainWindow.checkedlistboxPageList.Items.Item(i).ToString)
+                    If aaformMainWindow.checkedlistboxPageList.Items.Item(i).ToString.Contains(pageName) Then
                         aaformMainWindow.checkedlistboxPageList.SetItemChecked(i, True)
                     End If
                 Next
