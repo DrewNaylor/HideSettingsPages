@@ -30,12 +30,14 @@ Public Class loadPageListSelections
 
     Friend Shared Sub loaderTextFileSource(inputTextFile As String)
         ' See what the file starts with.
+        ' Load the file itself.
+        Dim fileReaderInput As String = My.Computer.FileSystem.ReadAllText(inputTextFile)
         ' If it starts with "hide:", then select the "Hide" radio button.
-        If inputTextFile.StartsWith("hide:") Then
-            Debug.WriteLine(inputTextFile)
+        If fileReaderInput.StartsWith("hide:") Then
+            Debug.WriteLine(fileReaderInput)
             aaformMainWindow.radiobuttonHidePages.Checked = True
             ' Now remove the beginning of the file and have it be a new string.
-            Dim newFile As String = inputTextFile.Remove(0, 5)
+            Dim newFile As String = fileReaderInput.Remove(0, 5)
             Debug.WriteLine(newFile)
         End If
     End Sub
