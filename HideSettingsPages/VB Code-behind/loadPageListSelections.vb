@@ -39,6 +39,27 @@ Public Class loadPageListSelections
             ' Now remove the beginning of the file and have it be a new string.
             Dim newFile As String = fileReaderInput.Remove(0, 5)
             Debug.WriteLine(newFile)
+
+            ' A delimiter is needed before continuing.
+            ' This is used to split apart the words
+            ' so that they canbe checked in the page
+            ' list.
+            Dim delimiter As Char = ";"c
+
+            ' Page names now need to be split.
+            Dim loaderPageList() As String = newFile.Split(delimiter)
+
+            ' Now go through the page list and check all pages
+            ' that are in the page list from the file.
+            For Each pageName As String In loaderPageList
+                For i As Integer = 0 To aaformMainWindow.checkedlistboxPageList.Items.Count - 1
+                    Debug.WriteLine("pageName: " & pageName)
+                    If aaformMainWindow.checkedlistboxPageList.GetItemText(i).Contains(pageName) Then
+                        aaformMainWindow.checkedlistboxPageList.SetItemChecked(i, True)
+                    End If
+                Next
+            Next
+
         End If
     End Sub
 
