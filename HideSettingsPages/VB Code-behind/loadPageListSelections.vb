@@ -29,7 +29,14 @@
 Public Class loadPageListSelections
 
     Friend Shared Sub loaderTextFileSource(inputTextFile As String)
-
+        ' See what the file starts with.
+        ' If it starts with "hide:", then select the "Hide" radio button.
+        If inputTextFile.StartsWith("hide:") Then
+            aaformMainWindow.radiobuttonHidePages.Checked = True
+            ' Now remove the beginning of the file.
+            inputTextFile.Remove(0, 5)
+            Debug.WriteLine(inputTextFile)
+        End If
     End Sub
 
 End Class
