@@ -63,28 +63,23 @@ Public Class loadPageListSelections
 
         ' Now go through the page list and check all pages
         ' that are in the page list from the file.
-        ' This code is based on an MSDN example:
-        ' https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.listbox.findstring?view=netframework-4.8
 
-        ' Ensure we have a proper string to search for.
-        'For Each pageName As String In loaderPageList
-        '    If pageName <> String.Empty Then
-        '        ' Find the item in the list and store the index to the item.
-        '        Dim index As Integer = aaformMainWindow.checkedlistboxPageList.FindString(pageName)
-        '        ' Determine if a valid index is returned. Select the item if it is valid.
-        '        If index <> -1 Then
-        '            aaformMainWindow.checkedlistboxPageList.SetItemChecked(index, True)
-        '        End If
-        '    End If
-        'Next
+        ' First, get a page name list based on the previous
+        ' split string.
         Dim pageNameList As String() = loaderPageList
+        ' Now we look at each of the page names in that
+        ' page name list.
         For Each pageName In pageNameList
+            ' Look through every item in the checkedlistbox.
             For i As Integer = 0 To aaformMainWindow.checkedlistboxPageList.Items.Count - 1
+                ' If the "current" checkedlistbox item text matches the
+                ' page name we're looking for, then trim the end and
+                ' check the checkedlistitem.
                 If aaformMainWindow.checkedlistboxPageList.Items(i).ToString.TrimEnd = pageName Then
                     aaformMainWindow.checkedlistboxPageList.SetItemChecked(i, True)
                 End If
-            Next
-        Next
+            Next ' Go to the next checkedlistbox item.
+        Next ' Go to the next page name.
     End Sub
 
 End Class
