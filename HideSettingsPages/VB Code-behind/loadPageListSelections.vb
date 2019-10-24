@@ -37,36 +37,46 @@ Public Class loadPageListSelections
             Debug.WriteLine(fileReaderInput)
             aaformMainWindow.radiobuttonHidePages.Checked = True
             ' Now remove the beginning of the file and have it be a new string.
-            Dim newFile As String = fileReaderInput.Remove(0, 5)
-            Debug.WriteLine(newFile)
+            checkBoxes(fileReaderInput.Remove(0, 5))
 
-            ' A delimiter is needed before continuing.
-            ' This is used to split apart the words
-            ' so that they canbe checked in the page
-            ' list.
-            Dim delimiter As Char = ";"c
-
-            ' Page names now need to be split.
-            Dim loaderPageList() As String = newFile.Split(delimiter)
-
-            ' Now go through the page list and check all pages
-            ' that are in the page list from the file.
-            ' This code is based on an MSDN example:
-            ' https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.listbox.findstring?view=netframework-4.8
-
-            ' Ensure we have a proper string to search for.
-            For Each pageName As String In loaderPageList
-                If pageName <> String.Empty Then
-                    ' Find the item in the list and store the index to the item.
-                    Dim index As Integer = aaformMainWindow.checkedlistboxPageList.FindString(pageName)
-                    ' Determine if a valid index is returned. Select the item if it is valid.
-                    If index <> -1 Then
-                        aaformMainWindow.checkedlistboxPageList.SetItemChecked(index, True)
-                    End If
-                End If
-            Next
+        ElseIf fileReaderInput.StartsWith("showonly:") Then
+            ' Otherwise, if it starts with "showonly:", select the
+            ' Show only radio button.
+            Debug.WriteLine(fileReaderInput)
+            aaformMainWindow.radiobuttonShowOnlyPages.Checked = True
+            ' Now remove the beginning of the file and have it be a new string.
+            checkBoxes(fileReaderInput.Remove(0, 9))
 
         End If
+    End Sub
+
+    Private Shared Sub checkBoxes(modifiedFile As String)
+        Debug.WriteLine(modifiedFile)
+        ' A delimiter is needed before continuing.
+        ' This is used to split apart the words
+        ' so that they canbe checked in the page
+        ' list.
+        Dim delimiter As Char = ";"c
+
+        ' Page names now need to be split.
+        Dim loaderPageList() As String = modifiedFile.Split(delimiter)
+
+        ' Now go through the page list and check all pages
+        ' that are in the page list from the file.
+        ' This code is based on an MSDN example:
+        ' https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.listbox.findstring?view=netframework-4.8
+
+        ' Ensure we have a proper string to search for.
+        For Each pageName As String In loaderPageList
+            If pageName <> String.Empty Then
+                ' Find the item in the list and store the index to the item.
+                Dim index As Integer = aaformMainWindow.checkedlistboxPageList.FindString(pageName)
+                ' Determine if a valid index is returned. Select the item if it is valid.
+                If index <> -1 Then
+                    aaformMainWindow.checkedlistboxPageList.SetItemChecked(index, True)
+                End If
+            End If
+        Next
     End Sub
 
 End Class
