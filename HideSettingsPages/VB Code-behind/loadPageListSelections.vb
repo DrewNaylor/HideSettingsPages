@@ -51,18 +51,8 @@ Public Class loadPageListSelections
 
             ' Now go through the page list and check all pages
             ' that are in the page list from the file.
-            'For i As Integer = 0 To aaformMainWindow.checkedlistboxPageList.Items.Count - 1
-            '    For Each pageName As String In loaderPageList
-
-            '        Debug.WriteLine("pageName: " & pageName)
-            '        Debug.WriteLine("i: " & i)
-            '        Debug.WriteLine("current item text (i): " & aaformMainWindow.checkedlistboxPageList.Items.Item(i).ToString)
-            '        'If pageName Is aaformMainWindow.checkedlistboxPageList.Items.Item(i) Then
-            '        '    aaformMainWindow.checkedlistboxPageList.SetItemChecked(i, True)
-            '        'End If
-
-            '    Next
-            'Next
+            ' This code is based on an MSDN example:
+            ' https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.listbox.findstring?view=netframework-4.8
 
             ' Ensure we have a proper string to search for.
             For Each pageName As String In loaderPageList
@@ -72,8 +62,6 @@ Public Class loadPageListSelections
                     ' Determine if a valid index is returned. Select the item if it is valid.
                     If index <> -1 Then
                         aaformMainWindow.checkedlistboxPageList.SetItemChecked(index, True)
-                    Else
-                        MessageBox.Show("The search string did not match any items in the ListBox")
                     End If
                 End If
             Next
