@@ -82,7 +82,7 @@ Public Class loadPageListSelections
             For i As Integer = 0 To aaformMainWindow.checkedlistboxPageList.Items.Count - 1
                 MessageBox.Show("Items(i).ToString: " & aaformMainWindow.checkedlistboxPageList.Items(i).ToString & vbCrLf &
                         "page: " & page)
-                If aaformMainWindow.checkedlistboxPageList.Items(i).ToString = page Then
+                If aaformMainWindow.checkedlistboxPageList.Items(i).ToString.TrimEnd = page Then
                     MessageBox.Show("Items(i).ToString: " & aaformMainWindow.checkedlistboxPageList.Items(i).ToString & vbCrLf &
                         "page: " & page)
                     aaformMainWindow.checkedlistboxPageList.SetItemChecked(i, True)
