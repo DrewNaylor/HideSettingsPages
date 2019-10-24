@@ -80,10 +80,10 @@ Public Class loadPageListSelections
         Dim pageName As String() = loaderPageList
         For Each page In pageName
             For i As Integer = 0 To aaformMainWindow.checkedlistboxPageList.Items.Count - 1
-                MessageBox.Show("GetItemText: " & aaformMainWindow.checkedlistboxPageList.Items(i).ToString & vbCrLf &
+                MessageBox.Show("Items(i).ToString: " & aaformMainWindow.checkedlistboxPageList.Items(i).ToString & vbCrLf &
                         "page: " & page)
-                If aaformMainWindow.checkedlistboxPageList.Items(i).ToString.Contains(page) Then
-                    MessageBox.Show("GetItemText: " & aaformMainWindow.checkedlistboxPageList.GetItemText(i) & vbCrLf &
+                If aaformMainWindow.checkedlistboxPageList.Items(i).ToString = page Then
+                    MessageBox.Show("Items(i).ToString: " & aaformMainWindow.checkedlistboxPageList.Items(i).ToString & vbCrLf &
                         "page: " & page)
                     aaformMainWindow.checkedlistboxPageList.SetItemChecked(i, True)
                 End If
