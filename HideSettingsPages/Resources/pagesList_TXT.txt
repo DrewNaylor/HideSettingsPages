@@ -94,11 +94,14 @@ privacy-messaging
 privacy-microphone
 privacy-motion
 privacy-notifications
+privacy-phonecalls
 privacy-pictures
 privacy-radios
+privacy-speech
 privacy-speechtyping
 privacy-tasks
 privacy-videos
+privacy-voiceactivation
 privacy-webcam
 project
 quiethours
