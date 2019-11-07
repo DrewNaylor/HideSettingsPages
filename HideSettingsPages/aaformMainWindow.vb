@@ -277,7 +277,7 @@ Public Class aaformMainWindow
         ' code.
 
         ' If the checkbox is unchecked, when it's clicked, set
-        ' My.Settings.messageShowSystemRestoreReminder to True
+        ' My.Settings.alwaysCopyIntoDirectlyApplyKeyValueWindow to True
         ' and the control's CheckState to CheckState.Checked.
         If menubarAlwaysCopySelections.CheckState = CheckState.Unchecked Then
             menubarAlwaysCopySelections.CheckState = CheckState.Checked
@@ -288,12 +288,46 @@ Public Class aaformMainWindow
             My.Settings.Reload()
 
             ' However, if the checkbox is checked, when it's clicked, set
-            ' My.Settings.messageShowSystemRestoreReminder to False
+            ' My.Settings.alwaysCopyIntoDirectlyApplyKeyValueWindow to False
             ' and the control's CheckState to CheckState.Unchecked.
         ElseIf menubarAlwaysCopySelections.CheckState = CheckState.Checked Then
             menubarAlwaysCopySelections.CheckState = CheckState.Unchecked
             If My.Settings.alwaysCopyIntoDirectlyApplyKeyValueWindow = True Then
                 My.Settings.alwaysCopyIntoDirectlyApplyKeyValueWindow = False
+            End If
+            My.Settings.Save()
+            My.Settings.Reload()
+
+        End If
+    End Sub
+#End Region
+
+#Region "menubarUncheckAllSelectionsBeforeImport toggle."
+    Private Sub menubarUncheckAllSelectionsBeforeImport_Click(sender As Object, e As EventArgs) Handles menubarUncheckAllSelectionsBeforeImport.Click
+        ' Toggles on or off unchecking all selections
+        ' before importing selections.
+
+        ' Code based on UXL Launcher's "Always On Top" button
+        ' code.
+
+        ' If the checkbox is unchecked, when it's clicked, set
+        ' My.Settings.uncheckPageListBeforeLoadingSelections to True
+        ' and the control's CheckState to CheckState.Checked.
+        If menubarUncheckAllSelectionsBeforeImport.CheckState = CheckState.Unchecked Then
+            menubarUncheckAllSelectionsBeforeImport.CheckState = CheckState.Checked
+            If My.Settings.uncheckPageListBeforeLoadingSelections = False Then
+                My.Settings.uncheckPageListBeforeLoadingSelections = True
+            End If
+            My.Settings.Save()
+            My.Settings.Reload()
+
+            ' However, if the checkbox is checked, when it's clicked, set
+            ' My.Settings.uncheckPageListBeforeLoadingSelections to False
+            ' and the control's CheckState to CheckState.Unchecked.
+        ElseIf menubarUncheckAllSelectionsBeforeImport.CheckState = CheckState.Checked Then
+            menubarUncheckAllSelectionsBeforeImport.CheckState = CheckState.Unchecked
+            If My.Settings.uncheckPageListBeforeLoadingSelections = True Then
+                My.Settings.uncheckPageListBeforeLoadingSelections = False
             End If
             My.Settings.Save()
             My.Settings.Reload()
@@ -588,10 +622,6 @@ Public Class aaformMainWindow
             End Select
         End If
     End Sub
-
-    Private Sub testInputFileButton_Click(sender As Object, e As EventArgs) Handles testInputFileButton.Click
-        loadPageListSelections.loaderTextFileSource(testInputFilePath.Text)
-    End Sub
 #End Region
 #End Region
 #End Region
@@ -626,6 +656,7 @@ Public Class aaformMainWindow
     End Sub
 
     Private Sub menubarExportSelections_Click(sender As Object, e As EventArgs) Handles menubarExportSelections.Click
+        ' Open temporary selections export window.
         aaformExportSelections.textboxFormattedOutput.Text = "[HideSettingsPages Page Selections Format 1.00]" & vbCrLf &
             textboxRegistryKeyValue.Text
         aaformExportSelections.ShowDialog(Me)

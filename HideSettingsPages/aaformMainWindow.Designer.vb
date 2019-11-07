@@ -26,8 +26,6 @@ Partial Class aaformMainWindow
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(aaformMainWindow))
         Me.flowlayoutpanelMainWindow = New System.Windows.Forms.FlowLayoutPanel()
         Me.groupboxSettingsPageVisibility = New System.Windows.Forms.GroupBox()
-        Me.testInputFilePath = New System.Windows.Forms.TextBox()
-        Me.testInputFileButton = New System.Windows.Forms.Button()
         Me.radiobuttonShowOnlyPages = New System.Windows.Forms.RadioButton()
         Me.radiobuttonHidePages = New System.Windows.Forms.RadioButton()
         Me.labelPageVisibility = New System.Windows.Forms.Label()
@@ -48,6 +46,7 @@ Partial Class aaformMainWindow
         Me.menubarMainWindow = New System.Windows.Forms.MenuStrip()
         Me.menubarFileMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarLoadSelections = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarExportSelections = New System.Windows.Forms.ToolStripMenuItem()
         Me.zSeparatorAboveLaunchSettingsApp = New System.Windows.Forms.ToolStripSeparator()
         Me.menubarLaunchSettings = New System.Windows.Forms.ToolStripMenuItem()
         Me.zSeparatorAboveKeyValueStuff = New System.Windows.Forms.ToolStripSeparator()
@@ -57,7 +56,7 @@ Partial Class aaformMainWindow
         Me.menubarOptionsMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarAlwaysCopySelections = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarUncheckAllSelectionsBeforeImport = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.zToolStripSeparatorOptionsMenu = New System.Windows.Forms.ToolStripSeparator()
         Me.menubarShowStartupWarningMessageButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarShowRestorePointReminderMessageButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarHelpMenu = New System.Windows.Forms.ToolStripMenuItem()
@@ -69,7 +68,6 @@ Partial Class aaformMainWindow
         Me.HiddenItemsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarHiddenCopySelections = New System.Windows.Forms.ToolStripMenuItem()
         Me.openfiledialogLoadSelections = New System.Windows.Forms.OpenFileDialog()
-        Me.menubarExportSelections = New System.Windows.Forms.ToolStripMenuItem()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
@@ -95,8 +93,6 @@ Partial Class aaformMainWindow
         '
         'groupboxSettingsPageVisibility
         '
-        Me.groupboxSettingsPageVisibility.Controls.Add(Me.testInputFilePath)
-        Me.groupboxSettingsPageVisibility.Controls.Add(Me.testInputFileButton)
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.radiobuttonShowOnlyPages)
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.radiobuttonHidePages)
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.labelPageVisibility)
@@ -108,22 +104,6 @@ Partial Class aaformMainWindow
         Me.groupboxSettingsPageVisibility.TabIndex = 0
         Me.groupboxSettingsPageVisibility.TabStop = False
         Me.groupboxSettingsPageVisibility.Text = "Settings page visibility"
-        '
-        'testInputFilePath
-        '
-        Me.testInputFilePath.Location = New System.Drawing.Point(156, 79)
-        Me.testInputFilePath.Name = "testInputFilePath"
-        Me.testInputFilePath.Size = New System.Drawing.Size(165, 22)
-        Me.testInputFilePath.TabIndex = 4
-        '
-        'testInputFileButton
-        '
-        Me.testInputFileButton.Location = New System.Drawing.Point(327, 79)
-        Me.testInputFileButton.Name = "testInputFileButton"
-        Me.testInputFileButton.Size = New System.Drawing.Size(75, 23)
-        Me.testInputFileButton.TabIndex = 3
-        Me.testInputFileButton.Text = "Button1"
-        Me.testInputFileButton.UseVisualStyleBackColor = True
         '
         'radiobuttonShowOnlyPages
         '
@@ -323,6 +303,13 @@ Partial Class aaformMainWindow
         Me.menubarLoadSelections.Size = New System.Drawing.Size(303, 26)
         Me.menubarLoadSelections.Text = "I&mport selections..."
         '
+        'menubarExportSelections
+        '
+        Me.menubarExportSelections.Name = "menubarExportSelections"
+        Me.menubarExportSelections.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
+        Me.menubarExportSelections.Size = New System.Drawing.Size(303, 26)
+        Me.menubarExportSelections.Text = "Ex&port selections..."
+        '
         'zSeparatorAboveLaunchSettingsApp
         '
         Me.zSeparatorAboveLaunchSettingsApp.Name = "zSeparatorAboveLaunchSettingsApp"
@@ -362,7 +349,7 @@ Partial Class aaformMainWindow
         '
         'menubarOptionsMenu
         '
-        Me.menubarOptionsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarAlwaysCopySelections, Me.menubarUncheckAllSelectionsBeforeImport, Me.ToolStripSeparator1, Me.menubarShowStartupWarningMessageButton, Me.menubarShowRestorePointReminderMessageButton})
+        Me.menubarOptionsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarAlwaysCopySelections, Me.menubarUncheckAllSelectionsBeforeImport, Me.zToolStripSeparatorOptionsMenu, Me.menubarShowStartupWarningMessageButton, Me.menubarShowRestorePointReminderMessageButton})
         Me.menubarOptionsMenu.Name = "menubarOptionsMenu"
         Me.menubarOptionsMenu.Size = New System.Drawing.Size(73, 24)
         Me.menubarOptionsMenu.Text = "&Options"
@@ -381,10 +368,10 @@ Partial Class aaformMainWindow
         Me.menubarUncheckAllSelectionsBeforeImport.Size = New System.Drawing.Size(482, 26)
         Me.menubarUncheckAllSelectionsBeforeImport.Text = "Uncheck all page list items before importing selections"
         '
-        'ToolStripSeparator1
+        'zToolStripSeparatorOptionsMenu
         '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(479, 6)
+        Me.zToolStripSeparatorOptionsMenu.Name = "zToolStripSeparatorOptionsMenu"
+        Me.zToolStripSeparatorOptionsMenu.Size = New System.Drawing.Size(479, 6)
         '
         'menubarShowStartupWarningMessageButton
         '
@@ -458,13 +445,6 @@ Partial Class aaformMainWindow
         Me.openfiledialogLoadSelections.Filter = "Text files|*.txt|All files|*.*"
         Me.openfiledialogLoadSelections.Title = "Import Selections"
         '
-        'menubarExportSelections
-        '
-        Me.menubarExportSelections.Name = "menubarExportSelections"
-        Me.menubarExportSelections.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.menubarExportSelections.Size = New System.Drawing.Size(303, 26)
-        Me.menubarExportSelections.Text = "Ex&port selections..."
-        '
         'aaformMainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
@@ -534,12 +514,10 @@ Partial Class aaformMainWindow
     Friend WithEvents menubarAlwaysCopySelections As ToolStripMenuItem
     Friend WithEvents HiddenItemsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents menubarHiddenCopySelections As ToolStripMenuItem
-    Friend WithEvents testInputFilePath As TextBox
-    Friend WithEvents testInputFileButton As Button
     Friend WithEvents openfiledialogLoadSelections As OpenFileDialog
     Friend WithEvents menubarLoadSelections As ToolStripMenuItem
     Friend WithEvents zSeparatorAboveLaunchSettingsApp As ToolStripSeparator
     Friend WithEvents menubarUncheckAllSelectionsBeforeImport As ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents zToolStripSeparatorOptionsMenu As ToolStripSeparator
     Friend WithEvents menubarExportSelections As ToolStripMenuItem
 End Class
