@@ -70,7 +70,10 @@ Partial Class aaformExportSelections
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.ClientSize = New System.Drawing.Size(396, 272)
         Me.Controls.Add(Me.tablelayoutpanelExportSelections)
+        Me.MinimizeBox = False
         Me.Name = "aaformExportSelections"
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
         Me.Text = "Export Selections"
         Me.tablelayoutpanelExportSelections.ResumeLayout(False)
         Me.tablelayoutpanelExportSelections.PerformLayout()
