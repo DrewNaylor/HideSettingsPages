@@ -435,8 +435,9 @@ Partial Class aaformMainWindow
         'menubarLoadSelections
         '
         Me.menubarLoadSelections.Name = "menubarLoadSelections"
+        Me.menubarLoadSelections.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
         Me.menubarLoadSelections.Size = New System.Drawing.Size(303, 26)
-        Me.menubarLoadSelections.Text = "Load selections..."
+        Me.menubarLoadSelections.Text = "L&oad selections..."
         '
         'zSeparatorAboveLaunchSettingsApp
         '
