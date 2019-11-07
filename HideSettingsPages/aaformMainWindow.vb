@@ -663,9 +663,20 @@ Public Class aaformMainWindow
     End Sub
 
     Private Sub menubarExportSelections_Click(sender As Object, e As EventArgs) Handles menubarExportSelections.Click
-        ' Open temporary selections export window.
-        aaformExportSelections.textboxFormattedOutput.Text = "[HideSettingsPages Page Selections Format 1.00]" & vbCrLf &
+        ' Show the "Export selections..." dialog and save the file if the user
+        ' wants to. The selections in the Registry key value preview box will
+        ' be written to the output file with a validation header.
+
+        ' Code based on this StackOverflow answer:
+        ' https://stackoverflow.com/a/5002598
+
+        If savefiledialogExportSelections.ShowDialog = DialogResult.OK Then
+            ' If the user clicks the "OK" button, save the file.
+
+            Dim fileName As String = savefiledialogExportSelections.FileName
+            Dim exportText As String = "[HideSettingsPages Page Selections Format 1.00]" & vbCrLf &
             textboxRegistryKeyValue.Text
-        aaformExportSelections.ShowDialog(Me)
+            My.Computer.FileSystem.WriteAllText(fileName, exportText, False)
+        End If
     End Sub
 End Class

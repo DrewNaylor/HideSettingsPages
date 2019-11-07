@@ -68,6 +68,7 @@ Partial Class aaformMainWindow
         Me.HiddenItemsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarHiddenCopySelections = New System.Windows.Forms.ToolStripMenuItem()
         Me.openfiledialogLoadSelections = New System.Windows.Forms.OpenFileDialog()
+        Me.savefiledialogExportSelections = New System.Windows.Forms.SaveFileDialog()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
@@ -446,6 +447,11 @@ Partial Class aaformMainWindow
         Me.openfiledialogLoadSelections.Filter = "Text files|*.txt|All files|*.*"
         Me.openfiledialogLoadSelections.Title = "Import Selections"
         '
+        'savefiledialogExportSelections
+        '
+        Me.savefiledialogExportSelections.Filter = "Text files|*.txt|All files|*.*"
+        Me.savefiledialogExportSelections.Title = "Export Selections"
+        '
         'aaformMainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
@@ -521,4 +527,5 @@ Partial Class aaformMainWindow
     Friend WithEvents menubarUncheckAllSelectionsBeforeImport As ToolStripMenuItem
     Friend WithEvents zToolStripSeparatorOptionsMenu As ToolStripSeparator
     Friend WithEvents menubarExportSelections As ToolStripMenuItem
+    Friend WithEvents savefiledialogExportSelections As SaveFileDialog
 End Class

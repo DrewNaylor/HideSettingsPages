@@ -117,12 +117,6 @@
     <Compile Include="aaformDirectlyApplyKeyValue.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="aaformExportSelections.Designer.vb">
-      <DependentUpon>aaformExportSelections.vb</DependentUpon>
-    </Compile>
-    <Compile Include="aaformExportSelections.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="aaformMainWindow.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -166,9 +160,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="aaformDirectlyApplyKeyValue.resx">
       <DependentUpon>aaformDirectlyApplyKeyValue.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="aaformExportSelections.resx">
-      <DependentUpon>aaformExportSelections.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="aaformMainWindow.resx">
       <DependentUpon>aaformMainWindow.vb</DependentUpon>
