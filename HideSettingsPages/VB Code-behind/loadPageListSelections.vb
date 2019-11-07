@@ -32,21 +32,26 @@ Public Class loadPageListSelections
         ' See what the file starts with.
         ' Load the file itself.
         Dim fileReaderInput As String = My.Computer.FileSystem.ReadAllText(inputTextFile)
-        ' If it starts with "hide:", then select the "Hide" radio button.
-        If fileReaderInput.StartsWith("hide:") Then
-            Debug.WriteLine(fileReaderInput)
-            aaformMainWindow.radiobuttonHidePages.Checked = True
-            ' Now remove the beginning of the file and have it be a new string.
-            checkBoxes(fileReaderInput.Remove(0, 5))
+        ' Ensure the input file is a valid text file for HideSettingsPages usage.
+        ' This could be useful as a feature to add to hsp_registry-helper as well.
+        If fileReaderInput.StartsWith("[HideSettingsPages Page Selections Format 1.00]") Then
+            ' Since the file appears to be valid, remove that text from the string and parse the rest.
+            ' If it starts with "hide:", then select the "Hide" radio button.
+            If fileReaderInput.StartsWith("hide:") Then
+                Debug.WriteLine(fileReaderInput)
+                aaformMainWindow.radiobuttonHidePages.Checked = True
+                ' Now remove the beginning of the file and have it be a new string.
+                checkBoxes(fileReaderInput.Remove(0, 5))
 
-        ElseIf fileReaderInput.StartsWith("showonly:") Then
-            ' Otherwise, if it starts with "showonly:", select the
-            ' Show only radio button.
-            Debug.WriteLine(fileReaderInput)
-            aaformMainWindow.radiobuttonShowOnlyPages.Checked = True
-            ' Now remove the beginning of the file and have it be a new string.
-            checkBoxes(fileReaderInput.Remove(0, 9))
+            ElseIf fileReaderInput.StartsWith("showonly:") Then
+                ' Otherwise, if it starts with "showonly:", select the
+                ' Show only radio button.
+                Debug.WriteLine(fileReaderInput)
+                aaformMainWindow.radiobuttonShowOnlyPages.Checked = True
+                ' Now remove the beginning of the file and have it be a new string.
+                checkBoxes(fileReaderInput.Remove(0, 9))
 
+            End If
         End If
     End Sub
 
