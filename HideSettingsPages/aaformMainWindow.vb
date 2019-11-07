@@ -603,7 +603,7 @@ Public Class aaformMainWindow
             Dim fileName As String = openfiledialogLoadSelections.FileName.ToUpperInvariant
             ' If it's a text file, process it using the text file
             ' parser sub/function.
-            If IO.Path.GetExtension(fileName) = "TXT" Then
+            If IO.Path.GetExtension(fileName) = ".TXT" Then
                 loadPageListSelections.loaderTextFileSource(fileName)
 
             Else
