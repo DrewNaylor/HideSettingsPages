@@ -65,6 +65,8 @@ Partial Class aaformMainWindow
         Me.HiddenItemsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarHiddenCopySelections = New System.Windows.Forms.ToolStripMenuItem()
         Me.openfiledialogLoadSelections = New System.Windows.Forms.OpenFileDialog()
+        Me.menubarLoadSelections = New System.Windows.Forms.ToolStripMenuItem()
+        Me.zSeparatorAboveLaunchSettingsApp = New System.Windows.Forms.ToolStripSeparator()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
@@ -306,7 +308,7 @@ Partial Class aaformMainWindow
         '
         'menubarFileMenu
         '
-        Me.menubarFileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarLaunchSettings, Me.zSeparatorAboveKeyValueStuff, Me.menubarDirectlyApplyKeyValueButton, Me.menubarVerifyKeyValueButton, Me.menubarExitButton})
+        Me.menubarFileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarLoadSelections, Me.zSeparatorAboveLaunchSettingsApp, Me.menubarLaunchSettings, Me.zSeparatorAboveKeyValueStuff, Me.menubarDirectlyApplyKeyValueButton, Me.menubarVerifyKeyValueButton, Me.menubarExitButton})
         Me.menubarFileMenu.Name = "menubarFileMenu"
         Me.menubarFileMenu.Size = New System.Drawing.Size(44, 24)
         Me.menubarFileMenu.Text = "&File"
@@ -430,6 +432,17 @@ Partial Class aaformMainWindow
         Me.openfiledialogLoadSelections.FileName = "OpenFileDialog1"
         Me.openfiledialogLoadSelections.Filter = """XML files|*.xml|Text files|*.txt|All files|*.*"""
         '
+        'menubarLoadSelections
+        '
+        Me.menubarLoadSelections.Name = "menubarLoadSelections"
+        Me.menubarLoadSelections.Size = New System.Drawing.Size(303, 26)
+        Me.menubarLoadSelections.Text = "Load selections..."
+        '
+        'zSeparatorAboveLaunchSettingsApp
+        '
+        Me.zSeparatorAboveLaunchSettingsApp.Name = "zSeparatorAboveLaunchSettingsApp"
+        Me.zSeparatorAboveLaunchSettingsApp.Size = New System.Drawing.Size(300, 6)
+        '
         'aaformMainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
@@ -502,4 +515,6 @@ Partial Class aaformMainWindow
     Friend WithEvents testInputFilePath As TextBox
     Friend WithEvents testInputFileButton As Button
     Friend WithEvents openfiledialogLoadSelections As OpenFileDialog
+    Friend WithEvents menubarLoadSelections As ToolStripMenuItem
+    Friend WithEvents zSeparatorAboveLaunchSettingsApp As ToolStripSeparator
 End Class
