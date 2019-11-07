@@ -624,4 +624,10 @@ Public Class aaformMainWindow
             End If
         End If
     End Sub
+
+    Private Sub menubarExportSelections_Click(sender As Object, e As EventArgs) Handles menubarExportSelections.Click
+        aaformExportSelections.textboxFormattedOutput.Text = "[HideSettingsPages Page Selections Format 1.00]" & vbCrLf &
+            textboxRegistryKeyValue.Text
+        aaformExportSelections.ShowDialog(Me)
+    End Sub
 End Class
