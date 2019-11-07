@@ -611,9 +611,13 @@ Public Class aaformMainWindow
                 ' want to try opening it anyway.
                 ' Also let them know that XML files are intended on being supported at a later
                 ' date, but that's not available yet.
-                MessageBox.Show(Me, "The file extension """ & IO.Path.GetExtension(openfiledialogLoadSelections.FileName) & """ isn't a supported extension like TXT. In the case of XML files, those are planned to be supported, but that's not available yet." & vbCrLf & vbCrLf &
-                                 "Try to open the file anyway?" & vbCrLf &
-                                    "File name and path: " & openfiledialogLoadSelections.FileName, "Load Selections")
+                Dim msgResult As Integer = MessageBox.Show(Me, "The file extension """ & IO.Path.GetExtension(openfiledialogLoadSelections.FileName) & """ isn't a supported extension like TXT. In the case of XML files, those are planned to be supported, but that's not available yet." & vbCrLf &
+                                 "Try to load the file as a text file anyway?" & vbCrLf & vbCrLf &
+                                    "File name and path: " & openfiledialogLoadSelections.FileName, "Load Selections", MessageBoxButtons.YesNo, MessageBoxIcon.Error)
+                ' If the user wants to try loading the file anyway, do so.
+                If msgResult = DialogResult.Yes Then
+                    loadPageListSelections.loaderTextFileSource(fileName)
+                End If
             End If
         End If
     End Sub
