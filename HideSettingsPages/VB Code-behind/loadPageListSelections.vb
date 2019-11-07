@@ -58,6 +58,11 @@ Public Class loadPageListSelections
                 checkBoxes(fileReaderInput.Remove(0, 9))
 
             End If
+
+        Else
+            ' Otherwise, if the file appears to have an invalid or missing header, let the user know.
+            MessageBox.Show("The input file appears to have a missing or invalid header. All text files used as input for HideSettingsPages must start with the following header:" & vbCrLf &
+                            validHeaderCheck, "Load Selections - Header Validation Check")
         End If
     End Sub
 
