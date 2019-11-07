@@ -30,6 +30,9 @@ Public Class loadPageListSelections
 
     Friend Shared Sub loaderTextFileSource(inputTextFile As String)
         ' Define the header text for file validity checking.
+        ' This format just so happens to be the same as the Registry
+        ' key value that's applied as it's an easy format to use in a text file.
+        ' The idea for a format header like this is based off the header for .reg files.
         Dim validHeaderCheck As String = "[HideSettingsPages Page Selections Format 1.00]"
 
         ' See what the file starts with.
@@ -62,7 +65,7 @@ Public Class loadPageListSelections
         Else
             ' Otherwise, if the file appears to have an invalid or missing header, let the user know.
             MessageBox.Show("The input file appears to have a missing or invalid header. All text files used as input for HideSettingsPages must start with the following header:" & vbCrLf &
-                            validHeaderCheck, "Load Selections - Header Validation Check")
+                            validHeaderCheck, "Import Selections - Header Validation Check")
         End If
     End Sub
 

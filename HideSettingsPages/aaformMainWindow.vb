@@ -616,7 +616,7 @@ Public Class aaformMainWindow
                 ' date, but that's not available yet.
                 Dim msgResult As Integer = MessageBox.Show(Me, "The file extension """ & IO.Path.GetExtension(openfiledialogLoadSelections.FileName) & """ isn't a supported extension like TXT. In the case of XML files, those are planned to be supported, but that's not available yet." & vbCrLf &
                                  "Try to load the file as a text file anyway?" & vbCrLf & vbCrLf &
-                                    "File name and path: " & openfiledialogLoadSelections.FileName, "Load Selections", MessageBoxButtons.YesNo, MessageBoxIcon.Error)
+                                    "File name and path: " & openfiledialogLoadSelections.FileName, "Import Selections", MessageBoxButtons.YesNo, MessageBoxIcon.Error)
                 ' If the user wants to try loading the file anyway, do so.
                 If msgResult = DialogResult.Yes Then
                     loadPageListSelections.loaderTextFileSource(fileName)
