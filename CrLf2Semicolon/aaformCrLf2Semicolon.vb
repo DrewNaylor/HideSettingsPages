@@ -97,7 +97,7 @@ Public Class aaformCrLf2Semicolon
                         vbCrLf &
                         "Copyright notice: Microsoft Windows and all related words and" & vbCrLf &
                         "trademarks/registered trademarks owned by Microsoft in the United States" & vbCrLf &
-                        "and/or other countries are Copyright 2018 Microsoft Corporation. All" & vbCrLf &
+                        "and/or other countries are Copyright Microsoft Corporation. All" & vbCrLf &
                         "Rights Reserved to Microsoft for Microsoft's copyrights, trademarks," & vbCrLf &
                         "and registered trademarks." & vbCrLf &
                         vbCrLf &

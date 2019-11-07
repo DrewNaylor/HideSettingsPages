@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Replaces CrLf characters with semicolons.")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("CrLf2Semicolon")>
-<Assembly: AssemblyCopyright("Copyright © 2018 Drew Naylor. Licensed under Gnu GPLv3+.")>
+<Assembly: AssemblyCopyright("Copyright © 2018-2019 Drew Naylor. Licensed under Gnu GPLv3+.")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
