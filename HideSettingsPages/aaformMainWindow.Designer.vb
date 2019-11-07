@@ -67,6 +67,8 @@ Partial Class aaformMainWindow
         Me.HiddenItemsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarHiddenCopySelections = New System.Windows.Forms.ToolStripMenuItem()
         Me.openfiledialogLoadSelections = New System.Windows.Forms.OpenFileDialog()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.menubarUncheckAllSelectionsBeforeImport = New System.Windows.Forms.ToolStripMenuItem()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
@@ -359,7 +361,7 @@ Partial Class aaformMainWindow
         '
         'menubarOptionsMenu
         '
-        Me.menubarOptionsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarAlwaysCopySelections, Me.menubarShowStartupWarningMessageButton, Me.menubarShowRestorePointReminderMessageButton})
+        Me.menubarOptionsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarAlwaysCopySelections, Me.menubarUncheckAllSelectionsBeforeImport, Me.ToolStripSeparator1, Me.menubarShowStartupWarningMessageButton, Me.menubarShowRestorePointReminderMessageButton})
         Me.menubarOptionsMenu.Name = "menubarOptionsMenu"
         Me.menubarOptionsMenu.Size = New System.Drawing.Size(73, 24)
         Me.menubarOptionsMenu.Text = "&Options"
@@ -444,6 +446,17 @@ Partial Class aaformMainWindow
         Me.openfiledialogLoadSelections.Filter = "Text files|*.txt|All files|*.*"
         Me.openfiledialogLoadSelections.Title = "Load Selections"
         '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(479, 6)
+        '
+        'menubarUncheckAllSelectionsBeforeImport
+        '
+        Me.menubarUncheckAllSelectionsBeforeImport.Name = "menubarUncheckAllSelectionsBeforeImport"
+        Me.menubarUncheckAllSelectionsBeforeImport.Size = New System.Drawing.Size(482, 26)
+        Me.menubarUncheckAllSelectionsBeforeImport.Text = "Uncheck all page list items before importing selections"
+        '
         'aaformMainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
@@ -518,4 +531,6 @@ Partial Class aaformMainWindow
     Friend WithEvents openfiledialogLoadSelections As OpenFileDialog
     Friend WithEvents menubarLoadSelections As ToolStripMenuItem
     Friend WithEvents zSeparatorAboveLaunchSettingsApp As ToolStripSeparator
+    Friend WithEvents menubarUncheckAllSelectionsBeforeImport As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
 End Class
