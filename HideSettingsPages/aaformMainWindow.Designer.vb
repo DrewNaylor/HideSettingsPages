@@ -56,6 +56,8 @@ Partial Class aaformMainWindow
         Me.menubarExitButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarOptionsMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarAlwaysCopySelections = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarUncheckAllSelectionsBeforeImport = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.menubarShowStartupWarningMessageButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarShowRestorePointReminderMessageButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarHelpMenu = New System.Windows.Forms.ToolStripMenuItem()
@@ -67,8 +69,7 @@ Partial Class aaformMainWindow
         Me.HiddenItemsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarHiddenCopySelections = New System.Windows.Forms.ToolStripMenuItem()
         Me.openfiledialogLoadSelections = New System.Windows.Forms.OpenFileDialog()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.menubarUncheckAllSelectionsBeforeImport = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarExportSelections = New System.Windows.Forms.ToolStripMenuItem()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
@@ -310,7 +311,7 @@ Partial Class aaformMainWindow
         '
         'menubarFileMenu
         '
-        Me.menubarFileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarLoadSelections, Me.zSeparatorAboveLaunchSettingsApp, Me.menubarLaunchSettings, Me.zSeparatorAboveKeyValueStuff, Me.menubarDirectlyApplyKeyValueButton, Me.menubarVerifyKeyValueButton, Me.menubarExitButton})
+        Me.menubarFileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menubarLoadSelections, Me.menubarExportSelections, Me.zSeparatorAboveLaunchSettingsApp, Me.menubarLaunchSettings, Me.zSeparatorAboveKeyValueStuff, Me.menubarDirectlyApplyKeyValueButton, Me.menubarVerifyKeyValueButton, Me.menubarExitButton})
         Me.menubarFileMenu.Name = "menubarFileMenu"
         Me.menubarFileMenu.Size = New System.Drawing.Size(44, 24)
         Me.menubarFileMenu.Text = "&File"
@@ -373,6 +374,17 @@ Partial Class aaformMainWindow
         Me.menubarAlwaysCopySelections.Size = New System.Drawing.Size(482, 26)
         Me.menubarAlwaysCopySelections.Text = "Always copy selections into Directly apply key value window"
         Me.menubarAlwaysCopySelections.ToolTipText = resources.GetString("menubarAlwaysCopySelections.ToolTipText")
+        '
+        'menubarUncheckAllSelectionsBeforeImport
+        '
+        Me.menubarUncheckAllSelectionsBeforeImport.Name = "menubarUncheckAllSelectionsBeforeImport"
+        Me.menubarUncheckAllSelectionsBeforeImport.Size = New System.Drawing.Size(482, 26)
+        Me.menubarUncheckAllSelectionsBeforeImport.Text = "Uncheck all page list items before importing selections"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(479, 6)
         '
         'menubarShowStartupWarningMessageButton
         '
@@ -446,16 +458,12 @@ Partial Class aaformMainWindow
         Me.openfiledialogLoadSelections.Filter = "Text files|*.txt|All files|*.*"
         Me.openfiledialogLoadSelections.Title = "Import Selections"
         '
-        'ToolStripSeparator1
+        'menubarExportSelections
         '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(479, 6)
-        '
-        'menubarUncheckAllSelectionsBeforeImport
-        '
-        Me.menubarUncheckAllSelectionsBeforeImport.Name = "menubarUncheckAllSelectionsBeforeImport"
-        Me.menubarUncheckAllSelectionsBeforeImport.Size = New System.Drawing.Size(482, 26)
-        Me.menubarUncheckAllSelectionsBeforeImport.Text = "Uncheck all page list items before importing selections"
+        Me.menubarExportSelections.Name = "menubarExportSelections"
+        Me.menubarExportSelections.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
+        Me.menubarExportSelections.Size = New System.Drawing.Size(303, 26)
+        Me.menubarExportSelections.Text = "Ex&port selections..."
         '
         'aaformMainWindow
         '
@@ -533,4 +541,5 @@ Partial Class aaformMainWindow
     Friend WithEvents zSeparatorAboveLaunchSettingsApp As ToolStripSeparator
     Friend WithEvents menubarUncheckAllSelectionsBeforeImport As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents menubarExportSelections As ToolStripMenuItem
 End Class
