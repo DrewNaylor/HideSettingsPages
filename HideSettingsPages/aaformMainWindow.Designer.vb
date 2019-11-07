@@ -441,8 +441,8 @@ Partial Class aaformMainWindow
         '
         'openfiledialogLoadSelections
         '
-        Me.openfiledialogLoadSelections.FileName = "OpenFileDialog1"
         Me.openfiledialogLoadSelections.Filter = "Text files|*.txt|All files|*.*"
+        Me.openfiledialogLoadSelections.Title = "Load Selections"
         '
         'aaformMainWindow
         '
