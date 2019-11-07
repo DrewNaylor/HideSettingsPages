@@ -444,7 +444,7 @@ Partial Class aaformMainWindow
         'openfiledialogLoadSelections
         '
         Me.openfiledialogLoadSelections.Filter = "Text files|*.txt|All files|*.*"
-        Me.openfiledialogLoadSelections.Title = "Load Selections"
+        Me.openfiledialogLoadSelections.Title = "Import Selections"
         '
         'ToolStripSeparator1
         '

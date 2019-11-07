@@ -592,6 +592,9 @@ Public Class aaformMainWindow
     Private Sub testInputFileButton_Click(sender As Object, e As EventArgs) Handles testInputFileButton.Click
         loadPageListSelections.loaderTextFileSource(testInputFilePath.Text)
     End Sub
+#End Region
+#End Region
+#End Region
 
     Private Sub menubarLoadSelections_Click(sender As Object, e As EventArgs) Handles menubarLoadSelections.Click
         ' Show the "Load selections..." dialog and open the file if the user
@@ -621,7 +624,4 @@ Public Class aaformMainWindow
             End If
         End If
     End Sub
-#End Region
-#End Region
-#End Region
 End Class
