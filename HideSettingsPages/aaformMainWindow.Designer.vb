@@ -364,6 +364,7 @@ Partial Class aaformMainWindow
         '
         'menubarUncheckAllSelectionsBeforeImport
         '
+        Me.menubarUncheckAllSelectionsBeforeImport.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.menubarUncheckAllSelectionsBeforeImport.Name = "menubarUncheckAllSelectionsBeforeImport"
         Me.menubarUncheckAllSelectionsBeforeImport.Size = New System.Drawing.Size(482, 26)
         Me.menubarUncheckAllSelectionsBeforeImport.Text = "Uncheck all page list items before importing selections"

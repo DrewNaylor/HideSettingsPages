@@ -62,6 +62,13 @@ Public Class aaformMainWindow
             menubarAlwaysCopySelections.CheckState = CheckState.Unchecked
         End If
 
+        ' Next, the Uncheck all page list items before importing selections checkbox.
+        If My.Settings.uncheckPageListBeforeLoadingSelections = True Then
+            menubarUncheckAllSelectionsBeforeImport.CheckState = CheckState.Checked
+        ElseIf My.Settings.uncheckPageListBeforeLoadingSelections = False Then
+            menubarUncheckAllSelectionsBeforeImport.CheckState = CheckState.Unchecked
+        End If
+
         ' Next, the Show startup warning checkbox.
         If My.Settings.messageShowStartupWarning = True Then
             menubarShowStartupWarningMessageButton.CheckState = CheckState.Checked
