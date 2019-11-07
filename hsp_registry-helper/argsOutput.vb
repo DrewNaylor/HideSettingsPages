@@ -55,7 +55,8 @@ Public Class argsOutput
             & vbCrLf & vbTab & "/undo" & vbTab & vbTab & "Remove Registry key value. Requires admin permissions." _
             & vbCrLf & vbTab & "/verify" & vbTab & vbTab & "Show the current Registry key value if it exists." _
             & vbCrLf & vbTab & "/help" & vbTab & vbTab & "Display this help text." _
-            & vbCrLf & vbTab & "/?" & vbTab & vbTab & "Display this help text.")
+            & vbCrLf & vbTab & "/?" & vbTab & vbTab & "Display this help text." _
+            & vbCrLf & vbTab & "/about" & vbTab & vbTab & "Display information about this application.")
         Console.WriteLine("")
         Console.WriteLine(vbTab & "<key value> is the Registry key value to apply to the system in the" & vbCrLf & vbTab & vbTab & "form of <hide or showonly>:<page>;<more pages>")
         Console.WriteLine("")
@@ -69,6 +70,7 @@ Public Class argsOutput
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /verify")
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /help")
         Console.WriteLine(vbTab & "hsp_registry-helper.exe /?")
+        Console.WriteLine(vbTab & "hsp_registry-helper.exe /about")
 
         ' Only shows an error message if showMessageBox is set to True.
         If showMessageBox = True Then
@@ -79,6 +81,18 @@ Public Class argsOutput
             Console.WriteLine("Press Enter to continue...")
             Console.ReadLine()
         End If
+    End Sub
+
+    Friend Shared Sub aboutHspRegistryHelper()
+        ' Update titlebar to tell the user this is about the application.
+        Console.Title = titlebarText & ": " & "About."
+        ' Show the user app info including title, version, copyright, and license.
+        Console.WriteLine(My.Application.Info.Title & vbCrLf & "Version " & My.Application.Info.Version.ToString)
+        Console.WriteLine(My.Application.Info.Copyright)
+        Console.WriteLine("")
+        Console.WriteLine(My.Resources.HSPRegistryHelperInfo)
+        Console.WriteLine("Press Enter to continue...")
+        Console.ReadLine()
     End Sub
 
     Friend Shared Sub passCommandLineArgs()
@@ -93,6 +107,8 @@ Public Class argsOutput
             regkeyvalue_Apply.runApplying()
         ElseIf actionToTake = "/help" Or actionToTake = "/?" Then
             noOrInvalidCommandLineArgs("", "Help info", False)
+        ElseIf actionToTake = "/about" Then
+            aboutHspRegistryHelper()
         Else
             ' If the argument isn't valid,
             ' tell the user and display
