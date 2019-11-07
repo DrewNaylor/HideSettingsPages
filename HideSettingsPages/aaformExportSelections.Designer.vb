@@ -59,6 +59,7 @@ Partial Class aaformExportSelections
         Me.textboxFormattedOutput.Location = New System.Drawing.Point(3, 46)
         Me.textboxFormattedOutput.Multiline = True
         Me.textboxFormattedOutput.Name = "textboxFormattedOutput"
+        Me.textboxFormattedOutput.ReadOnly = True
         Me.textboxFormattedOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.textboxFormattedOutput.Size = New System.Drawing.Size(390, 223)
         Me.textboxFormattedOutput.TabIndex = 1
