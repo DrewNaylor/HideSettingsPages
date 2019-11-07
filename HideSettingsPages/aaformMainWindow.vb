@@ -348,7 +348,7 @@ Public Class aaformMainWindow
         itemCheckSetter(False)
     End Sub
 
-    Private Sub itemCheckSetter(checkAllItems As Boolean)
+    Friend Shared Sub itemCheckSetter(checkAllItems As Boolean)
         ' This is the code that handles checking and unchecking the checkboxes
         ' in the page list.
         ' Code copied from original subs used for handling the "Click" event
@@ -357,13 +357,13 @@ Public Class aaformMainWindow
         ' Before unchecking/checking all items in the page list,
         ' disable the page list and "Apply" button.
 
-        checkedlistboxPageList.Enabled = False
-        buttonApplyChanges.Enabled = False
+        aaformMainWindow.checkedlistboxPageList.Enabled = False
+        aaformMainWindow.buttonApplyChanges.Enabled = False
 
-        For i As Integer = 0 To checkedlistboxPageList.Items.Count - 1
+        For i As Integer = 0 To aaformMainWindow.checkedlistboxPageList.Items.Count - 1
             ' Above code goes from an integer (i) set to 0, to the entire
             ' count of the items in the checkedlistbox, minus 1 to stay in bounds.
-            checkedlistboxPageList.SetItemChecked(i, checkAllItems)
+            aaformMainWindow.checkedlistboxPageList.SetItemChecked(i, checkAllItems)
             ' Above code unchecks or checks all those items, based on checkAllItems.
             ' If checkAllItems is = "False", all items will be unchecked.
             ' Otherwise, if it's = "True", all the items will be checked.
@@ -371,13 +371,13 @@ Public Class aaformMainWindow
         ' And repeat until finished.
 
         ' Now enable controls.
-        checkedlistboxPageList.Enabled = True
-        buttonApplyChanges.Enabled = True
+        aaformMainWindow.checkedlistboxPageList.Enabled = True
+        aaformMainWindow.buttonApplyChanges.Enabled = True
 
         ' Focus the page list so that the key preview thing doesn't
         ' get focused. There's not much of a point in focusing that
         ' right now.
-        checkedlistboxPageList.Focus()
+        aaformMainWindow.checkedlistboxPageList.Focus()
 
     End Sub
 #End Region

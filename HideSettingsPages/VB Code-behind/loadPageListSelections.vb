@@ -83,6 +83,13 @@ Public Class loadPageListSelections
         ' First, get a page name list based on the previous
         ' split string.
         Dim pageNameList As String() = loaderPageList
+
+        ' Before checking page names, uncheck the page list
+        ' if the user wants to.
+        If My.Settings.uncheckPageListBeforeLoadingSelections = True Then
+            aaformMainWindow.itemCheckSetter(False)
+        End If
+
         ' Now we look at each of the page names in that
         ' page name list.
         For Each pageName In pageNameList
