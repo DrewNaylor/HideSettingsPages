@@ -47,6 +47,8 @@ Partial Class aaformMainWindow
         Me.buttonUndoChanges = New System.Windows.Forms.Button()
         Me.menubarMainWindow = New System.Windows.Forms.MenuStrip()
         Me.menubarFileMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menubarLoadSelections = New System.Windows.Forms.ToolStripMenuItem()
+        Me.zSeparatorAboveLaunchSettingsApp = New System.Windows.Forms.ToolStripSeparator()
         Me.menubarLaunchSettings = New System.Windows.Forms.ToolStripMenuItem()
         Me.zSeparatorAboveKeyValueStuff = New System.Windows.Forms.ToolStripSeparator()
         Me.menubarDirectlyApplyKeyValueButton = New System.Windows.Forms.ToolStripMenuItem()
@@ -65,8 +67,6 @@ Partial Class aaformMainWindow
         Me.HiddenItemsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarHiddenCopySelections = New System.Windows.Forms.ToolStripMenuItem()
         Me.openfiledialogLoadSelections = New System.Windows.Forms.OpenFileDialog()
-        Me.menubarLoadSelections = New System.Windows.Forms.ToolStripMenuItem()
-        Me.zSeparatorAboveLaunchSettingsApp = New System.Windows.Forms.ToolStripSeparator()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
@@ -313,6 +313,18 @@ Partial Class aaformMainWindow
         Me.menubarFileMenu.Size = New System.Drawing.Size(44, 24)
         Me.menubarFileMenu.Text = "&File"
         '
+        'menubarLoadSelections
+        '
+        Me.menubarLoadSelections.Name = "menubarLoadSelections"
+        Me.menubarLoadSelections.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
+        Me.menubarLoadSelections.Size = New System.Drawing.Size(303, 26)
+        Me.menubarLoadSelections.Text = "L&oad selections..."
+        '
+        'zSeparatorAboveLaunchSettingsApp
+        '
+        Me.zSeparatorAboveLaunchSettingsApp.Name = "zSeparatorAboveLaunchSettingsApp"
+        Me.zSeparatorAboveLaunchSettingsApp.Size = New System.Drawing.Size(300, 6)
+        '
         'menubarLaunchSettings
         '
         Me.menubarLaunchSettings.Name = "menubarLaunchSettings"
@@ -430,19 +442,7 @@ Partial Class aaformMainWindow
         'openfiledialogLoadSelections
         '
         Me.openfiledialogLoadSelections.FileName = "OpenFileDialog1"
-        Me.openfiledialogLoadSelections.Filter = """Text files|*.txt|All files|*.*"""
-        '
-        'menubarLoadSelections
-        '
-        Me.menubarLoadSelections.Name = "menubarLoadSelections"
-        Me.menubarLoadSelections.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
-        Me.menubarLoadSelections.Size = New System.Drawing.Size(303, 26)
-        Me.menubarLoadSelections.Text = "L&oad selections..."
-        '
-        'zSeparatorAboveLaunchSettingsApp
-        '
-        Me.zSeparatorAboveLaunchSettingsApp.Name = "zSeparatorAboveLaunchSettingsApp"
-        Me.zSeparatorAboveLaunchSettingsApp.Size = New System.Drawing.Size(300, 6)
+        Me.openfiledialogLoadSelections.Filter = "Text files|*.txt|All files|*.*"
         '
         'aaformMainWindow
         '
