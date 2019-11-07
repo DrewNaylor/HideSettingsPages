@@ -129,6 +129,9 @@ opening the Directly apply key value window if this is turned off.
 Alternatively, you can press "Ctrl+Shift+D" if you want to copy over
 selections while this is turned off.</value>
   </data>
+  <metadata name="openfiledialogLoadSelections.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>392, 17</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>62</value>
   </metadata>

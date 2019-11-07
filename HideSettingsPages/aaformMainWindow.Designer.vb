@@ -26,6 +26,8 @@ Partial Class aaformMainWindow
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(aaformMainWindow))
         Me.flowlayoutpanelMainWindow = New System.Windows.Forms.FlowLayoutPanel()
         Me.groupboxSettingsPageVisibility = New System.Windows.Forms.GroupBox()
+        Me.testInputFilePath = New System.Windows.Forms.TextBox()
+        Me.testInputFileButton = New System.Windows.Forms.Button()
         Me.radiobuttonShowOnlyPages = New System.Windows.Forms.RadioButton()
         Me.radiobuttonHidePages = New System.Windows.Forms.RadioButton()
         Me.labelPageVisibility = New System.Windows.Forms.Label()
@@ -62,8 +64,7 @@ Partial Class aaformMainWindow
         Me.menubarAboutButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.HiddenItemsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menubarHiddenCopySelections = New System.Windows.Forms.ToolStripMenuItem()
-        Me.testInputFileButton = New System.Windows.Forms.Button()
-        Me.testInputFilePath = New System.Windows.Forms.TextBox()
+        Me.openfiledialogLoadSelections = New System.Windows.Forms.OpenFileDialog()
         Me.flowlayoutpanelMainWindow.SuspendLayout()
         Me.groupboxSettingsPageVisibility.SuspendLayout()
         Me.groupboxPageList.SuspendLayout()
@@ -102,6 +103,22 @@ Partial Class aaformMainWindow
         Me.groupboxSettingsPageVisibility.TabIndex = 0
         Me.groupboxSettingsPageVisibility.TabStop = False
         Me.groupboxSettingsPageVisibility.Text = "Settings page visibility"
+        '
+        'testInputFilePath
+        '
+        Me.testInputFilePath.Location = New System.Drawing.Point(156, 79)
+        Me.testInputFilePath.Name = "testInputFilePath"
+        Me.testInputFilePath.Size = New System.Drawing.Size(165, 22)
+        Me.testInputFilePath.TabIndex = 4
+        '
+        'testInputFileButton
+        '
+        Me.testInputFileButton.Location = New System.Drawing.Point(327, 79)
+        Me.testInputFileButton.Name = "testInputFileButton"
+        Me.testInputFileButton.Size = New System.Drawing.Size(75, 23)
+        Me.testInputFileButton.TabIndex = 3
+        Me.testInputFileButton.Text = "Button1"
+        Me.testInputFileButton.UseVisualStyleBackColor = True
         '
         'radiobuttonShowOnlyPages
         '
@@ -408,21 +425,9 @@ Partial Class aaformMainWindow
         Me.menubarHiddenCopySelections.Size = New System.Drawing.Size(499, 26)
         Me.menubarHiddenCopySelections.Text = "Copy selections into directly apply value window"
         '
-        'testInputFileButton
+        'openfiledialogLoadSelections
         '
-        Me.testInputFileButton.Location = New System.Drawing.Point(327, 79)
-        Me.testInputFileButton.Name = "testInputFileButton"
-        Me.testInputFileButton.Size = New System.Drawing.Size(75, 23)
-        Me.testInputFileButton.TabIndex = 3
-        Me.testInputFileButton.Text = "Button1"
-        Me.testInputFileButton.UseVisualStyleBackColor = True
-        '
-        'testInputFilePath
-        '
-        Me.testInputFilePath.Location = New System.Drawing.Point(156, 79)
-        Me.testInputFilePath.Name = "testInputFilePath"
-        Me.testInputFilePath.Size = New System.Drawing.Size(165, 22)
-        Me.testInputFilePath.TabIndex = 4
+        Me.openfiledialogLoadSelections.FileName = "OpenFileDialog1"
         '
         'aaformMainWindow
         '
@@ -495,4 +500,5 @@ Partial Class aaformMainWindow
     Friend WithEvents menubarHiddenCopySelections As ToolStripMenuItem
     Friend WithEvents testInputFilePath As TextBox
     Friend WithEvents testInputFileButton As Button
+    Friend WithEvents openfiledialogLoadSelections As OpenFileDialog
 End Class
