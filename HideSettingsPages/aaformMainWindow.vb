@@ -592,6 +592,31 @@ Public Class aaformMainWindow
     Private Sub testInputFileButton_Click(sender As Object, e As EventArgs) Handles testInputFileButton.Click
         loadPageListSelections.loaderTextFileSource(testInputFilePath.Text)
     End Sub
+
+    Private Sub menubarLoadSelections_Click(sender As Object, e As EventArgs) Handles menubarLoadSelections.Click
+        ' Show the "Load selections..." dialog and open the file if the user
+        ' wants to. The string in that file will be used to specify what
+        ' selections are applied in the checkedlistbox.
+        If openfiledialogLoadSelections.ShowDialog = DialogResult.OK Then
+            ' If the user clicks the "OK" button, open the file.
+
+            Dim fileName As String = openfiledialogLoadSelections.FileName.ToUpperInvariant
+            ' If it's a text file, process it using the text file
+            ' parser sub/function.
+            If IO.Path.GetExtension(fileName) = "TXT" Then
+                loadPageListSelections.loaderTextFileSource(fileName)
+
+            Else
+                ' If the file name's extension isn't "TXT", let the user know and ask if they
+                ' want to try opening it anyway.
+                ' Also let them know that XML files are intended on being supported at a later
+                ' date, but that's not available yet.
+                MessageBox.Show(Me, "The file extension """ & IO.Path.GetExtension(openfiledialogLoadSelections.FileName) & """ isn't a supported extension like TXT. In the case of XML files, those are planned to be supported, but that's not available yet." & vbCrLf & vbCrLf &
+                                 "Try to open the file anyway?" & vbCrLf &
+                                    "File name and path: " & openfiledialogLoadSelections.FileName, "Load Selections")
+            End If
+        End If
+    End Sub
 #End Region
 #End Region
 #End Region
