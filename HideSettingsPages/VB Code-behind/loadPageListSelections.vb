@@ -29,13 +29,16 @@
 Public Class loadPageListSelections
 
     Friend Shared Sub loaderTextFileSource(inputTextFile As String)
+        ' Define the header text for file validity checking.
+        Dim validHeaderCheck As String = "[HideSettingsPages Page Selections Format 1.00]"
         ' See what the file starts with.
         ' Load the file itself.
         Dim fileReaderInput As String = My.Computer.FileSystem.ReadAllText(inputTextFile)
         ' Ensure the input file is a valid text file for HideSettingsPages usage.
         ' This could be useful as a feature to add to hsp_registry-helper as well.
-        If fileReaderInput.StartsWith("[HideSettingsPages Page Selections Format 1.00]") Then
+        If fileReaderInput.StartsWith(validHeaderCheck) Then
             ' Since the file appears to be valid, remove that text from the string and parse the rest.
+            fileReaderInput = fileReaderInput.Replace(validHeaderCheck, "")
             ' If it starts with "hide:", then select the "Hide" radio button.
             If fileReaderInput.StartsWith("hide:") Then
                 Debug.WriteLine(fileReaderInput)
