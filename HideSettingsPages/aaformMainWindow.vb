@@ -681,11 +681,15 @@ Public Class aaformMainWindow
         End If
     End Sub
 
+    ' Create the renderer for the toolstrip:
+    Public Shared UXLToolstripRenderer As New uxlProToolstripRenderer
+
     Private Sub ApplyTenDarkThemeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApplyTenDarkThemeToolStripMenuItem.Click
         PortableThemeEngine.userTheme.LoadXml(My.Resources.TenDarkTheme_XML)
-        PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", Me)
-        PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", aaformDirectlyApplyKeyValue)
-        PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", aaformRegistryKeyValueValueLargePreview)
+        menubarMainWindow.Renderer = UXLToolstripRenderer
+        PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", Me, UXLToolstripRenderer)
+        PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", aaformDirectlyApplyKeyValue, UXLToolstripRenderer)
+        PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", aaformRegistryKeyValueValueLargePreview, UXLToolstripRenderer)
 
     End Sub
 End Class

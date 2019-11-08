@@ -33,6 +33,7 @@ Partial Class aaformCrLf2Semicolon
         Me.checkboxConvertLf = New System.Windows.Forms.CheckBox()
         Me.tooltipConvertLf = New System.Windows.Forms.ToolTip(Me.components)
         Me.linklabelAbout = New System.Windows.Forms.LinkLabel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'textboxInput
@@ -127,11 +128,21 @@ Partial Class aaformCrLf2Semicolon
         Me.linklabelAbout.TabStop = True
         Me.linklabelAbout.Text = "About"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(550, 327)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'aaformCrLf2Semicolon
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.ClientSize = New System.Drawing.Size(678, 367)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.linklabelAbout)
         Me.Controls.Add(Me.checkboxConvertLf)
         Me.Controls.Add(Me.buttonSelectOutput)
@@ -158,4 +169,5 @@ Partial Class aaformCrLf2Semicolon
     Friend WithEvents checkboxConvertLf As CheckBox
     Friend WithEvents tooltipConvertLf As ToolTip
     Friend WithEvents linklabelAbout As LinkLabel
+    Friend WithEvents Button1 As Button
 End Class

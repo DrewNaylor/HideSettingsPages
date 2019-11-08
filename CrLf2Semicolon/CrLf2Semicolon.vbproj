@@ -70,6 +70,9 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PortableUXLLauncher_ThemeEngine">
+      <HintPath>..\..\UXL-Launcher\PortableUXLLauncher_ThemeEngine\bin\Debug\PortableUXLLauncher_ThemeEngine.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -153,6 +156,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\defaulttheme_xml.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tendarktheme_xml.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

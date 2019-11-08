@@ -28,6 +28,8 @@
 
 
 
+Imports PortableUXLLauncher_ThemeEngine
+
 Public Class aaformCrLf2Semicolon
     Private Sub buttonSelectInput_Click(sender As Object, e As EventArgs) Handles buttonSelectInput.Click
         ' Select all text in Input textbox when clicked.
@@ -105,5 +107,11 @@ Public Class aaformCrLf2Semicolon
                         vbCrLf &
                         "Microsoft is not affiliated with either the HideSettingsPages project or" & vbCrLf &
                         "Drew Naylor and does not endorse this software.", "About " & My.Application.Info.Title)
+    End Sub
+
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        PortableThemeEngine.userTheme.LoadXml(My.Resources.TenDarkTheme_XML)
+        PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", Me, UXLToolstripRenderer)
     End Sub
 End Class
