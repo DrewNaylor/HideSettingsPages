@@ -61,12 +61,16 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to {\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fswiss\fprq2\fcharset0 Calibri;}{\f2\fnil\fcharset2 Symbol;}}
+        '''  Looks up a localized string similar to {\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fswiss\fprq2\fcharset0 Calibri;}{\f2\fnil\fcharset2 Symbol;}}
         '''{\colortbl ;\red0\green0\blue255;}
-        '''{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sl240\slmult1\qc\lang9\b\f0\fs10\par
+        '''{\*\generator Riched20 10.0.17134}\viewkind4\uc1 
+        '''\pard\sl240\slmult1\qc\b\f0\fs10\lang9\par
+        '''
         '''\pard\sl276\slmult1\qc\fs32 HideSettingsPages Acknowledgements\b0\par
+        '''
         '''\pard\sl360\slmult1\fs24\par
-        '''\pard{\pntext\f2\&apos;B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\&apos;B7}}\fi-360\li720\sl360\slmult1\lang1033\f1 Guidance\lang9\f0 : God\ [rest of string was truncated]&quot;;.
+        '''
+        '''\pard{\pntext\f2\&apos;B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\&apos;B7}}\fi-360\li720\sl360\slmult1\f1\lang1033 Guidanc [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property Acknowledgements_RTF() As String
             Get
@@ -75,12 +79,31 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 2018-09-23T01:40:50
+        '''  Looks up a localized string similar to 2019-11-07T23:00:16
         '''.
         '''</summary>
         Friend ReadOnly Property BuildDate() As String
             Get
                 Return ResourceManager.GetString("BuildDate", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &lt;UXL_Launcher_Theme&gt;
+        '''  &lt;Title&gt;Default Theme&lt;/Title&gt;
+        '''  &lt;Description&gt;Default is the theme UXL Launcher ships with.&lt;/Description&gt;
+        '''  &lt;Version&gt;v1.1&lt;/Version&gt;
+        '''  &lt;Author&gt;Drew Naylor&lt;/Author&gt;
+        '''
+        '''  &lt;!-- &quot;UseThemeEngineVersion&quot; is used to specify the version of the
+        '''  UXL Launcher Theme Engine to use in case there are changes in newer
+        '''  versions of the theme engine that designers or developers don&apos;t want
+        '''  to use. Version 1.01 is the oldest version number available and anything
+        '''  smaller than that will automat [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property DefaultTheme_XML() As String
+            Get
+                Return ResourceManager.GetString("DefaultTheme_XML", resourceCulture)
             End Get
         End Property
         
@@ -119,7 +142,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Copyright (C) 2017-2018 Drew Naylor. Lincensed under Gnu GPLv3+.
+        '''  Looks up a localized string similar to Copyright (C) 2017-2019 Drew Naylor. Lincensed under Gnu GPLv3+.
         '''
         '''HideSettingsPages is a GUI to set a Registry key value to hide individual pages in the Windows 10 Settings app on the Creators Update and newer.
         '''
@@ -170,32 +193,31 @@ Namespace My.Resources
         '''autoplay
         '''backup
         '''batterysaver
-        '''batterysaver-usagedetails
         '''bluetooth
         '''camera
+        '''clipboard
         '''colors
         '''connecteddevices
         '''cortana
+        '''cortana-talktocortana
         '''cortana-moredetails
+        '''cortana-notifications
         '''cortana-permissions
+        '''cortana-windowssearch
         '''crossdevice
         '''datausage
         '''dateandtime
         '''defaultapps
+        '''delivery-optimization
         '''developers
-        '''deviceencryption
+        '''devices-touchpad
         '''display
+        '''easeofaccess-audio
         '''easeofaccess-closedcaptioning
-        '''easeofaccess-highcontrast
-        '''easeofaccess-keyboard
-        '''easeofaccess-magnifier
-        '''easeofaccess-mouse
-        '''easeofaccess-narrator
-        '''easeofaccess-otheroptions
-        '''emailandaccounts
-        '''extras
-        '''findmydevice
-        '''gam [rest of string was truncated]&quot;;.
+        '''easeofaccess-colorfilter
+        '''easeofaccess-cursorandpointersize
+        '''easeofaccess-display
+        '''easeofac [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property pagesList_TXT() As String
             Get
@@ -209,6 +231,25 @@ Namespace My.Resources
         Friend ReadOnly Property separator() As String
             Get
                 Return ResourceManager.GetString("separator", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &lt;UXL_Launcher_Theme&gt;
+        '''  &lt;Title&gt;Ten Dark&lt;/Title&gt;
+        '''  &lt;Description&gt;A dark theme similar to Windows 10&apos;s &quot;Dark Mode&quot;.&lt;/Description&gt;
+        '''  &lt;Version&gt;v1.1&lt;/Version&gt;
+        '''  &lt;Author&gt;Drew Naylor&lt;/Author&gt;
+        '''
+        '''  &lt;!-- &quot;UseThemeEngineVersion&quot; is used to specify the version of the
+        '''  UXL Launcher Theme Engine to use in case there are changes in newer
+        '''  versions of the theme engine that designers or developers don&apos;t want
+        '''  to use. Version 1.01 is the oldest version number available and anything
+        '''  smaller than that will automati [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property TenDarkTheme_XML() As String
+            Get
+                Return ResourceManager.GetString("TenDarkTheme_XML", resourceCulture)
             End Get
         End Property
     End Module

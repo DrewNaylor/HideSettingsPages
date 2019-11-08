@@ -77,6 +77,9 @@
     <ApplicationIcon>HideSettingsPages-OfficialIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PortableUXLLauncher_ThemeEngine">
+      <HintPath>..\..\UXL-Launcher\PortableUXLLauncher_ThemeEngine\bin\Debug\PortableUXLLauncher_ThemeEngine.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
@@ -208,6 +211,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HideSettingsPages-OfficialIcon.ico" />
+    <None Include="Resources\TenDarkTheme_XML.xml" />
+    <None Include="Resources\DefaultTheme_XML.xml" />
     <None Include="Resources\pagesList_TXT.txt" />
     <None Include="Resources\HSPRegistryHelperInfo_TXT.txt" />
     <None Include="Resources\HideSettingsPagesInfo_TXT.txt" />

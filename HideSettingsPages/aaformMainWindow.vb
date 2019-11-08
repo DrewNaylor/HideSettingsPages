@@ -25,6 +25,7 @@
 'along with HideSettingsPages.  If not, see <http://www.gnu.org/licenses/>.
 
 
+Imports PortableUXLLauncher_ThemeEngine
 
 Public Class aaformMainWindow
 #Region "Form1 load code, exit button, and Registry key View Larger link label."
@@ -678,5 +679,13 @@ Public Class aaformMainWindow
             textboxRegistryKeyValue.Text
             My.Computer.FileSystem.WriteAllText(fileName, exportText, False)
         End If
+    End Sub
+
+    Private Sub ApplyTenDarkThemeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApplyTenDarkThemeToolStripMenuItem.Click
+        PortableThemeEngine.userTheme.LoadXml(My.Resources.TenDarkTheme_XML)
+        PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", Me)
+        PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", aaformDirectlyApplyKeyValue)
+        PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", aaformRegistryKeyValueValueLargePreview)
+
     End Sub
 End Class
