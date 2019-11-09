@@ -109,6 +109,8 @@ Public Class aaformCrLf2Semicolon
                         "Drew Naylor and does not endorse this software.", "About " & My.Application.Info.Title)
     End Sub
 
+    ' Create the renderer for the toolstrip:
+    Public Shared UXLToolstripRenderer As New uxlProToolstripRenderer
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         PortableThemeEngine.userTheme.LoadXml(My.Resources.TenDarkTheme_XML)
