@@ -112,7 +112,6 @@ Public Class aaformCrLf2Semicolon
     ' Create the renderer for the toolstrip:
     Public Shared UXLToolstripRenderer As New uxlProToolstripRenderer
 
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         PortableThemeEngine.userTheme.LoadXml(My.Resources.TenDarkTheme_XML)
         PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", Me, UXLToolstripRenderer)

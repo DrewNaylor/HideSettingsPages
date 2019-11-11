@@ -347,23 +347,27 @@ Public Class aaformMainWindow
 #End Region
 
 #Region "Help menubar buttons."
+
+    ' Allow the About window to be accessed from the theme engine.
+    Friend Shared forceAboutWindowTab As New aaformAboutWindow
+
     Private Sub menubarAboutButton_Click(sender As Object, e As EventArgs) Handles menubarAboutButton.Click
         ' Open the About window to About tab. Credit goes to this SO answer: <http://stackoverflow.com/a/2513186>
-        Dim forceAboutWindowTab As New aaformAboutWindow
+
         forceAboutWindowTab.tabcontrolAboutWindow.SelectTab(0)
         forceAboutWindowTab.ShowDialog()
     End Sub
 
     Private Sub menubarLicenseButton_Click(sender As Object, e As EventArgs) Handles menubarLicenseButton.Click
         ' Open the About window to License tab. Credit goes to this SO answer: <http://stackoverflow.com/a/2513186>
-        Dim forceAboutWindowTab As New aaformAboutWindow
+
         forceAboutWindowTab.tabcontrolAboutWindow.SelectTab(1)
         forceAboutWindowTab.ShowDialog()
     End Sub
 
     Private Sub menubarAuthorsButton_Click(sender As Object, e As EventArgs) Handles menubarAuthorsButton.Click
         ' Open the About window to Acknowledgements tab. Credit goes to this SO answer: <http://stackoverflow.com/a/2513186>
-        Dim forceAboutWindowTab As New aaformAboutWindow
+
         forceAboutWindowTab.tabcontrolAboutWindow.SelectTab(2)
         forceAboutWindowTab.ShowDialog()
     End Sub
@@ -691,6 +695,6 @@ Public Class aaformMainWindow
         PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", Me, UXLToolstripRenderer)
         PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", aaformDirectlyApplyKeyValue, UXLToolstripRenderer)
         PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", aaformRegistryKeyValueValueLargePreview, UXLToolstripRenderer)
-        PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", aaformAboutWindow, UXLToolstripRenderer)
+        PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", forceAboutWindowTab, UXLToolstripRenderer)
     End Sub
 End Class
