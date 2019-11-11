@@ -687,9 +687,10 @@ Public Class aaformMainWindow
     Private Sub ApplyTenDarkThemeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApplyTenDarkThemeToolStripMenuItem.Click
         PortableThemeEngine.userTheme.LoadXml(My.Resources.TenDarkTheme_XML)
         menubarMainWindow.Renderer = UXLToolstripRenderer
+        contextmenuPageList.Renderer = UXLToolstripRenderer
         PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", Me, UXLToolstripRenderer)
         PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", aaformDirectlyApplyKeyValue, UXLToolstripRenderer)
         PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", aaformRegistryKeyValueValueLargePreview, UXLToolstripRenderer)
-
+        PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", aaformAboutWindow, UXLToolstripRenderer)
     End Sub
 End Class
