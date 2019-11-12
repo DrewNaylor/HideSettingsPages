@@ -25,7 +25,7 @@
 'along with HideSettingsPages.  If not, see <http://www.gnu.org/licenses/>.
 
 
-Imports PortableUXLLauncher_ThemeEngine
+Imports libportablethemeengine
 
 Public Class aaformMainWindow
 #Region "Form1 load code, exit button, and Registry key View Larger link label."
@@ -685,16 +685,16 @@ Public Class aaformMainWindow
         End If
     End Sub
 
-    ' Create the renderer for the toolstrip:
-    Public Shared UXLToolstripRenderer As New uxlProToolstripRenderer
 
     Private Sub ApplyTenDarkThemeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApplyTenDarkThemeToolStripMenuItem.Click
-        PortableThemeEngine.userTheme.LoadXml(My.Resources.TenDarkTheme_XML)
-        menubarMainWindow.Renderer = UXLToolstripRenderer
-        contextmenuPageList.Renderer = UXLToolstripRenderer
-        PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", Me, UXLToolstripRenderer)
-        PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", aaformDirectlyApplyKeyValue, UXLToolstripRenderer)
-        PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", aaformRegistryKeyValueValueLargePreview, UXLToolstripRenderer)
-        PortableUXLLauncher_ThemeEngine.PortableThemeEngine.themeEngine_ApplyTheme("TenDarkTheme", forceAboutWindowTab, UXLToolstripRenderer)
+        'themeenginemain.userTheme.LoadXml(My.Resources.TenDarkTheme_XML)
+        menubarMainWindow.Renderer = themeenginemain.toolstripProRenderer
+        contextmenuPageList.Renderer = themeenginemain.toolstripProRenderer
+
+        Dim themeToLoad As String = "Eyesore2Theme_XML.xml"
+        themeenginemain.LoadTheme(themeToLoad, Me)
+        themeenginemain.LoadTheme(themeToLoad, aaformDirectlyApplyKeyValue)
+        themeenginemain.LoadTheme(themeToLoad, aaformRegistryKeyValueValueLargePreview)
+        themeenginemain.LoadTheme(themeToLoad, forceAboutWindowTab)
     End Sub
 End Class
