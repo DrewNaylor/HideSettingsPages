@@ -123,8 +123,11 @@ Public Class aaformMainWindow
         ' Opens a larger window to preview the Registry key value more easily.
         ' We have to hide the window before showing it or we get an exception
         ' when using Show(Me).
-        aaformRegistryKeyValueValueLargePreview.Visible = False
-        aaformRegistryKeyValueValueLargePreview.Show(Me)
+        If isThemeEngineRunning = True Then
+            themeenginemain.LoadTheme(themeToLoad, aaformRegistryKeyValueValueLargePreview)
+        End If
+        aaformRegistryKeyValueValueLargePreview.Hide()
+        aaformRegistryKeyValueValueLargePreview.Show()
     End Sub
 #End Region
 
@@ -685,13 +688,15 @@ Public Class aaformMainWindow
         End If
     End Sub
 
+    Friend Shared themeToLoad As String = "1.02-Latest_TenDarkTheme_XML.xml"
+    Friend Shared isThemeEngineRunning As Boolean = False
 
     Private Sub ApplyTenDarkThemeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApplyTenDarkThemeToolStripMenuItem.Click
         'themeenginemain.userTheme.LoadXml(My.Resources.TenDarkTheme_XML)
+        isThemeEngineRunning = True
         menubarMainWindow.Renderer = themeenginemain.toolstripProRenderer
         contextmenuPageList.Renderer = themeenginemain.toolstripProRenderer
 
-        Dim themeToLoad As String = "Eyesore2Theme_XML.xml"
         themeenginemain.LoadTheme(themeToLoad, Me)
         themeenginemain.LoadTheme(themeToLoad, aaformDirectlyApplyKeyValue)
         themeenginemain.LoadTheme(themeToLoad, aaformRegistryKeyValueValueLargePreview)
