@@ -47,7 +47,6 @@ Public Class loadPageListSelections
             fileReaderInput = fileReaderInput.TrimStart
             ' If it starts with "hide:", then select the "Hide" radio button.
             If fileReaderInput.StartsWith("hide:") Then
-                Debug.WriteLine(fileReaderInput)
                 aaformMainWindow.radiobuttonHidePages.Checked = True
                 ' Now remove the beginning of the file and have it be a new string.
                 checkBoxes(fileReaderInput.Remove(0, 5))
@@ -55,7 +54,6 @@ Public Class loadPageListSelections
             ElseIf fileReaderInput.StartsWith("showonly:") Then
                 ' Otherwise, if it starts with "showonly:", select the
                 ' Show only radio button.
-                Debug.WriteLine(fileReaderInput)
                 aaformMainWindow.radiobuttonShowOnlyPages.Checked = True
                 ' Now remove the beginning of the file and have it be a new string.
                 checkBoxes(fileReaderInput.Remove(0, 9))
@@ -70,10 +68,9 @@ Public Class loadPageListSelections
     End Sub
 
     Private Shared Sub checkBoxes(modifiedFile As String)
-        Debug.WriteLine(modifiedFile)
         ' A delimiter is needed before continuing.
         ' This is used to split apart the words
-        ' so that they canbe checked in the page
+        ' so that they can be checked in the page
         ' list.
         Dim delimiter As Char = ";"c
 
