@@ -98,7 +98,7 @@ Partial Class aaformMainWindow
         Me.groupboxSettingsPageVisibility.Controls.Add(Me.labelPageVisibility)
         Me.groupboxSettingsPageVisibility.Location = New System.Drawing.Point(3, 3)
         Me.groupboxSettingsPageVisibility.Name = "groupboxSettingsPageVisibility"
-        Me.groupboxSettingsPageVisibility.Size = New System.Drawing.Size(323, 88)
+        Me.groupboxSettingsPageVisibility.Size = New System.Drawing.Size(323, 76)
         Me.groupboxSettingsPageVisibility.TabIndex = 0
         Me.groupboxSettingsPageVisibility.TabStop = False
         Me.groupboxSettingsPageVisibility.Text = "Settings page visibility"
@@ -106,7 +106,7 @@ Partial Class aaformMainWindow
         'radiobuttonShowOnlyPages
         '
         Me.radiobuttonShowOnlyPages.AutoSize = True
-        Me.radiobuttonShowOnlyPages.Location = New System.Drawing.Point(6, 63)
+        Me.radiobuttonShowOnlyPages.Location = New System.Drawing.Point(3, 53)
         Me.radiobuttonShowOnlyPages.Name = "radiobuttonShowOnlyPages"
         Me.radiobuttonShowOnlyPages.Size = New System.Drawing.Size(76, 17)
         Me.radiobuttonShowOnlyPages.TabIndex = 2
@@ -117,7 +117,7 @@ Partial Class aaformMainWindow
         '
         Me.radiobuttonHidePages.AutoSize = True
         Me.radiobuttonHidePages.Checked = True
-        Me.radiobuttonHidePages.Location = New System.Drawing.Point(6, 42)
+        Me.radiobuttonHidePages.Location = New System.Drawing.Point(3, 32)
         Me.radiobuttonHidePages.Name = "radiobuttonHidePages"
         Me.radiobuttonHidePages.Size = New System.Drawing.Size(47, 17)
         Me.radiobuttonHidePages.TabIndex = 1
@@ -128,7 +128,7 @@ Partial Class aaformMainWindow
         'labelPageVisibility
         '
         Me.labelPageVisibility.AutoSize = True
-        Me.labelPageVisibility.Location = New System.Drawing.Point(4, 20)
+        Me.labelPageVisibility.Location = New System.Drawing.Point(6, 16)
         Me.labelPageVisibility.Name = "labelPageVisibility"
         Me.labelPageVisibility.Size = New System.Drawing.Size(283, 13)
         Me.labelPageVisibility.TabIndex = 0
@@ -137,7 +137,7 @@ Partial Class aaformMainWindow
         'groupboxPageList
         '
         Me.groupboxPageList.Controls.Add(Me.panelScrollablePageList)
-        Me.groupboxPageList.Location = New System.Drawing.Point(3, 97)
+        Me.groupboxPageList.Location = New System.Drawing.Point(3, 85)
         Me.groupboxPageList.Name = "groupboxPageList"
         Me.groupboxPageList.Size = New System.Drawing.Size(323, 439)
         Me.groupboxPageList.TabIndex = 1
@@ -191,7 +191,7 @@ Partial Class aaformMainWindow
         'labelChoosePages
         '
         Me.labelChoosePages.AutoSize = True
-        Me.labelChoosePages.Location = New System.Drawing.Point(4, 5)
+        Me.labelChoosePages.Location = New System.Drawing.Point(3, 0)
         Me.labelChoosePages.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.labelChoosePages.Name = "labelChoosePages"
         Me.labelChoosePages.Size = New System.Drawing.Size(175, 13)
@@ -200,11 +200,13 @@ Partial Class aaformMainWindow
         '
         'groupboxPreviewRegistryKeyValue
         '
+        Me.groupboxPreviewRegistryKeyValue.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.groupboxPreviewRegistryKeyValue.Controls.Add(Me.linklabelViewLarger)
         Me.groupboxPreviewRegistryKeyValue.Controls.Add(Me.textboxRegistryKeyValue)
-        Me.groupboxPreviewRegistryKeyValue.Location = New System.Drawing.Point(3, 542)
+        Me.groupboxPreviewRegistryKeyValue.Location = New System.Drawing.Point(3, 530)
         Me.groupboxPreviewRegistryKeyValue.Name = "groupboxPreviewRegistryKeyValue"
-        Me.groupboxPreviewRegistryKeyValue.Size = New System.Drawing.Size(323, 78)
+        Me.groupboxPreviewRegistryKeyValue.Size = New System.Drawing.Size(323, 95)
         Me.groupboxPreviewRegistryKeyValue.TabIndex = 2
         Me.groupboxPreviewRegistryKeyValue.TabStop = False
         Me.groupboxPreviewRegistryKeyValue.Text = "Registry key value preview"
@@ -212,7 +214,7 @@ Partial Class aaformMainWindow
         'linklabelViewLarger
         '
         Me.linklabelViewLarger.AutoSize = True
-        Me.linklabelViewLarger.Location = New System.Drawing.Point(6, 62)
+        Me.linklabelViewLarger.Location = New System.Drawing.Point(6, 79)
         Me.linklabelViewLarger.Name = "linklabelViewLarger"
         Me.linklabelViewLarger.Size = New System.Drawing.Size(68, 13)
         Me.linklabelViewLarger.TabIndex = 1
@@ -226,23 +228,25 @@ Partial Class aaformMainWindow
         Me.textboxRegistryKeyValue.Name = "textboxRegistryKeyValue"
         Me.textboxRegistryKeyValue.ReadOnly = True
         Me.textboxRegistryKeyValue.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.textboxRegistryKeyValue.Size = New System.Drawing.Size(311, 39)
+        Me.textboxRegistryKeyValue.Size = New System.Drawing.Size(311, 56)
         Me.textboxRegistryKeyValue.TabIndex = 0
         '
         'panelApplyUndoExit
         '
+        Me.panelApplyUndoExit.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.panelApplyUndoExit.Controls.Add(Me.buttonExit)
         Me.panelApplyUndoExit.Controls.Add(Me.buttonApplyChanges)
         Me.panelApplyUndoExit.Controls.Add(Me.buttonUndoChanges)
-        Me.panelApplyUndoExit.Location = New System.Drawing.Point(2, 625)
+        Me.panelApplyUndoExit.Location = New System.Drawing.Point(2, 630)
         Me.panelApplyUndoExit.Margin = New System.Windows.Forms.Padding(2)
         Me.panelApplyUndoExit.Name = "panelApplyUndoExit"
-        Me.panelApplyUndoExit.Size = New System.Drawing.Size(324, 34)
+        Me.panelApplyUndoExit.Size = New System.Drawing.Size(324, 24)
         Me.panelApplyUndoExit.TabIndex = 4
         '
         'buttonExit
         '
-        Me.buttonExit.Location = New System.Drawing.Point(245, 6)
+        Me.buttonExit.Location = New System.Drawing.Point(245, 1)
         Me.buttonExit.Name = "buttonExit"
         Me.buttonExit.Size = New System.Drawing.Size(62, 23)
         Me.buttonExit.TabIndex = 2
@@ -251,7 +255,7 @@ Partial Class aaformMainWindow
         '
         'buttonApplyChanges
         '
-        Me.buttonApplyChanges.Location = New System.Drawing.Point(18, 6)
+        Me.buttonApplyChanges.Location = New System.Drawing.Point(18, 1)
         Me.buttonApplyChanges.Name = "buttonApplyChanges"
         Me.buttonApplyChanges.Size = New System.Drawing.Size(90, 23)
         Me.buttonApplyChanges.TabIndex = 0
@@ -260,7 +264,7 @@ Partial Class aaformMainWindow
         '
         'buttonUndoChanges
         '
-        Me.buttonUndoChanges.Location = New System.Drawing.Point(115, 6)
+        Me.buttonUndoChanges.Location = New System.Drawing.Point(115, 1)
         Me.buttonUndoChanges.Name = "buttonUndoChanges"
         Me.buttonUndoChanges.Size = New System.Drawing.Size(123, 23)
         Me.buttonUndoChanges.TabIndex = 1
