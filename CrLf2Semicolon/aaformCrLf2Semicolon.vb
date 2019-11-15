@@ -1,5 +1,5 @@
 ﻿'CrLf2Semicolon - Replaces CrLf characters with semicolons.
-'Copyright (C) 2018 Drew Naylor
+'Copyright (C) 2018-2019 Drew Naylor
 'CrLf2Semicolon is part of the HideSettingsPages project.
 'https://github.com/DrewNaylor/HideSettingsPages
 '
