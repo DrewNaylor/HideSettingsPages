@@ -194,9 +194,9 @@ Partial Class aaformMainWindow
         Me.labelChoosePages.Location = New System.Drawing.Point(3, 0)
         Me.labelChoosePages.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.labelChoosePages.Name = "labelChoosePages"
-        Me.labelChoosePages.Size = New System.Drawing.Size(175, 13)
+        Me.labelChoosePages.Size = New System.Drawing.Size(308, 13)
         Me.labelChoosePages.TabIndex = 13
-        Me.labelChoosePages.Text = "Choose pages to hide or only show."
+        Me.labelChoosePages.Text = "Choose pages to hide or only show. (changes with radiobuttons)"
         '
         'groupboxPreviewRegistryKeyValue
         '

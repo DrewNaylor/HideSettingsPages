@@ -428,12 +428,16 @@ Public Class aaformMainWindow
     Private Sub radiobuttonHidePages_Click(sender As Object, e As EventArgs) Handles radiobuttonHidePages.Click
         ' Make sure the stringKeyValueHideOrShowOnly is updated
         ' when clicking the radio buttons.
+        ' Also update the label for the page list groupbox.
+        labelChoosePages.Text = "Choose pages to hide."
         registryKeyValueBuilder.computeStringFullRegistryKeyValue()
     End Sub
 
     Private Sub radiobuttonShowOnlyPages_Click(sender As Object, e As EventArgs) Handles radiobuttonShowOnlyPages.Click
         ' Make sure the stringKeyValueHideOrShowOnly is updated
         ' when clicking the radio buttons.
+        ' Also update the label for the page list groupbox.
+        labelChoosePages.Text = "Choose pages to show only."
         registryKeyValueBuilder.computeStringFullRegistryKeyValue()
     End Sub
 
@@ -450,11 +454,6 @@ Public Class aaformMainWindow
     End Sub
 #End Region
 #End Region
-
-#Region "Loading page list selections."
-
-#End Region
-
 
 #Region "Apply/undo Registry key value subs."
 
