@@ -62,7 +62,7 @@ Partial Class aaformRestorePointReminder
         Me.linklabelTurnOnOrOffSystemProtection.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.linklabelTurnOnOrOffSystemProtection.Name = "linklabelTurnOnOrOffSystemProtection"
         Me.linklabelTurnOnOrOffSystemProtection.Size = New System.Drawing.Size(259, 26)
-        Me.linklabelTurnOnOrOffSystemProtection.TabIndex = 2
+        Me.linklabelTurnOnOrOffSystemProtection.TabIndex = 3
         Me.linklabelTurnOnOrOffSystemProtection.TabStop = True
         Me.linklabelTurnOnOrOffSystemProtection.Text = "TenForums: How to Turn On or Off System Protection" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "for Drives in Windows 10 (ste" &
     "p 6)"
@@ -75,7 +75,7 @@ Partial Class aaformRestorePointReminder
         Me.linklabelCreateSystemRestorePoint.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.linklabelCreateSystemRestorePoint.Name = "linklabelCreateSystemRestorePoint"
         Me.linklabelCreateSystemRestorePoint.Size = New System.Drawing.Size(320, 26)
-        Me.linklabelCreateSystemRestorePoint.TabIndex = 3
+        Me.linklabelCreateSystemRestorePoint.TabIndex = 4
         Me.linklabelCreateSystemRestorePoint.TabStop = True
         Me.linklabelCreateSystemRestorePoint.Text = "TenForums: How to Create a System Restore Point in Windows 10" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(step 5)"
         '
@@ -86,7 +86,7 @@ Partial Class aaformRestorePointReminder
         Me.buttonDontCreateRestorePoint.Margin = New System.Windows.Forms.Padding(2)
         Me.buttonDontCreateRestorePoint.Name = "buttonDontCreateRestorePoint"
         Me.buttonDontCreateRestorePoint.Size = New System.Drawing.Size(86, 26)
-        Me.buttonDontCreateRestorePoint.TabIndex = 4
+        Me.buttonDontCreateRestorePoint.TabIndex = 1
         Me.buttonDontCreateRestorePoint.Text = "No"
         Me.buttonDontCreateRestorePoint.UseVisualStyleBackColor = True
         '
@@ -97,7 +97,7 @@ Partial Class aaformRestorePointReminder
         Me.checkboxDontAskAgain.Margin = New System.Windows.Forms.Padding(2)
         Me.checkboxDontAskAgain.Name = "checkboxDontAskAgain"
         Me.checkboxDontAskAgain.Size = New System.Drawing.Size(100, 17)
-        Me.checkboxDontAskAgain.TabIndex = 5
+        Me.checkboxDontAskAgain.TabIndex = 2
         Me.checkboxDontAskAgain.Text = "Don't ask again"
         Me.checkboxDontAskAgain.UseVisualStyleBackColor = True
         '
