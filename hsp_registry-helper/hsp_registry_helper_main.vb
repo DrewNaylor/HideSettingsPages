@@ -29,7 +29,6 @@
 
 
 
-Imports System.Windows.Forms
 Public Module hsp_registry_helper_main
 
     ' fullKey is the Registry key value from main app.

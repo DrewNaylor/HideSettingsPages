@@ -29,8 +29,6 @@
 
 
 
-Imports System.ComponentModel
-
 Public Class aaformAboutWindow
 #Region "Code that runs when the About window is opened."
     Private Sub RealAboutWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
