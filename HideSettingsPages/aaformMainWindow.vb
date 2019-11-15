@@ -215,6 +215,13 @@ Public Class aaformMainWindow
                 End If
             End If
         End If
+
+        ' Also update the label for the page list groupbox.
+        If radiobuttonHidePages.Checked = True Then
+            labelChoosePages.Text = "Choose pages to hide."
+        ElseIf radiobuttonShowOnlyPages.Checked = True Then
+            labelChoosePages.Text = "Choose pages to show only."
+        End If
     End Sub
 
     Private Sub menubarExportSelections_Click(sender As Object, e As EventArgs) Handles menubarExportSelections.Click
