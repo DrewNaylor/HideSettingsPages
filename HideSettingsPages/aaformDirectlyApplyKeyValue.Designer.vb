@@ -59,7 +59,7 @@ Partial Class aaformDirectlyApplyKeyValue
         Me.textboxKeyValue.Margin = New System.Windows.Forms.Padding(2)
         Me.textboxKeyValue.Name = "textboxKeyValue"
         Me.textboxKeyValue.Size = New System.Drawing.Size(266, 20)
-        Me.textboxKeyValue.TabIndex = 2
+        Me.textboxKeyValue.TabIndex = 0
         '
         'buttonApply
         '
@@ -67,7 +67,7 @@ Partial Class aaformDirectlyApplyKeyValue
         Me.buttonApply.Margin = New System.Windows.Forms.Padding(2)
         Me.buttonApply.Name = "buttonApply"
         Me.buttonApply.Size = New System.Drawing.Size(107, 28)
-        Me.buttonApply.TabIndex = 3
+        Me.buttonApply.TabIndex = 2
         Me.buttonApply.Text = "Apply changes"
         Me.buttonApply.UseVisualStyleBackColor = True
         '
@@ -77,7 +77,7 @@ Partial Class aaformDirectlyApplyKeyValue
         Me.buttonUndo.Margin = New System.Windows.Forms.Padding(2)
         Me.buttonUndo.Name = "buttonUndo"
         Me.buttonUndo.Size = New System.Drawing.Size(107, 28)
-        Me.buttonUndo.TabIndex = 4
+        Me.buttonUndo.TabIndex = 3
         Me.buttonUndo.Text = "Undo all changes"
         Me.buttonUndo.UseVisualStyleBackColor = True
         '
@@ -88,7 +88,7 @@ Partial Class aaformDirectlyApplyKeyValue
         Me.buttonClose.Margin = New System.Windows.Forms.Padding(2)
         Me.buttonClose.Name = "buttonClose"
         Me.buttonClose.Size = New System.Drawing.Size(107, 28)
-        Me.buttonClose.TabIndex = 5
+        Me.buttonClose.TabIndex = 4
         Me.buttonClose.Text = "Close"
         Me.buttonClose.UseVisualStyleBackColor = True
         '
@@ -98,7 +98,7 @@ Partial Class aaformDirectlyApplyKeyValue
         Me.buttonClearTextbox.Margin = New System.Windows.Forms.Padding(2)
         Me.buttonClearTextbox.Name = "buttonClearTextbox"
         Me.buttonClearTextbox.Size = New System.Drawing.Size(61, 23)
-        Me.buttonClearTextbox.TabIndex = 6
+        Me.buttonClearTextbox.TabIndex = 1
         Me.buttonClearTextbox.Text = "Clear"
         Me.buttonClearTextbox.UseVisualStyleBackColor = True
         '
