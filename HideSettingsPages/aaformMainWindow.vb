@@ -161,16 +161,6 @@ Public Class aaformMainWindow
         aaformDirectlyApplyKeyValue.ShowDialog(Me)
     End Sub
 
-
-    Private Sub menubarHiddenCopySelections_Click(sender As Object, e As EventArgs) Handles menubarHiddenCopySelections.Click
-        ' Under the "HiddenItems" menu, there's an entry just meant to copy over
-        ' the selections to the Directly apply key value window, and this code is
-        ' what it does when the user presses Ctrl+Shift+D.
-
-        aaformDirectlyApplyKeyValue.textboxKeyValue.Text = textboxRegistryKeyValue.Text
-        aaformDirectlyApplyKeyValue.ShowDialog(Me)
-    End Sub
-
     Private Sub menubarVerifyKeyValueButton_Click(sender As Object, e As EventArgs) Handles menubarVerifyKeyValueButton.Click
         ' Launch hsp_registry-helper.exe and have it tell the user what the current Registry key value is.
         Dim proc As New ProcessStartInfo
@@ -196,6 +186,55 @@ Public Class aaformMainWindow
             End Select
         End If
     End Sub
+
+#Region "Import and export selections buttons."
+    Private Sub menubarLoadSelections_Click(sender As Object, e As EventArgs) Handles menubarLoadSelections.Click
+        ' Show the "Load selections..." dialog and open the file if the user
+        ' wants to. The string in that file will be used to specify what
+        ' selections are applied in the checkedlistbox.
+        If openfiledialogLoadSelections.ShowDialog = DialogResult.OK Then
+            ' If the user clicks the "OK" button, open the file.
+
+            Dim fileName As String = openfiledialogLoadSelections.FileName.ToUpperInvariant
+            ' If it's a text file, process it using the text file
+            ' parser sub/function.
+            If IO.Path.GetExtension(fileName) = ".TXT" Then
+                loadPageListSelections.loaderTextFileSource(fileName)
+
+            Else
+                ' If the file name's extension isn't "TXT", let the user know and ask if they
+                ' want to try opening it anyway.
+                ' Also let them know that XML files are intended on being supported at a later
+                ' date, but that's not available yet.
+                Dim msgResult As Integer = MessageBox.Show(Me, "The file extension """ & IO.Path.GetExtension(openfiledialogLoadSelections.FileName) & """ isn't a supported extension like TXT. In the case of XML files, those are planned to be supported, but that's not available yet." & vbCrLf &
+                                 "Try to load the file as a text file anyway?" & vbCrLf & vbCrLf &
+                                    "File name and path: " & openfiledialogLoadSelections.FileName, "Import Selections", MessageBoxButtons.YesNo, MessageBoxIcon.Error)
+                ' If the user wants to try loading the file anyway, do so.
+                If msgResult = DialogResult.Yes Then
+                    loadPageListSelections.loaderTextFileSource(fileName)
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub menubarExportSelections_Click(sender As Object, e As EventArgs) Handles menubarExportSelections.Click
+        ' Show the "Export selections..." dialog and save the file if the user
+        ' wants to. The selections in the Registry key value preview box will
+        ' be written to the output file with a validation header.
+
+        ' Code based on this StackOverflow answer:
+        ' https://stackoverflow.com/a/5002598
+
+        If savefiledialogExportSelections.ShowDialog = DialogResult.OK Then
+            ' If the user clicks the "OK" button, save the file.
+
+            Dim fileName As String = savefiledialogExportSelections.FileName
+            Dim exportText As String = "[HideSettingsPages Page Selections Format 1.00]" & vbCrLf &
+            textboxRegistryKeyValue.Text
+            My.Computer.FileSystem.WriteAllText(fileName, exportText, False)
+        End If
+    End Sub
+#End Region
 
 #End Region
 
@@ -370,6 +409,17 @@ Public Class aaformMainWindow
     Private Sub menubarHelpTopicsButton_Click(sender As Object, e As EventArgs) Handles menubarHelpTopicsButton.Click
         ' Go to the GitHub wiki.
         Process.Start("https://github.com/DrewNaylor/HideSettingsPages/wiki")
+    End Sub
+#End Region
+
+#Region "HiddenItems menu."
+    Private Sub menubarHiddenCopySelections_Click(sender As Object, e As EventArgs) Handles menubarHiddenCopySelections.Click
+        ' Under the "HiddenItems" menu, there's an entry just meant to copy over
+        ' the selections to the Directly apply key value window, and this code is
+        ' what it does when the user presses Ctrl+Shift+D.
+
+        aaformDirectlyApplyKeyValue.textboxKeyValue.Text = textboxRegistryKeyValue.Text
+        aaformDirectlyApplyKeyValue.ShowDialog(Me)
     End Sub
 #End Region
 #End Region
@@ -631,51 +681,4 @@ Public Class aaformMainWindow
 #End Region
 #End Region
 #End Region
-
-    Private Sub menubarLoadSelections_Click(sender As Object, e As EventArgs) Handles menubarLoadSelections.Click
-        ' Show the "Load selections..." dialog and open the file if the user
-        ' wants to. The string in that file will be used to specify what
-        ' selections are applied in the checkedlistbox.
-        If openfiledialogLoadSelections.ShowDialog = DialogResult.OK Then
-            ' If the user clicks the "OK" button, open the file.
-
-            Dim fileName As String = openfiledialogLoadSelections.FileName.ToUpperInvariant
-            ' If it's a text file, process it using the text file
-            ' parser sub/function.
-            If IO.Path.GetExtension(fileName) = ".TXT" Then
-                loadPageListSelections.loaderTextFileSource(fileName)
-
-            Else
-                ' If the file name's extension isn't "TXT", let the user know and ask if they
-                ' want to try opening it anyway.
-                ' Also let them know that XML files are intended on being supported at a later
-                ' date, but that's not available yet.
-                Dim msgResult As Integer = MessageBox.Show(Me, "The file extension """ & IO.Path.GetExtension(openfiledialogLoadSelections.FileName) & """ isn't a supported extension like TXT. In the case of XML files, those are planned to be supported, but that's not available yet." & vbCrLf &
-                                 "Try to load the file as a text file anyway?" & vbCrLf & vbCrLf &
-                                    "File name and path: " & openfiledialogLoadSelections.FileName, "Import Selections", MessageBoxButtons.YesNo, MessageBoxIcon.Error)
-                ' If the user wants to try loading the file anyway, do so.
-                If msgResult = DialogResult.Yes Then
-                    loadPageListSelections.loaderTextFileSource(fileName)
-                End If
-            End If
-        End If
-    End Sub
-
-    Private Sub menubarExportSelections_Click(sender As Object, e As EventArgs) Handles menubarExportSelections.Click
-        ' Show the "Export selections..." dialog and save the file if the user
-        ' wants to. The selections in the Registry key value preview box will
-        ' be written to the output file with a validation header.
-
-        ' Code based on this StackOverflow answer:
-        ' https://stackoverflow.com/a/5002598
-
-        If savefiledialogExportSelections.ShowDialog = DialogResult.OK Then
-            ' If the user clicks the "OK" button, save the file.
-
-            Dim fileName As String = savefiledialogExportSelections.FileName
-            Dim exportText As String = "[HideSettingsPages Page Selections Format 1.00]" & vbCrLf &
-            textboxRegistryKeyValue.Text
-            My.Computer.FileSystem.WriteAllText(fileName, exportText, False)
-        End If
-    End Sub
 End Class
