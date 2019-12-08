@@ -43,7 +43,7 @@ More screenshots are visible on the [Wiki](https://github.com/DrewNaylor/HideSet
 
 To run HideSettingsPages, your computer requires the following:
 
-- HideSettingsPages Registry Helper. This is included with HideSettingsPages and is what applies the Registry key value to hide the pages the user chooses. It's sometimes refered to as "hsp_registry-helper" as that's the filename I chose for it.
+- HideSettingsPages Registry Helper. This is included with HideSettingsPages and is what applies the Registry key value to hide the pages the user chooses. It's sometimes referred to as "hsp_registry-helper" as that's the filename I chose for it.
 
 - [Microsoft .Net 4.6.1 Framework](https://www.microsoft.com/en-us/download/details.aspx?id=49981)
 
