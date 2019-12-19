@@ -34,6 +34,8 @@ More screenshots are visible on the [Wiki](https://github.com/DrewNaylor/HideSet
 
 - If certain categories (such as Apps) have all their pages hidden, the Settings app may crash when trying to open those categories. [(issue #9)](https://github.com/DrewNaylor/HideSettingsPages/issues/9)
 
+- Clearing the textbox in the Directly apply key value window doesn't set focus to the textbox. [(issue #55)](https://github.com/DrewNaylor/HideSettingsPages/issues/55)
+
 <br>
 <br>
 
