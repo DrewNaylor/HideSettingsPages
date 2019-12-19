@@ -300,7 +300,7 @@ Partial Class aaformMainWindow
         Me.menubarExportSelections.Name = "menubarExportSelections"
         Me.menubarExportSelections.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
         Me.menubarExportSelections.Size = New System.Drawing.Size(249, 22)
-        Me.menubarExportSelections.Text = "Ex&port selections..."
+        Me.menubarExportSelections.Text = "&Export selections..."
         '
         'zSeparatorAboveLaunchSettingsApp
         '
@@ -351,7 +351,7 @@ Partial Class aaformMainWindow
         Me.menubarAlwaysCopySelections.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.menubarAlwaysCopySelections.Name = "menubarAlwaysCopySelections"
         Me.menubarAlwaysCopySelections.Size = New System.Drawing.Size(391, 22)
-        Me.menubarAlwaysCopySelections.Text = "Always copy selections into Directly apply key value window"
+        Me.menubarAlwaysCopySelections.Text = "&Always copy selections into Directly apply key value window"
         Me.menubarAlwaysCopySelections.ToolTipText = resources.GetString("menubarAlwaysCopySelections.ToolTipText")
         '
         'menubarUncheckAllSelectionsBeforeImport
@@ -359,7 +359,7 @@ Partial Class aaformMainWindow
         Me.menubarUncheckAllSelectionsBeforeImport.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.menubarUncheckAllSelectionsBeforeImport.Name = "menubarUncheckAllSelectionsBeforeImport"
         Me.menubarUncheckAllSelectionsBeforeImport.Size = New System.Drawing.Size(391, 22)
-        Me.menubarUncheckAllSelectionsBeforeImport.Text = "Uncheck all page list items before importing selections"
+        Me.menubarUncheckAllSelectionsBeforeImport.Text = "&Uncheck all page list items before importing selections"
         '
         'zToolStripSeparatorOptionsMenu
         '
