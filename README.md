@@ -43,14 +43,14 @@ More screenshots are visible on the [Wiki](https://github.com/DrewNaylor/HideSet
 
 To run HideSettingsPages, your computer requires the following:
 
-- HideSettingsPages Registry Helper. This is included with HideSettingsPages and is what applies the Registry key value to hide the pages the user chooses. It's sometimes refered to as "hsp_registry-helper" as that's the filename I chose for it.
+- HideSettingsPages Registry Helper. This is included with HideSettingsPages and is what applies the Registry key value to hide the pages the user chooses. It's sometimes referred to as "hsp_registry-helper" as that's the filename I chose for it.
 
 - [Microsoft .Net 4.6.1 Framework](https://www.microsoft.com/en-us/download/details.aspx?id=49981)
 
   - Ignore the ad on that page, scroll down, and click the orange Download button. Note that this is the web installer and it'll download its components after it's opened. May take a while to download.
 
 - Windows versions: Windows 7 SP1, 10.
-  - Windows 8.0 and Windows 8.1 are untested although they might work. HideSettingsPages is intended to be used on Windows 10 Creators Update and above, though it does work on Windows 7 SP1. This app does not support Windows 10 S due to it being limited to running apps from the Windows Store.
+  - Windows 8.0 and Windows 8.1 are untested although they might work. HideSettingsPages is intended to be used on Windows 10 Creators Update and above, though it does work on Windows 7 SP1. This app does not support either Windows 10 S or Windows 10 in S Mode due to both being limited to running apps from the Windows Store.
 
 - Architectures: x86 (32-bit) and x64 (64-bit.)
 
