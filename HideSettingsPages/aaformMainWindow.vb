@@ -124,7 +124,7 @@ Public Class aaformMainWindow
         ' We have to hide the window before showing it or we get an exception
         ' when using Show(Me).
         If isThemeEngineRunning = True Then
-            themeenginemain.LoadTheme(themeToLoad, aaformRegistryKeyValueValueLargePreview)
+            libportablethemeengine.ThemeEngine.SelectTheme(themeToLoad, aaformRegistryKeyValueValueLargePreview)
         End If
         aaformRegistryKeyValueValueLargePreview.Hide()
         aaformRegistryKeyValueValueLargePreview.Show()
@@ -688,18 +688,16 @@ Public Class aaformMainWindow
         End If
     End Sub
 
-    Friend Shared themeToLoad As String = "1.02-Latest_TenDarkTheme_XML.xml"
+    Friend Shared themeToLoad As String = "TenDarkTheme"
     Friend Shared isThemeEngineRunning As Boolean = False
 
     Private Sub ApplyTenDarkThemeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApplyTenDarkThemeToolStripMenuItem.Click
         'themeenginemain.userTheme.LoadXml(My.Resources.TenDarkTheme_XML)
         isThemeEngineRunning = True
-        menubarMainWindow.Renderer = themeenginemain.toolstripProRenderer
-        contextmenuPageList.Renderer = themeenginemain.toolstripProRenderer
 
-        themeenginemain.LoadTheme(themeToLoad, Me)
-        themeenginemain.LoadTheme(themeToLoad, aaformDirectlyApplyKeyValue)
-        themeenginemain.LoadTheme(themeToLoad, aaformRegistryKeyValueValueLargePreview)
-        themeenginemain.LoadTheme(themeToLoad, forceAboutWindowTab)
+        libportablethemeengine.ThemeEngine.SelectTheme(themeToLoad, Me, Me.components)
+        libportablethemeengine.ThemeEngine.SelectTheme(themeToLoad, aaformDirectlyApplyKeyValue)
+        libportablethemeengine.ThemeEngine.SelectTheme(themeToLoad, aaformRegistryKeyValueValueLargePreview)
+        libportablethemeengine.ThemeEngine.SelectTheme(themeToLoad, forceAboutWindowTab)
     End Sub
 End Class

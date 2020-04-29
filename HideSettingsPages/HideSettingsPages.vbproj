@@ -78,10 +78,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="libportablethemeengine">
-      <HintPath>..\..\UXL-Launcher\PortableUXLLauncher_ThemeEngine\bin\Debug\libportablethemeengine.dll</HintPath>
-    </Reference>
-    <Reference Include="PortableUXLLauncher_ThemeEngine">
-      <HintPath>..\..\UXL-Launcher\PortableUXLLauncher_ThemeEngine\bin\Debug\PortableUXLLauncher_ThemeEngine.dll</HintPath>
+      <HintPath>..\..\HTML-Character-Code-Acquisition-Program\lib\libportablethemeengine.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
