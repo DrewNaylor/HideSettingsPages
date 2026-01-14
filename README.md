@@ -1,4 +1,10 @@
 # HideSettingsPages
+
+## Moving to Codeberg
+**Note:** I'm migrating to Codeberg. The canonical repo for HideSettingsPages is now here, please update your remotes: https://codeberg.org/DrewNaylor/HideSettingsPages
+
+## Rest of the readme
+
 Project build status: [![Build status](https://ci.appveyor.com/api/projects/status/x2rnocd9r332x18i?svg=true)](https://ci.appveyor.com/project/DrewNaylor/hidesettingspages)
 
 Master branch build status: [![Build status](https://ci.appveyor.com/api/projects/status/x2rnocd9r332x18i/branch/master?svg=true)](https://ci.appveyor.com/project/DrewNaylor/hidesettingspages/branch/master)
